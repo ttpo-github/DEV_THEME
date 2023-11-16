@@ -769,7 +769,7 @@
                       //this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
                       //this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
                       this.elements.selector.addEventListener('change', function(event){
-                        console.log(event.value)
+                        console.log(this.value)
                       })
                   
                       this.querySelectorAll('option').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
