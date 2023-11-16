@@ -690,13 +690,16 @@
                 
                 
                 <div class="icons-b-desc" style="display:flex;">
-          <span>{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %}</span>
+          <span style="color:white;">{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %}</span>
                   <p>
                     
                     <a href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }} </a> 
-                    <br>
-                    <span class="spanish-speaking-snip"> - se habla español</span>
+                   <br>
+                  <span class="spanish-speaking-snip"> - se habla español</span>
+                    
                   </p>
+
+          
 
                  <!-- Language Selector -->
                   {% comment %}
