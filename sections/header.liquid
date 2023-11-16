@@ -686,14 +686,101 @@
                     <path d="M17 2.125C25.2012 2.125 31.875 8.79883 31.875 17C31.875 25.2012 25.2012 31.875 17 31.875C8.79883 31.875 2.125 25.2012 2.125 17C2.125 8.79883 8.79883 2.125 17 2.125ZM17 0C7.61182 0 0 7.61182 0 17C0 26.3882 7.61182 34 17 34C26.3882 34 34 26.3882 34 17C34 7.61182 26.3882 0 17 0ZM26.4774 22.684L26.3819 22.3934C26.1578 21.7252 25.4191 21.0279 24.7384 20.8412L22.2254 20.1543C21.5447 19.9696 20.5735 20.2186 20.0734 20.7188L19.1644 21.6277C15.8607 20.7333 13.2688 18.1414 12.3765 14.8377L13.2854 13.9287C13.7835 13.4307 14.0325 12.4595 13.8478 11.7767L13.163 9.26367C12.9783 8.58301 12.2769 7.84424 11.6087 7.62012L11.3223 7.52462C10.652 7.3005 9.69531 7.52668 9.19727 8.02686L7.83594 9.38818C7.59316 9.62891 7.4375 10.3199 7.4375 10.3221C7.39181 14.6426 9.08524 18.8034 12.1399 21.8601C15.1863 24.9065 19.3326 26.5978 23.6386 26.5604C23.6614 26.5604 24.3732 26.409 24.616 26.1661L25.9773 24.8048C26.4754 24.3089 26.6995 23.3522 26.4774 22.684Z" fill="white"></path>
                   </svg>
                 </p>
+
+                
+                
                 <div class="icons-b-desc">
                   <p>
                     <span>{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %}</span>
                     <a href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }} <span class="spanish-speaking-snip"> - se habla español</span></a>
                   </p>
+
+                 <!-- Language Selector -->
+                  {% if localization.available_languages.size > 1 %}
+                    <pk-localization-form>
+                      {% form 'localization' %}
+                        <div class="disclosure">
+                          <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
+                            {{ localization.language.endonym_name | capitalize }}
+                  
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                            </svg>
+                          </button>
+                  
+                          <ul id="LanguageList" role="list" class="disclosure__list" hidden>
+                            {% for language in localization.available_languages %}
+                              <li class="disclosure__item" tabindex="-1">
+                                <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+                                  {{ language.endonym_name | capitalize }}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                  
+                          <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+                        </div>
+                      {% endform %}
+                    </pk-localization-form>
+                  {% endif %}
+                  
+                  <script>
+                  class LocalizationForm extends HTMLElement {
+                    constructor() {
+                      super();
+                      this.elements = {
+                        input: this.querySelector('input[name="language_code"], input[name="country_code"]'),
+                        button: this.querySelector('button'),
+                        panel: this.querySelector('ul'),
+                      };
+                      this.elements.button.addEventListener('click', this.openSelector.bind(this));
+                      this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+                      this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+                  
+                      this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+                    }
+                  
+                    hidePanel() {
+                      this.elements.button.setAttribute('aria-expanded', 'false');
+                      this.elements.panel.setAttribute('hidden', true);
+                    }
+                  
+                    onContainerKeyUp(event) {
+                      if (event.code.toUpperCase() !== 'ESCAPE') return;
+                  
+                      this.hidePanel();
+                      this.elements.button.focus();
+                    }
+                  
+                    onItemClick(event) {
+                      event.preventDefault();
+                      const form = this.querySelector('form');
+                      this.elements.input.value = event.currentTarget.dataset.value;
+                      if (form) form.submit();
+                    }
+                  
+                    openSelector() {
+                      this.elements.button.focus();
+                      this.elements.panel.toggleAttribute('hidden');
+                      this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+                    }
+                  
+                    closeSelector(event) {
+                      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+                      if (event.relatedTarget === null || shouldClose) {
+                        this.hidePanel();
+                      }
+                    }
+                  }
+                  
+                  customElements.define('pk-localization-form', LocalizationForm);
+                  </script>
+                  <!-- Language Selector -->
+                  
                 </div>
               </div>
               {% endif %}
+              
         {% comment %}
         <div class="bt-header-menu">
           {%- if section.settings.menu != blank -%}
