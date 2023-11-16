@@ -740,7 +740,7 @@
                         -->
                           
 
-                        <select name="cars" id="cars">
+                        <select>
                           {% for language in localization.available_languages %}
                               <option class="disclosure__item" tabindex="-1">
                                 <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
