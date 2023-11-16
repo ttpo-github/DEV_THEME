@@ -760,7 +760,7 @@
                       //this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
                       //this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
                       
-                      this.elements.selector.addEventListener('change', function(event){
+                      this.elements.selector.addEventListener('change', (event) => {
                         let selectElement = event.currentTarget;
                         let selectedOption = selectElement.options[selectElement.selectedIndex]
 
@@ -779,17 +779,7 @@
                       //this.querySelectorAll('option').forEach(el => console.log(el))
                     }
                   
-                    hidePanel() {
-                      this.elements.button.setAttribute('aria-expanded', 'false');
-                      this.elements.panel.setAttribute('hidden', true);
-                    }
-                  
-                    onContainerKeyUp(event) {
-                      if (event.code.toUpperCase() !== 'ESCAPE') return;
-                  
-                      this.hidePanel();
-                      this.elements.button.focus();
-                    }
+                   
                   
                     onSelection(optionEl) {
                       console.log(optionEl)
@@ -801,17 +791,7 @@
                       */
                     }
                   
-                    openSelector() {
-                      this.elements.button.focus();
-                      this.elements.panel.toggleAttribute('hidden');
-                      this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
-                    }
-                  
-                    closeSelector(event) {
-                      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
-                      if (event.relatedTarget === null || shouldClose) {
-                        this.hidePanel();
-                      }
+                    
                     }
                   }
                   
