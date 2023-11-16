@@ -692,7 +692,9 @@
                 <div class="icons-b-desc">
                   <p>
                     <span>{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %}</span>
-                    <a href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }} <span class="spanish-speaking-snip"> - se habla español</span></a> | 
+                    <a href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }} </a> 
+                    <br>
+                    <span class="spanish-speaking-snip"> - se habla español</span>
                   </p>
 
                  <!-- Language Selector -->
