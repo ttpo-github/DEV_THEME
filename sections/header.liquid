@@ -769,6 +769,7 @@
                       this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
                   
                       this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+                      this.querySelectorAll('a').forEach(el => console.log(el))
                     }
                   
                     hidePanel() {
