@@ -689,7 +689,7 @@
 
                 
                 
-                <div class="icons-b-desc">
+                <div class="icons-b-desc" style="display:flex;">
                   <p>
                     <span>{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %}</span>
                     <a href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }} </a> 
