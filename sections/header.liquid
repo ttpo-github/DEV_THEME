@@ -772,6 +772,8 @@
                       this.elements.selector.addEventListener('change', function(event){
                         let selectElement = event.currentTarget;
                         let selectedOption = selectElement.options[selectElement.selectedIndex]
+
+                        console.log(this.elements.input)
                         
                         event.preventDefault();
                         const form = this.querySelector('form');
