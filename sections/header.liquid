@@ -784,6 +784,7 @@
                     }
                   
                     onItemClick(event) {
+                      console.log(event)
                       event.preventDefault();
                       const form = this.querySelector('form');
                       this.elements.input.value = event.currentTarget.dataset.value;
