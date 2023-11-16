@@ -772,7 +772,7 @@
                       this.elements.selector.addEventListener('change', function(event){
                         let selectElement = event.currentTarget;
                         let selectedOption = selectElement.options[selectElement.selectedIndex]
-                        onSelection(selectedOption)
+                        this.onSelection(selectedOption)
 
                         
                       })
