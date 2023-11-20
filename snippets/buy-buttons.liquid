@@ -142,9 +142,9 @@
               </button>
               <div class="availability
                 {% if product.selected_or_first_available_variant.available == true %}
-                {% comment %}
+                
                   {% unless product.tags contains 'unavailable'%} hidden{% endunless %}
-                {% endcomment %}
+                
                 {% endif %}">
                 <a href="{{block.settings.phone_link}}" class="custom-btn button--full-width">{{block.settings.phone_text}}</a>
               </div>
