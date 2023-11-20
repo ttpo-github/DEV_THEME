@@ -145,8 +145,8 @@
     </div>
 
     {% if section.settings.littleimg %}
-      <div class="">
-        <img width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
+      <div class="" style="display:flex;justify-content:center;">
+        <img  height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
       </div>
     {% endif %}
     
