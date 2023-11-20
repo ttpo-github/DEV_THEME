@@ -133,7 +133,7 @@
                 
                   {%- if product.selected_or_first_available_variant.available == false  -%}
                     <div class="availability">
-                      <a href="{{block.settings.phone_link}}" style="padding:0px;" class="custom-btn button--full-width">{{ 'products.product.sold_out' | t }}</a>
+                      <a href="{{block.settings.phone_link}}" style="padding:0px;" class="button--full-width">{{ 'products.product.sold_out' | t }}</a>
                     </div>
                   {%- else -%}
                     <span id="test">
