@@ -164,9 +164,13 @@
     </div>
 
     {% if section.settings.littleimg %}
-      <div class="hero-banner-child-img bottom-image" style="display:flex;justify-content:center;">
-        <img  width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
-      </div>
+      
+        <div class="hero-banner-child-img bottom-image" style="display:flex;justify-content:center;">
+          <a href="{{ section.settings.littleimg_link }}">
+            <img  width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
+          </a>
+        </div>
+      
     {% endif %}
     
     {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
@@ -286,6 +290,11 @@
         "type": "image_picker",
         "id": "littleimg",
         "label": "Image Banner Beneath Buttons (Ideally 800x150)"
+      },
+      {
+        "type": "url",
+        "id": "littleimg_link",
+        "label": "Link for Sub Image Banner"
       },
       {
         "type":"checkbox",
