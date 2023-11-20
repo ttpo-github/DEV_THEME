@@ -979,7 +979,7 @@ class VariantSelects extends HTMLElement {
         if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
         const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, window.variantStrings.soldOut);
+        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, '<div class="availability"><a href="{{block.settings.phone_link}}" style="padding:0px;" class="custom-btn button--full-width">{{ 'products.product.sold_out' | t }}</a></div>');
 
         publish(PUB_SUB_EVENTS.variantChange, {data: {
           sectionId,
@@ -1034,10 +1034,10 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
-      if (text) addButtonText.textContent = text;
+      if (text) addButtonText.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
-      addButtonText.textContent = window.variantStrings.addToCart;
+      addButtonText.innerHTML = window.variantStrings.addToCart;
     }
 
     if (!modifyClass) return;
