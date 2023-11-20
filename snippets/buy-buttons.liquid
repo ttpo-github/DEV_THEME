@@ -132,7 +132,7 @@
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
                 <span>
                   {%- if product.selected_or_first_available_variant.available == false  -%}
-                    {{ 'products.product.sold_out' | t }}
+                    {{ 'products.product.sold_out'  }}
                   {%- else -%}                    
                       {{ 'products.product.add_to_cart' | t }}                    
                   {%- endif -%}
