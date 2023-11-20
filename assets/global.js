@@ -1000,13 +1000,13 @@ class VariantSelects extends HTMLElement {
     
     if(taginfo.includes("unavailable")){
       addButton.removeAttribute('disabled');
-      addButton.classList.add('hidden');
+      //addButton.classList.add('hidden');
       availability.classList.remove('hidden');
     }else{
       if (disable) {
         addButton.setAttribute('disabled', 'disabled');
         if(text==window.variantStrings.soldOut){
-          addButton.classList.add('hidden');
+          //addButton.classList.add('hidden');
           availability.classList.remove('hidden');
         }
         if (text) addButtonText.textContent = text;
