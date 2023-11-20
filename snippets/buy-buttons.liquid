@@ -128,6 +128,7 @@
         {% comment %}
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
         {% endcomment %}
+        "
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
                 <span>
                   {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
