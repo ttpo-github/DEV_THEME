@@ -979,7 +979,7 @@ class VariantSelects extends HTMLElement {
         if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
         const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, `<div class="availability"><a href="${window.varaintStrings.storeNumber}" style="padding:0px;" class="custom-btn button--full-width">${window.variantStrings.soldOut}</a></div>`);
+        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, `<div class="availability"><a href="${window.variantStrings.storeNumber}" style="padding:0px;" class="custom-btn button--full-width">${window.variantStrings.soldOut}</a></div>`);
 
         publish(PUB_SUB_EVENTS.variantChange, {data: {
           sectionId,
