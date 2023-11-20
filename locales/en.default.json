@@ -155,8 +155,8 @@
         "unit_price": "Unit price"
       },
       "share": "Share this product",
-      "sold_out": "<div class=\"availability\"><a href=\"{{block.settings.phone_link}}\" style=\"padding:0px;\" class=\"custom-btn button--full-width\">{{ 'products.product.sold_out' | t }}<\/a><\/div>",
-      "unavailable": "<div class=\"availability\"><a href=\"{{block.settings.phone_link}}\" style=\"padding:0px;\" class=\"custom-btn button--full-width\">{{ 'products.product.sold_out' | t }}<\/a><\/div>",
+      "sold_out": "Call for Availability - (833) 416-9396",
+      "unavailable": "Call for Availability - (833) 416-9396",
       "vendor": "Vendor",
       "value_unavailable": "{{ option_value }} - Unavailable",
       "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
