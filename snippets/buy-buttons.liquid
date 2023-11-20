@@ -132,10 +132,7 @@
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
                 <span>
                   {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                    <div class="availability
-                      {% if product.selected_or_first_available_variant.available == true %}                
-                        {% unless product.tags contains 'unavailable'%} hidden{% endunless %}                
-                      {% endif %}">
+                    <div class="availability">
                       <a href="{{block.settings.phone_link}}" style="padding:0px;" class="custom-btn button--full-width">{{ 'products.product.sold_out' | t }}</a>
                     </div>
                   {%- else -%}
