@@ -990,7 +990,7 @@ class VariantSelects extends HTMLElement {
   }
 
   /* CUSTOM TOGGLE */
-  
+ /* 
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
@@ -1022,9 +1022,9 @@ class VariantSelects extends HTMLElement {
     if (!modifyClass) return;
     }
   }
+*/
 
-
-  /*
+  
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
     if (!productForm) return;
@@ -1042,7 +1042,7 @@ class VariantSelects extends HTMLElement {
 
     if (!modifyClass) return;
   }
-*/
+
   
   setUnavailable() {
     const button = document.getElementById(`product-form-${this.dataset.section}`);
