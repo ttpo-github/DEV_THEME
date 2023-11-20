@@ -126,6 +126,9 @@
       {% if section.settings.head %}
         <h1 class="hero-banner-head">{{ section.settings.head }}</h1>
       {% endif %}
+      {% unless section.settings.subhead_below_main == blank %}
+        <h4 class="">{{ section.settings.subhead_below_main }}</h4>
+      {% endunless %}
     </div>
     {% if section.settings.bgimg %}
       <div class="hero-banner-child-img">
@@ -222,6 +225,11 @@
         "type": "text",
         "id": "subhead",
         "label": "Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "subhead_below_main",
+        "label": "Sub Heading Below Main Header"
       },
       {
         "type": "url",
