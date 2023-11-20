@@ -996,20 +996,20 @@ class VariantSelects extends HTMLElement {
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
-    const availability =  productForm.querySelector('.availability');
+    //const availability =  productForm.querySelector('.availability');
     let taginfo = this.getProductData().tags;
     if (!addButton) return;
     
     if(taginfo.includes("unavailable")){
       addButton.removeAttribute('disabled');
       //addButton.classList.add('hidden');
-      availability.classList.remove('hidden');
+      //availability.classList.remove('hidden');
     }else{
       if (disable) {
         addButton.setAttribute('disabled', 'disabled');
         if(text==window.variantStrings.soldOut){
           //addButton.classList.add('hidden');
-          availability.classList.remove('hidden');
+          //availability.classList.remove('hidden');
         }
         if (text) addButtonText.textContent = text;
       } else {
