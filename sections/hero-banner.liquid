@@ -72,6 +72,7 @@
     margin: auto;
     max-width: 1020px;
   }
+  
   .hero-banner-child-img img {
     display: block;
     max-width: 75vh;
@@ -145,8 +146,8 @@
     </div>
 
     {% if section.settings.littleimg %}
-      <div class="" style="display:flex;justify-content:center;">
-        <img  height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
+      <div class="hero-banner-child-img" style="display:flex;justify-content:center;">
+        <img  width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
       </div>
     {% endif %}
     
