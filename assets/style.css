@@ -383,8 +383,7 @@ html body.home h2{
 .header-main .bt-container {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    padding: 8px 5px;
+    padding: 8px 20px;
 }
 .header-main nav{
   width: 100%;
