@@ -815,8 +815,9 @@ html .menu-drawer__navigation {
     display: block;
   }
   .header-main .bt-container {
-    padding: 5.5px 20px;
+    padding: 5.5px 5px;
     display: block;
+    align-items:center;
   }
   .icons-b-desc p {
     color: #fff;
