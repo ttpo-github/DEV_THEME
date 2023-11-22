@@ -691,15 +691,16 @@
                 
                 <div class="icons-b-desc" style="display:flex; justify-content:space-between;">
           <span style="color:white;">{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %} </span>
+          <span style="color:white;"> | </span>
                   <div>
                     
-                  <span style="color:white;"> | </span><a style="color:white; font-size: 1em;" href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }}  </a> <span style="color:white;"> | </span>
+                  <a style="color:white; font-size: 1em;" href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }}  </a> 
                    
                   <!--<span class="spanish-speaking-snip"> - se habla español</span> <span> | </span>-->
                     
                   </div>
 
-          
+                  <span style="color:white;"> | </span>
 
                  <!-- Language Selector -->
                   {% comment %}
