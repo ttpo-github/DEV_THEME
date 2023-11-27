@@ -59,7 +59,7 @@ div.tj-modal-content {
   height:26px;
 }
 
-.sub-header-cta{
+div.sub-header-cta{
   display:flex; 
   justify-content:space-between; 
   align-items:center;
@@ -81,7 +81,7 @@ div.tj-modal-content {
 /* Main Layout Breakpoint MOBILE STYLES HERE */
 @media only screen and (max-width: 992px) {
 
-  .sub-header-cta{
+  div.sub-header-cta{
   justify-content:center; 
   align-items:center;
     gap:10px;
