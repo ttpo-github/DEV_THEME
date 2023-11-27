@@ -737,7 +737,7 @@
                       {% form 'localization' %}
                        
                         <div class="disclosure">
-                        <select>
+                        <select class="language-selector">
                           {% for language in localization.available_languages %}
                               <option class="disclosure__item" tabindex="{{ forloop.index }}" {% if language.iso_code == localization.language.iso_code %}selected aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
                                 
