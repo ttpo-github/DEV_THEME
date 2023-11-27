@@ -690,8 +690,10 @@
                 
                 
                 <div class="icons-b-desc" id="sub-header-cta">
-          <span style="color:white;">{% unless localization.country.iso_code == 'CA' %}{{ section.settings.shipping_text }}{% endunless %} </span>
-          <span style="color:white;"> | </span>
+                  {% unless localization.country.iso_code == 'CA' %}
+                    <span style="color:white;">{{ section.settings.shipping_text }} </span>
+                    <span style="color:white;"> | </span>
+                  {% endunless %}
                   <div>
                     
                   <a style="color:white; font-size: 1em;" href="tel:{{section.settings.header_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", ""}}" class="hidden-link">{{ section.settings.header_phone }}  </a> 
