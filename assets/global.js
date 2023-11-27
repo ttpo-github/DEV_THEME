@@ -1054,7 +1054,7 @@ class VariantSelects extends HTMLElement {
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
 
     if (!addButton) return;
-    addButtonText.textContent = window.variantStrings.unavailable;
+    addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" style="padding:0px;" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
     if (price) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
     if (sku) sku.classList.add('visibility-hidden');
