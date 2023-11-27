@@ -6606,7 +6606,7 @@ to {top:0; opacity:1}
 }
 @media only screen and (max-width: 991px){
 .modal {
-    padding-top: 88px;
+    padding-top: 78px;
     max-height: 100vh;
 }
 }
