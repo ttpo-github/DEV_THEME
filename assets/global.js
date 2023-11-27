@@ -1039,7 +1039,7 @@ class VariantSelects extends HTMLElement {
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.innerHTML = window.variantStrings.addToCart;
-      addButton.removeProperty('style')
+      addButton.style.padding = null
     }
 
     if (!modifyClass) return;
