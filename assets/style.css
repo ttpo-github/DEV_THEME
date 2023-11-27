@@ -290,8 +290,10 @@ html body.home h2{
   background-color: #0000D8;
 }
 .header-wrapper .bt-header-space{
-  padding-top: 30px;
-  padding-bottom: 37px;
+  /*padding-top: 30px;
+  padding-bottom: 37px;*/
+  padding-top:30px;
+  padding-bottom:30px;
   justify-content: space-between;
 }
 .bt-header .header-small-block {
@@ -869,6 +871,7 @@ html .menu-drawer__navigation {
   }
   .header-wrapper .bt-header-space {
 /*     padding-top: 72px; */
+    padding-top:15px;
     padding-bottom: 15px;
     margin: 0;
   }
