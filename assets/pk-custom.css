@@ -59,6 +59,12 @@ div.tj-modal-content {
   height:26px;
 }
 
+.sub-header-cta{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+}
+
 /* ^^^ General Style Cusomizations ^^^ */
 
 @media only screen and (min-width: 992px) {
@@ -74,6 +80,12 @@ div.tj-modal-content {
 
 /* Main Layout Breakpoint MOBILE STYLES HERE */
 @media only screen and (max-width: 992px) {
+
+  .sub-header-cta{
+  justify-content:center; 
+  align-items:center;
+    gap:10px;
+}
 
   .language-selector{
   height:auto;
