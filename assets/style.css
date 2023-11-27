@@ -695,9 +695,7 @@ html .menu-drawer__navigation {
     width: 100%;
   }
 
-  .header-call {
-  width:40%;
-}
+  
 }
 
 @media only screen and (max-width: 1360px) {
