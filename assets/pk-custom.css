@@ -31,6 +31,7 @@ div.tj-modal-content {
 }
 /* --- Style Overrides for the Tip Quick Widget --- */
 
+/* --- General Style Cusomizations --- */
 .cart-button-container {
   display:flex;
   gap: 5px;
@@ -54,6 +55,12 @@ div.tj-modal-content {
     color:grey;
 }
 
+.language-selector{
+  height:26px;
+}
+
+/* --- General Style Cusomizations --- */
+
 @media only screen and (min-width: 992px) {
 
   
@@ -62,6 +69,8 @@ div.tj-modal-content {
 }
 
 }
+
+
 
 /* Main Layout Breakpoint MOBILE STYLES HERE */
 @media only screen and (max-width: 992px) {
