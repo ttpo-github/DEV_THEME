@@ -1034,12 +1034,14 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
-      console.log(text)
+      //console.log(text)
       if (text) addButtonText.innerHTML = text;
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.innerHTML = window.variantStrings.addToCart;
-      addButton.style.padding = null
+
+      
+      addButton.style.padding = null;
     }
 
     if (!modifyClass) return;
@@ -1057,7 +1059,7 @@ class VariantSelects extends HTMLElement {
     if (!addButton) return;
     addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
 
-    addButton.style.padding = "0"
+    addButton.style.padding = "0";
     
     if (price) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
