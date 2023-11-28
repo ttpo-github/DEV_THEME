@@ -314,9 +314,11 @@ window.addEventListener("load", function() {
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
-    <a style="color:white; font-size: 1em; display:none;" href="tel:(833) 910-3416" class="patrick">(833) 910-3416</a>
+    <a style="color:white; font-size: 1em; display:none;" href="tel:(833) 910-3416" id="dynamic_phone_link" class="hidden-link">(833) 910-3416</a>
 
     <script>
+      const phoneTrackingLink = document.getElementById("dynamic_phone_link")
+      
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -333,10 +335,12 @@ window.addEventListener("load", function() {
 
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
+        //soldOut: `{{ 'products.product.sold_out' | t }}`,
+        //unavailable: `{{ 'products.product.unavailable' | t }}`,
+        soldOut: `Call for Availability: ${phoneTrackingLink.innerText}`,
+        unavailable: `Call for Availability: ${phoneTrackingLink.innerText}`,
         unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
-        storeNumber: 'tel:(833) 416-9396'
+        storeNumber: `${phoneTrackingLink.href}`
       }
 
       window.accessibilityStrings = {
