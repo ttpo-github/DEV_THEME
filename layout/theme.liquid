@@ -314,6 +314,8 @@ window.addEventListener("load", function() {
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
+    <a style="color:white; font-size: 1em; display:none;" href="tel:(833) 910-3416" class="hidden-link">(833) 910-3416</a>
+
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
@@ -321,7 +323,7 @@ window.addEventListener("load", function() {
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
         cart_url: '{{ routes.cart_url }}',
-        predictive_search_url: '{{ routes.predictive_search_url }}'
+        predictive_search_url: '{{ routes.predictive_search_url }}',
       };
 
       window.cartStrings = {
