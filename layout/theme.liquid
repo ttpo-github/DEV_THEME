@@ -318,7 +318,7 @@ window.addEventListener("load", function() {
 
     <script>
       const phoneTrackingLink = document.getElementById("dynamic_phone_link")
-      
+      console.log(phoneTrackingLink)
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
