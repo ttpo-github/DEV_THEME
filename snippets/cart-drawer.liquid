@@ -13,9 +13,9 @@
   }
 </style>
 
-<cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
-  <div id="CartDrawer" class="cart-drawer">
-    <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+<cart-drawer data-my-attribute="Patrick Krempin" class="drawer{% if cart == empty %} is-empty{% endif %}">
+  <div data-my-attribute="Patrick Krempin" id="CartDrawer" class="cart-drawer">
+    <div data-my-attribute="Patrick Krempin" id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
       class="drawer__inner"
       role="dialog"
@@ -80,6 +80,7 @@
         {% if cart == empty %}
           class=" is-empty"
         {% endif %}
+         data-my-attribute="Patrick Krempin"
       >
         <form
           action="{{ routes.cart_url }}"
