@@ -3237,7 +3237,7 @@ quantity-input.quantity input {
   border-width: 0 1px;
   border-style: solid;
   border-color: #ddd;
-  opacity: 1;
+  opacity: .85;
   padding: 0;
   font-size: 18px;
   font-family: 'Inter';
