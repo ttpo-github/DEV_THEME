@@ -154,13 +154,13 @@ class QuickOrderList extends HTMLElement {
         section: document.getElementById(this.quickOrderListId).dataset.id,
         selector: '.quick-order-list__total',
       },
-      /*
+      
       {
         id: 'CartDrawer',
         selector: '#CartDrawer',
         section: 'cart-drawer',
       },
-      */
+      
     ];
   }
 
@@ -181,7 +181,7 @@ class QuickOrderList extends HTMLElement {
           ? sectionElement.querySelector(section.selector)
           : sectionElement;
       if (elementToReplace) {
-        console.log(elementToReplace)
+        //console.log(elementToReplace)
         elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       }
     });
