@@ -153,13 +153,13 @@ class QuickOrderList extends HTMLElement {
         section: document.getElementById(this.quickOrderListId).dataset.id,
         selector: '.quick-order-list__total',
       },
-      /*
+      
       {
         id: 'CartDrawer',
         selector: '#CartDrawer',
         section: 'cart-drawer',
       },
-      */
+      
     ];
   }
 
