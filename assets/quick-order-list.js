@@ -119,7 +119,7 @@ class QuickOrderList extends HTMLElement {
   }
 
   onCartUpdate() {
-    console.log(`${window.location.pathname}?section_id=${this.sectionId}`)
+    //console.log(`${window.location.pathname}?section_id=${this.sectionId}`)
     fetch(`${window.location.pathname}?section_id=${this.sectionId}`)
       .then((response) => response.text())
       .then((responseText) => {
@@ -181,6 +181,7 @@ class QuickOrderList extends HTMLElement {
           ? sectionElement.querySelector(section.selector)
           : sectionElement;
       if (elementToReplace) {
+        console.log(elementToReplace)
         elementToReplace.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.section], section.selector);
       }
     });
