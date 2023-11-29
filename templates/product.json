@@ -102,10 +102,21 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "ab761efd-d5b2-4f38-b73b-ee08c1c7e72b": {
+      "type": "quick-order-list",
+      "settings": {
+        "show_image": true,
+        "show_sku": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "ab761efd-d5b2-4f38-b73b-ee08c1c7e72b"
   ]
 }
