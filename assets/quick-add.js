@@ -47,7 +47,7 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     setInnerHTML(element, html) {
-      console.log(innerHTML)
+      //console.log(innerHTML)
       element.innerHTML = html;
 
       // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
