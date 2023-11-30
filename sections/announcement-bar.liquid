@@ -144,7 +144,7 @@ console.log(hideBar)
         if (distance < 0) {
           //document.getElementById("headline").innerText = "It's my birthday!";
           if(hideBar){
-            
+            document.getElementById('shopify-section-{{ section.id }}').style.display = "none";
           }
           document.getElementById("custom-countdown").style.display = "none";
           document.getElementById("countdown-content").style.display = "block";
