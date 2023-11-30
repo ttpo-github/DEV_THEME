@@ -18,11 +18,11 @@
         "76b03f89-7ae9-4c1b-a5c6-5aa2ca531c03": {
           "type": "announcement-timer",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Days until Christmas:",
             "text_alignment": "center",
             "color_scheme": "accent-1",
             "link": "",
-            "timer-end": "11\/30",
+            "timer-end": "12\/25",
             "custom_liquid": ""
           }
         }
