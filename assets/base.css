@@ -2119,13 +2119,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
     grid-template-columns: 1fr auto;
   }
 
-  .custom-countdown{
-    display:flex;
-  }
   
-  .custom-countdown-message{
-    line-height:2em;
-  }
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
