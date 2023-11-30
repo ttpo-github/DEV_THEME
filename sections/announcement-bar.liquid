@@ -160,7 +160,7 @@
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy + 1,
-      dayMonth = '{{block.settings.timer-end}}',
+      dayMonth = '{{block.settings.timer-end}}' + '/',
       birthday = dayMonth + yyyy;
       
 
@@ -338,7 +338,7 @@
         {
           "type": "text",
           "id": "timer-end",
-          "default": "12/25/",
+          "default": "12/25",
           "label": "End Timer"
         },
         {
