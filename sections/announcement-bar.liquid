@@ -160,14 +160,13 @@
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       hh = today.getHours(),
-      minutes = today.getMinutes(),
       nextYear = yyyy + 1,
       dayMonth = "12/25/",
-      birthday = dayMonth + yyyy;
+      //birthday = dayMonth + yyyy;
+      birthday = {{block.settings.timer-end}}
 
-  console.log(hh)
   
-  today = mm + "/" + dd + "/" + yyyy;
+  today = mm + "/" + dd + "/" + yyyy + "/" + hh;
   if (today > birthday) {
     birthday = dayMonth + nextYear;
   }
@@ -336,6 +335,12 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "text",
+          "id": "timer-end",
+          "default": "12/25/23/00",
+          "label": "End Timer"
         },
         {
               "type": "liquid",
