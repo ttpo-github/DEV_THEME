@@ -37,14 +37,15 @@
                         <li class="custom-time"><span id="minutes"></span> Minutes</li>
                         <li class="custom-time"><span id="seconds"></span> Seconds</li>
                       </ul>
+                      {%- if block.settings.link != blank -%}
+                      {% render 'icon-arrow' %}
+                      {%- endif -%}
                     </span>
                     <span id="countdown-content" >
                       <span>MERRY CHRISTMAS!</span>
                     </span>
                     
-                    {%- if block.settings.link != blank -%}
-                      {% render 'icon-arrow' %}
-                    {%- endif -%}
+                    
                   </div>
                 </div>
 
