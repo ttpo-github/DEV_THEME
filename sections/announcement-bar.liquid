@@ -159,12 +159,10 @@
       dd = String(today.getDate()).padStart(2, "0"),
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
-      hh = today.getHours(),
       nextYear = yyyy + 1,
-      dayMonth = "12/25/",
-      //birthday = dayMonth + yyyy;
-      birthday = '{{block.settings.timer-end}}'
-  console.log(birthday)
+      dayMonth = '{{block.settings.timer-end}}',
+      birthday = dayMonth + yyyy;
+      
 
   
   today = mm + "/" + dd + "/" + yyyy + "/" + hh;
@@ -340,7 +338,7 @@
         {
           "type": "text",
           "id": "timer-end",
-          "default": "12/25/2023/00",
+          "default": "12/25/",
           "label": "End Timer"
         },
         {
