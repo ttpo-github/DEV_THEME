@@ -37,9 +37,11 @@
                         <li class="custom-time"><span id="minutes"></span> Minutes</li>
                         <li class="custom-time"><span id="seconds"></span> Seconds</li>
                       </ul>
-                      {%- if block.settings.link != blank -%}
-                      {% render 'icon-arrow' %}
-                      {%- endif -%}
+                       <span id="custom-link-arrow">
+                          {%- if block.settings.link != blank -%}
+                          {% render 'icon-arrow' %}
+                          {%- endif -%}
+                       </span>
                     </div>
                     <span id="countdown-content" >
                       <span>{{ block.settings.timer-end-message }}</span>
@@ -81,8 +83,10 @@
 
 #countdown-content span {
   padding: 0px
-  
- 
+}
+
+#custom-link-arrow{
+  display:none;
 }
 
 @media screen and (min-width: 990px){
@@ -99,6 +103,10 @@
   .custom-countdown-message{
     line-height:2em;
   }
+
+  #custom-link-arrow{
+  display:block;
+}
 }
             
 </style>
