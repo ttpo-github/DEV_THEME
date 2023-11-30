@@ -28,21 +28,22 @@
             {%- endif -%}
                 <div class="page-width">
                   <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+                    
                     <span>{{ block.settings.text | escape }}</span>
-
-                     <div id="countdown">
+                    
+                     <span id="countdown">
                       <ul>
                         <li class="custom-time"><span id="days"></span>days</li>
                         <li class="custom-time"><span id="hours"></span>Hours</li>
                         <li class="custom-time"><span id="minutes"></span>Minutes</li>
                         <li class="custom-time"><span id="seconds"></span>Seconds</li>
                       </ul>
-                    </div>
-                    <div id="content" class="emoji">
+                    </span>
+                    <span id="content" class="emoji">
                       <span>🥳</span>
                       <span>🎉</span>
                       <span>🎂</span>
-                    </div>
+                    </span>
                     
                     {%- if block.settings.link != blank -%}
                       {% render 'icon-arrow' %}
