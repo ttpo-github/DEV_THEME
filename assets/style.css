@@ -6312,7 +6312,7 @@ html .en-tx--container-inner {
 .modal {
   display: none;
   position: fixed;
-  z-index: 11;
+  z-index: 15;
   
   left: 0;
   top: 0;
