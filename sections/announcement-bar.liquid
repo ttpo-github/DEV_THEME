@@ -29,7 +29,7 @@
                 <div class="page-width">
                   <div class="announcement-bar__message {{ block.settings.text_alignment }} h5">
                     
-                     <span id="custom-countdown">
+                     <div id="custom-countdown">
                       <span class="custom-countdown-message">{{ block.settings.text | escape }}</span>
                       <ul class="custom-countdown-list">
                         <li class="custom-time"><span id="days"></span> Days</li>
@@ -40,7 +40,7 @@
                       {%- if block.settings.link != blank -%}
                       {% render 'icon-arrow' %}
                       {%- endif -%}
-                    </span>
+                    </div>
                     <span id="countdown-content" >
                       <span>{{ block.settings.timer-end-message }}</span>
                     </span>
