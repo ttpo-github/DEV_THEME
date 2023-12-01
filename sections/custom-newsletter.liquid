@@ -11,6 +11,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+
+    .white-text{
+      color:#FFFFFF;
+    }
   }
   
 {%- endstyle -%}
@@ -21,15 +25,15 @@
   </div>
   {% endif %}
   <div class="newsletter__wrapper bt-container content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="inner-container" style="color:#FFFFFF;">
+    <div class="inner-container white-text" >
       {%- for block in section.blocks -%}
         {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
           {%- when 'heading' -%}
-            <h2 style="color:#FFFFFF;" class="section__title">{{ block.settings.heading | escape }}</h2>
+            <h2 class="section__title white-text">{{ block.settings.heading | escape }}</h2>
           {%- when 'paragraph' -%}
-            <div class="newsletter__subheading rte" style="color:#FFFFFF;" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+            <div class="newsletter__subheading rte white-color" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
           {%- when 'email_form' -%}
             <div class="newsletter_form-wrap">
               {% form 'customer', class: 'newsletter-form' %}
