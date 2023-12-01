@@ -1638,7 +1638,7 @@ span.message.show {
   width: 100%;
 }
 
-.pk-newletter_bg-image{
+div.pk-newletter_bg-image{
   position: absolute;
     top: 0;
     bottom: 0;
