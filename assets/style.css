@@ -1637,6 +1637,17 @@ span.message.show {
   height: 100%;
   width: 100%;
 }
+
+.pk-newletter_bg-image{
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /* max-width: 740px; */
+    width: 100%;
+    overflow: hidden;
+}
+
 .newletter_bg-image {
   position: absolute;
   top: 0;
