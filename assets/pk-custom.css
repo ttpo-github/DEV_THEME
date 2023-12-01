@@ -69,7 +69,9 @@ div.tj-modal-content {
 }
 
 
-
+.yotpo-label .yotpo-small-box {
+  display:none;
+}
 /* ^^^ General Style Cusomizations ^^^ */
 
 @media only screen and (min-width: 992px) {
