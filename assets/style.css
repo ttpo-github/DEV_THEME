@@ -1591,11 +1591,12 @@ span.message.show {
   /*font-size: 16px;
   font-family: 'Inter';*/
   font-size:1.5em;
-  font-family: 'Oswald'
+  font-family: 'Oswald';
   letter-spacing: -.02em;
   padding: 0 20px;
   border: 1px solid #000646;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border-radius:20px;
   box-shadow: none;
   background: #fbfaf8;
   color: #000646;
