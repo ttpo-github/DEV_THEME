@@ -27,7 +27,7 @@
               <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
             {%- endif -%}
                 <div class="page-width">
-                  <div class="announcement-bar__message {{ block.settings.text_alignment }} h5">
+                  <div class=" {{ block.settings.text_alignment }} h5">
                     
                      <div id="custom-countdown">
                       <span class="custom-countdown-message">{{ block.settings.text | escape }} </span>
@@ -68,7 +68,7 @@
   display:flex;
   justify-content:center;
   text-align:center;
-  font-size:.7em;
+  font-size:.8em;
 }
 
 .custom-countdown-message {
