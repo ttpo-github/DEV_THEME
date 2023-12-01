@@ -17,7 +17,7 @@
 <div class="newsletter {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   {% if section.settings.image != blank %}
   <div class="newletter_bg-image pk-newletter_bg-image">
-    {{ section.settings.image | image_url: width: 1200 | image_tag : alt : section.settings.image.alt }}
+    {{ section.settings.image | image_url | image_tag : alt : section.settings.image.alt }}
   </div>
   {% endif %}
   <div class="newsletter__wrapper bt-container content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
