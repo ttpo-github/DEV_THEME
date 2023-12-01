@@ -68,6 +68,10 @@ div.tj-modal-content {
   gap:10px;
 }
 
+
+.yotpo-reviews-carousel .carousel-display-wrapper div{
+  display:none;
+}
 /* ^^^ General Style Cusomizations ^^^ */
 
 @media only screen and (min-width: 992px) {
