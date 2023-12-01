@@ -1648,6 +1648,15 @@ div.pk-newletter_bg-image{
     overflow: hidden;
 }
 
+div.pk-newletter_bg-image:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  border-width: 0px;
+}
+
 .newletter_bg-image {
   position: absolute;
   top: 0;
