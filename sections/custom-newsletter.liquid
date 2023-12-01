@@ -33,7 +33,7 @@
           {%- when 'heading' -%}
             <h2 class="section__title white-text">{{ block.settings.heading | escape }}</h2>
           {%- when 'paragraph' -%}
-            <div class="newsletter__subheading rte white-color" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+            <div class="newsletter__subheading rte white-text" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
           {%- when 'email_form' -%}
             <div class="newsletter_form-wrap">
               {% form 'customer', class: 'newsletter-form' %}
