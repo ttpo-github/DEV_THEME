@@ -1060,13 +1060,15 @@ class VariantSelects extends HTMLElement {
     console.log(updatedPhoneLink)
 
     if (!addButton) return;
-    
+    addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
+
+    /*
     if(!updatedPhoneLink){
       addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
     } else {
       addButtonText.innerHTML = updatedPhoneLink;
     }
-    
+    */
 
     addButton.style.padding = "0";
     
