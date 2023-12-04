@@ -317,8 +317,6 @@ window.addEventListener("load", function() {
     <a style="color:white; font-size: 1em; display:none;" href="tel:(833) 910-3416" id="dynamic_phone_link" class="hidden-link">TESTING (833) 910-3416</a>
 
     <script>
-      let phoneTrackingLink = document.getElementById("dynamic_phone_link")
-      console.log(`THE PHONE LINK ELEMENT: ${phoneTrackingLink}`)
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -335,12 +333,9 @@ window.addEventListener("load", function() {
 
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        //soldOut: `{{ 'products.product.sold_out' | t }}`,
-        //unavailable: `{{ 'products.product.unavailable' | t }}`,
-        soldOut: phoneTrackingLink,
-        unavailable: `Call for Availability: ${phoneTrackingLink.innerText}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
         unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
-        storeNumber: `${phoneTrackingLink.href}`
       }
 
       window.accessibilityStrings = {
