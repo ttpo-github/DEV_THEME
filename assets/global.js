@@ -1058,7 +1058,7 @@ class VariantSelects extends HTMLElement {
 
     const updatedPhoneLink = document.getElementById("dynamic_phone_link");
     
-    const usablePhoneLink = !updatedPhoneLink ? updatedPhoneLink.cloneNode(true) : null;
+    const usablePhoneLink = updatedPhoneLink ? updatedPhoneLink.cloneNode(true) : null;
     
 
     if (!addButton) return;
