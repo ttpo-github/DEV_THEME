@@ -1067,7 +1067,7 @@ class VariantSelects extends HTMLElement {
     if(!usablePhoneLink){
       addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
     } else {
-      addButtonText.appendChild(usablePhoneLink.outerHTML);
+      addButtonText.appendChild(usablePhoneLink);
       usablePhoneLink.style.display = "inline"
     }
     
