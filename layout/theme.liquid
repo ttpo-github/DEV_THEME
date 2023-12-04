@@ -317,7 +317,7 @@ window.addEventListener("load", function() {
     <a style="color:white; font-size: 1em; display:none;" href="tel:(833) 910-3416" id="dynamic_phone_link" class="hidden-link">TESTING (833) 910-3416</a>
 
     <script>
-      let phoneTrackingLink = document.getElementById("dynamic_phone_link")
+      let phoneTrackingLink = `${document.getElementById("dynamic_phone_link")}`
       console.log(phoneTrackingLink)
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
