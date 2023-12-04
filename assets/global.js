@@ -1056,7 +1056,12 @@ class VariantSelects extends HTMLElement {
     const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
 
+    const updatedPhoneLink = document.getElementById("dynamic_phone_link")
+    console.log(updatedPhoneLink)
+
     if (!addButton) return;
+    
+    
     addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
 
     addButton.style.padding = "0";
