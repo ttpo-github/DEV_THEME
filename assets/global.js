@@ -1056,8 +1056,11 @@ class VariantSelects extends HTMLElement {
     const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
 
-    const updatedPhoneLink = document.getElementById("dynamic_phone_link").outerHTML;
-    console.log(updatedPhoneLink)
+    const updatedPhoneLink = document.getElementById("dynamic_phone_link");
+    
+    const usablePhoneLink = !updatedPhoneLink ? updatedPhoneLink.cloneNode(true) : null;
+    usablePhoneLink.style.display = "inline"
+    console.log(usablePhoneLink)
 
     if (!addButton) return;
 
