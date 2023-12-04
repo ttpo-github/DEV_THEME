@@ -1059,17 +1059,16 @@ class VariantSelects extends HTMLElement {
     const updatedPhoneLink = document.getElementById("dynamic_phone_link");
     
     const usablePhoneLink = !updatedPhoneLink ? updatedPhoneLink.cloneNode(true) : null;
-    usablePhoneLink.style.display = "inline"
-    console.log(usablePhoneLink)
+    
 
     if (!addButton) return;
 
     
-    if(!updatedPhoneLink){
+    if(!usablePhoneLink){
       addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
     } else {
       addButtonText.innerHTML = updatedPhoneLink;
-      updatedPhoneLink.style.display = "inline"
+      usablePhoneLink.style.display = "inline"
     }
     
 
