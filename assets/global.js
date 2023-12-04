@@ -1069,7 +1069,7 @@ class VariantSelects extends HTMLElement {
     } else {
       addButtonText.innerHTML = ""
       addButtonText.appendChild(usablePhoneLink);
-      usablePhoneLink.style.display = "inline"
+      usablePhoneLink.style.display = "block"
     }
     
 
