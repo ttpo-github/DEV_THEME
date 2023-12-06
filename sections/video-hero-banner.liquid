@@ -6,11 +6,16 @@
 {%- assign section_id = 'custom-hero-section-' | append: section.id -%}
 
 <div id="{{ section_id }}" class="custom-hero-section">
-  <div class="video-overlay">
+  <div class="bg-video-wrap">
+    <video id="heroVideo" loop muted autoplay>
+      <source src="{{ section.settings.video_source }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
     <div class="hero-content">
       <div class="hero-header">
         <input type="text" placeholder="{{ section.settings.header_input_placeholder }}" class="header-input">
-        <div class="play-button" onclick="openVideoModal('{{ section.settings.video_source }}')">
+        <div class="play-button" onclick="openVideoModal()">
           <img src="path-to-your-play-button-image.png" alt="Play Button">
         </div>
         <div class="cta-buttons">
@@ -21,24 +26,12 @@
     </div>
   </div>
 
-  <div class="embed-container">
-    <iframe
-      src="{{ section.settings.video_source }}"
-      frameborder="0"
-      allowfullscreen
-      allow="autoplay; encrypted-media"
-    ></iframe>
-  </div>
-
   <div id="video-modal" class="video-modal">
     <span class="close-modal" onclick="closeVideoModal()">X</span>
-    <iframe
-      class="modal-video"
-      src="{{ section.settings.video_source }}"
-      frameborder="0"
-      allow="autoplay; encrypted-media; controls"
-      allowfullscreen
-    ></iframe>
+    <video class="modal-video" controls>
+      <source src="{{ section.settings.video_source }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 
@@ -50,46 +43,47 @@
     overflow: hidden;
   }
 
-  .embed-container {
+  .bg-video-wrap {
     position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
     overflow: hidden;
-    max-width: 100%;
+    width: 100%;
+    height: 100vh;
   }
 
-  .embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  video#heroVideo, .modal-video {
+    min-width: 100%;
+    min-height: 100vh;
     z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
   }
 
-  .hero-content {
-    text-align: center;
-    color: #fff; /* Change as needed */
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-size: 3px 3px;
     z-index: 2;
   }
 
-  .hero-header {
+  .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    z-index: 3;
+  }
+
+  .hero-header {
+    text-align: center;
+    color: #fff; /* Change as needed */
   }
 
   .header-input {
@@ -116,7 +110,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 3;
+    z-index: 4;
   }
 
   .modal-video {
@@ -137,7 +131,7 @@
 </style>
 
 <script>
-  function openVideoModal(videoSource) {
+  function openVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -149,6 +143,7 @@
     document.body.style.overflow = 'auto';
   }
 </script>
+
 
 
 
