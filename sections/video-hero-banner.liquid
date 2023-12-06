@@ -1,12 +1,208 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% comment %}
+  Add the following code to your "sections" folder in your Shopify theme.
+  Name the file "custom_hero_section.liquid" or something similar.
+{% endcomment %}
+
+{%- assign section_id = 'custom-hero-section-' | append: section.id -%}
+
+<div id="{{ section_id }}" class="custom-hero-section">
+  <div class="hero-video-container">
+    <iframe
+      class="hero-video"
+      src="{{ section.settings.video_source }}"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      muted
+    ></iframe>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-header">
+      <input type="text" placeholder="Header Text" class="header-input">
+      <div class="play-button" onclick="openVideoModal('{{ section.settings.video_source }}')">
+        <img src="path-to-your-play-button-image.png" alt="Play Button">
+      </div>
+      <div class="cta-buttons">
+        <a href="{{ section.settings.cta_button_1_href }}" class="cta-button">{{ section.settings.cta_button_1_text }}</a>
+        <a href="{{ section.settings.cta_button_2_href }}" class="cta-button">{{ section.settings.cta_button_2_text }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="video-modal" class="video-modal">
+    <span class="close-modal" onclick="closeVideoModal()">X</span>
+    <iframe
+      class="modal-video"
+      src="{{ section.settings.video_source }}"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<style>
+  /* Add your custom styling here */
+
+  #{{ section_id }} {
+    position: relative;
+    overflow: hidden;
   }
+
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff; /* Change as needed */
+  }
+
+  .hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .header-input {
+    margin-bottom: 10px;
+  }
+
+  .play-button {
+    cursor: pointer;
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Add more styling as needed */
+
+  /* Video Modal Styles */
+  .video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  .modal-video {
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+    display: block;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function openVideoModal(videoSource) {
+    var modal = document.getElementById('video-modal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('custom-hero-section-{{ section.id }}').style.opacity = 0.5;
+  }
+
+  function closeVideoModal() {
+    var modal = document.getElementById('video-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    document.getElementById('custom-hero-section-{{ section.id }}').style.opacity = 1;
+  }
+</script>
+
+{% comment %}
+  Add the following code at the top of your "custom_hero_section.liquid" file.
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Video Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Video Source (YouTube URL)",
+      "id": "video_source",
+      "default": "https://www.youtube.com/embed/your-video-id",
+      "info": "Enter the YouTube video URL for the background. Make sure it's set to autoplay and muted."
+    },
+    {
+      "type": "text",
+      "label": "CTA Button 1 Text",
+      "id": "cta_button_1_text",
+      "default": "Learn More",
+      "info": "Enter the text for CTA button 1."
+    },
+    {
+      "type": "url",
+      "label": "CTA Button 1 Href",
+      "id": "cta_button_1_href",
+      "default": "/",
+      "info": "Enter the URL for CTA button 1."
+    },
+    {
+      "type": "text",
+      "label": "CTA Button 2 Text",
+      "id": "cta_button_2_text",
+      "default": "Shop Now",
+      "info": "Enter the text for CTA button 2."
+    },
+    {
+      "type": "url",
+      "label": "CTA Button 2 Href",
+      "id": "cta_button_2_href",
+      "default": "/",
+      "info": "Enter the URL for CTA button 2."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Hero Section",
+      "category": "Custom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Header Input",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Placeholder",
+          "id": "header_input_placeholder",
+          "default": "Header Text"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
