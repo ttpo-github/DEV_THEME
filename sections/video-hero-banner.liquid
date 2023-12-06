@@ -145,20 +145,21 @@
 
 
 
+
 {% comment %}
   Add the following code at the top of your "custom_hero_section.liquid" file.
 {% endcomment %}
 
 {% schema %}
 {
-  "name": "Video Hero Section",
+  "name": "Custom Hero Section",
   "settings": [
     {
       "type": "text",
-      "label": "Video Source (YouTube URL)",
+      "label": "Video Source (MP4)",
       "id": "video_source",
-      "default": "https://www.youtube.com/embed/n61ULEU7CO0?autoplay=1&mute=1&controls=0&loop=1",
-      "info": "Enter the YouTube video URL for the background. Make sure it's set to autoplay, muted, and looped without controls."
+      "default": "https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4",
+      "info": "Enter the video URL for the background. Make sure it's set to loop, muted, and autoplay."
     },
     {
       "type": "text",
@@ -194,11 +195,21 @@
       "id": "header_input_placeholder",
       "default": "Header Text",
       "info": "Enter the placeholder text for the header input."
+    },
+    {
+      "type": "range",
+      "label": "Height Adjustment",
+      "id": "height_adjustment",
+      "min": 200,
+      "max": 1200,
+      "step": 10,
+      "default": 600,
+      "info": "Adjust the height of the hero section. Note: Video will maintain full width."
     }
   ],
   "presets": [
     {
-      "name": "Video Hero Section",
+      "name": "Custom Hero Section",
       "category": "Custom"
     }
   ],
@@ -218,3 +229,4 @@
   ]
 }
 {% endschema %}
+
