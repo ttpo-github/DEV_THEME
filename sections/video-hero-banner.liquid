@@ -57,11 +57,14 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    overflow: hidden;
   }
 
   .hero-video {
-    width: 100%;
-    height: 100%;
+    width: 100vw; /* Use 100vw to make the video take up the entire width of the viewport */
+    height: 56.25vw; /* Maintain the 16:9 aspect ratio for the video */
+    min-height: 100vh; /* Ensure the video covers the entire viewport height */
+    object-fit: cover;
     pointer-events: none; /* Disable pointer events on the video background */
   }
 
@@ -123,6 +126,7 @@
     cursor: pointer;
   }
 </style>
+
 
 <script>
   function openVideoModal(videoSource) {
