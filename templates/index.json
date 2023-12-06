@@ -3,13 +3,12 @@
     "c75a5c74-c373-4ac0-ae17-321e4fa26a1f": {
       "type": "video-hero-banner",
       "settings": {
-        "video_source": "https:\/\/www.youtube.com\/embed\/n61ULEU7CO0?autoplay=1&mute=1&controls=0&loop=1",
+        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bc3a11477dd5488d8241aa6fbb14fe58.mp4",
         "cta_button_1_text": "Learn More",
         "cta_button_1_href": "\/",
         "cta_button_2_text": "Shop Now",
         "cta_button_2_href": "\/",
-        "header_input_placeholder": "Header Text",
-        "hero_height": 500
+        "header_input_placeholder": "Header Text"
       }
     },
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945": {
