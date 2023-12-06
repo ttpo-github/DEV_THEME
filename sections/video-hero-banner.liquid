@@ -45,34 +45,12 @@
 <style>
   /* Add your custom styling here */
 
-  
-  
-  
-  .embed-container 
-  { 
-    position: relative; 
-   padding-bottom: 56.25%; 
-   height: 0; 
-   overflow: hidden; 
-   max-width: 100%; } 
-  
-  .embed-container iframe, .embed-container object, .embed-container embed 
-  { 
-  position: absolute; 
-   top: 0; 
-   left: 0; 
-   width: 100%; 
-   height: 100%; }
-
-
-
   #{{ section_id }} {
     position: relative;
     overflow: hidden;
   }
 
   .hero-video-container {
-    /*
     position: absolute;
     top: 0;
     left: 0;
@@ -80,27 +58,13 @@
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    */
-    position: relative; 
-   padding-bottom: 56.25%; 
-   height: 0; 
-   overflow: hidden; 
-   max-width: 100%;
   }
 
   .hero-video {
-    /*
     width: 100vw; /* Use 100vw to make the video take up the entire width of the viewport */
-    height: auto; /* Allow the height to adjust automatically based on the video's aspect ratio */
-    min-height: 100vh; /* Ensure the video covers the entire viewport height on larger screens */
+    height: 100vh; /* Use 100vh to make the video take up the entire height of the viewport */
     object-fit: cover;
     pointer-events: none; /* Disable pointer events on the video background */
-    */
-    position: absolute; 
-   top: 0; 
-   left: 0; 
-   width: 100%; 
-   height: 100%;
   }
 
   .hero-content {
@@ -131,6 +95,8 @@
     justify-content: space-between;
   }
 
+  /* Add more styling as needed */
+
   /* Video Modal Styles */
   .video-modal {
     display: none;
@@ -159,6 +125,7 @@
     cursor: pointer;
   }
 </style>
+
 
 <script>
   function openVideoModal(videoSource) {
