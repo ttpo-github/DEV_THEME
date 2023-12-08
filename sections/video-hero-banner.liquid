@@ -157,14 +157,19 @@
 
 <script>
 
+  const heroVideo = document.getElementById("heroVideo")
+
   document.getElementById("video-modal").addEventListener('click', function(e){
-    console.log(e.target)
+    if(e.target.id == "video-modal"){
+      closeVideoModal()
+    }
   })
   
   
   function openVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'block';
+    heroVideo.stop();
     //document.body.style.opacity = "0.5"
     //document.body.style.overflow = 'hidden';
   }
@@ -172,6 +177,7 @@
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'none';
+    heroVideo.play();
     //document.body.style.overflow = 'auto';
   }
 </script>
