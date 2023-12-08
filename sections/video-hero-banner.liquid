@@ -158,6 +158,7 @@
 <script>
 
   const heroVideo = document.getElementById("heroVideo")
+  const modalVideo = document.getElementById("modal-video")
 
   document.getElementById("video-modal").addEventListener('click', function(e){
     if(e.target.id == "video-modal"){
@@ -170,6 +171,7 @@
     var modal = document.getElementById('video-modal');
     modal.style.display = 'block';
     heroVideo.pause();
+    modalVideo.play();
     //document.body.style.opacity = "0.5"
     //document.body.style.overflow = 'hidden';
   }
@@ -177,6 +179,7 @@
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'none';
+    modalVideo.pause();
     heroVideo.play();
     //document.body.style.overflow = 'auto';
   }
