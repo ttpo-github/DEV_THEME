@@ -26,7 +26,7 @@
   <div id="video-modal" class="video-modal">
    <div class="video-modal-container">
     <span class="close-modal close" onclick="closeVideoModal()">X</span>
-    <video class="modal-video" loop controls autoplay>
+    <video class="modal-video" loop controls autoplay onload="playVideoModal()"
       
       <source src="{{ section.settings.video_source }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -155,7 +155,7 @@
 }
 </style>
 
-<script>
+<script defer>
 
   const heroVideo = document.getElementById("heroVideo");
   const modalVideo = document.getElementsByClassName("modal-video")[0];
@@ -185,6 +185,10 @@
     modalVideo.pause();
     heroVideo.play();
     //document.body.style.overflow = 'auto';
+  }
+
+  function playVideoModal(){
+    console.log(this)
   }
 
  
