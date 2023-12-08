@@ -160,6 +160,10 @@
   const heroVideo = document.getElementById("heroVideo");
   const modalVideo = document.getElementsByClassName("modal-video")[0];
 
+  modalVideo.onloadeddata = function() {
+    alert("Browser has loaded the current frame");
+};
+
   document.getElementById("video-modal").addEventListener('click', function(e){
     if(e.target.id == "video-modal"){
       closeVideoModal()
