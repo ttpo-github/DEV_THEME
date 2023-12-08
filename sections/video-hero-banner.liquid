@@ -158,13 +158,18 @@
 <script>
 
   const heroVideo = document.getElementById("heroVideo");
-  //const modalVideo = document.getElementByClassName("modal-video")[0];
+  const modalVideo = document.getElementByClassName("modal-video")[0];
 
   document.getElementById("video-modal").addEventListener('click', function(e){
     if(e.target.id == "video-modal"){
       closeVideoModal()
     }
   })
+
+  modalVideo.addEventListener("loadedmetadata", function() {
+        // Once the metadata is loaded, play the video
+        modalVideo.play();
+    });
   
   
   function openVideoModal() {
@@ -179,10 +184,12 @@
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'none';
-    //modalVideo.pause();
+    modalVideo.pause();
     heroVideo.play();
     //document.body.style.overflow = 'auto';
   }
+
+ 
 </script>
 
 
