@@ -56,14 +56,7 @@
     height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
   }
 
-  .video-modal-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: auto;
-  }
+  
 
 
   .hero-content {
@@ -104,7 +97,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%) scale(0);
+    transform:translate(-100%, -100%);
     transform-origin: center center;
     width: 100%;
     height: 100%;
@@ -117,14 +110,34 @@
   .video-modal.open {
     /*display: block;*/
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%);
   }
 
   .modal-video {
     width: 100%;
     height: 100%;
     /*margin: 10% auto;*/
-    display: block;
+    /*display: block;*/
+    transform:translate(-50%, -50%) scale(0);
+    opacity:0;
+    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+  }
+
+
+  .video-modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) scale(0);
+    opacity:0;
+    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+    width: 75%;
+    height: auto;
+  }
+
+  .mvideo-modal-container.open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .close-modal {
@@ -226,6 +239,8 @@
 
    function openVideoModal() {
     var modal = document.getElementById('video-modal');
+    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+    videoModalContainer.classList.add('open');
     modal.classList.add('open');
     document.body.classList.add('modal-open');
     
@@ -236,6 +251,8 @@
 
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
+    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+    videoModalContainer.classList.remove('open');
     modal.classList.remove('open');
     document.body.classList.remove('modal-open');
     
