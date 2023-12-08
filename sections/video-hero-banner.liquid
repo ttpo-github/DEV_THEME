@@ -104,11 +104,19 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%) scale(0);
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 20;
+    opacity:0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .video-modal.open {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   .modal-video {
@@ -193,7 +201,8 @@
   
   function openVideoModal() {
     var modal = document.getElementById('video-modal');
-    modal.style.display = 'block';
+    //modal.style.display = 'block';
+    modal.classList.add('open');
     document.body.classList.add('modal-open');
     heroVideo.pause();
     // Play the modal video when the modal is opened
@@ -203,7 +212,8 @@
 
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
-    modal.style.display = 'none';
+    //modal.style.display = 'none';
+    modal.classList.remove('open');
     document.body.classList.remove('modal-open');
     heroVideo.play();
     // Pause the modal video when the modal is closed
