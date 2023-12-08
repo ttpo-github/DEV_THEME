@@ -199,13 +199,14 @@
     //document.body.style.overflow = 'auto';
   }
   */
-  
+  /*
   function openVideoModal() {
     var modal = document.getElementById('video-modal');
     //modal.style.display = 'block';
     modal.classList.add('open');
     document.body.classList.add('modal-open');
     heroVideo.pause();
+    
     // Play the modal video when the modal is opened
     var modalVideo = document.querySelector('.modal-video');
     modalVideo.play();
@@ -221,7 +222,27 @@
     var modalVideo = document.querySelector('.modal-video');
     modalVideo.pause();
   }
+*/
 
+   function openVideoModal() {
+    var modal = document.getElementById('video-modal');
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+    
+    // Play the modal video when the modal is opened
+    var modalVideo = document.querySelector('.modal-video');
+    modalVideo.play();
+  }
+
+  function closeVideoModal() {
+    var modal = document.getElementById('video-modal');
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    
+    // Pause the modal video when the modal is closed
+    var modalVideo = document.querySelector('.modal-video');
+    modalVideo.pause();
+  }
  
 </script>
 
