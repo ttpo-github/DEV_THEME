@@ -26,7 +26,7 @@
   <div id="video-modal" class="video-modal">
    <div class="video-modal-container">
     <span class="close-modal close" onclick="closeVideoModal()">X</span>
-    <video class="modal-video" loop controls>
+    <video class="modal-video" loop controls autoplay>
       
       <source src="{{ section.settings.video_source }}" type="video/mp4">
       Your browser does not support the video tag.
@@ -158,7 +158,7 @@
 <script>
 
   const heroVideo = document.getElementById("heroVideo");
-  const modalVideo = document.getElementByClassName("modal-video")[0];
+  //const modalVideo = document.getElementByClassName("modal-video")[0];
 
   document.getElementById("video-modal").addEventListener('click', function(e){
     if(e.target.id == "video-modal"){
@@ -171,7 +171,7 @@
     var modal = document.getElementById('video-modal');
     modal.style.display = 'block';
     heroVideo.pause();
-    modalVideo.play();
+    /modalVideo.play();
     //document.body.style.opacity = "0.5"
     //document.body.style.overflow = 'hidden';
   }
@@ -179,7 +179,7 @@
   function closeVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'none';
-    modalVideo.pause();
+    //modalVideo.pause();
     heroVideo.play();
     //document.body.style.overflow = 'auto';
   }
