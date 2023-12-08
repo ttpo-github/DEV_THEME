@@ -159,7 +159,7 @@
 <script defer>
 
   const heroVideo = document.getElementById("heroVideo");
-  const modalVideo = document.getElementsByClassName("modal-video")[0];
+  //const modalVideo = document.getElementsByClassName("modal-video")[0];
 
   
 
@@ -170,7 +170,7 @@
   })
 
   
-  
+  /*
   function openVideoModal() {
     var modal = document.getElementById('video-modal');
     modal.style.display = 'block';
@@ -189,9 +189,26 @@
     heroVideo.play();
     //document.body.style.overflow = 'auto';
   }
+  */
+  
+  function openVideoModal() {
+    var modal = document.getElementById('video-modal');
+    modal.style.display = 'block';
+    document.body.classList.add('modal-open');
+    heroVideo.pause();
+    // Play the modal video when the modal is opened
+    var modalVideo = document.querySelector('.modal-video');
+    modalVideo.play();
+  }
 
-  function playVideoModal(){
-    console.log("Here")
+  function closeVideoModal() {
+    var modal = document.getElementById('video-modal');
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+    heroVideo.play();
+    // Pause the modal video when the modal is closed
+    var modalVideo = document.querySelector('.modal-video');
+    modalVideo.pause();
   }
 
  
