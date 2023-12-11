@@ -15,17 +15,24 @@
       {% endunless %}
 
       {% unless section.settings.header_input_placeholder == blank  %}
-      <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
+        <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
       {% endunless %}
-
-      <div class="play-button" onclick="openVideoModal()">
-        <img id="image-play-button" src="{{ section.settings.play_btn | img_url: ''}}" alt="Play Button" height="100px" width="100px">
-      </div>
+      
+      {% unless section.settings.play_btn == blank  %}
+        <div class="play-button" onclick="openVideoModal()">
+          <img id="image-play-button" src="{{ section.settings.play_btn | img_url: ''}}" alt="Play Button" height="100px" width="100px">
+        </div>
+      {% endunless %}
       
       <div class="hero-banner-buttons">
-        
+        {% unless section.settings.cta_button_1_text == blank  %}
           <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
+        {% endunless %}
+        
+        {% unless section.settings.cta_button_2_text == blank  %}
           <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
+        {% endunless %}
+        
       </div>
     </div>
   </div>
@@ -142,6 +149,10 @@
     font-size: 3em;
     cursor: pointer;
     z-index: 21;
+  }
+
+  .close-modal:hover{
+    transform:scale(1.2);
   }
 
   /* RIBBON */
