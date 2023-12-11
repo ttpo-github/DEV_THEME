@@ -8,7 +8,8 @@
 
   <div class="hero-content">
     <div class="hero-header">
-      <input type="text" placeholder="{{ section.settings.header_input_placeholder }}" class="header-input">
+      <h4 class="hero-banner-subhead">{{ section.settings.header_input_placeholder }}</h4>
+      
       <div class="play-button" onclick="openVideoModal()">
         <img src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/play-button.jpg?v=1702307252" alt="Play Button" width='100px' height='100px'>
       </div>
@@ -38,8 +39,6 @@
 
 
 <style>
-  /* Add your custom styling here */
-
   #{{ section_id }} {
     position: relative;
     overflow: hidden;
@@ -142,6 +141,147 @@
     cursor: pointer;
     z-index:21;
   }
+
+/* PORTED OVER FROM HERO BANNER STYLES */
+
+.hero-banner-main {
+    background: #000;
+    margin: 0 0 20px;
+  }
+  .hero-banner-head {
+    font-size: 50px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 5px 0;
+  }
+  .hero-banner-subhead {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    line-height: 1.29;
+    padding: 6px 35px;
+    display: inline-block;
+    vertical-align: top;
+    background: #0000ff;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  .hero-banner-below-header {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    line-height: 1.29;
+    padding: 6px 35px;
+    display: inline-block;
+    vertical-align: top;
+    background: #00000;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  .hero-banner-subhead:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    border-width: 15px 0px 15px 11px;
+    border-style: solid;
+    border-color: transparent transparent transparent #000;
+  }
+  .hero-banner-subhead:after {
+    border-width: 15px 11px 15px 0;
+    border-style: solid;
+    border-color: transparent #000 transparent transparent;
+    left: auto;
+    right: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+  }
+  .hero-banner-buttons {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .hero-banner-buttons a {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+    font-weight: 600;
+    line-height: 1;
+    padding: 11px 10px;
+    background: #0000ff;
+    color: #fff;
+    margin: 0 5px;
+    vertical-align: top;
+    display: inline-block;
+    min-width: 150px;
+    text-transform: uppercase;
+  }
+  .hero-banner-child-img {
+    margin: auto;
+    max-width: 1020px;
+  }
+  
+  .hero-banner-child-img img {
+    display: block;
+    max-width: 75vh;
+    margin: 0 auto;
+  }
+  .hero-banner-child-content {
+    padding: 40px 15px 0px;
+    text-align: center;
+  }
+  @media screen and (max-width: 425px) {
+    h1.hero-banner-head {
+      font-size: 41px;
+      line-height: 1.2;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+    h4.hero-banner-subhead {
+      font-size: 14px;
+      line-height: 1;
+      padding: 5px 18px;
+    }
+    .hero-banner-subhead:before {
+      border-width: 12px 0px 12px 8px;
+    }
+    .hero-banner-subhead:after {
+      border-width: 12px 8px 12px 0;
+    }
+    .hero-banner-child-img {
+      max-width: 71.178vw;
+    }
+    .hero-banner-child-img.bottom-image {
+      max-width: 99vw;
+    }
+    .hero-banner-buttons a {
+      font-size: 12px;
+    }
+    .hero-banner-buttons a:not(:last-child):after {
+      border-width: 1px;
+      width: 5px;
+      height: 5px;
+    }
+    .hero-banner-buttons a {
+      font-size: 13px;
+      min-width: 100px;
+      padding: 8px 10px;
+    }
+  }
+/* PORTED OVER FROM HERO BANNER STYLES */
+
 
 
   @media only screen and (max-width: 992px) {
