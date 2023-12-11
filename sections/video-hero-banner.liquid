@@ -8,10 +8,12 @@
 
   <div class="hero-content">
     <div class="hero-header">
-      <div id="ribbon">
-        <span class="">{{ section.settings.ribbon_banner_text }}</span>
-      </div>
-
+      {% unless section.settings.ribbon_banner_text == blank  %}
+        <div id="ribbon">
+          <span class="">{{ section.settings.ribbon_banner_text }}</span>
+        </div>
+      {% endunless %}
+      
       <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
       
       <div class="play-button" onclick="openVideoModal()">
