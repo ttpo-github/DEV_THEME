@@ -13,7 +13,7 @@
       </div>
       
       <div class="play-button" onclick="openVideoModal()">
-        <img id="image-place-button" src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/icons8-play-100_1.png?v=1702315838" alt="Play Button" height="100px" width="100px">
+        <img id="image-play-button" src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/icons8-play-100_1.png?v=1702315838" alt="Play Button" height="100px" width="100px">
       </div>
       <div class="hero-banner-buttons">
         <a href="{{ section.settings.cta_button_1_href }}" class="cta-button">{{ section.settings.cta_button_1_text }}</a>
@@ -53,7 +53,10 @@
     height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
   }
 
-  
+  #image-play-button{
+    height:10px;
+    width:10px;
+  }
 
 
   .hero-content {
