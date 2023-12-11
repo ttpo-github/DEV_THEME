@@ -17,6 +17,7 @@
       <div class="play-button" onclick="openVideoModal()">
         <img id="image-play-button" src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/icons8-play-100_1.png?v=1702315838" alt="Play Button" height="100px" width="100px">
       </div>
+      
       <div class="hero-banner-buttons">
         <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
         <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
@@ -25,22 +26,15 @@
   </div>
 
   <div id="video-modal" class="video-modal">
-   <div class="video-modal-container">
-    <span class="close-modal close" onclick="closeVideoModal()">X</span>
-    <video class="modal-video" loop controls autoplay="1" onload="playVideoModal()">
-      
-      <source src="{{ section.settings.video_source }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-   </div>
+    <div class="video-modal-container">
+      <span class="close-modal close" onclick="closeVideoModal()">X</span>
+      <video class="modal-video" loop controls autoplay="1" onload="playVideoModal()">
+        <source src="{{ section.settings.video_source }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
-
-
-  
 </div>
-
-
-
 
 <style>
   #{{ section_id }} {
@@ -50,13 +44,9 @@
 
   #heroVideo, .modal-video {
     width: 100%;
-    
     object-fit: cover;
     height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
   }
-
-  
-
 
   .hero-content {
     position: absolute;
@@ -66,7 +56,6 @@
     bottom: 0;
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
     z-index: 2;
   }
@@ -78,22 +67,17 @@
     height: 80%;
     flex-direction: column;
     justify-content: space-evenly;
-    
-  }
-
-  .header-input {
-    margin-bottom: 10px;
   }
 
   .play-button {
     cursor: pointer;
     transition: all .2s ease-in-out;
-    width:fit-content;
-    margin:0 auto;
+    width: fit-content;
+    margin: 0 auto;
   }
 
-  .play-button:hover{
-    transform:scale(1.2);
+  .play-button:hover {
+    transform: scale(1.2);
   }
 
   .cta-buttons {
@@ -101,20 +85,19 @@
     justify-content: space-between;
   }
 
- 
   /* Video Modal Styles */
   .video-modal {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform:translate(0%, 100%);
+    transform: translate(0%, 100%);
     transform-origin: center center;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 20;
-    opacity:0;
+    opacity: 0;
     transition: transform 3s ease-in-out, opacity 3s ease-in-out;
   }
 
@@ -127,17 +110,15 @@
   .modal-video {
     width: 100%;
     height: 100%;
-    /*margin: 10% auto;*/
     display: block;
-    
   }
 
   .video-modal-container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform:translate(-100%, -100%) scale(0);
-    opacity:0;
+    transform: translate(-100%, -100%) scale(0);
+    opacity: 0;
     transition: transform 3s ease-in-out, opacity 3s ease-in-out;
     width: 75%;
     height: auto;
@@ -155,103 +136,95 @@
     color: #fff;
     font-size: 3em;
     cursor: pointer;
-    z-index:21;
+    z-index: 21;
   }
 
-/* RIBBON */
-
+  /* RIBBON */
   #ribbon {
-		padding: 8px 10px;
-		margin: 0 auto;
-		margin-top:1%;
-		position:relative;
-		color: #ffffff;
-		font-size: 1.5em;
-    font-weight:900;
-    text-transform:uppercase;
-     width: fit-content;
-		text-align: center;
-		letter-spacing:0.1em;
-		text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
-		box-shadow: inset 0px 1px 0px rgba(255,255,255,.3),
-					inset 0px 0px 20px rgba(0,0,0,0.1),
-					0px 1px 1px rgba(0,0,0,0.4);
-		 background: -webkit-linear-gradient(top,#0000ff, #0000ff);
-      display: inline-block;
-	}
-	
-#ribbon:before, #ribbon:after {
-		content: "";
-		width:.2em;
-		bottom:-.5em;
-		position:absolute;
-		display:block;
-		border: .9em solid #0000ff;
-		box-shadow:0px 1px 0px rgba(0,0,0,0.4);
-		z-index:-2;
-	}
-	
-#ribbon:before {
-		left:-1.35em;
-		border-right-width: .75em;
-		border-left-color:transparent;
-	}
-	
-#ribbon:after {
-		right:-1.35em;
-		border-left-width: .75em;
-		border-right-color:transparent;
-	}
-	
-#content:before, #content:after {
-		content:"";
-		bottom:-.5em;
-		position:absolute;
-		display:block;
-		border-style:solid;
-		border-color: #0675b3 transparent transparent transparent;
-		z-index:-1;
-	}
-	
-#content:before {
-	  left: 0;
-	  border-width: .5em 0 0 .5em;
-	}
-	
-#content:after {
-	  right: 0;
-	  border-width: .5em .5em 0 0;
-	}
-/* ROBBON */
+    padding: 8px 10px;
+    margin: 0 auto;
+    margin-top: 1%;
+    position: relative;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
+      inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+      0px 1px 1px rgba(0, 0, 0, 0.4);
+    background: -webkit-linear-gradient(top, #0000ff, #0000ff);
+    display: inline-block;
+  }
 
-/* PORTED OVER FROM HERO BANNER STYLES */
+  #ribbon:before,
+  #ribbon:after {
+    content: "";
+    width: .2em;
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border: .9em solid #0000ff;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    z-index: -2;
+  }
 
-.hero-banner-main {
+  #ribbon:before {
+    left: -1.35em;
+    border-right-width: .75em;
+    border-left-color: transparent;
+  }
+
+  #ribbon:after {
+    right: -1.35em;
+    border-left-width: .75em;
+    border-right-color: transparent;
+  }
+
+  #content:before,
+  #content:after {
+    content: "";
+    bottom: -.5em;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #0675b3 transparent transparent transparent;
+    z-index: -1;
+  }
+
+  #content:before {
+    left: 0;
+    border-width: .5em 0 0 .5em;
+  }
+
+  #content:after {
+    right: 0;
+    border-width: .5em .5em 0 0;
+  }
+  /* ROBBON */
+
+  /* PORTED OVER FROM HERO BANNER STYLES */
+  .hero-banner-main {
     background: #000;
     margin: 0 0 20px;
   }
+
   .hero-banner-head {
     font-size: 50px;
     color: #fff;
-    line-height: 1;
+    line
+
+    -height: 1;
     text-align: center;
     margin: 0;
     text-transform: uppercase;
     padding: 5px 0;
     text-shadow: 2px 2px 3px #000;
   }
-/*
-  .hero-banner-head::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-    left:0%;
-  height: 2px; /* Adjust the height of the line as needed */
-  background-color: #000; /* Adjust the color of the line as needed */
-  z-index: 5; /* Adjust the z-index to make sure it's above other elements if needed */
-}
-*/
+
   .hero-banner-subhead {
     font-size: 15px;
     color: #fff;
@@ -267,6 +240,7 @@
     text-transform: uppercase;
     margin: 0 0 12px;
   }
+
   .hero-banner-below-header {
     font-size: 15px;
     color: #fff;
@@ -282,6 +256,7 @@
     text-transform: uppercase;
     margin: 0 0 12px;
   }
+
   .hero-banner-subhead:before {
     content: "";
     position: absolute;
@@ -294,7 +269,6 @@
     border-color: transparent transparent transparent #000;
   }
 
-  
   .hero-banner-subhead:after {
     border-width: 12px 8px 12px 0;
     border-style: solid;
@@ -305,25 +279,13 @@
     content: "";
     top: 0;
     bottom: 0;
-}
-
-  /*
-  .hero-banner-subhead:after {
-    border-width: 15px 11px 15px 0;
-    border-style: solid;
-    border-color: transparent #000 transparent transparent;
-    left: auto;
-    right: 0;
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
   }
-  */
+
   .hero-banner-buttons {
     text-align: center;
     margin: 0 0 20px;
   }
+
   .hero-banner-buttons a {
     text-align: center;
     font-size: 1.3em;
@@ -331,7 +293,7 @@
     font-weight: 600;
     line-height: 1;
     padding: 21px 20px;
-    width:33%;
+    width: 33%;
     background: #0000ff;
     color: #fff;
     margin: 0 20px;
@@ -343,8 +305,9 @@
   }
 
   .hero-banner-buttons a:hover {
-    transform:scale(1.2);
-}
+    transform: scale(1.2);
+  }
+
   .hero-banner-child-img {
     margin: auto;
     max-width: 1020px;
@@ -355,139 +318,138 @@
     max-width: 75vh;
     margin: 0 auto;
   }
+
   .hero-banner-child-content {
     padding: 40px 15px 0px;
     text-align: center;
   }
+
   @media screen and (max-width: 431px) {
     h1.hero-banner-head {
       font-size: 1.3em;
       line-height: 1.2;
       padding: 0;
-      margin-top:8px;
+      margin-top: 8px;
       margin-bottom: 8px;
     }
+
     h4.hero-banner-subhead {
       font-size: 14px;
       line-height: 1;
       padding: 5px 18px;
     }
+
     .hero-banner-subhead:before {
       border-width: 12px 0px 12px 8px;
     }
+
     .hero-banner-subhead:after {
       border-width: 12px 8px 12px 0;
     }
+
     .hero-banner-child-img {
       max-width: 71.178vw;
     }
+
     .hero-banner-child-img.bottom-image {
       max-width: 99vw;
     }
+
     .hero-banner-buttons a {
       font-size: 12px;
       margin: 0px 5px;
     }
+
     .hero-banner-buttons a:not(:last-child):after {
       border-width: 1px;
       width: 5px;
       height: 5px;
     }
+
     .hero-banner-buttons a {
       font-size: 13px;
       /*min-width: 100px;*/
       padding: 8px 10px;
     }
   }
-/* PORTED OVER FROM HERO BANNER STYLES */
 
-
+  /* PORTED OVER FROM HERO BANNER STYLES */
 
   @media only screen and (max-width: 992px) {
-  #heroVideo, .modal-video{
-    height:auto;
-  }
-
-    h1.hero-banner-head{
-      font-size:1em;
+    #heroVideo, .modal-video {
+      height: auto;
     }
 
-    .hero-content{
-      justify-content:center;
+    h1.hero-banner-head {
+      font-size: 1em;
     }
 
-    .video-modal-container{
-      width:100%;
+    .hero-content {
+      justify-content: center;
+    }
+
+    .video-modal-container {
+      width: 100%;
     }
 
     .video-modal-container.open {
       transform: translate(-50%, -100%) scale(1);
     }
 
-    #image-play-button{
-    height:75px;
-    width:75px;
-  }
-
-     .modal-video {
-    width: 95%;
-    height: 95%;
-    margin: 10% auto;
-    display: block;
-  }
-
-    .hero-header{
-      height:100%;
-      justify-content:space-between;
+    #image-play-button {
+      height: 75px;
+      width: 75px;
     }
 
-    
+    .modal-video {
+      width: 95%;
+      height: 95%;
+      margin: 10% auto;
+      display: block;
+    }
+
+    .hero-header {
+      height: 100%;
+      justify-content: space-between;
+    }
 
     .video-modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
-    width: 100%;
-    height:100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 3;
-  }
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 3;
+    }
 
     #ribbon {
-    font-size: 1em;
-    
+      font-size: 1em;
+    }
   }
-
-
-
-}
 </style>
 
 <script defer>
-
   const heroVideo = document.getElementById("heroVideo");
-  //const modalVideo = document.getElementsByClassName("modal-video")[0];
 
-  
-
-  document.getElementById("video-modal").addEventListener('click', function(e){
-    if(e.target.id == "video-modal"){
-      closeVideoModal()
+  document.getElementById("video-modal").addEventListener('click', function(e) {
+    if (e.target.id == "video-modal") {
+      closeVideoModal();
     }
-  })
+  });
 
-   function openVideoModal() {
+  function openVideoModal() {
     var modal = document.getElementById('video-modal');
     var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
     videoModalContainer.classList.add('open');
     modal.classList.add('open');
     document.body.classList.add('modal-open');
-    
+
     // Play the modal video when the modal is opened
     var modalVideo = document.querySelector('.modal-video');
-    modalVideo.play();   
+    modalVideo.play();
     heroVideo.pause();
   }
 
@@ -497,61 +459,12 @@
     videoModalContainer.classList.remove('open');
     modal.classList.remove('open');
     document.body.classList.remove('modal-open');
-    
+
     // Pause the modal video when the modal is closed
     var modalVideo = document.querySelector('.modal-video');
     modalVideo.pause();
     heroVideo.play();
   }
-
-  
-  /*
-  function openVideoModal() {
-    var modal = document.getElementById('video-modal');
-    modal.style.display = 'block';
-    heroVideo.pause();
-
-    
-    //modalVideo.play();
-    //document.body.style.opacity = "0.5"
-    //document.body.style.overflow = 'hidden';
-  }
-
-  function closeVideoModal() {
-    var modal = document.getElementById('video-modal');
-    modal.style.display = 'none';
-    modalVideo.pause();
-    heroVideo.play();
-    //document.body.style.overflow = 'auto';
-  }
-  */
-  /*
-  function openVideoModal() {
-    var modal = document.getElementById('video-modal');
-    //modal.style.display = 'block';
-    modal.classList.add('open');
-    document.body.classList.add('modal-open');
-    heroVideo.pause();
-    
-    // Play the modal video when the modal is opened
-    var modalVideo = document.querySelector('.modal-video');
-    modalVideo.play();
-  }
-
-  function closeVideoModal() {
-    var modal = document.getElementById('video-modal');
-    //modal.style.display = 'none';
-    modal.classList.remove('open');
-    document.body.classList.remove('modal-open');
-    heroVideo.play();
-    // Pause the modal video when the modal is closed
-    var modalVideo = document.querySelector('.modal-video');
-    modalVideo.pause();
-  }
-*/
-
-  
- 
 </script>
 
 
