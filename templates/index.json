@@ -5,9 +5,9 @@
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9359e57efa5c4661a103e444ae3b2622.mp4",
         "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
-        "cta_button_1_text": "Add To Cart",
+        "cta_button_1_text": "Shop",
         "cta_button_1_href": "shopify:\/\/products\/trailer-blueprint-master-collection-book-36-diy-trailer-how-to-builds-w-steps",
-        "cta_button_2_text": "Shop Now",
+        "cta_button_2_text": "",
         "cta_button_2_href": "\/",
         "header_input_placeholder": "50% off Of The Master COllection",
         "ribbon_banner_text": "the 12 days of christmas",
