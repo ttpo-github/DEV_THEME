@@ -13,9 +13,11 @@
           <span class="">{{ section.settings.ribbon_banner_text }}</span>
         </div>
       {% endunless %}
-      
+
+      {% unless section.settings.header_input_placeholder == blank  %}
       <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
-      
+      {% endunless %}
+
       <div class="play-button" onclick="openVideoModal()">
         <img id="image-play-button" src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/icons8-play-100_1.png?v=1702315838" alt="Play Button" height="100px" width="100px">
       </div>
@@ -491,8 +493,8 @@
       "type": "text",
       "label": "Video Source (MP4)",
       "id": "video_source",
-      "default": "https://designsupply-web.com/samplecontent/vender/codepen/20181014.mp4",
-      "info": "Enter the video URL for the background. Make sure it's set to loop, muted, and autoplay."
+      "default": "#",
+      "info": "Enter the video URL for the background and popup modal. Works with Shopify hosted MP4s."
     },
     {
       "type": "text",
