@@ -1,7 +1,3 @@
-{% comment %}
-  Add the following code to your "custom_hero_section.liquid" file.
-{% endcomment %}
-
 {%- assign section_id = 'custom-hero-section-' | append: section.id -%}
 
 <div id="{{ section_id }}" class="custom-hero-section">
@@ -192,6 +188,30 @@
     }
   })
 
+   function openVideoModal() {
+    var modal = document.getElementById('video-modal');
+    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+    videoModalContainer.classList.add('open');
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+    
+    // Play the modal video when the modal is opened
+    var modalVideo = document.querySelector('.modal-video');
+    //modalVideo.play();
+  }
+
+  function closeVideoModal() {
+    var modal = document.getElementById('video-modal');
+    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+    videoModalContainer.classList.remove('open');
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    
+    // Pause the modal video when the modal is closed
+    var modalVideo = document.querySelector('.modal-video');
+    //modalVideo.pause();
+  }
+
   
   /*
   function openVideoModal() {
@@ -238,29 +258,7 @@
   }
 */
 
-   function openVideoModal() {
-    var modal = document.getElementById('video-modal');
-    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
-    videoModalContainer.classList.add('open');
-    modal.classList.add('open');
-    document.body.classList.add('modal-open');
-    
-    // Play the modal video when the modal is opened
-    var modalVideo = document.querySelector('.modal-video');
-    //modalVideo.play();
-  }
-
-  function closeVideoModal() {
-    var modal = document.getElementById('video-modal');
-    var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
-    videoModalContainer.classList.remove('open');
-    modal.classList.remove('open');
-    document.body.classList.remove('modal-open');
-    
-    // Pause the modal video when the modal is closed
-    var modalVideo = document.querySelector('.modal-video');
-    //modalVideo.pause();
-  }
+  
  
 </script>
 
