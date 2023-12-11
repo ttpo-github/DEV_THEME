@@ -9,7 +9,7 @@
   <div class="hero-content">
     <div class="hero-header">
       <div id="ribbon">
-        <span class="">The 12 Days of Christmas</span>
+        <span class="">{{ section.settings.ribbon_banner_text }}</span>
       </div>
 
       <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
@@ -19,8 +19,9 @@
       </div>
       
       <div class="hero-banner-buttons">
-        <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
-        <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
+        
+          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
+          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
       </div>
     </div>
   </div>
@@ -524,7 +525,14 @@
       "label": "Header Input Placeholder",
       "id": "header_input_placeholder",
       "default": "Header Text",
-      "info": "Enter the placeholder text for the header input."
+      "info": "Enter the text for the header."
+    },
+    {
+      "type": "text",
+      "label": "Ribbon Banner Text",
+      "id": "ribbon_banner_text",
+      "default": "Header Text",
+      "info": "Enter the text for ribbon banner."
     },
     {
       "type": "range",
