@@ -19,7 +19,7 @@
       {% endunless %}
 
       <div class="play-button" onclick="openVideoModal()">
-        <img id="image-play-button" src="{{ section.settings.video_source }}" alt="Play Button" height="100px" width="100px">
+        <img id="image-play-button" src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/icons8-play-100_1.png?v=1702315838" alt="Play Button" height="100px" width="100px">
       </div>
       
       <div class="hero-banner-buttons">
@@ -495,6 +495,11 @@
       "id": "video_source",
       "default": "#",
       "info": "Enter the video URL for the background and popup modal. Works with Shopify hosted MP4s."
+    },
+    {
+        "type": "image_picker",
+        "id": "play_btn",
+        "label": "Play button image"
     },
     {
       "type": "text",
