@@ -17,7 +17,6 @@
         },
         "76b03f89-7ae9-4c1b-a5c6-5aa2ca531c03": {
           "type": "announcement-timer",
-          "disabled": true,
           "settings": {
             "text": "Days until Christmas:",
             "color_scheme": "accent-1",
