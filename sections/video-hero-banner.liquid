@@ -318,6 +318,9 @@
   .hero-banner-buttons {
     text-align: center;
     margin: 0 0 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero-banner-buttons a {
@@ -332,7 +335,9 @@
     color: #fff;
     margin: 0 10px;
     vertical-align: top;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /*min-width: 150px;*/
     text-transform: uppercase;
     transition: all .2s ease-in-out;
