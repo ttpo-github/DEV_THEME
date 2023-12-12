@@ -11,7 +11,11 @@
         "cta_button_2_href": "\/",
         "header_input_placeholder": "50% off Of The Master COllection",
         "ribbon_banner_text": "the 12 days of christmas",
-        "height_adjustment": 870
+        "height_adjustment": 870,
+        "show_shipping": true,
+        "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
+        "ship_text": "<span style=\"white-space:nowrap;\"><b>All orders placed before 12PM CST ship next day (<\/b> some exclusions apply <b>)<\/b><\/span>",
+        "ship_link": "shopify:\/\/policies\/shipping-policy"
       }
     },
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945": {
