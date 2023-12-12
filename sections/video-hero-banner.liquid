@@ -32,6 +32,19 @@
         {% unless section.settings.cta_button_2_text == blank  %}
           <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
         {% endunless %}
+
+        {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
+    <div class="shipping-text">
+      <a href="{{ section.settings.ship_link }}">
+        {% if section.settings.ship_icon != blank  %}
+          <img src="{{ section.settings.ship_icon | img_url:"medium" }}" loading="lazy">
+        {% endif %}
+        {% if section.settings.ship_text != blank %}
+          {{ section.settings.ship_text }}
+        {% endif %}
+      </a>
+    </div>
+    {% endif %}
         
       </div>
     </div>
@@ -47,6 +60,8 @@
     </div>
   </div>
 </div>
+
+
 
 <style>
   #{{ section_id }} {
@@ -391,7 +406,63 @@
     }
   }
 
+   .shipping-text img {
+    max-width: 60px;
+    margin-right: 10px;
+  }
+  
+  .shipping-text a span b {
+    color: #ffffffff;
+  }
+  
+  .shipping-text a span {
+    color: #6F6F6F;
+  }
+  
+  .shipping-text a {
+    font-family: Oswald,sans-serif!important;
+    font-weight: 400 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .shipping-text {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  
+  .shipping-text a span,.shipping-text a span b {
+    font-weight: 400 !important;
+    font-size: 15px !important;
+  }
+
+  @media screen and (max-width: 575px) {
+     .shipping-text a {
+       flex-direction:column;
+     }
+    .shipping-text img {
+      max-width: 40px;
+      margin-bottom: 8px;
+      margin-right: 0px;
+    }
+    
+    .shipping-text a span, .shipping-text a span b {
+      font-size: 13px !important;
+      text-align: center;
+    }
+    
+    .shipping-text {
+      padding: 15px 15px;
+    }
+  }
+
   /* PORTED OVER FROM HERO BANNER STYLES */
+
+  
 
   @media only screen and (max-width: 992px) {
     #heroVideo, .modal-video {
@@ -569,7 +640,27 @@ console.log("Close Video Modal Script")
       "step": 10,
       "default": 600,
       "info": "Adjust the height of the hero section. Note: Video will maintain full width."
-    }
+    },
+    {
+        "type":"checkbox",
+        "id":"show_shipping",
+        "label":"Show Shipping"
+      },
+      {
+        "type":"image_picker",
+        "id":"ship_icon",
+        "label":"Shipping Icon"
+      },
+      {
+        "type":"text",
+        "id":"ship_text",
+        "label":"Shipping Text"
+      },
+      {
+        "type":"url",
+        "id":"ship_link",
+        "label":"Shipping Link"
+      }
   ],
   "presets": [
     {
