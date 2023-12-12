@@ -24,7 +24,7 @@
         <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
           {%- if block.settings.text != blank -%}
             {%- if block.settings.link != blank -%}
-              <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow" style="padding:5.5px 0px;">
+              <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow" style="padding:5.5px 5px;">
             {%- endif -%}
                 <div class="page-width">
                   <div class=" {{ block.settings.text_alignment }} h5">
