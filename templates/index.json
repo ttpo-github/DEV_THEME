@@ -7,8 +7,8 @@
         "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
         "cta_button_1_text": "Shop the master collection",
         "cta_button_1_href": "shopify:\/\/products\/trailer-blueprint-master-collection-book-36-diy-trailer-how-to-builds-w-steps",
-        "cta_button_2_text": "",
-        "cta_button_2_href": "\/",
+        "cta_button_2_text": "Shop all",
+        "cta_button_2_href": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
         "header_input_placeholder": "50% off Of The Master COllection",
         "ribbon_banner_text": "the 12 days of christmas",
         "height_adjustment": 870,
@@ -30,6 +30,7 @@
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
       "type": "hero-banner",
+      "disabled": true,
       "settings": {
         "head": "",
         "subhead": "<strong>BLACKL FRIDAY SALE<\/strong>",
