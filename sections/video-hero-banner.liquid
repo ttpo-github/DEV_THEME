@@ -65,477 +65,436 @@
 
 
 <style>
-  #{{ section_id }} {
-    position: relative;
-    /*overflow: hidden;*/
-    height:100%;
+ /* General Styles */
+#{{ section_id }} {
+  position: relative;
+  /*overflow: hidden;*/
+  height: 100%;
+}
+
+#heroVideo,
+.modal-video {
+  width: 100%;
+  object-fit: cover;
+  height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hero-header {
+  text-align: center;
+  color: #fff; /* Change as needed */
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.play-button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.play-button:hover {
+  transform: scale(1.2);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Video Modal Styles */
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, 100%);
+  transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  opacity: 0;
+  transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+}
+
+.video-modal.open {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.modal-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%) scale(0);
+  opacity: 0;
+  transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+  /*width: 75%;*/
+  height: auto;
+}
+
+.video-modal-container.open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+  z-index: 21;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-modal:hover {
+  transform: scale(1.2);
+}
+
+/* Ribbon Styles */
+#ribbon {
+  padding: 8px 10px;
+  margin: 0 auto;
+  margin-top: 1%;
+  position: relative;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3),
+    inset 0px 0px 20px rgba(0, 0, 0, 0.1),
+    0px 1px 1px rgba(0, 0, 0, 0.4);
+  background: -webkit-linear-gradient(top, #0000ff, #0000ff);
+  display: inline-block;
+}
+
+#ribbon:before,
+#ribbon:after {
+  content: "";
+  width: 0.2em;
+  bottom: -0.5em;
+  position: absolute;
+  display: block;
+  border: 0.9em solid #0000ff;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+  z-index: -2;
+}
+
+#ribbon:before {
+  left: -1.35em;
+  border-right-width: 0.75em;
+  border-left-color: transparent;
+}
+
+#ribbon:after {
+  right: -1.35em;
+  border-left-width: 0.75em;
+  border-right-color: transparent;
+}
+
+/* Content Styles */
+#content:before,
+#content:after {
+  content: "";
+  bottom: -0.5em;
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #0675b3 transparent transparent transparent;
+  z-index: -1;
+}
+
+#content:before {
+  left: 0;
+  border-width: 0.5em 0 0 0.5em;
+}
+
+#content:after {
+  right: 0;
+  border-width: 0.5em 0.5em 0 0;
+}
+
+/* Hero Banner Styles */
+.hero-banner-main {
+  background: #000;
+  margin: 0 0 20px;
+}
+
+.hero-banner-head {
+  font-size: 50px;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  padding: 5px 0;
+  text-shadow: 2px 2px 3px #000;
+}
+
+.hero-banner-subhead,
+.hero-banner-below-header {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  line-height: 1.29;
+  padding: 6px 35px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.hero-banner-below-header {
+  background: #00000;
+}
+
+.hero-banner-subhead:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  border-width: 15px 0px 15px 11px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000;
+}
+
+.hero-banner-subhead:after {
+  border-width: 12px 8px 12px 0;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0) transparent transparent;
+  left: auto;
+  right: 0;
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+}
+
+.hero-banner-buttons {
+  text-align: center;
+  margin: 0 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-banner-buttons a {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Helvetica Neue';
+  font-weight: 600;
+  line-height: 1;
+  padding: 1.2em;
+  background: #0000ff;
+  color: #fff;
+  margin: 0 10px;
+  vertical-align: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+.hero-banner-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.hero-banner-child-img {
+  margin: auto;
+  max-width: 1020px;
+}
+
+.hero-banner-child-img img {
+  display: block;
+  max-width: 75vh;
+  margin: 0 auto;
+}
+
+.hero-banner-child-content {
+  padding: 40px 15px 0px;
+  text-align: center;
+}
+
+.shipping-text a span,
+.shipping-text a span b {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  h1.hero-banner-head {
+    font-size: 0.8em;
+    line-height: 1.2;
+    padding: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
-  #heroVideo, .modal-video {
-    width: 100%;
-    object-fit: cover;
-    height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
-  }
-
-  .hero-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  .hero-header {
-    text-align: center;
-    color: #fff; /* Change as needed */
-    display: flex;
-    height: 80%;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .play-button {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    width: fit-content;
-    margin: 0 auto;
-  }
-
-  .play-button:hover {
-    transform: scale(1.2);
-  }
-
-  .cta-buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* Video Modal Styles */
-  .video-modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(0%, 100%);
-    transform-origin: center center;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 20;
-    opacity: 0;
-    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
-  }
-
-  .video-modal.open {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-
-  .modal-video {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .video-modal-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -100%) scale(0);
-    opacity: 0;
-    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
-    /*width: 75%;*/
-    height: auto;
-  }
-
-  .video-modal-container.open {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .close-modal {
-    position: absolute;
-    top: 0px;
-    right: 10px;
-    color: #fff;
-    font-size: 3em;
-    cursor: pointer;
-    z-index: 21;
-    transition: transform .2s ease-in-out;
-  }
-
-  .close-modal:hover{
-    transform:scale(1.2);
-  }
-
-  /* RIBBON */
-  #ribbon {
-    padding: 8px 10px;
-    margin: 0 auto;
-    margin-top: 1%;
-    position: relative;
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 900;
-    text-transform: uppercase;
-    width: fit-content;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3),
-      inset 0px 0px 20px rgba(0, 0, 0, 0.1),
-      0px 1px 1px rgba(0, 0, 0, 0.4);
-    background: -webkit-linear-gradient(top, #0000ff, #0000ff);
-    display: inline-block;
-  }
-
-  #ribbon:before,
-  #ribbon:after {
-    content: "";
-    width: .2em;
-    bottom: -.5em;
-    position: absolute;
-    display: block;
-    border: .9em solid #0000ff;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
-    z-index: -2;
-  }
-
-  #ribbon:before {
-    left: -1.35em;
-    border-right-width: .75em;
-    border-left-color: transparent;
-  }
-
-  #ribbon:after {
-    right: -1.35em;
-    border-left-width: .75em;
-    border-right-color: transparent;
-  }
-
-  #content:before,
-  #content:after {
-    content: "";
-    bottom: -.5em;
-    position: absolute;
-    display: block;
-    border-style: solid;
-    border-color: #0675b3 transparent transparent transparent;
-    z-index: -1;
-  }
-
-  #content:before {
-    left: 0;
-    border-width: .5em 0 0 .5em;
-  }
-
-  #content:after {
-    right: 0;
-    border-width: .5em .5em 0 0;
-  }
-  /* ROBBON */
-
-  /* PORTED OVER FROM HERO BANNER STYLES */
-  .hero-banner-main {
-    background: #000;
-    margin: 0 0 20px;
-  }
-
-  .hero-banner-head {
-    font-size: 50px;
-    color: #fff;
-    line
-
-    -height: 1;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    padding: 5px 0;
-    text-shadow: 2px 2px 3px #000;
-  }
-
-  .hero-banner-subhead {
-    font-size: 15px;
-    color: #fff;
-    text-align: center;
-    font-family: 'Helvetica Neue';
-    font-weight: 400;
-    line-height: 1.29;
-    padding: 6px 35px;
-    display: inline-block;
-    vertical-align: top;
-    background: #0000ff;
-    position: relative;
-    text-transform: uppercase;
-    margin: 0 0 12px;
-  }
-
-  .hero-banner-below-header {
-    font-size: 15px;
-    color: #fff;
-    text-align: center;
-    font-family: 'Helvetica Neue';
-    font-weight: 400;
-    line-height: 1.29;
-    padding: 6px 35px;
-    display: inline-block;
-    vertical-align: top;
-    background: #00000;
-    position: relative;
-    text-transform: uppercase;
-    margin: 0 0 12px;
+  h4.hero-banner-subhead {
+    font-size: 14px;
+    line-height: 1;
+    padding: 5px 18px;
   }
 
   .hero-banner-subhead:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    border-width: 15px 0px 15px 11px;
-    border-style: solid;
-    border-color: transparent transparent transparent #000;
+    border-width: 12px 0px 12px 8px;
   }
 
   .hero-banner-subhead:after {
     border-width: 12px 8px 12px 0;
-    border-style: solid;
-    border-color: transparent rgba(0, 0, 0, 0) transparent transparent;
-    left: auto;
-    right: 0;
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-  }
-
-  .hero-banner-buttons {
-    text-align: center;
-    margin: 0 0 10px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hero-banner-buttons a {
-    text-align: center;
-    font-size: 1.2em;
-    font-family: 'Helvetica Neue';
-    font-weight: 600;
-    line-height: 1;
-    padding: 1.2em;
-    /*width: 33%;*/
-    background: #0000ff;
-    color: #fff;
-    margin: 0 10px;
-    vertical-align: top;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*min-width: 150px;*/
-    text-transform: uppercase;
-    transition: all .2s ease-in-out;
-    border-radius:5px;
-  }
-
-  .hero-banner-buttons a:hover {
-    transform: scale(1.1);
   }
 
   .hero-banner-child-img {
-    margin: auto;
-    max-width: 1020px;
-  }
-  
-  .hero-banner-child-img img {
-    display: block;
-    max-width: 75vh;
-    margin: 0 auto;
+    max-width: 71.178vw;
   }
 
-  .hero-banner-child-content {
-    padding: 40px 15px 0px;
-    text-align: center;
+  .hero-banner-child-img.bottom-image {
+    max-width: 99vw;
   }
 
-  .shipping-text a span,.shipping-text a span b {
-    color: #FFF;
-    font-size:1.2em;
-  }
-  
-  @media screen and (max-width: 992px) {
-    h1.hero-banner-head {
-      font-size: .8em;
-      line-height: 1.2;
-      padding: 0;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-    h4.hero-banner-subhead {
-      font-size: 14px;
-      line-height: 1;
-      padding: 5px 18px;
-    }
-
-    .hero-banner-subhead:before {
-      border-width: 12px 0px 12px 8px;
-    }
-
-    .hero-banner-subhead:after {
-      border-width: 12px 8px 12px 0;
-    }
-
-    .hero-banner-child-img {
-      max-width: 71.178vw;
-    }
-
-    .hero-banner-child-img.bottom-image {
-      max-width: 99vw;
-    }
-
-    .hero-banner-buttons a {
-      font-size: 12px;
-      margin: 0px 5px;
-    }
-
-    .hero-banner-buttons a:not(:last-child):after {
-      border-width: 1px;
-      width: 5px;
-      height: 5px;
-    }
-
-    .hero-banner-buttons a {
-      font-size: .8em;
-      /*min-width: 100px;*/
-      padding: .8em;
-    }
+  .hero-banner-buttons a {
+    font-size: 12px;
+    margin: 0px 5px;
   }
 
-   .shipping-text img {
-    max-width: 60px;
-    margin-right: 10px;
+  .hero-banner-buttons a:not(:last-child):after {
+    border-width: 1px;
+    width: 5px;
+    height: 5px;
   }
-  
+
+  .hero-banner-buttons a {
+    font-size: 0.8em;
+    padding: 0.8em;
+  }
+
+  .shipping-text img {
+    max-width: 40px;
+    margin-right: 0px;
+  }
+
   .shipping-text a span b {
     color: #ffffffff;
   }
-  
+
   .shipping-text a span {
     color: #6F6F6F;
   }
-  
+
   .shipping-text a {
-    font-family: Oswald,sans-serif!important;
+    font-family: Oswald, sans-serif !important;
     font-weight: 400 !important;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
+  .shipping-text {
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+  #heroVideo,
+  .modal-video {
+    height: auto;
+  }
+
+  h1.hero-banner-head {
+    font-size: 1em;
+  }
+
+  .hero-content {
+    justify-content: center;
+  }
+
+  .video-modal-container {
+    width: 100%;
+  }
+
+  .video-modal-container.open {
+    transform: translate(-50%, -100%) scale(1);
+  }
+
+  #image-play-button {
+    height: 60px;
+    width: 60px;
+  }
+
+  .modal-video {
+    width: 95%;
+    height: 95%;
+    margin: 10% auto;
+    display: block;
+  }
+
+  .hero-header {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .video-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 19;
+  }
+
+  #ribbon {
+    font-size: 0.8em;
+  }
+
   .shipping-text {
     text-align: center;
     display: inline-block;
     vertical-align: top;
     width: 100%;
     padding: 0px;
-    margin-bottom:10px
+    margin-bottom: 10px;
   }
+}
 
-
-  @media screen and (max-width: 992px) {
-     .shipping-text a {
-       /*flex-direction:column;*/
-     }
-    .shipping-text img {
-      max-width: 40px;
-      margin-right: 0px;
-    }
-    
-    .shipping-text a span, .shipping-text a span b {
-      font-size: .84em;
-      text-align: center;
-    }
-    
-    .shipping-text {
-      padding: 0px;
-    }
-  }
-
-  /* PORTED OVER FROM HERO BANNER STYLES */
-
-  
-
-  @media only screen and (max-width: 992px) {
-    #heroVideo, .modal-video {
-      height: auto;
-    }
-
-    h1.hero-banner-head {
-      font-size: 1em;
-    }
-
-    .hero-content {
-      justify-content: center;
-    }
-
-    .video-modal-container {
-      width: 100%;
-    }
-
-    .video-modal-container.open {
-      transform: translate(-50%, -100%) scale(1);
-    }
-
-    #image-play-button {
-      height: 60px;
-      width: 60px;
-    }
-
-    .modal-video {
-      width: 95%;
-      height: 95%;
-      margin: 10% auto;
-      display: block;
-    }
-
-    .hero-header {
-      height: 100%;
-      justify-content: space-between;
-    }
-
-    .video-modal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 19;
-    }
-
-    #ribbon {
-      font-size: .8em;
-    }
-
-    .shipping-text {
-    text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    padding: 0px;
-    margin-bottom:10px
-  }
-  }
 </style>
 
 <script defer>
