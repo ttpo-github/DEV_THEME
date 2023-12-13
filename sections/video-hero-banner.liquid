@@ -39,7 +39,7 @@
     <div class="shipping-text">
       <a href="{{ section.settings.ship_link }}">
         {% if section.settings.ship_icon != blank  %}
-          <img src="{{ section.settings.ship_icon | image_url }}" height="30px" width="30px">
+          <img src="{{ section.settings.ship_icon | image_url }}">
         {% endif %}
         {% if section.settings.ship_text != blank %}
           {{ section.settings.ship_text }}
