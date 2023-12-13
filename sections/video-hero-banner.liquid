@@ -502,42 +502,36 @@
       </div>
 
       {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
-    <div class="shipping-text">
-      <a href="{{ section.settings.ship_link }}">
-        {% if section.settings.ship_icon != blank  %}
-          <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
-        {% endif %}
-        {% if section.settings.ship_text != blank %}
-          {{ section.settings.ship_text }}
-        {% endif %}
-      </a>
-    </div>
-    {% endif %}
-    
+        <div class="shipping-text">
+          <a href="{{ section.settings.ship_link }}">
+            {% if section.settings.ship_icon != blank  %}
+              <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
+            {% endif %}
+            {% if section.settings.ship_text != blank %}
+              {{ section.settings.ship_text }}
+            {% endif %}
+          </a>
+        </div>
+      {% endif %}
     </div>
   </div>
-
-  
 
   <div id="video-modal" class="video-modal">
     <div class="video-modal-container">
       <span class="close-modal close" onclick="closeVideoModal()">X</span>
-      <video class="modal-video" loop controls onload="playVideoModal()">
-        <source src="{{ section.settings.video_source }}" type="video/mp4">
+      <!-- Dynamic creation of the modal video element -->
+      <video class="modal-video" loop controls>
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 </div>
 
-
-
-
-
 <script defer>
   const heroVideo = document.getElementById("heroVideo");
+  const modalVideo = document.querySelector('.modal-video');
 
-  document.getElementById("video-modal").addEventListener('click', function(e) {
+  document.getElementById("video-modal").addEventListener('click', function (e) {
     if (e.target.id == "video-modal") {
       closeVideoModal();
     }
@@ -550,12 +544,12 @@
     modal.classList.add('open');
     document.body.classList.add('modal-open');
 
-    // Play the modal video when the modal is opened
-    var modalVideo = document.querySelector('.modal-video');
+    // Set the source for the modal video when the modal is opened
+    modalVideo.src = "{{ section.settings.video_source }}";
     modalVideo.play();
     heroVideo.pause();
 
-    console.log("Open Video Modal Script")
+    console.log("Open Video Modal Script");
   }
 
   function closeVideoModal() {
@@ -566,13 +560,13 @@
     document.body.classList.remove('modal-open');
 
     // Pause the modal video when the modal is closed
-    var modalVideo = document.querySelector('.modal-video');
     modalVideo.pause();
     heroVideo.play();
 
-console.log("Close Video Modal Script")
+    console.log("Close Video Modal Script");
   }
 </script>
+
 
 
 
