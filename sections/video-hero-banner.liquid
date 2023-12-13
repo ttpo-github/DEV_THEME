@@ -16,8 +16,16 @@
     aspect-ratio: 16 / 9;
    }
 
+  
+
   @media screen and (max-width: 992px){
-    
+    .hero-banner-head {
+      /*font-size: .8em;*/
+      line-height: 1.2;
+      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
   }
 {% else %}
   
@@ -30,7 +38,13 @@
    }
 
    @media screen and (max-width: 992px){
-
+    .hero-banner-head {
+      font-size: .8em;
+      line-height: 1.2;
+      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
   }
 {% endif %}
 
@@ -336,14 +350,6 @@
   }
   
   @media screen and (max-width: 992px) {
-    h1.hero-banner-head {
-      font-size: .8em;
-      line-height: 1.2;
-      padding: 0;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
     h4.hero-banner-subhead {
       font-size: 14px;
       line-height: 1;
