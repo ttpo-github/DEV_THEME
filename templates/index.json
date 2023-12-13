@@ -6,7 +6,7 @@
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b76f6a2040534bbd94c6a1cacecfc225.mp4",
         "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
         "video_poster": "shopify:\/\/shop_images\/video-capture-2480.jpg",
-        "mobile_full_height": false,
+        "mobile_full_height": true,
         "cta_button_1_text": "Shop the master collection",
         "cta_button_1_href": "shopify:\/\/products\/trailer-blueprint-master-collection-book-36-diy-trailer-how-to-builds-w-steps",
         "cta_button_2_text": "Shop all",
