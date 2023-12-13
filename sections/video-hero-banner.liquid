@@ -1,71 +1,5 @@
 {%- assign section_id = 'custom-hero-section-' | append: section.id -%}
 
-<div id="{{ section_id }}" class="custom-hero-section">
-  <video id="heroVideo" loop muted autoplay height="720" width="1200">
-    <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
-    Your browser does not support the video tag.
-  </video>
-
-  <div class="hero-content">
-    <div class="hero-header">
-      {% unless section.settings.ribbon_banner_text == blank  %}
-        <div id="ribbon">
-          <span class="">{{ section.settings.ribbon_banner_text }}</span>
-        </div>
-      {% endunless %}
-
-      {% unless section.settings.header_input_placeholder == blank  %}
-        <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
-      {% endunless %}
-      
-      {% unless section.settings.play_btn == blank  %}
-        <div class="play-button" onclick="openVideoModal()">
-          <img id="image-play-button" src="{{ section.settings.play_btn | image_url}}" alt="Play Button" height="100px" width="100px">
-        </div>
-      {% endunless %}
-      
-      <div class="hero-banner-buttons">
-        {% unless section.settings.cta_button_1_text == blank  %}
-          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
-        {% endunless %}
-        
-        {% unless section.settings.cta_button_2_text == blank  %}
-          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
-        {% endunless %}
-        
-      </div>
-
-      {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
-    <div class="shipping-text">
-      <a href="{{ section.settings.ship_link }}">
-        {% if section.settings.ship_icon != blank  %}
-          <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
-        {% endif %}
-        {% if section.settings.ship_text != blank %}
-          {{ section.settings.ship_text }}
-        {% endif %}
-      </a>
-    </div>
-    {% endif %}
-    
-    </div>
-  </div>
-
-  
-
-  <div id="video-modal" class="video-modal">
-    <div class="video-modal-container">
-      <span class="close-modal close" onclick="closeVideoModal()">X</span>
-      <video class="modal-video" loop controls onload="playVideoModal()">
-        <source src="{{ section.settings.video_source }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-
-
 <style>
   #{{ section_id }} {
     position: relative;
@@ -531,6 +465,74 @@
     }
   }
 </style>
+
+<div id="{{ section_id }}" class="custom-hero-section">
+  <video id="heroVideo" loop muted autoplay height="720" width="1200">
+    <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-content">
+    <div class="hero-header">
+      {% unless section.settings.ribbon_banner_text == blank  %}
+        <div id="ribbon">
+          <span class="">{{ section.settings.ribbon_banner_text }}</span>
+        </div>
+      {% endunless %}
+
+      {% unless section.settings.header_input_placeholder == blank  %}
+        <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
+      {% endunless %}
+      
+      {% unless section.settings.play_btn == blank  %}
+        <div class="play-button" onclick="openVideoModal()">
+          <img id="image-play-button" src="{{ section.settings.play_btn | image_url}}" alt="Play Button" height="100px" width="100px">
+        </div>
+      {% endunless %}
+      
+      <div class="hero-banner-buttons">
+        {% unless section.settings.cta_button_1_text == blank  %}
+          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
+        {% endunless %}
+        
+        {% unless section.settings.cta_button_2_text == blank  %}
+          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
+        {% endunless %}
+        
+      </div>
+
+      {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
+    <div class="shipping-text">
+      <a href="{{ section.settings.ship_link }}">
+        {% if section.settings.ship_icon != blank  %}
+          <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
+        {% endif %}
+        {% if section.settings.ship_text != blank %}
+          {{ section.settings.ship_text }}
+        {% endif %}
+      </a>
+    </div>
+    {% endif %}
+    
+    </div>
+  </div>
+
+  
+
+  <div id="video-modal" class="video-modal">
+    <div class="video-modal-container">
+      <span class="close-modal close" onclick="closeVideoModal()">X</span>
+      <video class="modal-video" loop controls onload="playVideoModal()">
+        <source src="{{ section.settings.video_source }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 <script defer>
   const heroVideo = document.getElementById("heroVideo");
