@@ -7,6 +7,7 @@
   - columns: {Number}
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
+  - lazy: {Boolean}
 
   Usage:
   {% render 'card-collection' %}
@@ -69,7 +70,9 @@
               alt=""
               height="{{ card_collection.featured_image.height }}"
               width="{{ card_collection.featured_image.width }}"
-              loading="lazy"
+              {% if card_collection.lazy %}
+                loading="lazy"
+              {% endif %}
               class="motion-reduce"
             >
           </div>
