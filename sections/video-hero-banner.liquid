@@ -20,7 +20,7 @@
       
       {% unless section.settings.play_btn == blank  %}
         <div class="play-button" onclick="openVideoModal()">
-          <img id="image-play-button" src="{{ section.settings.play_btn | img_url: ''}}" alt="Play Button" height="100px" width="100px">
+          <img id="image-play-button" src="{{ section.settings.play_btn | image_url: 'small'}}" alt="Play Button" height="100px" width="100px">
         </div>
       {% endunless %}
       
@@ -39,7 +39,7 @@
     <div class="shipping-text">
       <a href="{{ section.settings.ship_link }}">
         {% if section.settings.ship_icon != blank  %}
-          <img src="{{ section.settings.ship_icon | img_url:"medium" }}" loading="lazy">
+          <img src="{{ section.settings.ship_icon | image_url:"small" }}" loading="lazy" height="30px" width="30px">
         {% endif %}
         {% if section.settings.ship_text != blank %}
           {{ section.settings.ship_text }}
