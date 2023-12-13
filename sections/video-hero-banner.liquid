@@ -1,7 +1,7 @@
 {%- assign section_id = 'custom-hero-section-' | append: section.id -%}
 
 <div id="{{ section_id }}" class="custom-hero-section">
-  <video id="heroVideo" loop muted autoplay>
+  <video id="heroVideo" loop muted autoplay height="720" width="1200">
     <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
     Your browser does not support the video tag.
   </video>
