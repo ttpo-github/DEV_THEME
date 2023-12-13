@@ -32,13 +32,8 @@
         {% unless section.settings.cta_button_2_text == blank  %}
           <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
         {% endunless %}
-        
-      </div>
 
-      
-    
-    </div>
-    {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
+        {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
     <div class="shipping-text">
       <a href="{{ section.settings.ship_link }}">
         {% if section.settings.ship_icon != blank  %}
@@ -50,6 +45,12 @@
       </a>
     </div>
     {% endif %}
+        
+      </div>
+
+      
+    
+    </div>
   </div>
 
   <div id="video-modal" class="video-modal">
