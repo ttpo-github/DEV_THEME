@@ -35,7 +35,10 @@
         
       </div>
 
-      {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
+      
+    
+    </div>
+    {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
     <div class="shipping-text">
       <a href="{{ section.settings.ship_link }}">
         {% if section.settings.ship_icon != blank  %}
@@ -47,8 +50,6 @@
       </a>
     </div>
     {% endif %}
-    
-    </div>
   </div>
 
   <div id="video-modal" class="video-modal">
