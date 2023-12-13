@@ -76,7 +76,13 @@
   #heroVideo, .modal-video {
     width: 100%;
     object-fit: cover;
-    height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
+    /*height: {{ section.settings.height_adjustment }}px; /* Adjust the height here */
+    
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+
+
   }
 
   .hero-content {
