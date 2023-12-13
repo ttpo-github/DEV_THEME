@@ -13,7 +13,7 @@
         "ribbon_banner_text": "the 12 days of christmas",
         "height_adjustment": 870,
         "show_shipping": true,
-        "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
+        "ship_icon": "shopify:\/\/shop_images\/delivery-truck-white.png",
         "ship_text": "<span style=\"white-space:nowrap;\"><b>All orders placed before 12PM CST ship next day (<\/b> some exclusions apply <b>)<\/b><\/span>",
         "ship_link": "shopify:\/\/policies\/shipping-policy"
       }
