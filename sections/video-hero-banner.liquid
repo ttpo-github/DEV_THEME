@@ -66,7 +66,7 @@
 
    @media screen and (max-width: 992px){
     .video-section-container{
-      height:50vh;
+      height:{{ section.settings.height_adjustment }}vh;
     }
      
     #heroVideo, .modal-video{
@@ -712,11 +712,11 @@
       "type": "range",
       "label": "Height Adjustment",
       "id": "height_adjustment",
-      "min": 200,
-      "max": 1200,
-      "step": 10,
-      "default": 600,
-      "info": "Adjust the height of the hero section. Note: Video will maintain full width."
+      "min": 25,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "info": "Adjust the height of the hero section. Note: Only applies if mobile full height is not selected."
     },
     {
         "type":"checkbox",
