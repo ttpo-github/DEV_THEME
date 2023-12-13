@@ -20,7 +20,7 @@
       
       {% unless section.settings.play_btn == blank  %}
         <div class="play-button" onclick="openVideoModal()">
-          <img id="image-play-button" src="{{ section.settings.play_btn}}" alt="Play Button" height="100px" width="100px">
+          <img id="image-play-button" src="{{ section.settings.play_btn | image_url}}" alt="Play Button" height="100px" width="100px">
         </div>
       {% endunless %}
       
