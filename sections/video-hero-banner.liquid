@@ -505,7 +505,7 @@
 </style>
 
 <div id="{{ section_id }}" class="custom-hero-section">
-  <video id="heroVideo" loop muted autoplay height="720" width="1200" poster="{{ section.settings.video_poster | image_url }}">
+  <video id="heroVideo" loop muted autoplay playsinline height="720" width="1200" poster="{{ section.settings.video_poster | image_url }}">
     <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
     Your browser does not support the video tag.
   </video>
