@@ -4,7 +4,7 @@
     <div class="bt-container">
       <div class="footer-grid">
         <div class="footer-grid__item logo-grid">
-          <figure><a href="{{ routes.root_url }}"><img loading="lazy" alt="{{ section.settings.footer_logo.logo.alt | default: shop.name | escape }}" src="{{section.settings.footer_logo | img_url : 'master' }}" alt=""/></a></figure>
+          <figure><a href="{{ routes.root_url }}"><img loading="lazy" width="223" height="73" alt="{{ section.settings.footer_logo.logo.alt | default: shop.name | escape }}" src="{{section.settings.footer_logo | img_url : 'master' }}" alt=""/></a></figure>
           {%- if section.settings.footer_logo_title != blank -%} <h3>{{ section.settings.footer_logo_title }}</h3>{%- endif -%}
           {%- if section.settings.footer_logo_text != blank -%} <p>{{ section.settings.footer_logo_text }}</p>{%- endif -%}
           <ul>
