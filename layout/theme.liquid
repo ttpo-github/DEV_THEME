@@ -256,6 +256,9 @@ window.addEventListener("load", function() {
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
+
+    <link rel="preload" as="image" href="//thetrailerpartsoutlet.com/cdn/shop/files/video-capture-2480.jpg?v=1702479418">
+    
     {{ 'style.css' | asset_url | stylesheet_tag: preload: true }}
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
@@ -357,7 +360,7 @@ window.addEventListener("load", function() {
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
-    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YpfkNF"></script>
+    {% comment %}<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YpfkNF"></script>{% endcomment %}
 
     <!-- Google Tag Manager (noscript) -->
     {% comment %}<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK8DCS3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{% endcomment %}
