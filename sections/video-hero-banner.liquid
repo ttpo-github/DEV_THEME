@@ -1,102 +1,30 @@
 {%- assign section_id = 'custom-hero-section-' | append: section.id -%}
 
 <style>
+
+  
   #{{ section_id }} {
     position: relative;
     /*overflow: hidden;*/
     height:auto;
+    width:100%;
     top:0%;
   }
-
-{% if section.settings.mobile_full_height %}
-   #heroVideo, .modal-video {
-    width: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    
-   }
-  .hero-banner-head{
-    font-size:4em;
-  }
-
-  @media screen and (min-width: 993px){
-    #heroVideo, .modal-video {
-    width: 100%;
-    object-fit: cover;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    /*height:auto;*/
-   }
-  }
-
-  
-
-  @media screen and (max-width: 992px){
-    
-    
-    .hero-banner-head {
-      font-size: 2em;
-      line-height: 1.2;
-      padding: 0;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-    #image-play-button {
-      height: 100px;
-      width: 100px;
-    }
-
-    
-  }
-{% else %}
   
    #heroVideo, .modal-video {
     width: 100%;
     object-fit: cover;
     max-width: 100%;
     /*height: auto;*/
-    aspect-ratio: 16 / 9;
+    /*aspect-ratio: 16 / 9;*/
+    height:100%;
    }
 
   .hero-banner-head{
     font-size:4em;
   }
 
-   @media screen and (max-width: 992px){
-    .video-section-container{
-      height:{{ section.settings.height_adjustment }}vh;
-    }
-     
-    #heroVideo, .modal-video{
-      height:100%;
-    }
-     
-    .hero-banner-head {
-      font-size: 1.3em;
-      line-height: 1.2;
-      padding: 0;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-     .hero-content {
-      justify-content: center;
-    }
-
-     .hero-header {
-      height: 90%;
-      justify-content: space-between;
-    }
-
-     #image-play-button {
-      height: 60px;
-      width: 60px;
-    }
-  }
-{% endif %}
-
+ 
      
    #heroVideo{
      filter:brightness(30%);
@@ -104,9 +32,13 @@
 
   .hero-banner-head{
     text-transform: uppercase;
+    line-height:1;
   }
 
- 
+ .hero-banner-subtext {
+   font-size: .3em;
+   text-transform:none;
+ }
 
   .hero-content {
     height:100%;
@@ -126,7 +58,7 @@
     text-align: center;
     color: #fff; /* Change as needed */
     display: flex;
-    height: 80%;
+    height: 70%;
     flex-direction: column;
     justify-content: space-evenly;
   }
@@ -205,6 +137,8 @@
   .close-modal:hover{
     transform:scale(1.2);
   }
+
+  
 
   /* RIBBON */
   #ribbon {
@@ -461,8 +395,16 @@
     
   }
 
+@media screen and (max-width: 992px) {
+    .hero-banner-subtext {
+   font-size: .6em;
+   text-transform:none;
+ }
 
-  @media screen and (max-width: 992px) {
+.hero-banner-head{
+  font-size:1.3em;
+}
+    
      .shipping-text a {
        /*flex-direction:column;*/
      }
@@ -519,57 +461,92 @@
     #ribbon {
       font-size: .8em;
     }
+
+     #{{ section_id }}.custom-hero-section{
+      height:{{ section.settings.height_adjustment }}px;
+    }
+
+    .video-section-container{
+      height:100%;
+    }
+     
+  
+     
+    .hero-banner-head {
+      font-size: 1.3em;
+      line-height: 1.2;
+      padding: 0;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+     .hero-content {
+      justify-content: center;
+    }
+    /*
+     .hero-header {
+      height: 90%;
+      justify-content: space-between;
+    }
+    */
+     #image-play-button {
+      height: 60px;
+      width: 60px;
+    }
   }
+
+
+  
 </style>
 
-<div id="{{ section_id }}" class="custom-hero-section">
+<div id="{{ section_id }}" class="custom-hero-section" style="top:0px;">
   <div class="video-section-container">
-  <video id="heroVideo" loop muted autoplay playsinline height="720" width="1200" poster="{{ section.settings.video_poster | image_url }}">
-    <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
-    Your browser does not support the video tag.
-  </video>
+    <video id="heroVideo" loop muted autoplay playsinline poster="{{ section.settings.video_poster | image_url }}" preload="auto">
+      <source src="{{ section.settings.video_source }}" type="video/mp4" style="width:100%;">
+      Your browser does not support the video tag.
+    </video>
 
-  <div class="hero-content">
-    <div class="hero-header">
-      {% unless section.settings.ribbon_banner_text == blank  %}
+    <div class="hero-content">
+      <div class="hero-header">
+        {% unless section.settings.ribbon_banner_text == blank %}
         <div id="ribbon">
           <span class="">{{ section.settings.ribbon_banner_text }}</span>
         </div>
-      {% endunless %}
+        {% endunless %}
 
-      {% unless section.settings.header_input_placeholder == blank  %}
-        <h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}</h1>
-      {% endunless %}
-      
-      {% unless section.settings.play_btn == blank  %}
+        {% unless section.settings.header_input_placeholder == blank %}
+        <a href="{{ section.settings.header_title_link }}" style="color:white;"><h1 class="hero-banner-head">{{ section.settings.header_input_placeholder }}<br><span class="hero-banner-subtext">{{ section.settings.header_subtext }}</span></h1></a>
+        {% endunless %}
+
+        {% unless section.settings.play_btn == blank %}
         <div class="play-button" onclick="openVideoModal()">
-          <img id="image-play-button" src="{{ section.settings.play_btn | image_url}}" alt="Play Button" height="100px" width="100px">
+          <img id="image-play-button" src="{{ section.settings.play_btn | image_url }}" alt="Play Button" height="100px" width="100px">
         </div>
-      {% endunless %}
-      
-      <div class="hero-banner-buttons">
-        {% unless section.settings.cta_button_1_text == blank  %}
-          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
         {% endunless %}
-        
-        {% unless section.settings.cta_button_2_text == blank  %}
-          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
-        {% endunless %}
-        
-      </div>
 
-      {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text  != blank %}
+        <div class="hero-banner-buttons">
+          {% unless section.settings.cta_button_1_text == blank %}
+          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
+          {% endunless %}
+
+          {% unless section.settings.cta_button_2_text == blank %}
+          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
+          {% endunless %}
+        </div>
+
+        {% if section.settings.show_shipping == true and section.settings.ship_icon != blank or section.settings.ship_text != blank %}
         <div class="shipping-text">
           <a href="{{ section.settings.ship_link }}">
-            {% if section.settings.ship_icon != blank  %}
-              <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
+            {% if section.settings.ship_icon != blank %}
+            <img src="{{ section.settings.ship_icon | image_url }}" height="20" width="40">
             {% endif %}
             {% if section.settings.ship_text != blank %}
-              {{ section.settings.ship_text }}
+            {{ section.settings.ship_text }}
             {% endif %}
           </a>
         </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
   </div>
 
@@ -582,7 +559,6 @@
       </video>
     </div>
   </div>
-  </div>
 </div>
 
 <script defer>
@@ -594,6 +570,8 @@
       closeVideoModal();
     }
   });
+
+  
 
   function openVideoModal() {
     var modal = document.getElementById('video-modal');
@@ -696,10 +674,24 @@
     },
     {
       "type": "text",
-      "label": "Header Input Placeholder",
+      "label": "Header Title",
       "id": "header_input_placeholder",
       "default": "Header Text",
       "info": "Enter the text for the header."
+    },
+    {
+      "type": "url",
+      "label": "Header Title Link",
+      "id": "header_title_link",
+      "default": "/",
+      "info": "Enter URL for the Header Text"
+    },
+    {
+      "type": "text",
+      "label": "Header Subtext",
+      "id": "header_subtext",
+      "default": "Subtext",
+      "info": "Enter subtext for the header."
     },
     {
       "type": "text",
@@ -712,10 +704,10 @@
       "type": "range",
       "label": "Mobile Height Adjustment",
       "id": "height_adjustment",
-      "min": 25,
-      "max": 150,
-      "step": 5,
-      "default": 50,
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "default": 1000,
       "info": "Adjust the height of the hero section based on total viewport height. Note: Only applies if mobile full height is not selected."
     },
     {
