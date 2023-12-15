@@ -5,3 +5,14 @@
 
 // 10.26.23
 - Header style changes made
+
+// 12.15.23
+- New Theme Publish, applied rquested changes to live theme and ported to Dev. Making an official commit here to mark the event. 
+- Theme includes:
+
+    - Langugage selector drop down in Header
+    - Quick order form implimentation for blended B2B context 
+    - New Custom newsletter build. Full width Image. 
+    - New home page video hero section. 
+    - Home page optimizations. 
+    - Update to collection product card pricing. Now shows the price of the top most variant instead of the lowest value in the product. 
