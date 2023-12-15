@@ -21,21 +21,21 @@
       </div>
 
        {%- when 'announcement-timer' -%}
-        <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+        <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }} style="top:0px;">
           {%- if block.settings.text != blank -%}
             {%- if block.settings.link != blank -%}
               <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow" style="padding:5.5px 5px;">
             {%- endif -%}
-                <div class="page-width">
+                <div class="page-width" style="padding:0;">
                   <div class=" {{ block.settings.text_alignment }} h5">
                     
                      <div id="custom-countdown">
                       <span class="custom-countdown-message">{{ block.settings.text | escape }} </span>
                       <ul class="custom-countdown-list">
-                        <li class="custom-time"><span id="days"></span> Days </li>
-                        <li class="custom-time"><span id="hours"></span> Hours </li>
-                        <li class="custom-time"><span id="minutes"></span> Minutes </li>
-                        <li class="custom-time"><span id="seconds"></span> Seconds </li>
+                        <li class="custom-time" {% if block.settings.show_day == false %}style="display:none;"{% endif %}><span id="days"></span> Days </li>
+                        <li class="custom-time" {% if block.settings.show_hour == false%}style="display:none;"{% endif %}><span id="hours"></span> Hours </li>
+                        <li class="custom-time" {% if block.settings.show_min == false%}style="display:none;"{% endif %}><span id="minutes"></span> Minutes </li>
+                        <li class="custom-time" {% if block.settings.show_second == false%}style="display:none;"{% endif %}><span id="seconds"></span> Seconds </li>
                       </ul>
                        <span id="custom-link-arrow">
                           {%- if block.settings.link != blank -%}
@@ -141,9 +141,6 @@
       birthday = dayMonth + yyyy,
       hideBar = {{ block.settings.hide-announcment-bar }};
       
-console.log(hideBar)
-  console.log(Boolean(hideBar))
-  console.log(typeof hideBar)
   
   today = mm + "/" + dd + "/" + yyyy;
   if (today > birthday) {
@@ -157,7 +154,8 @@ console.log(hideBar)
         const now = new Date().getTime(),
               distance = countDown - now;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
           document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
@@ -175,6 +173,12 @@ console.log(hideBar)
         //seconds
       }, 0)
   }());
+
+  
+
+
+
+ 
 </script>
           
         </div>
@@ -303,6 +307,30 @@ console.log(hideBar)
           "id":"hide-announcment-bar",
           "label":"Hide announcment bar on timmer end?",
           "default": false
+        },
+        {
+          "type":"checkbox",
+          "id":"show_day",
+          "label":"Show Day Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_hour",
+          "label":"Show Hour Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_min",
+          "label":"Show Minute Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_second",
+          "label":"Show Seconds Count",
+          "default": true
         },
         {
           "type": "text",
