@@ -213,6 +213,7 @@
     display: flex;
     padding: 0;
     align-items: center;
+  
   }
 
   .list-menu__item--link {
@@ -418,7 +419,7 @@
                                         {%- for childlink in link.links -%}
                                           <li>
                                             {%- if childlink.links == blank -%}
-                                              <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                              <a href="{{ childlink.url }}"  class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                                 {{ childlink.title | escape }}
                                               </a>
                                             {%- else -%}
@@ -478,6 +479,8 @@
               </details>
             </header-drawer>
           {%- endif -%}
+
+                       
     
           {%- if section.settings.menu != blank -%}
             {%- if section.settings.menu_type_desktop == 'dropdown' -%}
@@ -488,7 +491,7 @@
                       {%- if link.links != blank -%}
                         <header-menu>
                           <details id="Details-HeaderMenu-{{ forloop.index }}">
-                            <summary class="header__menu-item list-menu__item link focus-inset first__level">
+                            <summary  class="list-menu__item_es header__menu-item list-menu__item link focus-inset first__level">
                               <span{% if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                               <span class="drop-icons">{% render 'icon-caret' %}</span>
                             </summary>
@@ -530,6 +533,23 @@
                   {%- endfor -%}
                 </ul>
               </nav>
+
+                        <script defer>
+                          document.addEventListener('DOMContentLoaded', function() {
+                            // Get the current language from Shopify
+                            var currentLanguage = document.documentElement.lang;
+                        
+                            // Check if the current language is Spanish ('es')
+                            if (currentLanguage === 'es') {
+                              // Apply styles for the Spanish language
+                              var itemElements = document.querySelectorAll('.list-menu__item_es');
+                              for (var i = 0; i < itemElements.length; i++) {
+                                itemElements[i].style.fontSize = '0.8em';
+                              }
+                            }
+                          });
+                        </script>
+
             {%- else -%}
               <nav class="header__inline-menu">
                 <ul class="list-menu list-menu--inline" role="list">
