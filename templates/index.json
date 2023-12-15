@@ -2,6 +2,7 @@
   "sections": {
     "c75a5c74-c373-4ac0-ae17-321e4fa26a1f": {
       "type": "video-hero-banner",
+      "disabled": true,
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b76f6a2040534bbd94c6a1cacecfc225.mp4",
         "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
@@ -32,7 +33,6 @@
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "head": "",
         "subhead": "<strong>BLACKL FRIDAY SALE<\/strong>",
@@ -55,6 +55,7 @@
       "blocks": {
         "43d4edf9-2c66-4581-ae3b-235d8a5de143": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "bg_image": "shopify:\/\/shop_images\/Untitled-2_8c5dfd72-78c5-4299-a95b-a44269db0e7e.jpg",
             "sub_heading": "Memorial Day Week",
@@ -118,6 +119,7 @@
         "bf003ea6-1075-44f5-9494-83f647db2758",
         "db0dba57-e908-4dbb-866f-76a3b2ef4489"
       ],
+      "disabled": true,
       "settings": {
         "title": ""
       }
@@ -202,6 +204,7 @@
         "af31e0fb-c1ac-4c88-a354-bc37e635b6dd",
         "410da90e-5df9-40f6-b1c1-7e6fd209b8d7"
       ],
+      "disabled": true,
       "settings": {
         "title": "Featured Categories",
         "image_ratio": "square",
@@ -240,6 +243,7 @@
     },
     "16523705464bc2103a": {
       "type": "home-range",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/DSC09446-1.jpg",
         "title": "We Deliver Solutions Faster,  So The DOERS Can DO!",
@@ -250,6 +254,7 @@
     },
     "1652380251ad044f2c": {
       "type": "home-subscription",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/18-wheeler.jpg",
         "title": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"site\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> <\/div>",
@@ -262,6 +267,7 @@
     },
     "16520963705d40640a": {
       "type": "home-featured-blog",
+      "disabled": true,
       "settings": {
         "title": "Blog",
         "blog_url": "shopify:\/\/blogs\/products",
