@@ -274,8 +274,8 @@
     text-align: center;
     margin: 0 0 5px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content:space-around;
   }
 
   .hero-banner-buttons a {
@@ -285,7 +285,7 @@
     font-weight: 600;
     line-height: 1;
     padding: 1.2em;
-    /*width: 33%;*/
+    width: 50%;
     background: #0000ff;
     color: #fff;
     margin: 0 10px;
@@ -293,7 +293,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*min-width: 150px;*/
+    min-width: 150px;
     text-transform: uppercase;
     transition: all .2s ease-in-out;
     border-radius:5px;
@@ -360,7 +360,7 @@
 
     .hero-banner-buttons a {
       font-size: .8em;
-      /*min-width: 100px;*/
+      min-width: 100px;
       padding: .8em;
     }
   }
@@ -526,11 +526,11 @@
 
         <div class="hero-banner-buttons">
           {% unless section.settings.cta_button_1_text == blank %}
-          <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
+            <a href="{{ section.settings.cta_button_1_href }}" class="">{{ section.settings.cta_button_1_text }}</a>
           {% endunless %}
 
           {% unless section.settings.cta_button_2_text == blank %}
-          <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
+            <a href="{{ section.settings.cta_button_2_href }}" class="">{{ section.settings.cta_button_2_text }}</a>
           {% endunless %}
         </div>
 
