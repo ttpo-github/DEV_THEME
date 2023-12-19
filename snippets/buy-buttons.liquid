@@ -132,7 +132,7 @@
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
                 <span>
                   {%- if product.selected_or_first_available_variant.available == false  -%}
-                    <a href="{{block.settings.phone_link}}" style="padding:0px;" class="custom-btn button--full-width">{{ 'products.product.sold_out' | t }}</a>
+                    <a style="display:none;" href="tel:(833) 910-3416" id="dynamic_phone_link" class="hidden-link custom-btn button--full-width">Call for Availability: <br> (833) 910-3416</a>
                   {%- else -%}                    
                       {{ 'products.product.add_to_cart' | t }}
                     
