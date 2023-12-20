@@ -25,11 +25,29 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "1703096093f29fbda0": {
+      "type": "apps",
+      "blocks": {
+        "e3a5e1ee-17e4-4123-80d0-cc5fadc38cf4": {
+          "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-block\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MjM0OTU=\"><\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "e3a5e1ee-17e4-4123-80d0-cc5fadc38cf4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "wholesale-form",
-    "74c21194-7ccb-4084-abdb-e9b06c2bd4d0"
+    "74c21194-7ccb-4084-abdb-e9b06c2bd4d0",
+    "1703096093f29fbda0"
   ]
 }
