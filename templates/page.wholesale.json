@@ -1,1 +1,35 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28,"css_class":""}},"wholesale-form":{"type":"wholesale-form","settings":{"color_scheme":"background-2","padding_top":60,"padding_bottom":60}}},"order":["main","wholesale-form"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "css_class": ""
+      }
+    },
+    "wholesale-form": {
+      "type": "wholesale-form",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "74c21194-7ccb-4084-abdb-e9b06c2bd4d0": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"globo-formbuilder\" data-id=\"MjM0OTU=\"><\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "wholesale-form",
+    "74c21194-7ccb-4084-abdb-e9b06c2bd4d0"
+  ]
+}
