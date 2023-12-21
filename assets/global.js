@@ -965,11 +965,11 @@ class VariantSelects extends HTMLElement {
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
         
-        const dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
+        //const dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
 
         //console.log(dynamicPhoneLink)
 
-        let theLink = let theLink = (dynamicPhoneLink === null ? `<a href="tel: ${window.variantStrings.storeNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel: ${this.phoneAnchor.href}" style="padding:0px;" class="updatedLink custom-btn button--full-width">${this.phoneAnchor.textContent}</a>`) 
+        let theLink = let theLink = (dynamicPhoneLink === null ? `<a href="tel: ${window.variantStrings.storeNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel: ${dynamicPhoneLink.href}" style="padding:0px;" class="updatedLink custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>`) 
 
         if (source && destination) destination.innerHTML = source.innerHTML;
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
