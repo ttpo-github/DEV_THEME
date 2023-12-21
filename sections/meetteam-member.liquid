@@ -11,7 +11,7 @@
           <h3>{{ block.settings.title }}</h3>
           <div>{{ block.settings.designation }}</div>
         
-          {% if block.settings.phone_info %}
+          {% if block.settings.phone_info != empty %}
             <p>Call or Text: <span><a href="tel:+{{block.settings.phone_info | remove: '-' | remove: '(' | remove: ')' | remove: ' ' }}">{{ block.settings.phone_info }}</a></span></p>
           {% endif %}
         
