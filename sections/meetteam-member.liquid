@@ -10,6 +10,11 @@
           </figure>
           <h3>{{ block.settings.title }}</h3>
           <div>{{ block.settings.designation }}</div>
+        
+          {% if block.settings.phone_number %}
+            <p>Call or Text:<span><a href="tel:+{{block.settings.expert-call | remove: '-' | remove: '(' | remove: ')' | remove: ' ' }}">{{ block.settings.expert-call }}</a></span></p>
+          {% endif %}
+        
           <span class="spanish-speaking-snip">{{ block.settings.add_info }}</span>
         </div>
       </li>
@@ -106,6 +111,11 @@
             "type" : "text",
             "id" : "add_info",
             "label" : "Additional Info"
+          },
+          {
+            "type" : "text",
+            "id" : "phone_info",
+            "label" : "Phone Number"
           }
         ]
 	  }
