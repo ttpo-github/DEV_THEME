@@ -7,6 +7,7 @@
       "blocks": {
         "e59b35ca-97fd-427c-87aa-268cf742c9f3": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "We are closed on Monday and Tuesday, we will resume business on Wednesday the 27th",
             "text_alignment": "center",
