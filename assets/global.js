@@ -969,7 +969,7 @@ class VariantSelects extends HTMLElement {
 
         console.log(dynamicPhoneLink)
 
-       let theLink = dynamicPhoneLink === undefined ? `<a href="tel: ${window.variantStrings.storeNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel+${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
+       let theLink = dynamicPhoneLink == undefined ? `<a href="tel: ${window.variantStrings.storeNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel+${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
 
         console.log(theLink)
 
@@ -987,7 +987,7 @@ class VariantSelects extends HTMLElement {
         if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
         const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, `<a href="${window.variantStrings.storeNumber}" style="padding:0px;" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>`);
+        this.toggleAddButton(addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true, theLink );
 
         publish(PUB_SUB_EVENTS.variantChange, {data: {
           sectionId,
