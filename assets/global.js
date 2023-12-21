@@ -969,7 +969,7 @@ class VariantSelects extends HTMLElement {
 
         console.log(dynamicPhoneLink)
 
-       let theLink = dynamicPhoneLink == undefined ? `<a href="tel: ${window.variantStrings.storeNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel+${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
+       let theLink = dynamicPhoneLink == undefined ? `<a href="tel+${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">${window.variantStrings.soldOut}</a>` : `<a href="tel+${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
 
         console.log(theLink)
 
@@ -1073,7 +1073,7 @@ class VariantSelects extends HTMLElement {
 
     
     if(!usablePhoneLink){
-      addButtonText.innerHTML = `<a href="${window.variantStrings.storeNumber}" class="custom-btn button--full-width">${window.variantStrings.unavailable}</a>`;
+      addButtonText.innerHTML = `<a href="${window.variantStrings.linkStoreNumber}" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.unavailable}</a>`;
     } else {
       addButtonText.innerHTML = ""
       addButtonText.appendChild(usablePhoneLink);
