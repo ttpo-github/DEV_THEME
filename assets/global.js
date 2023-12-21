@@ -965,7 +965,7 @@ class VariantSelects extends HTMLElement {
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
         
-        //const dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
+        let dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
 
         //console.log(dynamicPhoneLink)
 
