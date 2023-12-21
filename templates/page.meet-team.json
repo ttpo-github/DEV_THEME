@@ -85,7 +85,7 @@
             "title": "Jason",
             "designation": "Trailer Parts Expert",
             "add_info": "",
-            "phone_info": ""
+            "phone_info": "936-312-3337"
           }
         },
         "96309fb2-bec1-4048-a6f1-9e71ba915a35": {
@@ -95,7 +95,7 @@
             "title": "Juan",
             "designation": "Trailer Parts Expert",
             "add_info": "",
-            "phone_info": ""
+            "phone_info": "936-220-4724"
           }
         },
         "0ee36b37-fc60-4b3f-8697-89d30f999d22": {
@@ -105,7 +105,7 @@
             "title": "Kyle",
             "designation": "Trailer Parts Expert",
             "add_info": "",
-            "phone_info": ""
+            "phone_info": "936-226-3664"
           }
         },
         "d5b011a3-2ca1-4be0-8b77-ae0799272be9": {
@@ -115,7 +115,7 @@
             "title": "Krystal",
             "designation": "Trailer Parts Expert",
             "add_info": "",
-            "phone_info": ""
+            "phone_info": "936-218-1280"
           }
         },
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae": {
@@ -125,7 +125,7 @@
             "title": "Anna",
             "designation": "Customer Service",
             "add_info": "",
-            "phone_info": ""
+            "phone_info": "936-220-4199"
           }
         },
         "0f1ddfbe-1867-499b-85a1-29594d75cc8b": {
@@ -387,6 +387,15 @@
             "add_info": "",
             "phone_info": ""
           }
+        },
+        "6eb46a13-3873-44a7-a52c-441f571494a4": {
+          "type": "title",
+          "settings": {
+            "title": "Sydney",
+            "designation": "Customer Service",
+            "add_info": "",
+            "phone_info": "936-245-8193"
+          }
         }
       },
       "block_order": [
@@ -421,7 +430,8 @@
         "773b232e-999e-4eb0-8bd2-a323c3748888",
         "f135ec97-38d4-43c8-8db6-893177f1702b",
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
-        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea"
+        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea",
+        "6eb46a13-3873-44a7-a52c-441f571494a4"
       ],
       "settings": {
         "title": "Our Team",
