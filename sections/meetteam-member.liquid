@@ -11,8 +11,8 @@
           <h3>{{ block.settings.title }}</h3>
           <div>{{ block.settings.designation }}</div>
         
-          {% if block.settings.phone_number %}
-            <p>Call or Text:<span><a href="tel:+{{block.settings.phone_number | remove: '-' | remove: '(' | remove: ')' | remove: ' ' }}">{{ block.settings.phone_number }}</a></span></p>
+          {% if block.settings.phone_info %}
+            <p>Call or Text:<span><a href="tel:+{{block.settings.phone_info | remove: '-' | remove: '(' | remove: ')' | remove: ' ' }}">{{ block.settings.phone_info }}</a></span></p>
           {% endif %}
         
           <span class="spanish-speaking-snip">{{ block.settings.add_info }}</span>
