@@ -96,9 +96,11 @@ function getElement(elementName){
   }
   return document.querySelector('#livechat-eye-catcher');
 };
+
 function addClass(element){
   element?.classList.add('display-chat-widget')
 }
+
 setTimeout(function(){
   let chat_widget = getElement('chat_widget');
   let chat_widget_eye_catcher = getElement();
@@ -115,12 +117,14 @@ setTimeout(function(){
   if(chat_widget_eye_catcher){
      addClass(chat_widget_eye_catcher);
   }else{
+    //
    setTimeout(function(){
      chat_widget_eye_catcher = getElement();
      if(chat_widget_eye_catcher){
        addClass(chat_widget_eye_catcher);
      }
    },5000)
+    //
   }
 },10000)
 
