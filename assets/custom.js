@@ -107,6 +107,7 @@ setTimeout(function(){
   if(chat_widget){
     addClass(chat_widget)
   }else{
+    //
    setTimeout(function(){
      chat_widget = getElement('chat_widget');
      if(chat_widget){
@@ -114,6 +115,7 @@ setTimeout(function(){
      }
    },5000)
   }
+  //
   if(chat_widget_eye_catcher){
      addClass(chat_widget_eye_catcher);
   }else{
