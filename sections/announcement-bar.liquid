@@ -63,12 +63,13 @@
           </div>
 
 
-          <style>
+           <style>
 #custom-countdown{
   display:flex;
   justify-content:center;
   text-align:center;
   font-size:.8em;
+  flex-direction:column;
 }
 
 .custom-countdown-message {
@@ -78,12 +79,13 @@
 }
 
 .custom-countdown-list {
-  display: grid;
+  display: flex;
   list-style: none;
   grid-template-columns: auto auto auto auto;
   padding: 0px;
   line-height: 0;
   gap:5px;
+  justify-content:center;
 }
 
   
@@ -91,6 +93,7 @@
   display: none;
   padding:0px;
    text-align:center;
+  flex-direction:row;
 }
 
 #countdown-content span {
@@ -107,7 +110,17 @@
     justify-content:center;
     gap:5px;
     font-size:1em;
+    flex-direction:row;
   }
+
+  .custom-countdown-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: auto auto auto auto;
+  padding: 0px;
+  line-height: 0;
+  gap:5px;
+}
 
   .custom-countdown-list{
     gap:10px;
