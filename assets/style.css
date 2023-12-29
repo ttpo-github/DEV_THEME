@@ -1488,7 +1488,7 @@ span.message.show {
   vertical-align: top;
   width: 100%;
   margin: 0;
-  max-width: 168px;
+  /*max-width: 168px;*/
   padding: 0;
 }
 .brand__list img{
@@ -1499,8 +1499,10 @@ span.message.show {
 }
 .brand__list-item svg,
 .brand__list-item img {
+  /*
   max-height: 162px;
   max-width: 162px;
+  */
   height: auto;
   display: block;
   width: 100%;
