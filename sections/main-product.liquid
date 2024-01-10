@@ -571,6 +571,7 @@
     }
   </script>
 </section>
+  {% comment %} ORIGINAL PRODUCT DETAILS TAB SECTION START
 <section>
   <div class="product-inner-tabbing section-spacing">
     <div class="bt-container" id="bt-container">
@@ -613,7 +614,7 @@
         <div class="video-container">{{ product.metafields.custom.video_link }}</div>
       </div>{%- endif %}
   
-     {% comment %} How to tabbing {% endcomment %}
+     <!-- How to tabbing -->
       {%- if product.metafields.custom.howto_link1 %}
         <div id="howto" class="product-tabing-body">{{ product.metafields.custom.howto_link1 }}</div>
       {%- endif %}
@@ -672,6 +673,7 @@
     });
   </script>
 </section>
+ ORIGINAL PRODUCT DETAILS TAB SECTION END  {% endcomment %}      
                           
 {% comment %}
 <section>
