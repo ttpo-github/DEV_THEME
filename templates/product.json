@@ -102,10 +102,27 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "quick_order_list_GiKQY3": {
+      "type": "quick-order-list",
+      "settings": {
+        "show_image": false,
+        "show_sku": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product_detail_tabs_UPzfLk": {
+      "type": "product-detail-tabs",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "quick_order_list_GiKQY3",
+    "product_detail_tabs_UPzfLk"
   ]
 }
