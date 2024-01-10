@@ -100,17 +100,26 @@
   </script>
 </section>
 {% schema %}
-  {
-    "name": "Product Detail Tabs",
-    "settings": [
-      {
+ {
+  "name": "Product Detail Tabs",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
       "type": "checkbox",
-      "id": "enable_sticky_info",
+      "id": "show_image",
       "default": false,
       "label": "Placeholder"
     }
-    ]
-  }
+  ],
+  "presets": [
+    {
+      "name": "Product Detail Tabs"
+    }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}
