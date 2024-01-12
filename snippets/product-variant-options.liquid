@@ -62,6 +62,8 @@
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
       {{ value -}}
     </label>
+
+    <script>console.log('{{ value }}')</script>
     
 
     {% if value contains 'custom' or value contains 'Custom' and once == false %}
