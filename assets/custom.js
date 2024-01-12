@@ -46,7 +46,7 @@ $('.feature-blog__list').slick({
   ]
 });
 
-
+// 2 WEEK CUSTOM VARIANT INPUT ----------------------------------------------------------------------------------------------
 if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom"]').prop("checked") == true){
   $('variant-radios input[value*="Custom"],variant-radios input[value*="custom"]').siblings('.custom_variant').show();
 }
@@ -59,6 +59,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_variant').hide();
   }
 });
+// 2 WEEK CUSTOM VARIANT INPUT ----------------------------------------------------------------------------------------------
 
 $('.blog-filter').slick({
   arrows: true,
