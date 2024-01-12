@@ -52,6 +52,7 @@ if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom
   $('variant-radios input[value*="Custom"],variant-radios input[value*="custom"]').siblings('.custom_variant').show();
 }
 */
+/*
 $('variant-radios input[type="radio"]').change(function(){
   if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom"]').is(":checked")){
     $(this).siblings('.custom_variant').show();
@@ -61,6 +62,25 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_variant').hide();
   }
 });
+*/
+
+// Assuming the variant-radios and custom_variant classes exist in your HTML
+
+document.querySelectorAll('.variant-radios input[type="radio"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    var customRadioChecked = document.querySelector('.variant-radios input[value*="Custom"], .variant-radios input[value*="custom"]').checked;
+
+    if (customRadioChecked) {
+      this.parentElement.querySelector('.custom_variant').style.display = 'block';
+    } else {
+      document.querySelectorAll('.custom_variant input').forEach(function(input) {
+        input.value = '';
+      });
+      this.parentElement.querySelector('.custom_variant').style.display = 'none';
+    }
+  });
+});
+
 // 2 WEEK CUSTOM VARIANT INPUT ----------------------------------------------------------------------------------------------
 
 $('.blog-filter').slick({
