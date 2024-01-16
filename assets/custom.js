@@ -80,7 +80,8 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').show();
   }
   else {
-    $('.custom_variant input').val('');
+    //$('.custom_variant input').val('');
+    //$('.custom_spring_center_variant input').val('');
     $(this).siblings('.custom_variant').hide();
     $(this).siblings('.custom_spring_center_variant').hide();
   }
