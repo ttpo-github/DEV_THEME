@@ -66,7 +66,7 @@
     <script>//console.log('{{ value }}')</script>
 
     {% if value contains 'Custom Spring Center (+1 Week Build Time)' %}
-      <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;"{% endif %}>
+      <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;" {% else %} style="display:none;"{% endif %}>
           <label>Please select your Hubface and input your custom Spring Center length:</label>
           <input id="hubface-selection" class="" type="text" name="properties[Hubface Selection]" form="product-form-{{ section.id }}">
         
