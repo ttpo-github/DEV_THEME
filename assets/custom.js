@@ -73,13 +73,14 @@ $('variant-radios input[type="radio"]').change(function(){
 */
 
 $('variant-radios input[type="radio"]').change(function(){
-  if ($('variant-radios input[value="Custom \\(+2 Week Build Time\\) \\+\\$150"]').is(":checked")) {
-    $(this).siblings('.custom_variant').show();
-    $(this).siblings('.custom_spring_center_variant').hide();
+  if ($('variant-radios input[value*="Custom"]').is(":checked") &&
+      !$('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]').is(":checked")) {
+        $(this).siblings('.fully_custom_variant').show();
+        $(this).siblings('.custom_spring_center_variant').hide();
   }
   else if ($('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]').is(":checked")){
     $(this).siblings('.custom_spring_center_variant').show();
-    $(this).siblings('.custom_variant').hide();
+    $(this).siblings('.fully_custom_variant').hide();
   }
   else {
     //$('.custom_variant input').val('');
