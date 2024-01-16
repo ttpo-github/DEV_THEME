@@ -63,7 +63,7 @@
       {{ value -}}
     </label>
 
-    <script>console.log({{ option | json }})</script>
+    
 
     {% if value contains 'Custom Spring Center (+1 Week Build Time)' %}
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;" {% else %} style="display:none;"{% endif %}>
@@ -71,8 +71,11 @@
         
           <label for="cars">Choose an option:</label>
           <select name="cars" id="cars">
-            
-            <option value="volvo">Volvo</option>
+            {% for theValue in option.values %}
+              <script>console.log('{{ theValue }}')</script>
+           
+            {% endfor %}
+       <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
