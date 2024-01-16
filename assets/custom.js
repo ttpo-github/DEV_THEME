@@ -82,6 +82,7 @@ $('variant-radios input[type="radio"]').change(function(){
   else {
     $('.custom_variant input').val('');
     $(this).siblings('.custom_variant').hide();
+    $(this).siblings('.custom_spring_center_variant').hide();
   }
 });
 
