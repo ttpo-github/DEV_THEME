@@ -54,7 +54,7 @@ if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom
 */
 
 $('variant-radios input[type="radio"]').change(function(){
-  if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom"]').is(":checked")){
+  if ($('variant-radios input[value="Custom Hubface and Spring"]).is(":checked")){
     $(this).siblings('.custom_variant').show();
   }
   else {
