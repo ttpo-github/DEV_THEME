@@ -72,13 +72,9 @@
           <label for="cars">Choose an option:</label>
           <select name="cars" id="cars">
             {% for theValue in option.values %}
-              <script>console.log('{{ theValue }}')</script>
-           
+              <option value="{{ theValue }}">{{ theValue }}</option>
             {% endfor %}
-       <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+       
           </select>
         
           <input id="hubface-selection" class="" type="text" name="properties[Hubface Selection]" form="product-form-{{ section.id }}">
