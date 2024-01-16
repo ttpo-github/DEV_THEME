@@ -63,7 +63,7 @@
       {{ value -}}
     </label>
 
-    <script>console.log('{{ value }}')</script>
+    <script>//console.log('{{ value }}')</script>
 
     {% if value contains 'Custom Spring Center (+1 Week Build Time)' %}
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;"{% endif %}>
