@@ -54,15 +54,16 @@ if ($('variant-radios input[value*="Custom"],variant-radios input[value*="custom
 */
 
 $('variant-radios input[type="radio"]').change(function(){
-  if ($('variant-radios input[value="Custom (+2 Week Build Time) +$150"]).is(":checked")){
+  if ($('variant-radios input[value="Custom \\(+2 Week Build Time\\) \\+\\$150"]').is(":checked")) {
     $(this).siblings('.custom_variant').show();
-  }
+}
+
                                                
-/*
-  if ($('variant-radios input[value="Custom Spring Center (+1 Week Build Time) +$75"]).is(":checked")){
+
+  if ($('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]).is(":checked")){
          $(this).siblings('.custom_spring_center_variant').show();
   }
-*/
+
                                                
   else {
     $('.custom_variant input').val('');
