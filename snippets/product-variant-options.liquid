@@ -69,8 +69,8 @@
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;" {% else %} style="display:none;"{% endif %}>
           <label>Please select your Hubface and input your custom Spring Center length:</label>
         
-          <label for="cars">Choose an option:</label>
-          <select name="cars" id="cars">
+          <label for="properties[Hubface Selection]">Choose an option:</label>
+          <select name="properties[Hubface Selection]" id="hubface-selection">
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
               {% if theValue contains '/' %}
@@ -79,8 +79,6 @@
             {% endfor %}
        
           </select>
-        
-          <input id="hubface-selection" class="" type="text" name="properties[Hubface Selection]" form="product-form-{{ section.id }}">
         
           <input id="custom-spring-center" class="" type="text" name="properties[Custom Spring Center]" form="product-form-{{ section.id }}">
       </div>
