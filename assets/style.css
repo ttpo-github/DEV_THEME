@@ -3230,11 +3230,12 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide {
-  display: none; 
+  max-height:0px;
+  transition:all 3s;
 }
 
 .custom-option-slide.custom-slide-active {
-  display: block;
+  max-height:700px
 }
 
 
