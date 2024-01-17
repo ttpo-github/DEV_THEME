@@ -3230,14 +3230,19 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide {
-  height: 0;
-  overflow: hidden;
-  opacity: 0; /* Use opacity for visibility */
+  position:absolute;
+  transform:translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 3s ease-in;
+  
 }
 
 .custom-option-slide.custom-slide-active {
-  animation: slideDown .5s ease;
-  animation-fill-mode: forwards;
+  position:relative;
+  transform:translateY(0%);
+  visibility: visible;
+  opacity: 1;
 }
 
 @keyframes slideDown {
