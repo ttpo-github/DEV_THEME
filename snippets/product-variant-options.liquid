@@ -69,7 +69,7 @@
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;" {% else %} style="display:none;"{% endif %}>
           <label>Please select your Hubface and input your custom Spring Center length:</label>
         <br>
-          <label for="properties[Hubface Selection]">Select a Hubface</label>
+          <label for="properties[Hubface Selection]">Select a Hubface:</label>
           <select name="properties[Hubface Selection]" id="hubface-selection">
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
