@@ -3232,6 +3232,7 @@ fieldset.product-form__input .form__label,
 .custom-option-slide {
   height: 0;
   overflow: hidden;
+  visibility:hidden;
 }
 
 .custom-option-slide.custom-slide-active {
@@ -3242,9 +3243,11 @@ fieldset.product-form__input .form__label,
 @keyframes slideDown {
   from {
     height: 0;
+    visibility:hidden;
   }
   to {
     height: 100%;
+    visibility:visible;
   }
 }
 
