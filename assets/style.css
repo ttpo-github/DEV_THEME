@@ -3235,7 +3235,6 @@ fieldset.product-form__input .form__label,
   visibility: hidden;
   opacity: 0;
   transition: all 2s ease-in;
-  height:0%;
   
 }
 
@@ -3252,7 +3251,7 @@ fieldset.product-form__input .form__label,
   }
   to {
       visibility: visible;
-    opacity: 1;
+      opacity: 1;
      transform:translateY(0%)
   }
 }
