@@ -3232,7 +3232,7 @@ fieldset.product-form__input .form__label,
 .custom-option-slide {
   height: 0;
   overflow: hidden;
-  visibility:hidden;
+  opacity: 0; /* Use opacity for visibility */
 }
 
 .custom-option-slide.custom-slide-active {
@@ -3243,13 +3243,14 @@ fieldset.product-form__input .form__label,
 @keyframes slideDown {
   from {
     height: 0;
-    visibility:hidden;
+    opacity: 0;
   }
   to {
-    height: 100%;
-    visibility:visible;
+    height: 100px; /* Use a specific pixel value instead of a percentage */
+    opacity: 1;
   }
 }
+
 
 
 
