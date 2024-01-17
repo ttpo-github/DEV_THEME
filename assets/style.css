@@ -3259,6 +3259,7 @@ fieldset.product-form__input .form__label,
   font-size: 15px;
   font-family: Inter;
   color: #000646;
+  border-radius:6px;
   
 }
 
@@ -3274,7 +3275,7 @@ fieldset.product-form__input .form__label,
   font-size: 15px;
   font-family: Inter;
   color: #000646;
-  
+  border-radius: 6px;
 }
 
 fieldset.product-form__input {
