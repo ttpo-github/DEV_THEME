@@ -71,7 +71,7 @@
           <label>Please select your Hubface and input your custom Spring Center length:</label>
         <br>
           <label for="properties[Hubface Selection]">Select a Hubface:</label>
-          <select name="properties[Hubface Selection]" id="hubface-selection">
+          <select name="properties[Hubface Selection]" id="hubface-selection" class="hubface-selection">
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
               {% if theValue contains '/' %}
