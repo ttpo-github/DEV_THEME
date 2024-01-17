@@ -3234,6 +3234,7 @@ fieldset.product-form__input .form__label,
   opacity:0;
   overflow:hidden;
   transition:all .3s;
+  border:2px solid block;
 }
 
 .custom-option-slide.custom-slide-active {
