@@ -3234,7 +3234,7 @@ fieldset.product-form__input .form__label,
   transform:translateY(-100%);
   visibility: hidden;
   opacity: 0;
-  transition: all 3s ease-in;
+  transition: all .5s ease-in;
   
 }
 
