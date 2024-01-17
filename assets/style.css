@@ -3239,6 +3239,9 @@ fieldset.product-form__input .form__label,
 .custom-option-slide.custom-slide-active {
   max-height:700px;
   opacity:1;
+}
+
+.custom-option-inner-container {
   border:2px solid black;
   padding: 5px;
   border-radius: 6px;
