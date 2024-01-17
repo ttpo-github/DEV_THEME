@@ -3239,22 +3239,9 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide.custom-slide-active {
- max-height:auto;
+ max-height:700px;
   visibility: visible;
       opacity: 1;
-}
-
-@keyframes slideDown {
-  from {
-    visibility: hidden;
-    opacity: 0;
-    transform:translateY(-100%)
-  }
-  to {
-      visibility: visible;
-      opacity: 1;
-     transform:translateY(0%)
-  }
 }
 
 
