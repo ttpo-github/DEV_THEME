@@ -3237,12 +3237,12 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide.custom-slide-active {
-  max-height: 0;
-  overflow: hidden;
+  max-height: 700px;
+  overflow: visibility;
   transition: max-height 0.3s ease-out; /* Adjust duration and easing as needed */
   animation: slideDown 0.5s ease-out; /* Adjust duration and easing as needed */
   animation-fill-mode: forwards;
-  display: none;
+  display: block;
 }
 
 @keyframes slideDown {
