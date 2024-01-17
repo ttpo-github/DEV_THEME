@@ -3236,6 +3236,7 @@ fieldset.product-form__input .form__label,
 
 .custom-option-slide.custom-slide-active {
   animation: slideDown 0.5s ease;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideDown {
