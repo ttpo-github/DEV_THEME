@@ -3262,7 +3262,7 @@ fieldset.product-form__input .form__label,
   margin: 8px 0 0;
 }
 
-.custom-option-inner-container select {
+.custom-option-inner-container .hubface-selection {
   -moz-appearance: none;
   -webkit-appearance: none;
   background: white;
