@@ -3259,7 +3259,7 @@ fieldset.product-form__input .form__label,
   font-size: 15px;
   font-family: Inter;
   color: #000646;
-  margin: 8px 0 0;
+  
 }
 
 .custom-option-inner-container select {
@@ -3274,7 +3274,7 @@ fieldset.product-form__input .form__label,
   font-size: 15px;
   font-family: Inter;
   color: #000646;
-  margin: 8px 0 0;
+  
 }
 
 fieldset.product-form__input {
