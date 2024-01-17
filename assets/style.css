@@ -3230,21 +3230,31 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide {
-  max-height:0;
-  overflow:hidden;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 5s ease-in;
+  max-height: 0;
+  overflow: hidden;
+  display: none;
   
 }
 
 .custom-option-slide.custom-slide-active {
- max-height:700px;
-  visibility: visible;
-      opacity: 1;
-  transition: all 5s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Adjust duration and easing as needed */
+  animation: slideDown 0.5s ease-out; /* Adjust duration and easing as needed */
+  animation-fill-mode: forwards;
+  display: none;
 }
 
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    display: none;
+  }
+  to {
+    max-height: 700px; /* Adjust to a sufficiently large value or use 'auto' based on your content height */
+    display: block;
+  }
+}
 
 
 
