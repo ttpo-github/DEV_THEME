@@ -3262,6 +3262,20 @@ fieldset.product-form__input .form__label,
   margin: 8px 0 0;
 }
 
+.custom-option-inner-container select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  &:focus {
+    color: black;
+  }
+
 
 
 
