@@ -3240,7 +3240,10 @@ fieldset.product-form__input .form__label,
 
 .custom-option-slide.custom-slide-active {
   position:static;
+  transform:translateY(-100%);
   animation-name:slideDown;
+  visibility: visible;
+      opacity: 1;
 }
 
 @keyframes slideDown {
