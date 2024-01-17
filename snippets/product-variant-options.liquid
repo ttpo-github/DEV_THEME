@@ -68,7 +68,7 @@
     {% if value == 'Custom Spring Center (+1 Week Build Time) +$75' %}
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant" {% if option.selected_value == value %}style="display:block;" {% else %} style="display:none;"{% endif %}>
           <label>Please select your Hubface and input your custom Spring Center length:</label>
-        
+        <br>
           <label for="properties[Hubface Selection]">Choose an option:</label>
           <select name="properties[Hubface Selection]" id="hubface-selection">
             {% for theValue in option.values %}
@@ -76,8 +76,7 @@
               {% if theValue contains '/' %}
                 <option value="{{ splitValue[0] }}">{{ splitValue[0] }}</option>
               {% endif %}
-            {% endfor %}
-       
+            {% endfor %}       
           </select>
         
           <input id="custom-spring-center" class="" type="text" name="properties[Custom Spring Center]" form="product-form-{{ section.id }}">
