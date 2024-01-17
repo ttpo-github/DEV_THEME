@@ -3228,6 +3228,20 @@ fieldset.product-form__input .form__label,
 .custom_variant {
   margin-top: 15px;
 }
+
+.custom-option-slide {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease; /* Adjust the duration and timing function as needed */
+}
+
+.custom-option-slide.active {
+  height: 100%;
+}
+
+
+
+
 fieldset.product-form__input {
   margin-bottom: 20px;
   max-width: 100%;
