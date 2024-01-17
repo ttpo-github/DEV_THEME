@@ -3231,11 +3231,13 @@ fieldset.product-form__input .form__label,
 
 .custom-option-slide {
   max-height:0px;
+  opacity:0;
   transition:all 3s;
 }
 
 .custom-option-slide.custom-slide-active {
   max-height:700px
+  opacity:1;
 }
 
 
