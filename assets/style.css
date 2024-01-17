@@ -3231,7 +3231,6 @@ fieldset.product-form__input .form__label,
 
 .custom-option-slide {
   height: 0;
-  overflow: hidden;
 }
 
 .custom-option-slide.custom-slide-active {
