@@ -3242,6 +3242,7 @@ fieldset.product-form__input .form__label,
  max-height:700px;
   visibility: visible;
       opacity: 1;
+  transition: all .8s ease-out;
 }
 
 
