@@ -71,7 +71,7 @@ $('variant-radios input[type="radio"]').change(function(){
   }
 });
 */
-
+/*
 $('variant-radios input[type="radio"]').change(function(){
   if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]').is(":checked")) {
     $(this).siblings('.fully_custom_variant').show();
@@ -88,7 +88,24 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').hide();
   }
 });
+*/
 
+$('variant-radios input[type="radio"]').change(function(){
+  if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]').is(":checked")) {
+    $(this).siblings('.fully_custom_variant').addClass(".custom-slide-active");
+    $(this).siblings('.custom_spring_center_variant').removeClass(".custom-slide-active");
+  }
+  else if ($('variant-radios input[value="Custom Spring Center \\(+1 Week Build Time\\) \\+\\$75"]').is(":checked")){
+    $(this).siblings('.custom_spring_center_variant').addClass(".custom-slide-active");
+    $(this).siblings('.fully_custom_variant').removeClass(".custom-slide-active");
+  }
+  else {
+    //$('.custom_variant input').val('');
+    //$('.custom_spring_center_variant input').val('');
+    $(this).siblings('.fully_custom_variant').removeClass(".custom-slide-active");
+    $(this).siblings('.custom_spring_center_variant').removeClass(".custom-slide-active");
+  }
+});
 
 
 // 2 WEEK CUSTOM VARIANT INPUT ----------------------------------------------------------------------------------------------
