@@ -3232,14 +3232,17 @@ fieldset.product-form__input .form__label,
 .custom-option-slide {
   max-height:0;
   overflow:hidden;
-  transition: all .5s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 5s ease-in;
   
 }
 
 .custom-option-slide.custom-slide-active {
  max-height:700px;
-  
-  transition: all .5s ease-out;
+  visibility: visible;
+      opacity: 1;
+  transition: all 5s ease-out;
 }
 
 
