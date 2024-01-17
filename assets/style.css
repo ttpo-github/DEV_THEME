@@ -3272,9 +3272,7 @@ fieldset.product-form__input .form__label,
   padding: 12px;
   width: 100%;
   font-size: 18px;
-  &:focus {
-    color: black;
-  }
+}
 
 
 
