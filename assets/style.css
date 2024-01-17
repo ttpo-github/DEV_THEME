@@ -3266,12 +3266,11 @@ fieldset.product-form__input .form__label,
   -moz-appearance: none;
   -webkit-appearance: none;
   background: white;
-  border: none;
-  border-radius: 0;
+  border-radius: 6px;
+  margin:1rem;
   cursor: pointer;
-  padding: 12px;
-  width: 100%;
-  font-size: 18px;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
 
