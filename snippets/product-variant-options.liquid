@@ -72,7 +72,9 @@
           <label for="cars">Choose an option:</label>
           <select name="cars" id="cars">
             {% for theValue in option.values %}
-              <option value="{{ theValue }}">{{ theValue }}</option>
+              {% if theValue contains '/' %}
+                <option value="{{ theValue }}">{{ theValue }}</option>
+              {% endif %}
             {% endfor %}
        
           </select>
