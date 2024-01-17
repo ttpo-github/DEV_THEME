@@ -3230,8 +3230,8 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide {
-  position:relative;
-  transform:translateY(-100%);
+  max-height:0;
+  overflow:hidden;
   visibility: hidden;
   opacity: 0;
   transition: all 2s ease-in;
@@ -3239,9 +3239,7 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-slide.custom-slide-active {
-  position:relative;
-  transform:translateY(0%);
-  animation-name:slideDown;
+ max-height:auto;
   visibility: visible;
       opacity: 1;
 }
