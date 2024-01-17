@@ -74,7 +74,7 @@
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
               {% if theValue contains '/' %}
-                <option value="{{ splitValue[1] }}">{{ splitValue[1] }}</option>
+                <option value="{{ splitValue[0] }}">{{ splitValue[0] }}</option>
               {% endif %}
             {% endfor %}
        
