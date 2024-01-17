@@ -3233,7 +3233,7 @@ fieldset.product-form__input .form__label,
   max-height:0px;
   opacity:0;
   overflow:hidden;
-  transition:max-height 1s ease-out, opacity .2s ease-out;
+  transition:max-height 1s, opacity .2s;
 }
 
 .custom-option-slide.custom-slide-active {
