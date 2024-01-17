@@ -71,7 +71,7 @@
           <label>Please select your Hubface and input your custom Spring Center length:</label>
         <br>
           <label for="properties[Hubface Selection]">Select a Hubface:</label>
-          <div class="select-wrapper">
+         
           <select name="properties[Hubface Selection]" id="hubface-selection" class="hubface-selection">
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
@@ -80,7 +80,7 @@
               {% endif %}
             {% endfor %}       
           </select>
-          </div>
+         
           <br>
           <label for="properties[Custom Spring Center]">Custom Spring Center Measurment:</label>
           <input id="custom-spring-center" class="" type="text" name="properties[Custom Spring Center]" form="product-form-{{ section.id }}">
