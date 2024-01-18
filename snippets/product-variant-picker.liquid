@@ -137,3 +137,46 @@
     </div>
   </div>
 </noscript>
+
+<style>
+  #popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+            z-index: 2;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+</style>
+
+<div id="overlay"></div>
+
+<div id="popup-container">
+    <span id="close-btn">&times;</span>
+    <img src="https://ao1nviixch2mw5na-5229412425.shopifypreview.com/cdn/shop/files/MINMAXWEBIMAGE_35185924-ee3c-406d-a36e-b7e3314b3726.jpg?v=1705415037&width=1946" alt="Popup Image">
+</div>
+<script></script>
