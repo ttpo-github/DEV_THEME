@@ -969,7 +969,7 @@ class VariantSelects extends HTMLElement {
 
         console.log(dynamicPhoneLink)
 
-       let theLink = dynamicPhoneLink == undefined ? `<a href="tel:${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>` : `<a href="tel+${dynamicPhoneLink.href.split("tel:")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
+       let theLink = dynamicPhoneLink == undefined ? `<a href="tel:${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>` : `<a href="tel:${dynamicPhoneLink.href.split("tel:")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>` 
 
         console.log(theLink)
 
