@@ -3242,7 +3242,7 @@ fieldset.product-form__input .form__label,
 }
 
 .custom-option-inner-container {
-  border:2px solid black;
+  border:1px solid black;
   padding: 5px;
   border-radius: 6px;
 }
