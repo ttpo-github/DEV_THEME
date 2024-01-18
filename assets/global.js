@@ -1073,7 +1073,7 @@ class VariantSelects extends HTMLElement {
 
     
     if(!usablePhoneLink){
-      addButtonText.innerHTML = `<a href="${window.variantStrings.linkStoreNumber}" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.unavailable}</a>`;
+      addButtonText.innerHTML = `<a href="tel:${window.variantStrings.linkStoreNumber}" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.unavailable}</a>`;
     } else {
       addButtonText.innerHTML = ""
       addButtonText.appendChild(usablePhoneLink);
