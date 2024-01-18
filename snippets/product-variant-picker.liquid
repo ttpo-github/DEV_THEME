@@ -141,7 +141,7 @@
 <style>
   #popup-container {
             display: none;
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -156,7 +156,7 @@
 
         #overlay {
             display: none;
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -180,7 +180,7 @@
     <img src="https://ao1nviixch2mw5na-5229412425.shopifypreview.com/cdn/shop/files/MINMAXWEBIMAGE_35185924-ee3c-406d-a36e-b7e3314b3726.jpg?v=1705415037&width=1946" alt="Popup Image">
 </div>
 <script>
-    const openPopupButton = document.getElementById('axle_reference_chart');
+    const openPopupButton = document.getElementsByClassName('axle_reference_chart');
     const popupContainer = document.getElementById('popup-container');
     const overlay = document.getElementById('overlay');
     const closeBtn = document.getElementById('close-btn');
