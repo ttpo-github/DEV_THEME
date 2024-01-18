@@ -179,4 +179,27 @@
     <span id="close-btn">&times;</span>
     <img src="https://ao1nviixch2mw5na-5229412425.shopifypreview.com/cdn/shop/files/MINMAXWEBIMAGE_35185924-ee3c-406d-a36e-b7e3314b3726.jpg?v=1705415037&width=1946" alt="Popup Image">
 </div>
-<script></script>
+<script>
+    const openPopupButton = document.getElementById('axle_reference_chart');
+    const popupContainer = document.getElementById('popup-container');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-btn');
+
+    openPopupButton.forEach(function(el){
+      el.addEventListener('click', () => {
+        popupContainer.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+    })
+
+    closeBtn.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+  
+</script>
