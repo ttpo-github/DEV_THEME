@@ -185,7 +185,7 @@
     const overlay = document.getElementById('overlay');
     const closeBtn = document.getElementById('close-btn');
 
-    openPopupButton.forEach(function(el){
+    Array.from(openPopupButton).forEach(function(el){
       el.addEventListener('click', () => {
         popupContainer.style.display = 'block';
         overlay.style.display = 'block';
