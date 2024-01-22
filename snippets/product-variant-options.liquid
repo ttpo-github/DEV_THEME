@@ -65,7 +65,7 @@
 
     
 
-    {% if value == 'Custom Spring Center (+1 Week Build Time) +$75' %}
+    {% if value == 'Custom Spring Center (+3 Day Build Time) + $75' %}
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant custom-option-slide {% if option.selected_value == value %}custom-slide-active{% endif %}" >
         <div class="custom-option-inner-container">
           
@@ -90,7 +90,7 @@
     {% endif %}
     
 
-    {% if value contains 'Custom' and value != 'Custom Spring Center (+1 Week Build Time) +$75' %}
+    {% if value contains 'Custom' and value != 'Custom Spring Center (+3 Day Build Time) + $75' %}
       <div id="{{ option.name | replace: " ","-"}}" class="fully_custom_variant custom-option-slide {% if option.selected_value == value %}custom-slide-active{% endif %}" >
         <div class="custom-option-inner-container">
           <label>Custom Hubface and Spring Center Measurements(Ex.82/67)</label>
