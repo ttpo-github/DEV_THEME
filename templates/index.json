@@ -2,6 +2,7 @@
   "sections": {
     "c75a5c74-c373-4ac0-ae17-321e4fa26a1f": {
       "type": "video-hero-banner",
+      "disabled": true,
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/686f074903ca4950abcdd3d52e0bb2d5.mp4",
         "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
@@ -33,7 +34,6 @@
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "head": "",
         "subhead": "<strong>BLACKL FRIDAY SALE<\/strong>",
@@ -80,6 +80,7 @@
       "block_order": [
         "43d4edf9-2c66-4581-ae3b-235d8a5de143"
       ],
+      "disabled": true,
       "custom_css": [
         "p {font-size: 12px; color: #ffffff;}"
       ],
