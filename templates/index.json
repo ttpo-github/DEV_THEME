@@ -36,6 +36,7 @@
       "type": "hero-banner",
       "settings": {
         "head": "BRAKE ASSEMBLIES",
+        "heading_link": "shopify:\/\/collections\/brake-assemblies",
         "subhead": "<strong>WEEKLY SALE<\/strong>",
         "subhead_below_main": "<strong>Up to 31% Off This Week!  <\/strong>",
         "firstlink": "shopify:\/\/collections\/brake-assemblies",
