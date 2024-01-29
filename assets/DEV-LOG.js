@@ -16,3 +16,11 @@
     - New home page video hero section. 
     - Home page optimizations. 
     - Update to collection product card pricing. Now shows the price of the top most variant instead of the lowest value in the product. 
+
+// 1.29.24
+- New Theme Publish
+- Theme Includes:
+    - "3 Week Custom Build" option on product page
+    - New B2B wholesale form implimentation
+    - Linkable Headers
+    - Various Requested Style Changes
