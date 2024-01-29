@@ -143,7 +143,7 @@
         <h4 class="hero-banner-subhead">{{ section.settings.subhead }}</h4>
       {% endif %}
       {% if section.settings.head %}
-        <h1 class="hero-banner-head">{{ section.settings.head }}</h1>
+        <h1 class="hero-banner-head"><a href="{{ section.settings.heading_link }}">{{ section.settings.head }}</a></h1>
       {% endif %}
       {% unless section.settings.subhead_below_main == blank %}
         <h4 class="hero-banner-below-header">{{ section.settings.subhead_below_main }}</h4>
@@ -250,6 +250,11 @@
         "type": "text",
         "id": "head",
         "label": "Heading"
+      },
+      {
+        "type": "url",
+        "id": "heading_link",
+        "label": "Add Link for Heading Text"
       },
       {
         "type": "text",
