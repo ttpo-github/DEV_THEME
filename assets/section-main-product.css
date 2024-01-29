@@ -181,6 +181,14 @@ fieldset.product-form__input .form__label {
   transition: all .3s;
   font-weight: 600;
 }
+
+@media screen and (max-width: 749px){
+  .product-form__input input[type='radio'] + label{
+	width:100%;
+  }
+}
+
+
 .product-form__input input[type='radio'] + label:before {
   content: '';
   position: absolute;
