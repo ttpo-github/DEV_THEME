@@ -70,7 +70,7 @@
         <div class="custom-option-inner-container">
           
           <label for="properties[Hubface Selection]">Select a Standard Hubface:</label>         
-          <select name="properties[Hubface Selection]" id="hubface-selection" class="hubface-selection" form="product-form-{{ section.id }}">
+          <select name="properties[Hubface Selection]" id="hubface-selection" disabled class="hubface-selection" form="product-form-{{ section.id }}">
             {% for theValue in option.values %}
               {% assign splitValue = theValue | split: '/' %}
               {% if theValue contains '/' %}
