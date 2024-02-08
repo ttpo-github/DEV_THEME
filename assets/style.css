@@ -6247,6 +6247,10 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
     .contact-form-design .coman-form p{
         font-size: 14px;
     }
+
+    .product__info-wrapper{
+      background:#e9e9e9;
+    }
 }
 
 .product__info-wrapper .yotpo-display-wrapper {
