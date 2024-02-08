@@ -3164,7 +3164,7 @@ shopify-payment-terms {
 .product-single .slider-mobile-gutter.product-mainGallery {
   border: 1px solid #ddd;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border-radius:10px;
 }
 .product-single .product-mainGallery ul {
