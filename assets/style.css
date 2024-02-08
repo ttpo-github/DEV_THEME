@@ -3164,7 +3164,7 @@ shopify-payment-terms {
 .product-single .slider-mobile-gutter.product-mainGallery {
   border: 1px solid #ddd;
   padding: 15px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   border-radius:10px;
 }
 .product-single .product-mainGallery ul {
@@ -3969,7 +3969,7 @@ html .product__info-container .yotpo-stars .yotpo-icon {
   .product-single .slider-mobile-gutter.product-mainGallery {
     border: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   .experts-block h3 {
     font-size: 15px;
