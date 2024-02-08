@@ -3165,6 +3165,7 @@ shopify-payment-terms {
   border: 1px solid #ddd;
   padding: 15px;
   margin-bottom: 20px;
+  border-radius:10px;
 }
 .product-single .product-mainGallery ul {
   margin: 0;
