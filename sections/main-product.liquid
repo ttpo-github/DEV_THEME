@@ -63,6 +63,7 @@
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
 
+      {% comment %}
       <div class="helps" id="myBtn">
         <div class="help-images">
           <img src="{{ section.settings.help-image | img_url: 'master' }}">
@@ -75,6 +76,7 @@
           </div>
         </div>      
       </div>
+      {% endcomment %}
       
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
