@@ -10,8 +10,8 @@
             "background-color": "#ffffff",
             "text-color": "#232933",
             "icon-color": "#5c5f62",
-            "top-padding": 28,
-            "bottom-padding": 28
+            "top-padding": 0,
+            "bottom-padding": 0
           }
         },
         "variant_picker": {
