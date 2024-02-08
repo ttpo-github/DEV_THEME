@@ -3120,7 +3120,7 @@ ul.tabing-header li.active:after,
 }
 .product-single .product__title h1 {
   font-size: 26px;
-  margin: 0;
+  margin: 10px 0;
   line-height: 1.3;
   font-family: Inter;
   font-weight: 700;
@@ -3128,7 +3128,7 @@ ul.tabing-header li.active:after,
   letter-spacing: -0.5px;
 }
 .product-single .product__title {
-  margin: 10px 0;
+  margin: 0 10px;
 }
 .product-single .price {
   font-size: 28px;
