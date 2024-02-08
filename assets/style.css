@@ -6253,11 +6253,7 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
     }
 }
 
-@media only screen and (max-width: 767px)
-.price_review-wrap {
-    justify-content: space-between;
-    margin-top: 10px;
-}
+
 
 .product__info-wrapper .yotpo-display-wrapper {
   display: inline-block;
@@ -6322,6 +6318,7 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
   }
   .price_review-wrap {
     justify-content: space-between;
+    margin-top:10px;
   }
   .thumbnail-slider .thumbnail-list.slider {
     padding-left: 0;
