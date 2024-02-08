@@ -150,6 +150,11 @@ div.yotpo-label.yotpo-small-box {
 
 }
 
+
+div.as-aedd {
+  margin: 0 !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {...}
 
