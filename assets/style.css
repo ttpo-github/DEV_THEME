@@ -3128,7 +3128,7 @@ ul.tabing-header li.active:after,
   letter-spacing: -0.5px;
 }
 .product-single .product__title {
-  margin: 0 0 10px;
+  margin: 10px 0 10px;
 }
 .product-single .price {
   font-size: 28px;
