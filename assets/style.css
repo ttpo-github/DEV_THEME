@@ -6249,7 +6249,7 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
         font-size: 14px;
     }
 
-   .product__info-wrapper{
+   div.product__info-wrapper{
      border-radius:0px;
    }
 }
