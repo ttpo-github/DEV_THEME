@@ -6248,12 +6248,12 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
         font-size: 14px;
     }
 
-    .product__info-wrapper{
-      background:#e9e9e9;
-    }
+   
 }
 
-
+ .product__info-wrapper{
+      background:#e9e9e9;
+    }
 
 .product__info-wrapper .yotpo-display-wrapper {
   display: inline-block;
