@@ -6295,9 +6295,10 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
       margin-left: 2px;
       margin-right: 2px;
   }
+  
   .product__title.showonlymobile {
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.2;
     margin: 0 0 10px;
     font-family: Inter;
