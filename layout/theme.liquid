@@ -243,7 +243,7 @@ window.addEventListener("load", function() {
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true}}
-    {{ 'pk-custom.css' | asset_url}}
+    {{ 'pk-custom.css' | asset_url | stylesheet_tag: preload:true}}
     
     <link href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css" rel="preload" as="style" onload="this.rel='stylesheet'">
     
