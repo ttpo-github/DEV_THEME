@@ -151,9 +151,10 @@ div.yotpo-label.yotpo-small-box {
 }
 
 
-div.as-aedd{
-  padding:10px!important;
-  font-size:14px!important;
+
+
+div.as-aedd:first-child {
+  font-size:12px;
 }
 
 /* Extra small devices (phones, 600px and down) */
