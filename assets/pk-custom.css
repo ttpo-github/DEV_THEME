@@ -150,8 +150,8 @@ div.yotpo-label.yotpo-small-box {
 
 }
 
-.as-aedd > div:first-child > span:first-child {
-  font-size:5px;
+div.as-aedd > div:first-child > span:first-child {
+  font-size:5px!important;
 }
 
 
