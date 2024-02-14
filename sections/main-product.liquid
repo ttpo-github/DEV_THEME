@@ -504,6 +504,9 @@
       var triggerElementPosition = triggerElement.getBoundingClientRect().top;
       var windowHeight = window.innerHeight;
 
+      console.log(triggerElementPosition)
+      console.log(windowHeight)
+
       if (triggerElementPosition <= windowHeight) {
         toggleMenuBar();
       } else {
