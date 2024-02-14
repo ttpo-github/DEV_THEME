@@ -441,82 +441,82 @@
 
   <style>
 
-  .menu-bar {
-    position: fixed;
-    bottom: -50px; /* Height of the menu bar */
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    transition: bottom 0.3s ease-in-out;
-  }
+  #bottomMenu {
+  position: fixed;
+  bottom: -100px; /* Start off-screen */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  transition: bottom 0.3s ease-in-out;
+}
 
-  .menu-bar.custom-show {
-    bottom: 0;
-  }
+#bottomMenu.visible {
+  bottom: 0; /* Slide into view */
+}
 
-  /* Style the button that toggles the menu */
-  .toggle-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 999;
-  }
+#content {
+  height: 2000px; /* Just for testing scrolling */
+}
 
-  /* Target element with ID 'trigger' */
-  #trigger {
-    height: 500px; /* Just for demonstration */
-  }
+/* Style the menu items */
+#bottomMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#bottomMenu ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#bottomMenu ul li:last-child {
+  margin-right: 0;
+}
+
+#bottomMenu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 </style>
 
 
-<div class="menu-bar" id="menuBar">
-  <!-- Menu content goes here -->
-  Menu Content
-</div>
+<div id="bottomMenu">
+    <!-- Your menu items here -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 
 
 
 <div id="trigger"></div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var menuBar = document.getElementById('menuBar');
-   
-    var triggerElement = document.getElementById('ProductSubmitButton-{{ section.id }}');
 
-    //console.log('ProductSubmitButton-{{ section.id }}')
-
-    // Function to toggle menu bar visibility
-    function toggleMenuBar() {
-      menuBar.classList.toggle('custom-show');
+  document.addEventListener("DOMContentLoaded", function() {
+  var targetElement = document.getElementById('ProductSubmitButton-{{ section.id }}');
+  var bottomMenu = document.getElementById('bottomMenu');
+  
+  function toggleBottomMenu() {
+    var rect = targetElement.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    
+    if (rect.top < viewHeight && rect.bottom >= 0) {
+      bottomMenu.classList.add('visible');
+    } else {
+      bottomMenu.classList.remove('visible');
     }
+  }
+  
+  window.addEventListener('scroll', toggleBottomMenu);
+});
 
-    // Function to handle scrolling and show/hide menu bar
-    function handleScroll() {
-      var triggerElementPosition = triggerElement.getBoundingClientRect().top;
-      var windowHeight = window.innerHeight;
-
-      console.log(triggerElementPosition)
-      console.log(windowHeight)
-
-      if (triggerElementPosition < 0) {
-        toggleMenuBar();
-      } else {
-        menuBar.classList.remove('custom-show');
-      }
-    }
-
-    // Event listener for window scroll
-    window.addEventListener('scroll', handleScroll);
-  });
 </script>
 
   {%- if product.media.size > 0 -%}
