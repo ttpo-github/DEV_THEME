@@ -487,8 +487,12 @@
 <div id="bottomMenu">
     <!-- Your menu items here -->
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li>
+        <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+            </div>
+      </li>
+      <li><a href="#">Variant</a></li>
       <li> 
         <button type="submit" name="add" form="product-form-{{ section.id }}"
                 class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
