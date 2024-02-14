@@ -482,10 +482,22 @@
   Menu Content
 </div>
 
+
+
+<div id="trigger"></div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var menuBar = document.getElementById('menuBar');
+   
     var triggerElement = document.getElementById('ProductSubmitButton-{{ section.id }}');
+
+    //console.log('ProductSubmitButton-{{ section.id }}')
+
+    // Function to toggle menu bar visibility
+    function toggleMenuBar() {
+      menuBar.classList.toggle('show');
+    }
 
     // Function to handle scrolling and show/hide menu bar
     function handleScroll() {
