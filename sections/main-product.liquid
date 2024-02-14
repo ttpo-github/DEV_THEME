@@ -482,7 +482,7 @@
   Menu Content
 </div>
 
-<button class="toggle-btn" id="toggleBtn">Toggle Menu</button>
+
 
 <div id="trigger"></div>
 
@@ -490,7 +490,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     var menuBar = document.getElementById('menuBar');
     var toggleBtn = document.getElementById('toggleBtn');
-    var triggerElement = document.getElementById('trigger');
+    var triggerElement = document.getElementById('ProductSubmitButton-{{ section.id }}');
 
     // Function to toggle menu bar visibility
     function toggleMenuBar() {
