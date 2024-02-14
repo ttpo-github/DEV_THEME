@@ -507,7 +507,7 @@
       console.log(triggerElementPosition)
       console.log(windowHeight)
 
-      if (triggerElementPosition <= 0) {
+      if (triggerElementPosition < 0) {
         toggleMenuBar();
       } else {
         menuBar.classList.remove('custom-show');
