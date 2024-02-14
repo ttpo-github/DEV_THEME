@@ -489,7 +489,29 @@
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li> 
+        <button type="submit" name="add"
+                class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+        {% comment %}
+                {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
+        {% endcomment %}
+        
+                {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
+                <span>
+                  {%- if product.selected_or_first_available_variant.available == false  -%}
+                    <a style="padding:0;" href="tel:8339103416" class="hidden-link custom-btn button--full-width">Call for Availability: <br> (833) 910-3416</a>
+                  {%- else -%}                    
+                      {{ 'products.product.add_to_cart' | t }}
+                    
+                  {%- endif -%}
+                </span>
+                <div class="loading-overlay__spinner hidden">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </div>
+              </button>
+      </li>
     </ul>
   </div>
 
