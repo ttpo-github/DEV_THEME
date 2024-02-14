@@ -439,6 +439,84 @@
     </modal-dialog>
   {%- endfor -%}
 
+  <style>
+
+  .menu-bar {
+    position: fixed;
+    bottom: -50px; /* Height of the menu bar */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    transition: bottom 0.3s ease-in-out;
+  }
+
+  .menu-bar.show {
+    bottom: 0;
+  }
+
+  /* Style the button that toggles the menu */
+  .toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  /* Target element with ID 'trigger' */
+  #trigger {
+    height: 500px; /* Just for demonstration */
+  }
+</style>
+
+
+<div class="menu-bar" id="menuBar">
+  <!-- Menu content goes here -->
+  Menu Content
+</div>
+
+<button class="toggle-btn" id="toggleBtn">Toggle Menu</button>
+
+<div id="trigger"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var menuBar = document.getElementById('menuBar');
+    var toggleBtn = document.getElementById('toggleBtn');
+    var triggerElement = document.getElementById('trigger');
+
+    // Function to toggle menu bar visibility
+    function toggleMenuBar() {
+      menuBar.classList.toggle('show');
+    }
+
+    // Function to handle scrolling and show/hide menu bar
+    function handleScroll() {
+      var triggerElementPosition = triggerElement.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight;
+
+      if (triggerElementPosition <= windowHeight) {
+        toggleMenuBar();
+      } else {
+        menuBar.classList.remove('show');
+      }
+    }
+
+    // Event listener for the toggle button
+    toggleBtn.addEventListener('click', toggleMenuBar);
+
+    // Event listener for window scroll
+    window.addEventListener('scroll', handleScroll);
+  });
+</script>
+
   {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
