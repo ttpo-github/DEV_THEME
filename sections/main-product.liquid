@@ -491,11 +491,11 @@
     <!-- Your menu items here -->
     <ul>
       <li>
-        {{ product.selected_or_first_available_variant_available.featured_image | image_url: width: 416 | image_tag:
+        {{ product.featured_image | image_url: width: 416 | image_tag:
                 loading: 'lazy',
                 sizes: atcBottomMenuSizes,
                 widths: '54, 74, 104, 162, 208, 324, 416',
-                alt: product.selected_or_first_available_variant.alt | escape
+                alt: product.alt | escape
               }}
       </li>
       <li>
