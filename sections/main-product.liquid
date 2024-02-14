@@ -493,8 +493,13 @@
             </div>
       </li>
       <li>
-        <div class="product__title showonlymobile">
-          <h1 itemprop="name">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
+        <div class="product__title" {{ block.shopify_attributes }}>
+          <h1>{{ product.title | escape }}</h1>
+          <a href="{{ product.url }}" class="product__title">
+            <h2 class="h1">
+              {{ product.title | escape }}
+            </h2>
+          </a>
         </div>
       </li>
       <li> 
