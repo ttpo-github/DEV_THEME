@@ -490,7 +490,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li> 
-        <button type="submit" name="add"
+        <button type="submit" name="add" form="product-form-{{ section.id }}"
                 class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
         {% comment %}
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
