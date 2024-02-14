@@ -506,6 +506,9 @@
   function toggleBottomMenu() {
     var rect = targetElement.getBoundingClientRect();
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    var mainContent = document.getElementById('MainContent')
+
+    console.log(mainContent.getBoundingClientRect().bottom)
     
     if (rect.top - 100 < 0) {
       bottomMenu.classList.add('visible');
