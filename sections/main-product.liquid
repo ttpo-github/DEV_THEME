@@ -483,11 +483,21 @@
 
 </style>
 
+{%- capture atcBottomMenuSizes -%}
+  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+{%- endcapture -%}
 
 <div id="bottomMenu">
     <!-- Your menu items here -->
     <ul>
-     
+      <li>
+        {{ product.selected_or_first_available_variant.available.preview_image | image_url: width: 416 | image_tag:
+                loading: 'lazy',
+                sizes: atcBottomMenuSizes,
+                widths: '54, 74, 104, 162, 208, 324, 416',
+                alt: featured_media.alt | escape
+              }}
+      </li>
       <li>
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1>{{ product.title | escape }}</h1>
