@@ -492,7 +492,11 @@
               {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
             </div>
       </li>
-      <li><a href="#">Variant</a></li>
+      <li>
+        <div class="product__title showonlymobile">
+          <h1 itemprop="name">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
+        </div>
+      </li>
       <li> 
         <button type="submit" name="add" form="product-form-{{ section.id }}"
                 class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
