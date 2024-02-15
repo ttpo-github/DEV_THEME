@@ -487,6 +487,13 @@
   border-radius:5px;
 }
 
+.atc_title {
+  text-align:left;
+}
+
+.atc_price{
+  text-align:left;
+}
 </style>
 
 
@@ -518,7 +525,7 @@
 
         <div>
           <div>
-            <div class="product__title" {{ block.shopify_attributes }} style="margin:0;">
+            <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1>{{ product.title | escape }}</h1>
             <a href="{{ product.url }}" class="product__title">
               <h2 class="h1">
@@ -527,7 +534,7 @@
             </a>
           </div>
 
-          <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+          <div class="no-js-hidden atc_price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
               </div>
           </div>
