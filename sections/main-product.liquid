@@ -500,11 +500,7 @@
 
 
 @media only screen and (min-width: 600px) {
-  .atc_product-info {
-    justify-content:normal;
-  }
-  
-  .atc_product_info img {
+  .atc_mobile_image_container {
   display:none;
 }
 }
@@ -530,7 +526,7 @@
     <script>console.log({{ settings.page_width | json }})</script>
       
       <li class="atc_product_info">
-        <div>
+        <div class="atc_mobile_image_container">
             
               {{ product.featured_media.preview_image | image_url: width: 60 | image_tag:
                 loading: 'lazy',
