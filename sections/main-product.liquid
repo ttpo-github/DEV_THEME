@@ -497,7 +497,7 @@
         {%- endcapture -%}
 
     <script>console.log('Product Media Width')</script>
-    <script>console.log('{{ product.media_width }}')</script>
+    <script>console.log('{{ product | json }}')</script>
       
       <li
             id="Slide-Thumbnails-{{ section.id }}-0{{ id_append }}"
