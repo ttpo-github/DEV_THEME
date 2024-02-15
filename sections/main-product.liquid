@@ -483,21 +483,33 @@
 
 </style>
 
-{%- capture atcBottomMenuSizes -%}
-  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
-{%- endcapture -%}
+
 
 <div id="bottomMenu">
     <!-- Your menu items here -->
     <ul>
-      <li>
-        {{ product.selected_variant.featured_image | image_url: width: 416 | image_tag:
-                loading: 'lazy',
-                sizes: atcBottomMenuSizes,
-                widths: '54, 74, 104, 162, 208, 324, 416',
-                alt: product.selected_variant.alt | escape
-              }}
-      </li>
+      {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
+        <li
+          id="Slide-{{ section.id }}-{{ featured_media.id }}{{ id_append }}"
+          class="product__media-item grid__item slider__slide is-active{% if single_media_visible %} product__media-item--single{% endif %}{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}"
+          data-media-id="{{ section.id }}-{{ featured_media.id }}"
+        >
+          {%- assign media_position = 1 -%}
+          {% render 'product-thumbnail',
+            media: featured_media,
+            media_count: media_count,
+            position: media_position,
+            desktop_layout: section.settings.gallery_layout,
+            mobile_layout: section.settings.mobile_thumbnails,
+            loop: section.settings.enable_video_looping,
+            modal_id: section.id,
+            xr_button: true,
+            media_width: media_width,
+            media_fit: section.settings.media_fit,
+            constrain_to_viewport: section.settings.constrain_to_viewport,
+            lazy_load: false
+          %}
+        </li>
       <li>
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1>{{ product.title | escape }}</h1>
