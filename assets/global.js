@@ -884,7 +884,7 @@ class VariantSelects extends HTMLElement {
     const newMediaModal = modalContent.querySelector( `[data-media-id="${this.currentVariant.featured_media.id}"]`);
     modalContent.prepend(newMediaModal);
 
-    console.log(newMediaModal)
+    document.getElementByClassname('atc_mobile_image_container')[0].innerHTML = newMediaModal;
   }
 
   updateURL() {
