@@ -541,7 +541,7 @@
     <script>console.log({{ product.featured_media.width | json }})</script>
     <script>console.log({{ settings.page_width | json }})</script>
       
-<div style="display:flex; gap:5px;">
+<div style="display:flex; gap:10px;">
       <div class="atc_desktop_image_container">
         {{ product.featured_media.preview_image | image_url: width: 104 | image_tag:
                 loading: 'lazy',
