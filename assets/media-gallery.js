@@ -33,9 +33,10 @@ if (!customElements.get('media-gallery')) {
         activeMedia.parentElement.prepend(activeMedia);
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
-          console.log(activeThumbnail)
-
           
+          console.log(activeThumbnail.src)
+
+          document.getElementsByClassName('atc_mobile_image')[0]
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
