@@ -469,7 +469,7 @@
 
 #bottomMenu ul li {
   display: inline-block;
-  margin-right: 20px;
+  
 }
 
 #bottomMenu ul li:last-child {
@@ -479,6 +479,11 @@
 #bottomMenu ul li a {
   color: #fff;
   text-decoration: none;
+}
+
+.atc_product_info {
+  display:flex;
+  justify-content:space-between;
 }
 
 </style>
@@ -500,7 +505,7 @@
     <script>console.log({{ product.featured_media.width | json }})</script>
     <script>console.log({{ settings.page_width | json }})</script>
       
-      <li>
+      <li class="atc_product_info">
         <div>
             
               {{ product.featured_media.preview_image | image_url: width: 74 | image_tag:
