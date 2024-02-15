@@ -499,11 +499,7 @@
 }
 
 
-@media only screen and (min-width: 600px) {
-  .atc_mobile_image_container {
-  display:none;
-}
-}
+
 
 
 </style>
@@ -521,16 +517,7 @@
           calc((100vw - 8rem) / 3)
         {%- endcapture -%}
 
-    <li>
-      <div class="atc_desktop_image_container">
-            
-              {{ product.featured_media.preview_image | image_url: width: 104 | image_tag:
-                loading: 'lazy',
-                size: sizes,
-                widths: '54, 74, 104, 162, 208, 324, 416'
-              }}
-        </div>
-    </li>
+   
 
     <script>console.log('Product Media Width')</script>
     <script>console.log({{ product.featured_media.width | json }})</script>
