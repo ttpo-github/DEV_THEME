@@ -460,7 +460,7 @@
 }
 
 /* Style the menu items */
-#bottomMenu ul {
+#bottomMenu .atc_main_container {
   list-style-type: none;
   margin: 0;
   padding: 0 15px;
@@ -470,14 +470,6 @@
 }
 
 
-#bottomMenu ul li:last-child {
-  margin-right: 0;
-}
-
-#bottomMenu ul li a {
-  color: #fff;
-  text-decoration: none;
-}
 
 .atc_product_info {
   display:flex;
@@ -517,7 +509,7 @@
 
 <div id="bottomMenu">
     <!-- Your menu items here -->
-    <ul class="bt-container" style="max-width:500px;">
+    <div class="bt-container atc_main_container" style="max-width:500px;">
 
       {%- capture sizes -%}
           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: 0.45 | round }} - 4rem) / 4),
@@ -532,7 +524,7 @@
     <script>console.log({{ product.featured_media.width | json }})</script>
     <script>console.log({{ settings.page_width | json }})</script>
       
-      <li class="atc_product_info">
+      <div class="atc_product_info">
         <div class="atc_mobile_image_container">
             
               {{ product.featured_media.preview_image | image_url: width: 75 | image_tag:
@@ -559,8 +551,8 @@
               </div>
           </div>
         </div>
-          </li>
-      <li>
+          </div>
+      <div>
         
 
          <button type="submit" name="add" form="product-form-{{ section.id }}" style="margin:0px;"
@@ -584,9 +576,9 @@
                   </svg>
                 </div>
               </button>
-      </li>
+      </div>
        
-    </ul>
+    </div>
   </div>
 
 
