@@ -36,6 +36,7 @@ if (!customElements.get('media-gallery')) {
           console.log(activeThumbnail)
 
           
+          
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
         if (this.elements.viewer.slider) this.elements.viewer.resetPages();
