@@ -504,13 +504,7 @@
             {%- capture thumbnail_id -%}
               Thumbnail-{{ section.id }}-0{{ id_append }}
             {%- endcapture -%}
-            <button
-              class="thumbnail global-media-settings global-media-settings--no-shadow thumbnail--narrow"
-              aria-label="{%- if product.featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
-              aria-current="true"
-              aria-controls="GalleryViewer-{{ section.id }}{{ id_append }}"
-              aria-describedby="{{ thumbnail_id }}"
-            >
+            
               {{ product.featured_media.preview_image | image_url: width: 54 | image_tag:
                 loading: 'lazy',
                 
@@ -518,7 +512,7 @@
                 id: thumbnail_id,
                 alt: product.featured_media.alt | escape
               }}
-            </button>
+            
           </li>
       <li>
         <div class="product__title" {{ block.shopify_attributes }}>
