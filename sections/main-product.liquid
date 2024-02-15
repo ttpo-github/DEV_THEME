@@ -505,7 +505,7 @@
               Thumbnail-{{ section.id }}-0{{ id_append }}
             {%- endcapture -%}
             
-              {{ product.featured_media.preview_image | image_url: width: 54 | image_tag:
+              {{ product.featured_media.preview_image | image_url: width: 208 | image_tag:
                 loading: 'lazy',
                 size: sizes,
                 widths: '54, 74, 104, 162, 208, 324, 416',
