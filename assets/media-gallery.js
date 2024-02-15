@@ -34,7 +34,7 @@ if (!customElements.get('media-gallery')) {
         if (this.elements.thumbnails) {
           const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
           
-          console.log(activeThumbnail.childNodes[0].childNodes[0])
+          console.log(activeThumbnail.childNodes[0].childNodes[0].src)
 
           document.getElementsByClassName('atc_mobile_image')[0]
           
