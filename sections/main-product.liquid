@@ -500,7 +500,8 @@
     <script>console.log({{ product.featured_media.width | json }})</script>
     <script>console.log({{ settings.page_width | json }})</script>
       
-      <li
+      <li>
+        <div>
             id="Slide-Thumbnails-{{ section.id }}-0{{ id_append }}"
             class=""
             data-target="{{ section.id }}-{{ product.featured_media.id }}"
@@ -511,10 +512,11 @@
                 size: sizes,
                 widths: '54, 74, 104, 162, 208, 324, 416'
               }}
-            
-          </li>
-      <li>
-        <div class="product__title" {{ block.shopify_attributes }}>
+        </div>
+
+        <div>
+        <div>
+          <div class="product__title" {{ block.shopify_attributes }}>
           <h1>{{ product.title | escape }}</h1>
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1">
@@ -526,6 +528,11 @@
         <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
             </div>
+        </div>
+        </div>
+          </li>
+      <li>
+        
 
          <button type="submit" name="add" form="product-form-{{ section.id }}"
                 class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
