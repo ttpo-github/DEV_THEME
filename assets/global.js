@@ -888,7 +888,7 @@ class VariantSelects extends HTMLElement {
     var parser = new DOMParser();
     
     // Parse the HTML content
-    var parsedHtml = parser.parseFromString(htmlContent, 'text/html');
+    var parsedHtml = parser.parseFromString(newMediaModal, 'text/html');
     
     document.getElementsByClassName('atc_mobile_image_container')[0].innerHTML = parsedHtml;
 
