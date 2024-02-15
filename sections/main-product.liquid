@@ -504,12 +504,13 @@
   justify-content:space-between;
 }
 
-  .atc_desktop_image_container{
+  .atc_mobile_image_container{
     display:none;
   }
 
 .atc_desktop_image_container {
   display:block;
+  border-radius:5px;
 }
 }
 
@@ -535,7 +536,8 @@
     <script>console.log('Product Media Width')</script>
     <script>console.log({{ product.featured_media.width | json }})</script>
     <script>console.log({{ settings.page_width | json }})</script>
-<div style="display:flex;">
+      
+<div style="display:flex; gap:5px;">
       <div class="atc_desktop_image_container">
         {{ product.featured_media.preview_image | image_url: width: 104 | image_tag:
                 loading: 'lazy',
