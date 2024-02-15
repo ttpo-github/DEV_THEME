@@ -522,14 +522,12 @@
             </h2>
           </a>
         </div>
-      </li>
-       <li>
+
         <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
             </div>
-      </li>
-      <li> 
-        <button type="submit" name="add" form="product-form-{{ section.id }}"
+
+         <button type="submit" name="add" form="product-form-{{ section.id }}"
                 class="product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
         {% comment %}
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
@@ -551,6 +549,7 @@
                 </div>
               </button>
       </li>
+       
     </ul>
   </div>
 
