@@ -466,6 +466,7 @@
   padding: 0 15px;
   text-align: center;
   display:block;
+  margin:auto;
 }
 
 
@@ -501,7 +502,7 @@
 
 <div id="bottomMenu">
     <!-- Your menu items here -->
-    <ul class="bt-container">
+    <ul class="bt-container" style="max-width:500px;">
 
       {%- capture sizes -%}
           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: 0.45 | round }} - 4rem) / 4),
