@@ -987,9 +987,11 @@ class VariantSelects extends HTMLElement {
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
-        console.log(document.getElementsByClassName('atc_price')[0])
+        let atcPrice = document.getElementsByClassName('atc_price')[0];
 
-        console.log(price)
+        atcPrice.innerHTML = price.innerHTML
+
+        //console.log(price)
 
         if (price) price.classList.remove('visibility-hidden');
 
