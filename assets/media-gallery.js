@@ -47,8 +47,8 @@ if (!customElements.get('media-gallery')) {
 
           atcMobileImage.src = newImage.src
 
-          console.log(atcMobileImage.srcset)
-          //atcMobileImage.srcet = newImage.srcset
+          //console.log(atcMobileImage.srcset)
+          atcMobileImage.srcset = newImage.srcset
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
