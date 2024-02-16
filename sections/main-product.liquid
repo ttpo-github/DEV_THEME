@@ -524,6 +524,12 @@
   display:block;
   border-radius:5px;
 }
+
+.atc_price_and_reviews{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 }
 
 
@@ -569,7 +575,7 @@
         </div>
 
         <div>
-          <div>
+          <div class="atc_price_and_reviews">
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1>{{ product.title | escape }}</h1>
             <a href="{{ product.url }}" class="product__title">
