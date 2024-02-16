@@ -40,7 +40,7 @@ if (!customElements.get('media-gallery')) {
 
           
 
-          //document.getElementsByClassName('atc_mobile_image')[0].outerHTML = activeThumbnail.querySelector('button > img').outerHTML
+          document.getElementsByClassName('atc_mobile_image')[0].outerHTML = activeThumbnail.querySelector('button > img').outerHTML
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
