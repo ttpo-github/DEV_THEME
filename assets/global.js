@@ -969,6 +969,8 @@ class VariantSelects extends HTMLElement {
         const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
         const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+
+        let atcMenuButton = document.querySelector('.atc_bottom_menu_button')
         
         let dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
         let refactoredPhoneLink = dynamicPhoneLink
@@ -1051,16 +1053,22 @@ class VariantSelects extends HTMLElement {
     if (!productForm) return;
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
+
+    let atcMenuButton = document.querySelector('.atc_bottom_menu_button')
+    
     if (!addButton) return;
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
       //console.log(text)
-      if (text) addButtonText.innerHTML = text;
+      if (text) { 
+        addButtonText.innerHTML = text;
+        atcMenuButton.innerHTML = text;
+      }
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.innerHTML = window.variantStrings.addToCart;
-
+      atcMenuButton.innerHTML = window.variantStrings.addToCart;
       
       addButton.style.padding = null;
     }
