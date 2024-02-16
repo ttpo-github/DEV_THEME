@@ -38,14 +38,15 @@ if (!customElements.get('media-gallery')) {
 
           //console.log(activeThumbnail.querySelector('button > img'))
 
-          let newImageSource = activeThumbnail.querySelector('button > img').src
+          let newImage = activeThumbnail.querySelector('button > img')
 
           let atcMobileImage = document.querySelector('.atc_mobile_image_container img')
           let atcDesktopImage = document.getElementsByClassName('atc_desktop_image_container img')[0]
 
           console.log(atcMobileImage)
 
-          atcMobileImage.src = newImageSource
+          atcMobileImage.src = newImage.src
+          atcMobileImage.srcet = newImage.srcset
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
