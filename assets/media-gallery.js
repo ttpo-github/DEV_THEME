@@ -40,7 +40,7 @@ if (!customElements.get('media-gallery')) {
 
           let newImageSource = activeThumbnail.querySelector('button > img').src
 
-          let atcMobileImage = document.getElementsByClassName('atc_mobile_image_container')[0]
+          let atcMobileImage = document.querySelector('atc_mobile_image_container img')[0]
           let atcDesktopImage = document.getElementsByClassName('atc_desktop_image_container img')[0]
 
           console.log(atcMobileImage)
