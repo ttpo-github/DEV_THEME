@@ -578,11 +578,13 @@
               </h2>
             </a>
           </div>
-
+          <div>
           <div class="no-js-hidden atc_price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
-                <div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div>
+                
               </div>
+            <div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div>
+          </div>
           </div>
         </div>
           </div>
