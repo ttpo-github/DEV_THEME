@@ -38,7 +38,9 @@ if (!customElements.get('media-gallery')) {
 
           console.log(activeThumbnail.querySelector('button'))
 
-          document.getElementsByClassName('atc_mobile_image')[0].outerHTML = activeThumbnail.querySelector('button > img').outerHTML
+          let widthChange = activeThumbnail.querySelector('button > img').width = 75
+
+          document.getElementsByClassName('atc_mobile_image')[0].outerHTML = widthChange.outerHTML
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
