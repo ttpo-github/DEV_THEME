@@ -975,7 +975,7 @@ class VariantSelects extends HTMLElement {
         //console.log(dynamicPhoneLink)
 
        //let theLink = dynamicPhoneLink == undefined ? `<a href="tel:${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>` : `<a href="tel:${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>`; 
-       let theLink = dynamicPhoneLink == undefined ? `Undefined` : `Defined`
+       let theLink = dynamicPhoneLink == undefined ? `Undefined` : `${dynamicPhoneLink.outerHTML}`
         //console.log(theLink)
 
         if (source && destination) destination.innerHTML = source.innerHTML;
