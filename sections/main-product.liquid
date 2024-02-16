@@ -575,7 +575,7 @@
         </div>
 
         <div>
-          <div class="atc_price_and_reviews">
+          <div >
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1>{{ product.title | escape }}</h1>
             <a href="{{ product.url }}" class="product__title">
@@ -584,7 +584,7 @@
               </h2>
             </a>
           </div>
-          <div>
+          <div class="atc_price_and_reviews">
           <div class="no-js-hidden atc_price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
                 
