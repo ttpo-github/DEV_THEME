@@ -41,14 +41,14 @@ if (!customElements.get('media-gallery')) {
           let newImage = activeThumbnail.querySelector('button > img')
 
           let atcMobileImage = document.querySelector('.atc_mobile_image_container img')
-          let atcDesktopImage = document.getElementsByClassName('atc_desktop_image_container img')[0]
-
-          console.log(atcMobileImage)
+          let atcDesktopImage = document.querySelector('.atc_desktop_image_container img')
 
           atcMobileImage.src = newImage.src
-
-          //console.log(atcMobileImage.srcset)
           atcMobileImage.srcset = newImage.srcset
+
+          atcDesktopImage.src = newImage.src
+          atcDesktopImage.srcset = newImage.srcset
+          
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
         }
