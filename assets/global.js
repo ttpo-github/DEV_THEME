@@ -971,13 +971,13 @@ class VariantSelects extends HTMLElement {
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
         
         let dynamicPhoneLink = document.getElementsByClassName('dynamic_phone_link')[0];
-        let refactoredPhoneLink = dynamicPhoneLink.outerHTML
+        let refactoredPhoneLink = dynamicPhoneLink
         refactoredPhoneLink.style.display = "block";
         refactoredPhoneLink.style.color = "white";
         //console.log(dynamicPhoneLink)
 
        //let theLink = dynamicPhoneLink == undefined ? `<a href="tel:${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>` : `<a href="tel:${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>`; 
-       let theLink = dynamicPhoneLink == undefined ? `Undefined` : `${refactoredPhoneLink}`
+       let theLink = dynamicPhoneLink == undefined ? `Undefined` : `${refactoredPhoneLink.outerHTML}`
         //console.log(theLink)
 
         if (source && destination) destination.innerHTML = source.innerHTML;
