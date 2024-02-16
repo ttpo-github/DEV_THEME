@@ -987,6 +987,8 @@ class VariantSelects extends HTMLElement {
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
+        
+
         console.log(price)
 
         if (price) price.classList.remove('visibility-hidden');
