@@ -843,7 +843,7 @@ class VariantSelects extends HTMLElement {
       });
     }
 
-    console.log(`In Update Master ID: ${this.currentVariant}`)
+    console.log(this.currentVariant)
     
     for(let variant of CFA){
       if(JSON.stringify(variant.options) == JSON.stringify(this.currentVariant.options)){
