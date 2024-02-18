@@ -824,6 +824,9 @@ class VariantSelects extends HTMLElement {
   updateMasterId() {
     let CFA = [];
     let unavilable = [];
+
+    console.log(variant)
+    
     this.currentVariant = this.getVariantData().find((variant) => {
       if(!variant.available){
       	CFA.push(variant);
