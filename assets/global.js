@@ -804,6 +804,7 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
+    
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -815,6 +816,10 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
     }
+  }
+
+  updateTitle(variantOb){
+    console.log("In the update Title callback")
   }
 
   updateOptions() {
@@ -844,6 +849,8 @@ class VariantSelects extends HTMLElement {
     }
 
     console.log(this.currentVariant)
+
+    this.updateTitle(this.currentVariant)
     
     for(let variant of CFA){
       if(JSON.stringify(variant.options) == JSON.stringify(this.currentVariant.options)){
