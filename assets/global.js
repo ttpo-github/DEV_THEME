@@ -825,7 +825,7 @@ class VariantSelects extends HTMLElement {
     let CFA = [];
     let unavilable = [];
 
-    console.log(`In Update Master ID: ${this.currentVariant}`)
+    
     
     this.currentVariant = this.getVariantData().find((variant) => {
       if(!variant.available){
@@ -842,6 +842,9 @@ class VariantSelects extends HTMLElement {
         radio.classList.remove("noavaiable");
       });
     }
+
+    console.log(`In Update Master ID: ${this.currentVariant}`)
+    
     for(let variant of CFA){
       if(JSON.stringify(variant.options) == JSON.stringify(this.currentVariant.options)){
         for(let fieldset of fieldsets){
