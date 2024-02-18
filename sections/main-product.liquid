@@ -55,7 +55,7 @@
   {% include 'breadcrumb' %}
   {% endcomment %}
   <div class="product__title showonlymobile">
-    <h1 itemprop="name">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
+    <h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
   </div>
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
@@ -581,7 +581,7 @@
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1>{{ product.title | escape }}</h1>
             <a href="{{ product.url }}" class="product__title">
-              <h2 class="h1">
+              <h2 class="h1" class="ttpo_product_title">
                 {{ product.title | escape }}
               </h2>
             </a>
