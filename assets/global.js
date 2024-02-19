@@ -822,7 +822,7 @@ class VariantSelects extends HTMLElement {
     console.log("In the update Title callback")
     let titles = document.getElementsByClassName('ttpo_product_title')
     Array.from(titles).forEach(function(el){
-      el.innerText = variantOb.name
+      el.innerText = variantOb.option2
     })
   }
 
@@ -854,8 +854,8 @@ class VariantSelects extends HTMLElement {
 
     console.log(this.currentVariant)
 
-    //this.updateTitle(this.currentVariant)
-    this.updateTitle(this.option2)
+    this.updateTitle(this.currentVariant)
+    //this.updateTitle(this.option2)
     
     for(let variant of CFA){
       if(JSON.stringify(variant.options) == JSON.stringify(this.currentVariant.options)){
