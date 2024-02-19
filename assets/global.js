@@ -854,7 +854,8 @@ class VariantSelects extends HTMLElement {
 
     console.log(this.currentVariant)
 
-    this.updateTitle(this.currentVariant)
+    //this.updateTitle(this.currentVariant)
+    this.updateTitle(this.option2)
     
     for(let variant of CFA){
       if(JSON.stringify(variant.options) == JSON.stringify(this.currentVariant.options)){
