@@ -7,9 +7,11 @@
         {%- if product.metafields.custom.howto_link1 %}<li><span data-id="#howto">How To</span></li>{%- endif %}
         <li><span data-id="#reviews">Reviews</span></li>
         {%- if product.metafields.custom.answered_questions1 %}<li><span data-id="#faq">Answered Questions</span></li>{%- endif %}
+        
         {% for tabbing in product.metafields.custom.product_tabbing.value %}
         <li><span data-id="#customtabing{{ forloop.index }}">{{ tabbing.tab_header }}</span></li>
         {% endfor %}
+        
       </ul>
       <div id="descriptions" class="product-tabing-body">
         <div class="product__description rte quick-add-hidden">
@@ -59,6 +61,7 @@
         {%- endfor %}
       </div>
       {% endif %}
+      
       {% for tabbing in product.metafields.custom.product_tabbing.value %}
         <div id="customtabing{{ forloop.index }}" class="product-tabing-body">
           <div class="product__description rte quick-add-hidden">{{ tabbing.tab_body }}</div>
