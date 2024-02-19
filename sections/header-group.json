@@ -63,6 +63,7 @@
       "blocks": {
         "2539d899-c607-4fc2-bc89-953da35c260b": {
           "type": "expert",
+          "disabled": true,
           "settings": {
             "expert-image": "shopify:\/\/shop_images\/Juan.png",
             "expert-heading": "Juan",
