@@ -1113,9 +1113,9 @@ class VariantSelects extends HTMLElement {
 
     
     if(!updatedPhoneLink){
-      addButtonText.innerHTML = `<a href="tel:${window.variantStrings.linkStoreNumber}" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.unavailable}</a>`;
+      addButtonText.innerHTML = `<a href="tel${window.variantStrings.linkStoreNumber}" class="custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.unavailable}</a>`;
     } else {
-      addButtonText.innerHTML = `<a href="tel:${updatedPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${updatedPhoneLink.textContent}</a>`
+      addButtonText.innerHTML = `<a href="tel${updatedPhoneLink.href.split("tel")[1]}" style="padding:0px;" class="custom-btn button--full-width">${updatedPhoneLink.textContent}</a>`
       //addButtonText.appendChild(usablePhoneLink);
       //usablePhoneLink.style.display = "block"
     }
