@@ -1915,7 +1915,10 @@ div.pk-newletter_bg-image:before{
   font-family: 'Inter',sans-serif;
   background: #000646;
   border-radius: 10px;
+  /*
   padding: 13px 41px 14px;
+  */
+  padding: 13px 0px 14px;
   font-size: 16px;
   color: #fff;
   font-weight: 600;
