@@ -822,7 +822,7 @@ class VariantSelects extends HTMLElement {
     console.log("In the update Title callback")
     let titles = document.getElementsByClassName('ttpo_product_title')
     Array.from(titles).forEach(function(el){
-      el.innerText = variantOb.option2
+      el.innerText = variantOb.name
     })
   }
 
