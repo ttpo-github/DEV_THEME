@@ -7,7 +7,7 @@
         "title": "WE ARE PROUD",
         "text": "to be one of America's fastest growing online retailer and wholesaler of trailer parts and trailer accessories and still family owned. Founded in 2013, our combined decades of experience allow us to offer quality products at competitive prices, with excellent customer service delivered by knowledgeable experts. When you pick up the phone and call us, you will be confident in knowing that you’re speaking to not only a real human being, but a real trailer parts expert out of Texas.",
         "subtitle": "Our Focus & Values",
-        "Para2": "<strong><\/strong>Our Focus<br>To deliver Solutions Faster than anyone else, so the <strong>DOERS<\/strong> can <strong>DO<\/strong>!<br><br>\n<strong><\/strong>Our Values\n<br>• <strong><\/strong>Transparent\n<br>• <strong><\/strong> Goal Oriented\n<br>• <strong><\/strong> Adaptive<br>• <strong><\/strong> Disciplined<br>• <strong><\/strong> Taking Ownership"
+        "Para2": "<strong><\/strong>Focus:<br>Faster Solutions. Superior Service. So the <strong>DOERS<\/strong> can <strong>DO<\/strong>!<br><br>\n<strong><\/strong>Our Values\n<br>• <strong><\/strong>Transparent\n<br>• <strong><\/strong> Growth Oriented\n<br>• <strong><\/strong> Adaptive<br>• <strong><\/strong> Disciplined<br>• <strong><\/strong> Own It"
       }
     },
     "meetteam-member": {
@@ -86,16 +86,6 @@
             "designation": "Trailer Parts Expert",
             "add_info": "",
             "phone_info": "936-312-3337"
-          }
-        },
-        "96309fb2-bec1-4048-a6f1-9e71ba915a35": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Juan.png",
-            "title": "Juan",
-            "designation": "Trailer Parts Expert",
-            "add_info": "se habla español",
-            "phone_info": "936-220-4724"
           }
         },
         "0ee36b37-fc60-4b3f-8697-89d30f999d22": {
@@ -198,16 +188,6 @@
             "phone_info": ""
           }
         },
-        "841e151f-ad21-4689-8c50-3772aa0a7ad3": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ernesto.jpg",
-            "title": "Ernesto",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e": {
           "type": "title",
           "settings": {
@@ -228,31 +208,11 @@
             "phone_info": ""
           }
         },
-        "7ed2af24-873c-4777-97c2-63922662edb4": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/josh.jpg",
-            "title": "Joshua",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7": {
           "type": "title",
           "settings": {
             "image": "shopify:\/\/shop_images\/abram.png",
             "title": "Abraham",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "e4ad6834-05b4-4ea5-953e-239a4059e9db": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/colton_575939c2-227e-4a8c-8793-729e761ed9db.jpg",
-            "title": "Colton",
             "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
@@ -264,16 +224,6 @@
             "image": "shopify:\/\/shop_images\/Bryce_79d498d4-0240-4968-9486-d51c279951f7.jpg",
             "title": "Bryce",
             "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "683d5c3d-db5c-4989-9d1b-e7212ec3ebe4": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Kief2.png",
-            "title": "Kiefer",
-            "designation": "Creative Director",
             "add_info": "",
             "phone_info": ""
           }
@@ -378,16 +328,6 @@
             "phone_info": ""
           }
         },
-        "f135ec97-38d4-43c8-8db6-893177f1702b": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Crystal_bfac5557-60ac-4359-a8f2-0839877ac977.jpg",
-            "title": "Crystal",
-            "designation": "Accounts Payable",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1": {
           "type": "title",
           "settings": {
@@ -402,7 +342,7 @@
           "type": "title",
           "settings": {
             "image": "shopify:\/\/shop_images\/bridgette_b2b3d392-bab1-4461-91e2-cd4b65d36c26.png",
-            "title": "Bridgette",
+            "title": "Bridget",
             "designation": "Human Resources",
             "add_info": "",
             "phone_info": ""
@@ -412,7 +352,6 @@
       "block_order": [
         "15ddfb96-c8ca-47a6-937b-28033e1d6fe3",
         "89cf4160-acac-4e25-aba7-5306c9902460",
-        "96309fb2-bec1-4048-a6f1-9e71ba915a35",
         "0ee36b37-fc60-4b3f-8697-89d30f999d22",
         "d5b011a3-2ca1-4be0-8b77-ae0799272be9",
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae",
@@ -423,14 +362,10 @@
         "8b86c970-9d8b-4373-8584-f78c052382f6",
         "dbb35d2e-4431-48e5-a6cb-97d4b495acaf",
         "51de812e-547c-47ff-9090-735d305c3223",
-        "841e151f-ad21-4689-8c50-3772aa0a7ad3",
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e",
         "97c50f0a-d69d-49e6-a2eb-8b7de73cd96f",
-        "7ed2af24-873c-4777-97c2-63922662edb4",
         "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7",
-        "e4ad6834-05b4-4ea5-953e-239a4059e9db",
         "aef102ec-5094-4fb5-8ddf-f8e9ddecb17a",
-        "683d5c3d-db5c-4989-9d1b-e7212ec3ebe4",
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6",
         "112f30af-cbdb-4a83-9e27-540d203a1586",
         "ba15bbd3-e261-49f6-a16c-80add243c702",
@@ -441,7 +376,6 @@
         "4d3ed014-5698-44d9-8388-d4e5c92528e0",
         "f1ef1ef5-e136-42c5-9a51-8587714bcd79",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
-        "f135ec97-38d4-43c8-8db6-893177f1702b",
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
         "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea"
       ],

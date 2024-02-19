@@ -1,1 +1,14 @@
-{"parent":"page.meet-team.json","context":{"market":"us"},"sections":{"meetteam-member1":{"settings":{},"blocks":{"96309fb2-bec1-4048-a6f1-9e71ba915a35":{"settings":{"add_info":"se habla español"}}}}}}
+{
+  "parent": "page.meet-team.json",
+  "context": {
+    "market": "us"
+  },
+  "sections": {
+    "meetteam-member1": {
+      "settings": {
+      },
+      "blocks": {
+      }
+    }
+  }
+}
