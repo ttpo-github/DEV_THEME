@@ -994,7 +994,7 @@ class VariantSelects extends HTMLElement {
         let refactoredPhoneLink = dynamicPhoneLink
         refactoredPhoneLink.style.display = "block";
         refactoredPhoneLink.style.color = "white";
-        refactoredPhoneLink.href = refactoredPhoneLink.href.replace("+","")
+        //refactoredPhoneLink.href = refactoredPhoneLink.href.replace("+","")
         console.log(refactoredPhoneLink)
         //console.log(dynamicPhoneLink)
 
