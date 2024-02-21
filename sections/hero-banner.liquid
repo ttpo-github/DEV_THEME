@@ -151,7 +151,12 @@
     </div>
     {% if section.settings.bgimg %}
       <div class="hero-banner-child-img">
-        <img width="100%" height="auto" src="{{ section.settings.bgimg | img_url: '' }}" alt="{{ section.settings.bgimg.alt }}">
+        <!--<img width="100%" height="auto" src="{{ section.settings.bgimg | img_url: '' }}" alt="{{ section.settings.bgimg.alt }}">-->
+        {{ section.settings.littleimg | image_url: width: 3840 | image_tag:
+              sizes: "100vw",
+              height: "auto",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            }}
       </div>
     {% endif %}
     <div class="hero-banner-buttons">
@@ -186,7 +191,7 @@
     <div class="shipping-text">
       <a href="{{ section.settings.ship_link }}">
         {% if section.settings.ship_icon != blank  %}
-          <img src="{{ section.settings.ship_icon | img_url:"medium" }}">
+          <img src="{{ section.settings.ship_icon | img_url:"small" }}">
         {% endif %}
         {% if section.settings.ship_text != blank %}
           {{ section.settings.ship_text }}
