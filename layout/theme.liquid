@@ -250,7 +250,16 @@ window.addEventListener("load", function() {
     
     <link href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css" rel="preload" as="style" onload="this.rel='stylesheet'">
     
-    
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@400;500;600;700;900&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    {%- if settings.predictive_search_enabled -%}
+      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+    {%- endif -%}
 
     <!--<link rel="preload" as="image" href="//thetrailerpartsoutlet.com/cdn/shop/files/video-capture-2480.jpg?v=1702479418">-->
     <link rel="preload" as="image" href="//02pa8k60atm7dm64-5229412425.shopifypreview.com/cdn/shop/files/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg">
