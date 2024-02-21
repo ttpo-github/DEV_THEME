@@ -152,7 +152,7 @@
     {% if section.settings.bgimg %}
       <div class="hero-banner-child-img">
         <!--<img width="100%" height="auto" src="{{ section.settings.bgimg | img_url: '' }}" alt="{{ section.settings.bgimg.alt }}">-->
-        {{ section.settings.littleimg | image_url: width: 3840 | image_tag:
+        {{ section.settings.bgimg | image_url: width: 3840 | image_tag:
               sizes: "100vw",
               height: "auto",
               widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
