@@ -166,10 +166,11 @@
     {% if section.settings.littleimg %}
       
         <div class="hero-banner-child-img bottom-image" style="display:flex;justify-content:center;">
+          {% comment %}
           <a href="{{ section.settings.littleimg_link }}">
-            <img  width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">
-            
+            <img  width="100%" height="auto" src="{{ section.settings.littleimg | img_url: '' }}" alt="{{ section.settings.littleimg.alt }}">            
           </a>
+          {% endcomment %}
           {{ section.settings.littleimg | image_url: width: 3840 | image_tag:
               sizes: "100vw",
               height: "auto",
