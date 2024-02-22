@@ -269,11 +269,16 @@ window.addEventListener("load", function() {
     {% endstyle %}
 
     
-
+    {% comment %}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'pk-custom.css' | asset_url | stylesheet_tag: preload:true }}
+    {% endcomment %}
+    
     {{ 'hero-banner.css' | asset_url | stylesheet_tag: preload:true }}
 
+    <link href="{{ 'base.css' | asset_url }}" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'" />
+    <link href="{{ 'pk-custom.css' | asset_url }}" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'" />
+    
   
    
     
@@ -299,6 +304,8 @@ window.addEventListener("load", function() {
 
     <link rel="preload" as="image" href="//vgsmlqezst1nflr8-5229412425.shopifypreview.com/cdn/shop/files/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg?v=1705933098&width=3840">
     <link rel="preload" as="image" href="//vgsmlqezst1nflr8-5229412425.shopifypreview.com/cdn/shop/files/go_now.jpg?v=1705933339&width=800">
+    <link rel="preload" as="image" href="https://vgsmlqezst1nflr8-5229412425.shopifypreview.com/cdn/shop/files/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f_small.png?v=1689832289">
+  
     <!--
     <link rel="preload" fetchpriority="high" as="image" href="https://thetrailerpartsoutlet.com/cdn/shop/files/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg?v=1705933098&width=3840">
     <link rel="preload" fetchpriority="high" as="image" href="https://thetrailerpartsoutlet.com/cdn/shop/files/go_now.jpg?v=1705933339&width=800">
