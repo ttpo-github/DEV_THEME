@@ -49,11 +49,11 @@ body {min-width: 320px;position: relative;z-index: 1;font-family: 'Roboto', sans
 
 
 span.Bakbak {
-  font-family: 'Bakbak One Regular Custom', cursive;
+  font-family: 'Oswald Custom', cursive;
 }
 html body.home h1,
 html body.home h2{
-  font-family: Oswald,sans-serif!important;
+  font-family: Oswald Custom!important;
   /*font-family: Bakbak One Regular Custom;*/
   font-weight: 700 !important;
 }
