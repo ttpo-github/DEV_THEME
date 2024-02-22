@@ -257,10 +257,12 @@ window.addEventListener("load", function() {
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@400;500;600;700;900&family=Oswald:wght@400;700&display=swap">
+     
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
+
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Inter:wght@400;500;600;700;900&family=Oswald:wght@400;700&display=swap">-->
 
     <!--<link rel="preload" as="image" href="//thetrailerpartsoutlet.com/cdn/shop/files/video-capture-2480.jpg?v=1702479418">-->
     
