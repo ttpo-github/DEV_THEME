@@ -51,9 +51,8 @@
       <a href="{{ section.settings.littleimg_link }}">
           {{ section.settings.littleimg | image_url: width: 800 | image_tag:
               sizes: "800",
-              height: "auto",
-              widths: '375, 550, 800',
-              preload:true
+              height: "100%",
+              widths: '375, 550, 800'
             }}
       </a>
         </div>
