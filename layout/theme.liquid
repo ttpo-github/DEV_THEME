@@ -264,7 +264,7 @@ window.addEventListener("load", function() {
     <!--<link rel="preload" as="image" href="//thetrailerpartsoutlet.com/cdn/shop/files/video-capture-2480.jpg?v=1702479418">-->
     <!--<link rel="preload" as="image" href="//02pa8k60atm7dm64-5229412425.shopifypreview.com/cdn/shop/files/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg">-->
     
-    {{ 'style.css' | asset_url }}
+    {{ 'style.css' | asset_url | stylesheet_tag: preload: true }}
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
       document.documentElement.classList.add('shopify-design-mode');
