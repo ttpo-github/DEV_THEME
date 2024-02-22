@@ -4968,7 +4968,7 @@ html .yotpo ul,
 html .yotpo li,
 html .yotpo form,
 html .yotpo label{
-  font-family: 'Inter';
+  font-family: 'Inter Custom';
 }
 span.yotpo-display-wrapper {
   display: inline-block;
