@@ -22,7 +22,7 @@
     font-display: swap;
 }
 
-/*
+
 @font-face {
     font-family: 'Bakbak One Regular Custom';
     src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/BakbakOneRegular.woff') format('woff');
@@ -30,7 +30,7 @@
     font-style: normal;
     font-display: swap;
 }
-*/
+
 
 a {
   text-decoration: none;
@@ -59,7 +59,8 @@ span.Bakbak {
 }
 html body.home h1,
 html body.home h2{
-  font-family: Oswald,sans-serif !important;
+  /*font-family: Oswald,sans-serif !important*/;
+  font-family: Bakbak One Regular Custom !important;
   font-weight: 700 !important;
 }
 /********** common css *********/
