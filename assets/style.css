@@ -1342,7 +1342,7 @@ html .menu-drawer__navigation {
   display: none;
 }
 .collection-list-wrapper .full-unstyled-link {
-  font-family: 'Inter';
+  font-family: 'Inter Custom';
   font-size: 15px;
   line-height: 1.3;
   font-weight: 600;
