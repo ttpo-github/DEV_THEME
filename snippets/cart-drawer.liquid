@@ -15,16 +15,16 @@
   }
 </style>
 
-<cart-drawer data-my-attribute="Patrick James" class="drawer{% if cart == empty %} is-empty{% endif %}">
-  <div data-my-attribute="Patrick James" id="CartDrawer" class="cart-drawer">
-    <div data-my-attribute="Patrick James" id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+<cart-drawer  class="drawer{% if cart == empty %} is-empty{% endif %}">
+  <div  id="CartDrawer" class="cart-drawer">
+    <div  id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
       class="drawer__inner"
       role="dialog"
       aria-modal="true"
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
-      data-my-attribute="Patrick James"
+      
     >
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
@@ -423,8 +423,8 @@
         {% endif %}
       <div class="drawer__footer">
   <div>
-  <img src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Fedex-logo_200x113_7f643bc1-eee3-4fd8-b19f-c0fcf1fb4e00.webp?v=1698436412" alt="Fedex" height="auto" width="100%" style="max-width: 77px;">
-  <p>The Trailer Parts Outlet ships ground orders predominately with FedEx. Ground orders ship next business day if ordered by 12PM CST. ( <a href="https://thetrailerpartsoutlet.com/policies/shipping-policy"/> Some exclusions may apply </a> )</p>
+  <img loading="lazy"  src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Fedex-logo_200x113_7f643bc1-eee3-4fd8-b19f-c0fcf1fb4e00.webp?v=1698436412" alt="Fedex" height="auto" width="100%" style="max-width: 77px;">
+  <p>The Trailer Parts Outlet ships ground orders predominately with FedEx. Ground orders ship next business day if ordered by 12PM CST. ( <a href="https://thetrailerpartsoutlet.com/policies/shipping-policy"> Some exclusions may apply </a> )</p>
   </div>
                                   {% comment %}
         {%- if settings.show_cart_note -%}
