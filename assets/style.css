@@ -22,29 +22,7 @@
     font-display: swap;
 }
 
-@font-face {
-        font-family: 'Bakbak One Regular Custom';
-        src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/BakbakOneRegular.woff') format('woff');
-        font-weight: 100;
-        font-style: normal;
-        font-display: swap;
-        }
 
-      @font-face {
-          font-family: 'Oswald Custom';
-          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Regular.woff?v=1708622834') format('woff');
-          font-weight: 100;
-          font-style: normal;
-          font-display: swap;
-        }
-
-         @font-face {
-          font-family: 'Inter Custom';
-          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Regular.woff?v=1708627209') format('woff');
-          font-weight: 100;
-          font-style: normal;
-          font-display: swap;
-        }
 
 
 
@@ -197,7 +175,7 @@ html body.home h2{
 .section__title,
 .shopify-policy__title h1{
   font-size: 34px;
-  font-family: Oswald,sans-serif;
+  font-family: Oswald Custom,sans-serif;
   color: #000646;
   text-align: center;
   position: relative;
@@ -255,7 +233,7 @@ html body.home h2{
   padding-bottom: 10px;
 }
 .header-top a{
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald Custom', sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-weight: 400;
@@ -1606,7 +1584,7 @@ span.message.show {
   color: #000;
   margin: 0 0 13px;
   font-size:1.5em;
-  font-family:'Oswald'
+  font-family:'Oswald Custom'
 }
 .newsletter__subheading p {
   margin: 0;
@@ -1621,7 +1599,7 @@ span.message.show {
   /*font-size: 16px;
   font-family: 'Inter';*/
   font-size:1.5em;
-  font-family: 'Oswald';
+  font-family: 'Oswald Custom';
   letter-spacing: -.02em;
   padding: 0 20px;
   border: 1px solid #000646;
@@ -3642,7 +3620,7 @@ ul.product_tabbing > li > span.active {
 
 h2.cbb-also-bought-title {
   font-size: 24px !important;
-  font-family: Oswald,sans-serif;
+  font-family: Oswald Custom,sans-serif;
   color: #000646 !important;
   text-align: center !important;
   position: relative;
