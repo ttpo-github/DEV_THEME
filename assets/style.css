@@ -53,7 +53,7 @@ span.Bakbak {
 }
 html body.home h1,
 html body.home h2{
-  font-family: Oswald,sans-serif !important;
+  font-family: Oswald,sans-serif;
   /*font-family: Bakbak One Regular Custom !important;*/
   font-weight: 700 !important;
 }
