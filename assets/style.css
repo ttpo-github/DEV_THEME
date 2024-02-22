@@ -24,7 +24,7 @@
 
 
 @font-face {
-    font-family: 'Bakbak One Regular';
+    font-family: 'Bakbak One Regular Custom';
     src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/BakbakOneRegular.woff') format('woff');
     font-weight: 500;
     font-style: normal;
@@ -55,7 +55,7 @@ body {min-width: 320px;position: relative;z-index: 1;font-family: 'Roboto', sans
 
 
 span.Bakbak {
-  font-family: 'Bakbak One', cursive;
+  font-family: 'Bakbak One Regular Custom', cursive;
 }
 html body.home h1,
 html body.home h2{
@@ -1098,7 +1098,7 @@ html .menu-drawer__navigation {
   color: #fff;
   line-height: 1.4;
   margin: 0;
-  font-family: 'Bakbak One';
+  font-family: 'Bakbak One Regular Custom';
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -1106,7 +1106,7 @@ html .menu-drawer__navigation {
   font-size: 67px;
   color: #fff;
   font-weight: 400;
-  font-family: 'Bakbak One';
+  font-family: 'Bakbak One Regular Custom';
   line-height: 1.4;
   margin: 0 0 32px;
 }
@@ -1116,7 +1116,7 @@ html .menu-drawer__navigation {
 .hero-section-button-wrap a {
   color: #000646;
   background: #fff;
-  font-family: Bakbak One;
+  font-family: Bakbak One Regular Custom;
   font-size: 26px;
   line-height: 1;
   display: inline-block;
@@ -1339,7 +1339,7 @@ html .menu-drawer__navigation {
 .collection_header {
   line-height: 1;
   letter-spacing: -.02em;
-  font-family: Bakbak One;
+  font-family: Bakbak One Regular Custom;
   font-weight: 400;
   font-size: 20px;
   display: flex;
@@ -2068,7 +2068,7 @@ footer {
   font-size: 20px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  font-family: 'Bakbak One';
+  font-family: 'Bakbak One Regular Custom';
   font-weight: 500;
   line-height: 1.25;
   margin: 0 0 20px;
@@ -2221,7 +2221,7 @@ ul.footer__list-social.list-social > li {
   font-size: 18px;
   line-height: 1;
   margin: 0 30px 0 0;
-  font-family: Bakbak One;
+  font-family: Bakbak One Regular Custom;
   font-weight: 400;
   white-space: nowrap;
 }
@@ -2634,7 +2634,7 @@ ul.product_item-color_variant li {
   border: 1px solid #ddd;
   padding: 3px;
   line-height: 1;
-  font-family: Bakbak One;
+  font-family: Bakbak One Regular Custom;
   font-weight: 400;
   font-size: 14px;
   transition: all 0.3s
