@@ -266,9 +266,10 @@ window.addEventListener("load", function() {
     
     
     {{ 'style.css' | asset_url | stylesheet_tag: preload: true }}
+    <!--
     <link rel="preload" fetchpriority="high" as="image" href="https://thetrailerpartsoutlet.com/cdn/shop/files/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg?v=1705933098&width=3840">
     <link rel="preload" fetchpriority="high" as="image" href="https://thetrailerpartsoutlet.com/cdn/shop/files/go_now.jpg?v=1705933339&width=800">
-
+    -->
    
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
