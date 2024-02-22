@@ -32,8 +32,56 @@
         "padding_bottom": 52
       }
     },
+    "image_banner_MpxKfk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_NPAkti": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_bXQ4Ra": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_8YmVqW": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_NPAkti",
+        "text_bXQ4Ra",
+        "buttons_8YmVqW"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
       "type": "hero-banner",
+      "disabled": true,
       "settings": {
         "head": "BRAKES",
         "heading_link": "shopify:\/\/collections\/brake-assemblies",
@@ -276,6 +324,7 @@
   "order": [
     "c75a5c74-c373-4ac0-ae17-321e4fa26a1f",
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
+    "image_banner_MpxKfk",
     "8c893e45-fcd3-4987-a4de-d1494b74dc72",
     "16520884405626e12c",
     "1652094941ece48291",
