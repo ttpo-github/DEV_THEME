@@ -208,7 +208,8 @@ window.addEventListener("load", function() {
         min-height: 100%;
         margin: 0;
         font-size: 15px;
-        font-family: var(--font-body-family);
+        /*font-family: var(--font-body-family)*/;
+        font-family: Bakbak One Regular Custom;
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
       }
@@ -241,6 +242,14 @@ window.addEventListener("load", function() {
           background-position: center left !important;
       }
     {% endstyle %}
+
+    @font-face {
+    font-family: 'Bakbak One Regular Custom';
+    src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/BakbakOneRegular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
 
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'pk-custom.css' | asset_url | stylesheet_tag: preload:true }}
