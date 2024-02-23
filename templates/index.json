@@ -48,7 +48,7 @@
         "littleimg_link": "shopify:\/\/collections\/sale-page-2021",
         "show_shipping": true,
         "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
-        "ship_text": "<span><b>All orders placed before 12PM CST ship next day (<\/b> some exclusions apply <b>)<\/b><\/span>",
+        "ship_text": "<span><b>All orders placed before 12PM CST ship next day (<\/b> <span style=\"color:#FFFFFF\">some exclusions apply<\/span> <b>)<\/b><\/span>",
         "ship_link": "shopify:\/\/policies\/shipping-policy"
       }
     },
