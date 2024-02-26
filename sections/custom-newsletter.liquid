@@ -25,7 +25,12 @@
 <div class="newsletter {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   {% if section.settings.image != blank %}
   <div class="newletter_bg-image pk-newletter_bg-image">
-    <img loading="lazy" src="{{ section.settings.image | image_url: width: 1800}}" alt="Newsletter Background Image">
+    <img loading="lazy" src="{{ section.settings.image | image_url: width: 3840 | image_tag:
+              sizes: "100vw",
+              height: "auto",
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+              alt="Newsletter Background Image">
   </div>
   {% endif %}
   <div class="newsletter__wrapper bt-container content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
