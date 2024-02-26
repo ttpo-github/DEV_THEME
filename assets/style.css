@@ -2355,9 +2355,10 @@ ul.footer__list-social.list-social > li {
   }
   .main-footer .menu-grid li:not(:last-child) {
     margin-bottom: 10px;
+    margin-top:10px;
   }
   .main-footer .menu-grid a.link {
-    font-size: 14px;
+    font-size: 1.8rem;
   }
   .footer__copyright {
     padding: 17px 0;
