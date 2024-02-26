@@ -556,7 +556,12 @@
       
 <div style="display:flex; gap:10px; justify-content:center;">
       <div class="atc_desktop_image_container">
-        {{ product.selected_or_first_available_variant.featured_image | image_url: width: 104 | image_tag:
+        {% if product.selected_or_first_available_variant.featured_image != null%}
+          {% assign initial_image = product.selected_or_first_available_variant.featured_image %}
+        {% else %}
+          {% assign initial_image = product.featured_image %}
+        {% endif %}
+        {{ initial_image | image_url: width: 104 | image_tag:
                 loading: 'lazy',
                 size: sizes,
                 widths: '54, 74, 104, 162, 208, 324, 416',
@@ -567,7 +572,7 @@
       <div>
       <div class="atc_product_info">
         <div class="atc_mobile_image_container">            
-              {{ product.selected_or_first_available_variant.featured_image | image_url: width: 75 | image_tag:
+              {{ initial_image | image_url: width: 75 | image_tag:
                 loading: 'lazy',
                 size: sizes,
                 widths: '54, 74, 104, 162, 208, 324, 416',
