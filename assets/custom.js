@@ -186,7 +186,7 @@ setTimeout(function(){
   }
 },10000)
 
-
+/*
 document.addEventListener( 'DOMContentLoaded', function () {
     // Get the modal
     var modal = document.getElementById("myModal");    
@@ -236,3 +236,4 @@ document.addEventListener( 'DOMContentLoaded', function () {
       }
     }
  })
+*/
