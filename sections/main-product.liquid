@@ -592,7 +592,7 @@
             <h1 class="ttpo_product_title">{{ product.title | escape }}</h1>
             <a href="{{ product.url }}" class="product__title">
               <h2 class="h1" class="ttpo_product_title">
-                {{ product.title | escape }}
+                {{ product.title | truncate: 20 | escape }}
               </h2>
             </a>
           </div>
