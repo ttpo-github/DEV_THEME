@@ -2147,7 +2147,7 @@ footer {
   opacity: 0.7;
 }
 .main-footer .menu-grid li:not(:last-child) {
-  margin-bottom: 18px;
+  /l*margin-bottom: 18px;*/
 }
 .main-footer .menu-grid li {
   line-height: 1;
