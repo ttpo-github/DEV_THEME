@@ -6848,7 +6848,7 @@ to {top:0; opacity:1}
 
 /* Heading Class Styles */
 
-h1_class { 
+.h1_class { 
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
@@ -6857,7 +6857,7 @@ h1_class {
     margin-right: 0;
     font-weight: bold;
 }
-h2_class {
+.h2_class {
     display: block;
     font-size: 1.5em;
     margin-top: 0.83em;
@@ -6866,7 +6866,7 @@ h2_class {
     margin-right: 0;
     font-weight: bold;
 }
-h3_class { 
+.h3_class { 
     display: block;
     font-size: 1.17em;
     margin-top: 1em;
@@ -6875,7 +6875,7 @@ h3_class {
     margin-right: 0;
     font-weight: bold;
 }
-h4_class { 
+.h4_class { 
     display: block;
     margin-top: 1.33em;
     margin-bottom: 1.33em;
@@ -6883,7 +6883,7 @@ h4_class {
     margin-right: 0;
     font-weight: bold;
 }
-h5_class { 
+.h5_class { 
     display: block;
     font-size: .83em;
     margin-top: 1.67em;
@@ -6892,7 +6892,7 @@ h5_class {
     margin-right: 0;
     font-weight: bold;
 }
-h6_class { 
+.h6_class { 
     display: block;
     font-size: .67em;
     margin-top: 2.33em;
