@@ -575,7 +575,10 @@
               }}
         </div>
 
-        <script>console.log({{ product.selected_or_first_available_variant | json }})</script>
+        <script>
+          console.log({{ product.selected_or_first_available_variant | json }})
+          console.log({{ product | json }})
+        </script>
 
         <div>
           <div >
@@ -607,7 +610,7 @@
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
         {% endcomment %}
         
-                {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %} >
+                {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}>
                 <span>
                   {%- if product.selected_or_first_available_variant.available == false  -%}
                     <a style="padding:0;" href="tel:8339103416" class="hidden-link custom-btn button--full-width">Call for Availability: <br> (833) 910-3416</a>
