@@ -9,7 +9,7 @@
         <h1 class="hero-banner-head"><a style="color: inherit;" href="{{ section.settings.heading_link }}">{{ section.settings.head }}</a></h1>
       {% endif %}
       {% unless section.settings.subhead_below_main == blank %}
-        <h4 class="hero-banner-below-header">{{ section.settings.subhead_below_main }}</h4>
+        <p class="hero-banner-below-header h4-class">{{ section.settings.subhead_below_main }}</p>
       {% endunless %}
     </div>
     {% if section.settings.bgimg %}
