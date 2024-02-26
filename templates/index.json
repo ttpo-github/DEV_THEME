@@ -144,7 +144,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Artboard_2.jpg",
             "svg": "",
-            "link": "https:\/\/www.inc.com\/profile\/tk-trailer-parts"
+            "link": "https:\/\/www.inc.com\/profile\/tk-trailer-parts",
+            "image_alt": "Inc 500"
           }
         },
         "bf003ea6-1075-44f5-9494-83f647db2758": {
@@ -152,7 +153,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Untitled-7_23b12895-b49d-4f3b-b896-f5e09c4d61b9.png",
             "svg": "",
-            "link": "https:\/\/www.natda.org"
+            "link": "https:\/\/www.natda.org",
+            "image_alt": ""
           }
         },
         "db0dba57-e908-4dbb-866f-76a3b2ef4489": {
@@ -160,7 +162,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Artboard_6_ef91d630-815c-4188-b325-9f6018f2e7c9.jpg",
             "svg": "",
-            "link": "https:\/\/www.greatplacetowork.com\/certified-company\/7021936"
+            "link": "https:\/\/www.greatplacetowork.com\/certified-company\/7021936",
+            "image_alt": ""
           }
         }
       },
