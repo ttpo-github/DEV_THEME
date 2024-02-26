@@ -989,7 +989,7 @@ html .menu-drawer__navigation {
     width: 20px;
   }
   .bt-header .search__button {
-    width: 48px;
+    width: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2241,7 +2241,7 @@ ul.footer__list-social.list-social > li {
   position: relative;
 }
 .footer-search .search__input.field__input {
-  height: 48px;
+  height: 40px;
   border-radius: 50px;
   padding: 0 60px 0 20px;
   letter-spacing: 0;
