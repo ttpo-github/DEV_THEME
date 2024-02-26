@@ -2354,8 +2354,11 @@ ul.footer__list-social.list-social > li {
     margin-bottom: 30px;
   }
   .main-footer .menu-grid li:not(:last-child) {
+    /*
     margin-bottom: 20px;
     margin-top:20px;
+    */
+    padding:20px 0px;
   }
   .main-footer .menu-grid a.link {
     font-size: 1.8rem;
