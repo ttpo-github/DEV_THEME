@@ -2149,6 +2149,14 @@ footer {
 .main-footer .menu-grid li:not(:last-child) {
   margin-bottom: 18px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-footer .menu-grid li:not(:last-child) {
+  margin-bottom: 0px;
+}
+}
+
 .main-footer .menu-grid li {
   line-height: 1;
 }
