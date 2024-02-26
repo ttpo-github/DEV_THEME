@@ -28,7 +28,7 @@
                  sizes="100vw"
                  src="{{ block.settings.image | image_url: width: 1500 }}"
                  
-                 alt="{{ block.settings.image.alt | escape }}"
+                 alt="{{ block.settings.image_alt | escape }}"
                  width="{{ block.settings.image.width }}"
                  height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
                  >
@@ -77,6 +77,11 @@
           "type" : "url",
           "id" : "link",
           "label" : "Add Link"
+      	},
+        {
+          "type" : "text",
+          "id" : "image_alt",
+          "label" : "Image Alt Title"
       	}
       ]
     }
