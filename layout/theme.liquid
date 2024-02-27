@@ -318,8 +318,9 @@
 
     {{ 'hero-banner.css' | asset_url | stylesheet_tag: preload:true }}
     {{ 'base-min.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'pk-custom.css' | asset_url | stylesheet_tag: preload: true }}
     {% comment %}{{ 'pk-custom.css' | asset_url | stylesheet_tag: preload:true }}{% endcomment %}
-    <link href="{{ 'pk-custom.css' | asset_url }}" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'" />
+    <!--<link href="{{ 'pk-custom.css' | asset_url }}" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'" />-->
     
     <link href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css" rel="preload" as="style" onload="this.rel='stylesheet'">
     
