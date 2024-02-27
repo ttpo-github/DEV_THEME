@@ -154,7 +154,9 @@ div.as-aedd > div:first-child > span:first-child {
   font-size:5px!important;
 }
 
-
+.custom-btn-padding {
+  padding: 13px 41px 14px;
+}
 
 
 /* Extra small devices (phones, 600px and down) */
