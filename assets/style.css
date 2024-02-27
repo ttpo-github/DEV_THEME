@@ -22,7 +22,102 @@
     font-display: swap;
 }
 
+@font-face {
+        font-family: 'Bakbak One';
+        src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/BakbakOneRegular.woff') format('woff');
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+        }
 
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Regular.woff?v=1708622834') format('woff');
+          font-weight: 100;
+          font-style: normal;
+          font-display: swap;
+        }
+        /*
+         @font-face {
+          font-family: 'Inter';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Regular.woff?v=1708627209') format('woff');
+          font-weight: 900;
+          font-style: normal;
+          font-display: swap;
+        }
+        */
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('Ihttps://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-ExtraBold.woff2?v=1708702924') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Bold.woff2?v=1708702924') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Black.woff2?v=1708702924') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-ExtraLight.woff2?v=1708702924') format('woff2');
+            font-weight: 200;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Light.woff2?v=1708702924') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Medium.woff2?v=1708702924') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Regular.woff2?v=1708702924') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-SemiBold.woff2?v=1708702924') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Inter';
+            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Thin.woff2?v=1708702924') format('woff2');
+            font-weight: 100;
+            font-style: normal;
+            font-display: swap;
+        }
 
 
 
