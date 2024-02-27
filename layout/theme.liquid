@@ -44,11 +44,51 @@
 
       @font-face {
           font-family: 'Oswald';
-          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Regular.woff?v=1708622834') format('woff');
-          font-weight: 100;
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Medium.woff2?v=1709045670') format('woff2');
+          font-weight: 500;
           font-style: normal;
           font-display: swap;
-        }
+      }
+      
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Regular.woff2?v=1709045670') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+      }
+      
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-ExtraLight.woff2?v=1709045670') format('woff2');
+          font-weight: 200;
+          font-style: normal;
+          font-display: swap;
+      }
+      
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Bold.woff2?v=1709045670') format('woff2');
+          font-weight: bold;
+          font-style: normal;
+          font-display: swap;
+      }
+      
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-SemiBold.woff2?v=1709045670') format('woff2');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+      }
+      
+      @font-face {
+          font-family: 'Oswald';
+          src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Oswald-Light.woff2?v=1709045670') format('woff2');
+          font-weight: 300;
+          font-style: normal;
+          font-display: swap;
+      }
         /*
          @font-face {
           font-family: 'Inter';
@@ -58,7 +98,9 @@
           font-display: swap;
         }
         */
+
         
+      
         @font-face {
             font-family: 'Inter';
             src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-ExtraBold.woff2?v=1708702924') format('woff2');
@@ -83,21 +125,6 @@
             font-display: swap;
         }
         
-        @font-face {
-            font-family: 'Inter';
-            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-ExtraLight.woff2?v=1708702924') format('woff2');
-            font-weight: 200;
-            font-style: normal;
-            font-display: swap;
-        }
-        
-        @font-face {
-            font-family: 'Inter';
-            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Light.woff2?v=1708702924') format('woff2');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
-        }
         
         @font-face {
             font-family: 'Inter';
@@ -123,13 +150,6 @@
             font-display: swap;
         }
         
-        @font-face {
-            font-family: 'Inter';
-            src: url('https://cdn.shopify.com/s/files/1/0052/2941/2425/files/Inter-Thin.woff2?v=1708702924') format('woff2');
-            font-weight: 100;
-            font-style: normal;
-            font-display: swap;
-        }
       
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
