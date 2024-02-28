@@ -533,8 +533,8 @@ window.addEventListener("load", function() {
                   const img = document.createElement('img');    
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
-                  //const expertContent = document.querySelector('.help-content .click div');
-                  //expertContent.innerHTML = expertContent.dataset.name.replace('[name]', random_expert.name)
+                  const expertContent = document.querySelector('.cart-drawer-call-expert');
+                  expertContent.innerHTML = expertContent.dataset.name.replace('[name]', random_expert.name).replace('[phone]',random_expert.phone)
   
                   // EXPERT DROPDOWN
                   
