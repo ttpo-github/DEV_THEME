@@ -750,6 +750,15 @@
       ]
     }
   </script>
+
+  {% assign min = 1 %}
+{% assign max = 5 %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+
+<script>console.log('{{ randomNumber }}')</script>
+
+                          
   <script>
     // EXPERT DROPDOWN
     const random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
