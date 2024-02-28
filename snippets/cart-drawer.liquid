@@ -418,11 +418,12 @@
                 <script>
                 // EXPERT DROPDOWN
                   //const random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
-                  const random_expert = window.expert_data;
+                  const random_expert = Array.from(window.expert_data);
                   //console.log(window.expert_data)
                   
                   console.log(random_expert[1])
                   console.log(window.expert_data[2])
+                  
                   document.querySelector('.help-images').innerHTML = ''
                   const img = document.createElement('img');    
                   img.src = random_expert.image;    
