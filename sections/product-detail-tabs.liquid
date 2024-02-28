@@ -101,6 +101,27 @@
       $(this).siblings().slideToggle().toggleClass('active');
     });
   </script>
+
+  <script>
+    // EXPERT DROPDOWN
+    const random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
+    
+    //console.log(window.expert_data)
+    console.log('Product Details')
+    console.log(random_expert)
+    console.log({random_expert})
+    console.log({random_expert:random_expert})
+    
+    document.querySelector('.help-images').innerHTML = ''
+    const img = document.createElement('img');    
+    img.src = random_expert.image;    
+    document.querySelector('.help-images').appendChild(img);
+    const expertContent = document.querySelector('.help-content .click div');
+    expertContent.innerHTML = expertContent.dataset.name.replace('[name]', random_expert.name)
+    // EXPERT DROPDOWN
+  </script>
+
+  
 </section>
 {% schema %}
  {
