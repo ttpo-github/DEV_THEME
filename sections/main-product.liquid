@@ -760,11 +760,12 @@
 
                           
   <script>
+    /*
     // EXPERT DROPDOWN
     const random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
     
     //console.log(window.expert_data)
-    
+    console.log('Product Section')
     console.log({random_expert:random_expert})
     document.querySelector('.help-images').innerHTML = ''
     const img = document.createElement('img');    
@@ -773,6 +774,7 @@
     const expertContent = document.querySelector('.help-content .click div');
     expertContent.innerHTML = expertContent.dataset.name.replace('[name]', random_expert.name)
     // EXPERT DROPDOWN
+    */
     
     const fieldsets = Array.from(document.querySelectorAll('fieldset'));     
     let options = fieldsets.map((fieldset) => {
