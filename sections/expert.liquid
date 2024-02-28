@@ -102,7 +102,8 @@
   {% if block.settings.expert-heading != blank %}
       window.expert_data.push({
           image: '{{ block.settings.expert-image | img_url: 'master' }}',
-          name: '{{ block.settings.expert-heading }}'
+          name: '{{ block.settings.expert-heading }}',
+          phone: '{{ block.settings.button_link }}'
       });
   {% endif %}
   {% endfor %}
