@@ -521,7 +521,7 @@ window.addEventListener("load", function() {
               <script>
                   
                 // EXPERT DROPDOWN
-                  const random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
+                  let random_expert = window.expert_data[Math.floor(Math.random()*window.expert_data.length)];
     
                   //console.log(window.expert_data)
                   console.log('Main')
@@ -530,10 +530,10 @@ window.addEventListener("load", function() {
                   console.log({random_expert:random_expert})
                   
                   document.querySelector('.help-images').innerHTML = ''
-                  const img = document.createElement('img');    
+                  let img = document.createElement('img');    
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
-                  const expertContent = document.querySelector('.cart-drawer-call-expert');
+                  let expertContent = document.querySelector('.cart-drawer-call-expert');
                   console.log(expertContent)
                   expertContent.innerHTML = expertContent.innerText.replace('[name]', random_expert.name)
   
