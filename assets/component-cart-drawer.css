@@ -535,7 +535,7 @@ cart-drawer-items .cart-drawer-review-cart, .drawer__close {
   }
   .drawer {
     /*Was 118px*/
-    top: 78px;
+    top: 90px;
   }
   cart-drawer-items {
     max-height: 420px;
