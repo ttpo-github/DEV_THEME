@@ -533,10 +533,10 @@ window.addEventListener("load", function() {
                   let img = document.createElement('img');    
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
-                  let expertContent = document.querySelector('.cart-drawer-call-expert');
+                  let expertContent = document.querySelector('.cart-drawer-call-expert-text');
                   let expertPhone = document.querySelector('.cart-drawer-call-expert-phone')
-                  let textRefactor = expertContent.innerText
-                  //expertPhone.href = random_expert.phone.replace(/[()\-]/g, '')
+                  let textRefactor = expertContent.innerText.replace('[name]', random_expert.name).replace('[phone]', random_expert.phone)
+                  expertPhone.href = random_expert.phone.replace(/[()\-]/g, '')
                   expertContent.innerHTML = textRefactor
   
                   // EXPERT DROPDOWN
