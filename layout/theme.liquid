@@ -537,7 +537,7 @@ window.addEventListener("load", function() {
                   document.querySelector('.help-images').innerHTML = ''
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
-                  expertPhone.href = `tel:${random_expert.phone.replace(/[()\-]/g, '').trim()}`
+                  expertPhone.href = `tel:${random_expert.phone.replace(/[()\-\s]/g, '').trim()}`
                   expertContent.innerHTML = `Call ${random_expert.name} at ${random_expert.phone}`
   
                   // EXPERT DROPDOWN
