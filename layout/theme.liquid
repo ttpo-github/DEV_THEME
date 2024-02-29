@@ -534,7 +534,7 @@ window.addEventListener("load", function() {
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
                   let expertContent = document.querySelector('.cart-drawer-call-expert');
-                  console.log(expertContent.innerHTML.replace('[name]', random_expert.name))
+                  console.log(expertContent.innerHTML.replace('[name]', random_expert.name).replace('[phone]', random_expert.phone))
                   
                   //expertContent.innerHTML = expertContent.innerText.replace('[name]', random_expert.name)
   
