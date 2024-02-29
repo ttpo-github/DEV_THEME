@@ -94,6 +94,7 @@
     $(document).on('click','#reviews-wrapper', function(){
       $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
+    
     $('.faq-body h4').on('click',function(){
       $('.faq-body h4').not(this).removeClass('active');
       $('.faq-content').not($(this).siblings()).slideUp().removeClass('active')
