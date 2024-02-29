@@ -91,7 +91,7 @@
       });
     }, false );
       
-    $(document).on('click','#yotpo-display-wrapper', function(){
+    $(document).on('click','.yotpo-display-wrapper', function(){
       $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
     $('.faq-body h4').on('click',function(){
@@ -100,6 +100,9 @@
       $(this).toggleClass('active');
       $(this).siblings().slideToggle().toggleClass('active');
     });
+
+ 
+    
   </script>
 
   
