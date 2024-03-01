@@ -91,7 +91,7 @@
       });
     }, false );
       
-    $('#reviews-wrapper').on('click', function(){
+    $(document).on('click','#reviews-wrapper', function(){
       console.log('clicked')
       $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
