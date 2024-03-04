@@ -64,7 +64,7 @@
           </s>
 
           {% if product.compare_at_price > product.price %}
-        <div class="card__badge">
+        <div class="price-item price-item--regular">
           -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF
         </div>
         {% endif %}
@@ -75,11 +75,7 @@
       <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
 
-        {% if product.compare_at_price > product.price %}
-        <div class="card__badge">
-          -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF
-        </div>
-        {% endif %}
+        
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
