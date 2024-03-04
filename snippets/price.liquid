@@ -73,6 +73,11 @@
       {%- endunless -%}
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
+        {% if product.compare_at_price > product.price %}
+        <div class="price-item price-item--regular">
+          -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF
+        </div>
+        {% endif %}
         {{ money_price }}
       </span>
     </div>
