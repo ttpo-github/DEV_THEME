@@ -105,9 +105,9 @@
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
 
         {% if product.compare_at_price > product.price %}
-        <div class="card__badge">
+        <span class="card__badge">
           -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%
-        </div>
+        </span>
         {% endif %}
         
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
