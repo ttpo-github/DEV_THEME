@@ -51,11 +51,8 @@
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-        <div>
         <span>
           <s class="price-item price-item--regular">
-              
-            
               {% if settings.currency_code_enabled %}
                 {{ compare_at_price | money_without_trailing_zeros }}
               {% else %}
@@ -84,7 +81,6 @@
         <div class="card__badge-custom">
           -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF
         </div>
-            </div>
         {% endif %}
           
         </span>
