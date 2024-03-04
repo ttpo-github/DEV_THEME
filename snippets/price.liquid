@@ -53,6 +53,8 @@
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
           <s class="price-item price-item--regular">
+              
+            
               {% if settings.currency_code_enabled %}
                 {{ compare_at_price | money_without_trailing_zeros }}
               {% else %}
@@ -60,25 +62,9 @@
               {% endif %}
            
           </s>
-<style>
-  .card__badge-custom {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 0 10px 0 0;
-    font-size: 15px;
-    line-height: 40px;
-    background: #dd3b3b;
-    color: #fff;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    font-weight: 600;
-    font-family: Inter;
-}
-</style>
+
           {% if product.compare_at_price > product.price %}
-        <div class="card__badge-custom">
+        <div class="card__badge">
           -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}% OFF
         </div>
         {% endif %}
