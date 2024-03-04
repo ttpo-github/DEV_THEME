@@ -105,7 +105,7 @@
         .card__badge-custom {
             padding: 5px 10px;
             font-size: 15px;
-            line-height: 40px;
+            line-height: 1;
             background: #dd3b3b;
             color: #fff;
             border-radius: 30px;
@@ -116,9 +116,9 @@
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
 
         {% if product.compare_at_price > product.price %}
-        <div  class="card__badge-custom">
+        <span  class="card__badge-custom">
          SALE -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 |divided_by: product.selected_or_first_available_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%
-        </div>
+        </span>
         {% endif %}
         
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
