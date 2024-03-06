@@ -30,6 +30,12 @@
   endif
 -%}
 
+<style>
+  div.product__info-container .bottomLine .yotpo-bottomline {
+    flex-direction:column;
+  }
+</style>
+
 <div class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
