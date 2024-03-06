@@ -1013,7 +1013,11 @@
 
 <script type="text/javascript" src="https://node1.itoris.com/dpo/storefront/include.js?shop=the-trailer-parts-outlet.myshopify.com"></script>
 
-
+<script>
+  FIGPII.helpers.track("click", "form[action='/cart/add'] button[type=submit]", "add_to_cart")
+  //console.log(document.querySelector("form[action='/cart/add'] button[type=submit]"))
+  //console.log(FIGPII)
+</script>
 
 
 {% schema %}
