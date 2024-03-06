@@ -592,7 +592,7 @@
           </div>
           <div class="atc_price_and_reviews">
           <div class="no-js-hidden atc_price" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- render 'price-w-sale-badge', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                {%- render 'price-w-sale-badge', product: product, use_variant: true, show_badges: false, price_class: 'price--large' -%}
                 
               </div>
             <a href="#reviews"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></a>
