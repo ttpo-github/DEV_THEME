@@ -3798,6 +3798,12 @@ html .product__info-container .yotpo-stars .yotpo-icon {
   color: #000646;
 }
 
+@media only screen and (max-width: 768px) {
+  .product__info-container .bottomLine .yotpo-bottomline {
+    flex-direction:column;
+  }  
+}
+
 @media only screen and (min-width: 1200px){
   .cbb-also-bought-add-to-cart-button {
     opacity:0;
