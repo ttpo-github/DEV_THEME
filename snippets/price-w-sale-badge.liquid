@@ -31,13 +31,17 @@
 -%}
 
 <style>
-  div.product__info-container .bottomLine div.yotpo-bottomline.pull-left.star-clickable {
-    flex-direction:column;
-  }
-
-  div.product__info-container div.bottomLine div.yotpo-bottomline .star-clickable {
-    flex-direction: column;
-  }
+  .card__badge-custom {
+            padding: 5px 10px;
+            font-size: 15px;
+            line-height: 1;
+            background: #dd3b3b;
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 600;
+            font-family: Inter;
+            margin-right:5px;
+        }
 </style>
 
 <div class="price
@@ -111,19 +115,7 @@
         {{ money_price }}
       </div>
 
-      <style>
-        .card__badge-custom {
-            padding: 5px 10px;
-            font-size: 15px;
-            line-height: 1;
-            background: #dd3b3b;
-            color: #fff;
-            border-radius: 30px;
-            font-weight: 600;
-            font-family: Inter;
-            margin-right:5px;
-        }
-      </style>
+      
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
 
         {% if product.compare_at_price > product.price %}
