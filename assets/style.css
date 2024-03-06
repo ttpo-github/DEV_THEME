@@ -3802,6 +3802,10 @@ html .product__info-container .yotpo-stars .yotpo-icon {
   .product__info-container .bottomLine .yotpo-bottomline {
     flex-direction:column;
   }  
+
+  .product__info-container .bottomLine .yotpo-bottomline a.text-m {
+    margin-left:0px;
+  }
 }
 
 @media only screen and (min-width: 1200px){
