@@ -29,6 +29,10 @@
       {% comment %}{%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}{% endcomment %}
     </title>
 
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global-min.js' | asset_url }}" defer="defer"></script>
