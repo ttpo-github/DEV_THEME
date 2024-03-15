@@ -22,15 +22,25 @@
     {% render 'pagefly-head' %}
     {% render 'meta-tags' %}
 
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {% comment %}{%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}{% endcomment %}
-    </title>
-
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {% if canonical_url == 'https://thetrailerpartsoutlet.com/collections' %}
+      <title>
+        {{ page_title }}
+        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {% comment %}{%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}{% endcomment %}
+      </title>
+      <meta name="description" content="Discover high-quality trailer parts and accessories at The Trailer Parts Outlet. Browse our collection for reliable products and exceptional customer service.">
+    {% else %}
+      <title>
+        {{ page_title }}
+        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {% comment %}{%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}{% endcomment %}
+      </title>
+  
+      {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
     {% endif %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
