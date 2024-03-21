@@ -1,5 +1,5 @@
 {
-  "name": "t:sections.header.name",
+  "name": "dawn13-header",
   "type": "header",
   "sections": {
     "announcement-bar": {
