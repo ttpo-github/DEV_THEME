@@ -191,12 +191,6 @@
         "settings": {
         }
       },
-      "14590438140231777464": {
-        "type": "shopify:\/\/apps\/tip-quik\/blocks\/tipquik\/e8537d4b-08b5-42f2-ad3d-bd0ce25fb64a",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "17985673643287205206": {
         "type": "shopify:\/\/apps\/estimated-delivery-date-plus\/blocks\/app_setting\/4a0685bc-c234-45b2-8382-5ad6a8e3e3fd",
         "disabled": false,
