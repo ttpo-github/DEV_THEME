@@ -40,20 +40,13 @@
       }
     },
     "header": {
-      "type": "header",
+      "type": "dawn13-header",
       "settings": {
-        "top_menu": "",
-        "new_window_link": "",
-        "top_right_text": "",
-        "top_right_link": "",
-        "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "new-lending-menu",
-        "menu_type_desktop": "mega",
-        "mobile_menu": "main-menu",
-        "shipping_text": "",
-        "header_phone": "",
+        "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
+        "color_scheme": "background-1",
         "mobile_logo_position": "center",
         "margin_bottom": 0
       }
