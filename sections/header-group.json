@@ -40,13 +40,13 @@
       }
     },
     "header": {
-      "type": "dawn13-header",
+      "type": "header",
       "settings": {
+        "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "new-lending-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
-        "color_scheme": "background-1",
         "mobile_logo_position": "center",
         "margin_bottom": 0
       }
