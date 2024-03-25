@@ -596,6 +596,46 @@
                 </ul>
               </nav>
 
+              {% for link in linklists[settings.custom_collections].links %}
+  <div class="grid" id="{{link.title | replace: ' ','-' | replace:'&','and' | downcase }}">
+    <div class="grid__item medium-up--one-sixth text-left text-center-sm">
+      <a href="{{link.url}}" style="text-decoration:none; color:inherit; margin:0px;"><h5 class="collection-title">{{link.title}}</h5></a>
+        
+       {% unless link.url == "#" %}
+         {% assign links_length = link.links | size %}
+         {% unless links_length < 9 and link.title != 'Shop All Products'%}
+          	<a href="{{link.url}}" target="_blank" class="custom-btn">View more {{link.title}}</a>
+          {% endunless %}
+      {% endunless %}
+      
+    </div>
+    <div class="grid__item medium-up--five-sixths">
+      <div class="collection-lists">
+      {% for childlink in link.links %}      
+            <div class="item-wrapper">
+            {% assign this_collection = childlink.object %}
+              <a {% if link.title != "Shop All Products" %}
+                   href="{{this_collection.url}}"
+                 {% else %}
+                  {% if childlink.title == 'Axle Service Kits' %}
+                    href="#trailer-axle-repair-parts"
+                  {% else %}
+                    href="#{{childlink.title | replace: ' ','-' | replace:'&','and' | downcase }}"
+                  {% endif %}
+                {% endif %}>
+                <div class="img-wrap">
+                	<img src="{{this_collection.image | img_url: '140x'}}" alt="{{this_collection.image.alt}}"/>
+                </div>
+                <p>{{childlink.title}}</p>
+              </a>
+			</div>
+     {% endfor %}
+      </div>
+  </div>
+  </div>
+<hr>
+{% endfor %}
+
               
             {%- endif -%}
           {%- endif -%}
