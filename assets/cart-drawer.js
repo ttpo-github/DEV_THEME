@@ -113,8 +113,8 @@ class CartDrawerItems extends CartItems {
   getSectionsToRender() {
     return [
       {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
+        id: 'DawnCartDrawer',
+        section: 'dawn13-cart-drawer',
         selector: '.drawer__inner'
       },
       {
