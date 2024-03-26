@@ -87,7 +87,7 @@ class CartDrawer extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'dawn13-cart-drawer',
+        id: 'cart-drawer',
         selector: '#DawnCartDrawer'
       },
       {
@@ -107,14 +107,14 @@ class CartDrawer extends HTMLElement {
   }
 }
 
-customElements.define('dawn13-cart-drawer', CartDrawer);
+customElements.define('cart-drawer', CartDrawer);
 
 class CartDrawerItems extends CartItems {
   getSectionsToRender() {
     return [
       {
         id: 'DawnCartDrawer',
-        section: 'dawn13-cart-drawer',
+        section: 'cart-drawer',
         selector: '.drawer__inner'
       },
       {
