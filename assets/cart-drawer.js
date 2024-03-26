@@ -87,7 +87,7 @@ class CartDrawer extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'dawn-13-cart-drawer',
+        id: 'dawn13-cart-drawer',
         selector: '#DawnCartDrawer'
       },
       {
