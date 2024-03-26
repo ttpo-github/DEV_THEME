@@ -17,8 +17,8 @@
   }
 </style>
 
-<cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
-  <div id="CartDrawer" class="cart-drawer">
+<dawn13-cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
+  <div id="DawnCartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
       class="drawer__inner gradient color-{{ settings.cart_color_scheme }}"
@@ -529,7 +529,7 @@
       </div>
     </div>
   </div>
-</cart-drawer>
+</dawn13-cart-drawer>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
