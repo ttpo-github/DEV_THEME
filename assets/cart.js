@@ -96,6 +96,7 @@ class CartItems extends HTMLElement {
       sections_url: window.location.pathname
     });
 
+    console.log("SECTIONS")
     console.log(body.sections)
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
