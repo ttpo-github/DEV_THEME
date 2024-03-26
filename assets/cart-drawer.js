@@ -107,7 +107,7 @@ class CartDrawer extends HTMLElement {
   }
 }
 
-customElements.define('dawn13-cart-drawer', CartDrawer);
+customElements.define('cart-drawer', CartDrawer);
 
 class CartDrawerItems extends CartItems {
   getSectionsToRender() {
