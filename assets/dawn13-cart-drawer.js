@@ -114,7 +114,7 @@ class CartDrawer extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'cart-drawer-test',
+        id: 'cart-drawer',
         selector: '#CartDrawer',
       },
       {
@@ -140,7 +140,7 @@ class CartDrawerItems extends CartItems {
       {
         id: 'CartDrawer',
         section: 'cart-drawer',
-        selector: '.drawer__inner',
+        selector: '.drawer__inner-test',
       },
       {
         id: 'cart-icon-bubble',
