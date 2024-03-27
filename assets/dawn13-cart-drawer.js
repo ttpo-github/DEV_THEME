@@ -139,7 +139,7 @@ class CartDrawerItems extends CartItems {
     return [
       {
         id: 'CartDrawer',
-        section: 'cart-drawer',
+        section: 'dawn13-cart-drawer',
         selector: '.dawn13-drawer__header',
       },
       {
