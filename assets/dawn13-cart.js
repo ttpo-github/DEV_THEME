@@ -136,9 +136,10 @@ class CartItems extends HTMLElement {
         }
 
         this.classList.toggle('is-empty', parsedState.item_count === 0);
-        const cartDrawerWrapper = document.querySelector('cart-drawer');
+        const cartDrawerWrapper = document.querySelector('dawn13-cart-drawer');
 
         console.log(cartDrawerWrapper)
+        
         const cartFooter = document.getElementById('main-cart-footer');
 
         if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
