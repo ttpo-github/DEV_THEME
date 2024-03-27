@@ -140,7 +140,7 @@ class CartDrawerItems extends CartItems {
       {
         id: 'dawn13-CartDrawer',
         section: 'dawn13-cart-drawer',
-        selector: '.dawn13-drawer__header',
+        selector: '.dawn13-drawer__inner',
       },
       {
         id: 'cart-icon-bubble',
