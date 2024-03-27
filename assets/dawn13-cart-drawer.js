@@ -7,6 +7,7 @@ class CartDrawer extends HTMLElement {
     this.setHeaderCartIconAccessibility();
   }
 
+  /*
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
     cartLink.setAttribute('role', 'button');
@@ -22,7 +23,27 @@ class CartDrawer extends HTMLElement {
       }
     });
   }
+  */
 
+  setHeaderCartIconAccessibility() {
+    const cartLink = document.querySelectorAll('#cart-icon-bubble');
+    cartLink.forEach((btn) => {
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-haspopup', 'dialog');
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.open(btn)
+    });
+    btn.addEventListener('keydown', (event) => {
+      if (event.code.toUpperCase() === 'SPACE') {
+        event.preventDefault();
+        this.open(btn);
+      }
+    });
+      
+    });
+  }
+  
   open(triggeredBy) {
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
