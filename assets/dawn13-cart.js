@@ -120,7 +120,8 @@ class CartItems extends HTMLElement {
       .then((response) => {
         return response.text();
       })
-      .then((state) => {
+      .then((state) => {\
+        console.log("In the update quantity call back. cart.js")
         const parsedState = JSON.parse(state);
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
