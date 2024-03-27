@@ -83,11 +83,7 @@ class CartItems extends HTMLElement {
 
   getSectionsToRender() {
     return [
-      {
-        id: 'main-cart-items',
-        section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents',
-      },
+    
       {
         id: 'cart-icon-bubble',
         section: 'cart-icon-bubble',
