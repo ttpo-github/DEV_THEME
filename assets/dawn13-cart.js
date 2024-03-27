@@ -116,7 +116,7 @@ class CartItems extends HTMLElement {
       sections_url: window.location.pathname,
     });
 
-    console.log(this.getSectionsToRender().map((section) => section.section))
+    console.log(this.getSectionsToRender()//.map((section) => section.section))
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {
