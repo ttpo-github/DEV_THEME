@@ -92,13 +92,7 @@ class CartDrawer extends HTMLElement {
 
   getSectionsToRender() {
     return [
-      {
-        id: 'cart-drawer',
-        selector: '#CartDrawer',
-      },
-      {
-        id: 'cart-icon-bubble',
-      },
+      
     ];
   }
 
