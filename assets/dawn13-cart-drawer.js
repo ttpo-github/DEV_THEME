@@ -138,7 +138,7 @@ class CartDrawerItems extends CartItems {
   getSectionsToRender() {
     return [
       {
-        id: 'CartDrawer',
+        id: 'dawn13-CartDrawer',
         section: 'dawn13-cart-drawer',
         selector: '.dawn13-drawer__header',
       },
