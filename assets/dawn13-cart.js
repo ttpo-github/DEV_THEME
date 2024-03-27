@@ -120,8 +120,7 @@ class CartItems extends HTMLElement {
       .then((response) => {
         return response.text();
       })
-      .then((state) => {\
-        
+      .then((state) => {
         const parsedState = JSON.parse(state);
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
