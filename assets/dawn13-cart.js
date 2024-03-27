@@ -129,6 +129,8 @@ class CartItems extends HTMLElement {
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
         const items = document.querySelectorAll('.cart-item');
 
+        console.log(items)
+        
         if (parsedState.errors) {
           quantityElement.value = quantityElement.getAttribute('value');
           this.updateLiveRegions(line, parsedState.errors);
@@ -137,7 +139,9 @@ class CartItems extends HTMLElement {
 
         this.classList.toggle('is-empty', parsedState.item_count === 0);
         const cartDrawerWrapper = document.querySelector('dawn13-cart-drawer');
+        const customCartDrawerWrapper = document.getElementsByTagName('dawn13-cart-drawer')
 
+        console.log(customCartDrawerWrapper)
         console.log(cartDrawerWrapper)
         
         const cartFooter = document.getElementById('main-cart-footer');
