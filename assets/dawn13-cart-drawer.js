@@ -98,7 +98,7 @@ class CartDrawer extends HTMLElement {
         console.log(`Section Element: ${sectionElement}`)
         ? document.querySelector(section.selector)
         : document.getElementById(section.id);
-      //sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+      sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
 
     setTimeout(() => {
