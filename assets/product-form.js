@@ -28,6 +28,7 @@ if (!customElements.get('product-form')) {
       const formData = new FormData(this.form);
       if (this.cart) {
         formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
+        console.log(formData)
         formData.append('sections_url', window.location.pathname);
         this.cart.setActiveElement(document.activeElement);
       }
