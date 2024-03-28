@@ -115,7 +115,7 @@ class CartDrawer extends HTMLElement {
     return [
       {
         id: 'dawn13-cart-drawer',
-        selector: '#CartDrawer',
+        selector: '#dawn13-CartDrawer',
       },
       {
         id: 'cart-icon-bubble',
