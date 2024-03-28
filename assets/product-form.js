@@ -28,13 +28,13 @@ if (!customElements.get('product-form')) {
       const formData = new FormData(this.form);
       if (this.cart) {
         formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
-        console.log(formData)
         formData.append('sections_url', window.location.pathname);
         this.cart.setActiveElement(document.activeElement);
       }
       config.body = formData;
 
-      console.log(config)
+      console.log("In the Product Form before fetch")
+      console.log(this.cart.getSectionsToRender())
 
       fetch(`${routes.cart_add_url}`, config)
         .then((response) => response.json())
