@@ -64,7 +64,7 @@
         </div>
       {%- endif -%}
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
-        <h2 class="drawer__heading" style="display:none;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}</h2>
+        <h2 class="drawer__heading">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
         <a href="tel:9362263664" class="cart-drawer-call-expert-phone" style="display:flex;">
                                 <div style="display:flex; justify-content:center;flex-direction:column; align-items:center; gap:10px;">
@@ -105,7 +105,7 @@
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">
-                    {% comment %}
+                    
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -116,7 +116,7 @@
                         scope="col"
                         role="columnheader"
                       >
-                        {{ 'sections.cart.headings.product' | t }}
+                        {{ 'sections.cart.headings.product' | t }}TITLE
                       </th>
                       <th
                         id="CartDrawer-ColumnTotal"
@@ -124,16 +124,14 @@
                         scope="col"
                         role="columnheader"
                       >
-                        {{ 'sections.cart.headings.total' | t }}
+                        {{ 'sections.cart.headings.total' | t }}TOTAL
                       </th>
                       <th id="CartDrawer-ColumnQuantity" role="columnheader">
-                        <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
+                        <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}QTY</span>
                       </th>
                     </tr>
-                    {% endcomment%}
-                    <tr role="row">
-                    <h2 class="drawer__heading">CART</h2>
-                    </tr>
+                    
+                    
                   </thead>
 
                   <tbody role="rowgroup">
