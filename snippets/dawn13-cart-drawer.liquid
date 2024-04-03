@@ -105,6 +105,7 @@
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">
+                    {% comment %}
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -129,6 +130,8 @@
                         <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
                       </th>
                     </tr>
+                    {% endcomment%}
+                    <p>CART</p>
                   </thead>
 
                   <tbody role="rowgroup">
