@@ -4476,7 +4476,8 @@ cart-remove-button .button svg {
     justify-content: center;
   }
   .cart-items tbody td.cart-item__media{
-    padding: 10px;
+    /*padding: 10px;*/
+    padding:0px;
   }
   .cart-items tbody td.cart-item__media {
 /*     border-right: 1px solid #dadada; */
