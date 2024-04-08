@@ -6864,6 +6864,16 @@ to {top:0; opacity:1}
 }
 /* Experts Product Page Modal Opener */
 
+@media only screen and (max-width: 768px){
+  .help-images {
+    max-width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 60px;
+    width: 100%;
+}
+}
+
 /* Heading Class Styles */
 
 .h1_class { 
