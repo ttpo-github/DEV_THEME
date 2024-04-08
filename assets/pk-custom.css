@@ -42,14 +42,13 @@ div.tj-modal-content {
 .cart-drawer-properties {
   max-height:0px;
   opacity:0%;
-   transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   margin:0px;
 }
 
 .cart-drawer-properties.custom-open {
   max-height:1000px;
   opacity:1;
-    overflow:scroll;
   margin-top:1rem;
 } 
 
