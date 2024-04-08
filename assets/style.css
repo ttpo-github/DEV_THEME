@@ -4443,7 +4443,7 @@ cart-remove-button .button svg {
     display: none !important;
   }
   .cart-items thead th {
-    display: table-row !important;
+    /*display: table-row !important;*/
     border-bottom: 0;
     opacity: 1;
   }
