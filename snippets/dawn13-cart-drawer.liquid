@@ -187,7 +187,7 @@
                             or item.properties.size != 0
                             or item.selling_plan_allocation != null
                           -%}
-                            <a onclick="propertyContainerToggle()">Click to see details</a>
+                            <a onclick="propertyContainerToggle(e)">Click to see details</a>
                             <div class="cart-drawer-properties-container">
                             <dl class="cart-drawer-properties">
                               {%- if item.product.has_only_default_variant == false -%}
@@ -230,8 +230,8 @@
                           {%- endif -%}
 
                           <script>
-                            function propertyContainerToggle(){
-                              console.log(this)
+                            function propertyContainerToggle(event){
+                              console.log(event)
                             }
                           </script>
                           
