@@ -230,7 +230,7 @@
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                           {%- endif -%}
 
-                          <script>
+                          <script defer>
                             function propertyContainerToggle(event){
                               //console.log(event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties'));
                               let properties = event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties');
