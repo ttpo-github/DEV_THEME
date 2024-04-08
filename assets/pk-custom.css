@@ -32,7 +32,7 @@ div.tj-modal-content {
 /* --- Style Overrides for the Tip Quick Widget --- */
 
 /* --- General Style Cusomizations --- */
-.cart-drawer-properties-container {
+.cart-drawer-properties {
   height:0%;
   display:none;
   tansition: all forward ease-in-out;
