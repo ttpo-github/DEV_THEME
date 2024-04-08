@@ -34,13 +34,13 @@ div.tj-modal-content {
 /* --- General Style Cusomizations --- */
 .cart-drawer-properties {
   height:0%;
-  display:none;
+  
   tansition: all 3s ease-in-out;
 }
 
 .cart-drawer-properties.custom-open {
   height:100%;
-  display:block;
+  
 }
 
 .cart-button-container {
