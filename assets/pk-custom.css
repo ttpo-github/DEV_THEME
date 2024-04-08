@@ -41,7 +41,7 @@ div.tj-modal-content {
 .cart-drawer-properties {
   max-height:0px;
   opacity:0%;
-   transition: all 3s ease-in-out;
+   transition: all .3s ease-in-out;
 
 }
 
