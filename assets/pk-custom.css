@@ -4,12 +4,6 @@
   padding: 5px 20px;
 }
 
-.details-link {
-  text-decoration: underline;
-  font-weight:400;
-  cursor:pointer;
-}
-
 div.tj-modal-header {
   padding:0px;
 }
@@ -38,15 +32,20 @@ div.tj-modal-content {
 /* --- Style Overrides for the Tip Quick Widget --- */
 
 /* --- General Style Cusomizations --- */
+.details-link {
+  text-decoration: underline;
+  font-weight:400;
+  cursor:pointer;
+}
+
 .cart-drawer-properties {
   height:0%;
-  display:none;
+  
    transition: all 3s ease-in-out;
 }
 
 .cart-drawer-properties.custom-open {
   height:100%;
-  display:block;
 }
 
 .cart-button-container {
