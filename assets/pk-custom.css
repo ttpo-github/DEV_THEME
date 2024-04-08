@@ -32,6 +32,12 @@ div.tj-modal-content {
 /* --- Style Overrides for the Tip Quick Widget --- */
 
 /* --- General Style Cusomizations --- */
+.cart-drawer-properties-container {
+  height:0%;
+  display:none;
+  tansition: all forward ease-in-out;
+}
+
 .cart-button-container {
   display:flex;
   gap: 5px;
