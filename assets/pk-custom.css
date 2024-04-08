@@ -47,6 +47,7 @@ div.tj-modal-content {
 .cart-drawer-properties.custom-open {
   max-height:100%;
   opacity:1;
+    overflow:hidden;
 }
 
 .cart-button-container {
