@@ -87,6 +87,13 @@ div.yotpo-label.yotpo-small-box {
 
 /* Main Layout Breakpoint MOBILE STYLES HERE */
 @media only screen and (max-width: 992px) {
+  .ask-a-specialist{
+    font-size: 1.2rem;
+  }
+
+  .call-specialist{
+    font-size: 1.2rem;
+  }
 
   #sub-header-cta{
   justify-content:center; 
