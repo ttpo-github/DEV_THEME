@@ -42,12 +42,14 @@ div.tj-modal-content {
   max-height:0%;
   opacity:0%;
    transition: all 3s ease-in-out;
+  display:none;
 }
 
 .cart-drawer-properties.custom-open {
   max-height:100%;
   opacity:1;
     overflow:hidden;
+  display:block;
 }
 
 .cart-button-container {
