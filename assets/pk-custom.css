@@ -134,10 +134,10 @@ div.yotpo-label.yotpo-small-box {
   button.drawer__close {
   display: inline-block;
   padding: 0;
-    /*
-  min-width: 4.4rem;
-  min-height: 4.4rem;
-    */
+    
+  min-width:initial;
+  min-height:initial;
+    
   box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
   top: 10px;
   position: static;
