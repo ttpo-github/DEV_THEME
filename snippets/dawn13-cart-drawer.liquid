@@ -188,7 +188,7 @@
                             or item.selling_plan_allocation != null
                           -%}
                            <div class="cart-drawer-properties-container">
-                            <a onclick="propertyContainerToggle(event)">Details</a>
+                            <a onclick="propertyContainerToggle(event)" class="details-link">Details</a>
                            
                             <dl class="cart-drawer-properties">
                               {%- if item.product.has_only_default_variant == false -%}
