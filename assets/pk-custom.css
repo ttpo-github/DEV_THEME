@@ -4,6 +4,11 @@
   padding: 5px 20px;
 }
 
+.details-link {
+  text-decoration: underline;
+  font-weight:400; 
+}
+
 div.tj-modal-header {
   padding:0px;
 }
