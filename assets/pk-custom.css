@@ -46,7 +46,7 @@ div.tj-modal-content {
 }
 
 .cart-drawer-properties.custom-open {
-  max-height:initial;
+  max-height:1000px;
   opacity:1;
     overflow:hidden;
 } 
