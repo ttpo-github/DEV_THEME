@@ -38,6 +38,11 @@ div.tj-modal-content {
   tansition: all forward ease-in-out;
 }
 
+.cart-drawer-properties.custom-open {
+  height:100%;
+  display:block;
+}
+
 .cart-button-container {
   display:flex;
   gap: 5px;
