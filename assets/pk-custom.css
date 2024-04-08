@@ -35,7 +35,7 @@ div.tj-modal-content {
 .cart-drawer-properties {
   height:0%;
   display:none;
-  tansition: all forward ease-in-out;
+  tansition: all 3s ease-in-out;
 }
 
 .cart-drawer-properties.custom-open {
