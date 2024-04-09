@@ -1943,8 +1943,6 @@ div.pk-newletter_bg-image:before{
 }
 
 .custom-btn:active{
-  background:#FFF;
-  border-radius:2px;
   transform:scale(.5);
 }
 .inner-feature-blog-section .btn-wrap {
