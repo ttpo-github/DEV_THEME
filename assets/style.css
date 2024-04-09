@@ -1936,6 +1936,7 @@ div.pk-newletter_bg-image:before{
   text-align: center;
   border: 0;
   cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 .custom-btn:hover {
   background: #0000d8;
