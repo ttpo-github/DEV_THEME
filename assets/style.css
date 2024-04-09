@@ -1941,7 +1941,7 @@ div.pk-newletter_bg-image:before{
   background: #0000d8;
 }
 
-.custom-btn:focus{
+.custom-btn:active{
   background:#FFF;
 }
 .inner-feature-blog-section .btn-wrap {
