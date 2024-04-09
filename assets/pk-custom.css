@@ -32,6 +32,10 @@ div.tj-modal-content {
 /* --- Style Overrides for the Tip Quick Widget --- */
 
 /* --- General Style Cusomizations --- */
+.cart-drawer-call-expert-phone{
+  margin:auto;
+}
+
 .details-link {
   text-decoration: underline;
   font-weight:400;
