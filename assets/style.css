@@ -1931,7 +1931,7 @@ div.pk-newletter_bg-image:before{
   line-height: 1;
   display: inline-block;
   vertical-align: top;
-  transition: all 3s ease-in-out;
+  transition: all .3s ease-in-out;
   text-transform: uppercase;
   text-align: center;
   border: 0;
@@ -1945,7 +1945,7 @@ div.pk-newletter_bg-image:before{
 .custom-btn:active{
   background:#FFF;
   border-radius:2px;
-  transform:scale(2);
+  transform:scale(.7);
 }
 .inner-feature-blog-section .btn-wrap {
   margin-top: 45px;
