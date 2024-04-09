@@ -71,7 +71,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__header {
   position: relative;
-  padding: 1.5rem 0;
+  padding: 10px;
   display: flex;
   justify-content: flex-start;
   gap:10px;
