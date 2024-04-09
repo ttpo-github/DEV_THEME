@@ -38,7 +38,9 @@
         {% for block in section.blocks %}
           {%- case block.type -%}
             {%- when '@app' -%}
+            <div {% if section.settings.css_id_selector != blank %}id="{{ section.settings.css_id_selector }}"{% endif %}>
               {% render block %}
+            </div>
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
