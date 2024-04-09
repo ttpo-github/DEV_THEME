@@ -1948,6 +1948,31 @@ div.pk-newletter_bg-image:before{
   transform:scale(.8);
 }
 
+@media only screen and (min-width: 950px){
+  
+.call-expert-cta{
+  
+  font-family: 'Inter',sans-serif;
+  background: #00f;
+  border-radius: 4px;
+  /*
+  padding: 13px 41px 14px;
+  */
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  transition: all .3s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+}
+
 
 .custom-btn {
   font-family: 'Inter',sans-serif;
