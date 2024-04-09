@@ -76,6 +76,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   justify-content: flex-start;
   gap:10px;
   align-items: center;
+  margin:auto;
 }
 
 .drawer__heading {
@@ -296,6 +297,10 @@ cart-drawer-items {
 }
 
 @media screen and (max-width: 749px) {
+.drawer__header { 
+  margin:initial;
+}
+  
   .cart-drawer .cart-item cart-remove-button {
     margin-left: 0;
   }
