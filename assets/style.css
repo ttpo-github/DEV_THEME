@@ -1945,6 +1945,10 @@ div.pk-newletter_bg-image:before{
 .custom-btn:active{
   transform:scale(.5);
 }
+.custom-btn:visited{
+  background:black;
+}
+
 .inner-feature-blog-section .btn-wrap {
   margin-top: 45px;
 }
