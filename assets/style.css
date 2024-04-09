@@ -4309,7 +4309,7 @@ table.cart-items {
 .cart__footer .cart__note label,
 .cart-additional-field label {
   position: static;
-  margin: 0 0 8px;
+  margin: 8px 0 8px;
   height: auto;
   display: block;
   color: #000646;
