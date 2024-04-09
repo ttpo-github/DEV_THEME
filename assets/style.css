@@ -215,7 +215,7 @@ html body.home h2{
 }
 @media only screen and (max-width: 1199px){
   .rte {
-    font-size: 15px;
+    font-size: 1.3rem;
   }
 }
 
