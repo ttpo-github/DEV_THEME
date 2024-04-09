@@ -1917,6 +1917,38 @@ div.pk-newletter_bg-image:before{
 .author_date-wrap span:not(:last-child) {
   margin-right: 19px;
 }
+
+.call-expert-cta{
+  
+  font-family: 'Inter',sans-serif;
+  background: #00f;
+  border-radius: 10px;
+  /*
+  padding: 13px 41px 14px;
+  */
+  padding: .5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: top;
+  transition: all .3s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.call-expert-cta:hover {
+  background: #0000d8;
+}
+
+.call-expert-cta:active{
+  transform:scale(.8);
+}
+
+
 .custom-btn {
   font-family: 'Inter',sans-serif;
   background: #00f;
@@ -1937,13 +1969,6 @@ div.pk-newletter_bg-image:before{
   border: 0;
   cursor: pointer;
   
-}
-.custom-btn:hover {
-  background: #0000d8;
-}
-
-.custom-btn:active{
-  transform:scale(.8);
 }
 
 
