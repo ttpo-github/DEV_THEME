@@ -486,7 +486,15 @@
       </cart-drawer-items>
       <div class="drawer__footer">
 
-        
+        <div class="cart-additional-field">
+            <label for="Cart-note">Trailer Parts Expert that assisted you</label>
+            <select form="cart" name="attributes[Trailer Parts Expert]">
+              {%- assign options = "None | Trevor Jugert | Jason Gonzales | Kyle Burns | Krystal Kurtz | Anna Nicholas" | split: "|"  -%}
+              {% for option in options %}
+              <option value="{{- option -}}">{{option }}</option>
+              {% endfor %}
+            </select>
+          </div>
         
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
