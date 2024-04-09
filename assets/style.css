@@ -6826,6 +6826,8 @@ to {top:0; opacity:1}
     overflow: hidden;
     height: 85px;
     width: 100%;
+  border:2px solid #000;
+    padding:2px;
 }
 
 .help-images img {
