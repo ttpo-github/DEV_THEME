@@ -10,7 +10,7 @@
         <div class="cart-additional-wrap">
           <div class="cart-additional-field">
             <label for="Cart-note">{{ section.settings.assisted_title }}</label>
-            <select form="cart" name="attributes[{{ section.settings.assisted_title }}]">
+            <select form="cart" name="attributes[Trailer Parts Expert that assisted customer]">
               {%- assign options = section.settings.expert_assisted_you | split: "|"  -%}
               {% for option in options %}
               <option value="{{- option -}}">{{option }}</option>
