@@ -16,11 +16,6 @@
           "settings": {
           }
         },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-          }
-        },
         "diy_tax_exempt_checkout_app_block_QmBgbB": {
           "type": "shopify:\/\/apps\/diy-tax-exempt-checkout\/blocks\/app-block\/82644d0b-45f4-4a69-b630-f5ee55674d62",
           "settings": {
@@ -48,12 +43,17 @@
             "en_tx_email_border_radius": 4,
             "en_tx_email_border_color": "#95a7b7"
           }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "subtotal",
-        "buttons",
-        "diy_tax_exempt_checkout_app_block_QmBgbB"
+        "diy_tax_exempt_checkout_app_block_QmBgbB",
+        "buttons"
       ],
       "settings": {
         "show_cart_note": true,
