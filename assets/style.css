@@ -1940,6 +1940,10 @@ div.pk-newletter_bg-image:before{
 .custom-btn:hover {
   background: #0000d8;
 }
+
+.custom-btn:focus{
+  background:#FFF;
+}
 .inner-feature-blog-section .btn-wrap {
   margin-top: 45px;
 }
