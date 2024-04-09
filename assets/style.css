@@ -1945,6 +1945,7 @@ div.pk-newletter_bg-image:before{
 .custom-btn:active{
   background:#FFF;
   border-radius:2px;
+  transform:scale(2);
 }
 .inner-feature-blog-section .btn-wrap {
   margin-top: 45px;
