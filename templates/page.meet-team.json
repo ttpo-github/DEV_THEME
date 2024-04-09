@@ -73,7 +73,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/trevor.jpg",
             "title": "Trevor",
-            "designation": "Sales Manager",
+            "designation": "Sales & Purchasing Manager",
             "add_info": "",
             "phone_info": "936-349-6220"
           }
@@ -133,7 +133,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/brandon-1648147839231_1200x_e8032aae-60d4-4488-9692-104a9c8a7072.png",
             "title": "Brandon",
-            "designation": "Purchasing",
+            "designation": "Supply Chain Director",
             "add_info": "",
             "phone_info": ""
           }
@@ -213,16 +213,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/abram.png",
             "title": "Abraham",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "aef102ec-5094-4fb5-8ddf-f8e9ddecb17a": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Bryce_79d498d4-0240-4968-9486-d51c279951f7.jpg",
-            "title": "Bryce",
             "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
@@ -323,7 +313,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/amanda.jpg",
             "title": "Amanda",
-            "designation": "Accounts Receivable",
+            "designation": "Lead Finance",
             "add_info": "",
             "phone_info": ""
           }
@@ -333,7 +323,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/stevie.png",
             "title": "Stevie",
-            "designation": "Admin Assistant",
+            "designation": "Finance Admin",
             "add_info": "",
             "phone_info": ""
           }
@@ -343,7 +333,16 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bridgette_b2b3d392-bab1-4461-91e2-cd4b65d36c26.png",
             "title": "Bridget",
-            "designation": "Human Resources",
+            "designation": "Finance Admin",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_gaaQgz": {
+          "type": "title",
+          "settings": {
+            "title": "Kadie",
+            "designation": "Finance Admin",
             "add_info": "",
             "phone_info": ""
           }
@@ -365,7 +364,6 @@
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e",
         "97c50f0a-d69d-49e6-a2eb-8b7de73cd96f",
         "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7",
-        "aef102ec-5094-4fb5-8ddf-f8e9ddecb17a",
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6",
         "112f30af-cbdb-4a83-9e27-540d203a1586",
         "ba15bbd3-e261-49f6-a16c-80add243c702",
@@ -377,7 +375,8 @@
         "f1ef1ef5-e136-42c5-9a51-8587714bcd79",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
-        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea"
+        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea",
+        "title_gaaQgz"
       ],
       "settings": {
         "title": "Our Team",
