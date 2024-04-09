@@ -21,6 +21,12 @@
           "settings": {
           }
         },
+        "custom_liquid_69URTN": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"tax-exempt-target\"><\/div>"
+          }
+        },
         "diy_tax_exempt_checkout_app_block_QmBgbB": {
           "type": "shopify:\/\/apps\/diy-tax-exempt-checkout\/blocks\/app-block\/82644d0b-45f4-4a69-b630-f5ee55674d62",
           "settings": {
@@ -40,7 +46,7 @@
             "en_tx_alert_msg_certificate_number": "Enter your tax-exempt certificate number",
             "en_tx_margin_top": 0,
             "en_tx_margin_bottom": 0,
-            "en_tx_bg_color": "#FFFFFF",
+            "en_tx_bg_color": "#ffffff",
             "en_tx_border": 1.5,
             "en_tx_border_radius": 3,
             "en_tx_border_color": "#ffffff",
@@ -53,6 +59,7 @@
       "block_order": [
         "subtotal",
         "buttons",
+        "custom_liquid_69URTN",
         "diy_tax_exempt_checkout_app_block_QmBgbB"
       ],
       "settings": {
