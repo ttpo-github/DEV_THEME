@@ -24,7 +24,7 @@
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\">1<\/div>"
+            "custom_liquid": "<div id=\"tax-exempt-target\"><\/div>"
           }
         },
         "diy_tax_exempt_checkout_app_block_QmBgbB": {
