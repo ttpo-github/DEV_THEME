@@ -160,13 +160,14 @@ div.yotpo-label.yotpo-small-box {
     
   box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
   top: 10px;
-  position: static;
+  position: absolute;
   right: -10px;
   color: rgb(var(--color-foreground));
   background-color: transparent;
   border: none;
   cursor: pointer;
   text-align:right;
+  
 }
 
   div.drawer__footer{
