@@ -11,19 +11,14 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
-        "subtotal": {
-          "type": "subtotal",
-          "settings": {
-          }
-        },
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
             "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-<\/span><\/div>"
           }
         },
-        "buttons": {
-          "type": "buttons",
+        "subtotal": {
+          "type": "subtotal",
           "settings": {
           }
         },
@@ -54,13 +49,18 @@
             "en_tx_email_border_radius": 4,
             "en_tx_email_border_color": "#95a7b7"
           }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "subtotal",
         "custom_liquid_69URTN",
-        "buttons",
-        "diy_tax_exempt_checkout_app_block_QmBgbB"
+        "subtotal",
+        "diy_tax_exempt_checkout_app_block_QmBgbB",
+        "buttons"
       ],
       "settings": {
         "show_cart_note": true,
