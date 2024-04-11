@@ -107,6 +107,17 @@
       });
   {% endif %}
   {% endfor %}
+
+  //let expertLength = window.expert_data.length;
+  {% capture expertLength%}
+    window.expert_data.length
+  {% endcapture %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: expertLength %}
+
+  window.chosen_expert = window.expert_data[{{ randomNumber }}]
+
+  console.log(window.chosen_expert)
+  
   console.log('In Expert Section')
   console.log(window.expert_data)
 </script>
