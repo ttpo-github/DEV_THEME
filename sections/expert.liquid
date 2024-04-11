@@ -110,11 +110,13 @@
 
   let expertLength = window.expert_data.length;
   
-  function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-  let randomRange = getRandomArbitrary(0, expertLength)
+  let randomRange = getRandomInt(0, expertLength)
 
   console.log(randomRange)
 
