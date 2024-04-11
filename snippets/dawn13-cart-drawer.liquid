@@ -81,7 +81,10 @@
                                     </div>
                                 </div>
                               </a>
+
+        {% assign randomNumber = "now" | date: "%N" | modulo: 7 %}
         <script>
+          console.log('{{ randomNumber }}')
           console.log(window.expert_data)
         </script>
         <button
