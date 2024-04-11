@@ -108,13 +108,13 @@
   {% endif %}
   {% endfor %}
 
-  //let expertLength = window.expert_data.length;
-  {% capture expertLength%}
-    window.expert_data.length
-  {% endcapture %}
-  {% assign randomNumber = "now" | date: "%N" | modulo: expertLength %}
+  let expertLength = window.expert_data.length;
+  
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
-  window.chosen_expert = window.expert_data[{{ randomNumber }}]
+  window.chosen_exprt = window.expert_data[getRandomArbitrary(0, expertLength)]
 
   console.log(window.chosen_expert)
   
