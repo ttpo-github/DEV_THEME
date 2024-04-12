@@ -70,7 +70,7 @@
       
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
 
-  {% assign experts = settings.array_of_experts | split: "|" %}
+  {% assign experts = settings.array_of_experts | split: "|" | json %}
 {% assign numberOfExperts = experts | size %}
 {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
 {% assign chosenExpert = experts[randomNumber] %}
