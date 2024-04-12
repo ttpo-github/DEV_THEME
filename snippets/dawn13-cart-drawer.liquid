@@ -12,7 +12,7 @@
 <script src="{{ 'dawn13-cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-{% assign numberOfExperts = settings.array_of_experts | size %}
+{% assign numberOfExperts = settings.array_of_experts | split: "," %}
 {% assign randomNumber = "now" | date: "%N" | modulo: 100 %}
 
 <script>
