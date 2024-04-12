@@ -1583,7 +1583,7 @@
         "type": "textarea",
         "id": "array_of_experts",
         "label": "Experts",
-        "info": "Must be array of objects containing an experts image url, name, and phone number"
+        "info": "Each object must have an iamge url, name, and phone number delimeted by a pipe"
       }
     ]
   }
