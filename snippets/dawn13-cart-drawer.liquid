@@ -30,10 +30,7 @@
 <dawn13-cart-drawer class="checkchecktesttest drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="dawn13-CartDrawer" class="cart-drawer">
 
-  {% assign experts = settings.array_of_experts | split: "|"%}
-  {% assign numberOfExperts = experts | size %}
-  {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
-  {% assign chosenExpert = experts[randomNumber] %}
+ 
     
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
@@ -77,6 +74,12 @@
       {%- endif -%}
       
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
+
+         {% assign experts = settings.array_of_experts | split: "|"%}
+  {% assign numberOfExperts = experts | size %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
+  {% assign chosenExpert = experts[randomNumber] %}
+        
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
         <a href="{{ experts.phone }}" class="cart-drawer-call-expert-phone " style="display:flex;">
