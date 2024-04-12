@@ -124,7 +124,7 @@ class CartItems extends HTMLElement {
       })
       .then((state) => {
         const parsedState = JSON.parse(state);
-        console.log(parsedState)
+        console.log(parsedState.sections.dawn13_cart_drawer)
         const quantityElement =
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
         const items = document.querySelectorAll('.cart-item');
