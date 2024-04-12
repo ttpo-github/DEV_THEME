@@ -76,10 +76,10 @@
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
-        <a href="tel:9362263664" class="cart-drawer-call-expert-phone " style="display:flex;">
+        <a href="{{ experts.phone }}" class="cart-drawer-call-expert-phone " style="display:flex;">
                                 <div style="display:flex; justify-content:center;flex-direction:row; align-items:center; gap:10px;">
                                   <div id="expert_popup" class=" help-images">
-                                    <img width="100%" height="auto"  src="{{ experts.image | image_url}}" alt="Support person">                                    
+                                    <img width="100%" height="auto"  src="{{ experts.image | image_url }}" alt="Support person">                                    
                                   </div>
                                   <div style="text-align:left;">
                                       <span style="margin:0;" class="ask-a-specialist"><span style="font-size:1.5rem; font-weight:600;">Need help?</span> <br>Ask a Specialist!</span>
