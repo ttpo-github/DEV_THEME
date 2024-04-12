@@ -73,7 +73,7 @@
   {% assign experts = settings.array_of_experts | split: "|" %}
 {% assign numberOfExperts = experts | size %}
 {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
-{% assign chosenExpert = experts[randomNumber] | json %}
+{% assign chosenExpert = experts[randomNumber]  %}
 
 <script>console.log('Chosen Expert')</script>
         <script>console.log(typeof {{ chosenExpert }})</script>
