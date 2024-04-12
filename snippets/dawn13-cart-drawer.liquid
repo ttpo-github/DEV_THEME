@@ -79,6 +79,8 @@
         <script>console.log({{ chosenExpert }})</script>
         <script>console.log('{{ chosenExpert.name }}')</script>
 
+        <script>console.log({{ shop.metaobjects.trailer_parts_experts.values }})</script>
+
         {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
           <script>console.log('{{ expertTest.name }}')</script>
         {% endfor %}
