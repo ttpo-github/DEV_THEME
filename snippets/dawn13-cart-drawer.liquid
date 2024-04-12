@@ -82,7 +82,7 @@
         <script>console.log({{ shop.metaobjects.trailer_parts_experts }})</script>
 
         {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
-          <script>console.log({{ expertTest | json}})</script>
+          <script>console.log({{ expertTest['name']}})</script>
         {% endfor %}
 
 
