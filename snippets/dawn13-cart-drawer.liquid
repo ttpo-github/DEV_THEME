@@ -76,8 +76,9 @@
 {% assign chosenExpert = experts[randomNumber]  %}
 {% assign expertName = chosenExpert.name %}
 
-<div>{{ chosenExpert }}</div>
+
 <script>console.log('Chosen Expert')</script>
+<script>console.log({{ experts }})</script>
 <script>console.log({{ chosenExpert }})</script>
         
 
