@@ -84,6 +84,9 @@
         <script>console.log({{ chosenExpert }})</script>
         <script>console.log({{ expertName }})</script>
 
+        {% for expertTest in shop.metaobjects.trailer_parts_experts %}
+          <script>console.log({{ expertTest }})</script>
+{% endfor %}
 
 
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
