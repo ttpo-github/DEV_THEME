@@ -131,7 +131,7 @@ class CartItems extends HTMLElement {
           document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
         const items = document.querySelectorAll('.cart-item');
 
-        console.log(items)
+        //console.log(items)
         
         if (parsedState.errors) {
           quantityElement.value = quantityElement.getAttribute('value');
@@ -143,15 +143,15 @@ class CartItems extends HTMLElement {
         const cartDrawerWrapper = document.querySelector('dawn13-cart-drawer');
         const customCartDrawerWrapper = document.getElementsByTagName('dawn13-cart-drawer')
 
-        console.log(customCartDrawerWrapper)
-        console.log(cartDrawerWrapper)
+        //console.log(customCartDrawerWrapper)
+        //console.log(cartDrawerWrapper)
         
         const cartFooter = document.getElementById('main-cart-footer');
 
         if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
-        
+        console.log(parsedState.sections[section.section])
         
         this.getSectionsToRender().forEach((section) => {
           const elementToReplace =
