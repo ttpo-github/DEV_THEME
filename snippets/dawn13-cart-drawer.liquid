@@ -12,16 +12,8 @@
 <script src="{{ 'dawn13-cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
- {% assign experts = settings.array_of_experts | split: "|"%}
-  {% assign numberOfExperts = experts | size %}
-  {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
-  {% assign chosenExpert = experts[randomNumber] %}
+ 
 
-<script>
-  console.log({{ numberOfExperts }})
-  console.log('{{ randomNumber }}')
-  console.log({{ chosenExpert }})
-</script>
 
 
 <style>
@@ -78,7 +70,11 @@
       
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
 
-        
+        {% assign experts = settings.array_of_experts | split: "|"%}
+  {% assign numberOfExperts = experts | size %}
+  {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
+  {% assign chosenExpert = experts[randomNumber] %}
+
         
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
