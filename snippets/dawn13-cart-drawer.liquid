@@ -78,7 +78,7 @@
 
         <div>{{ chosenExpert }}</div>
         <script>console.log('Chosen Expert')</script>
-        <script>console.log({{ chosenExpert }})</script>
+        <script>console.log({{ chosenExpert[name] }})</script>
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
         <a href="{{ chosenExpert.phone }}" class="cart-drawer-call-expert-phone " style="display:flex;">
