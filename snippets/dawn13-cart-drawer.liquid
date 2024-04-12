@@ -28,13 +28,13 @@
 </style>
 
 <dawn13-cart-drawer class="checkchecktesttest drawer{% if cart == empty %} is-empty{% endif %}">
+  <div id="dawn13-CartDrawer" class="cart-drawer">
 
   {% assign experts = settings.array_of_experts | split: "|"%}
   {% assign numberOfExperts = experts | size %}
   {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
   {% assign chosenExpert = experts[randomNumber] %}
-  
-  <div id="dawn13-CartDrawer" class="cart-drawer">
+    
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
       class="checkchecktesttest drawer__inner dawn13-drawer__inner gradient color-{{ settings.cart_color_scheme }}"
