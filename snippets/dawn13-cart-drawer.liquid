@@ -14,10 +14,12 @@
 
 {% assign numberOfExperts = settings.array_of_experts | split: "|" | size %}
 {% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
+{% assign chosenExpert = settings.array_of_experts[randomNumber] %}
 
 <script>
   console.log({{ numberOfExperts }})
   console.log('{{ randomNumber }}')
+  console.log({{ chosenExpert }})
 </script>
 
 
