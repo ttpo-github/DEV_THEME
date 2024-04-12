@@ -151,12 +151,13 @@ class CartItems extends HTMLElement {
         if (cartFooter) cartFooter.classList.toggle('is-empty', parsedState.item_count === 0);
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
-        console.log(parsedState.sections[section.section])
+        //console.log(parsedState.sections[section.section])
         
         this.getSectionsToRender().forEach((section) => {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
           elementToReplace.innerHTML = this.getSectionInnerHTML(
+            console.log(parsedState.sections[section.section])
             parsedState.sections[section.section],
             section.selector
           );
