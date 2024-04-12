@@ -157,7 +157,7 @@ class CartItems extends HTMLElement {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
           elementToReplace.innerHTML = this.getSectionInnerHTML(
-            console.log(parsedState.sections[section.section])
+            //console.log(parsedState.sections[section.section])
             parsedState.sections[section.section],
             section.selector
           );
