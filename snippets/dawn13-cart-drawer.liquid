@@ -95,7 +95,7 @@
           
             {% assign notebook = expertTest | sort %}
           <script>console.log({{ notebook | json  }})</script>
-            {% assign notebooks = notebooks | concat: notebook %}
+            {% assign notebooks = notebooks | concat: notebook  %}
           
         {% endfor %}
 
