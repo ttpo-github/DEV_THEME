@@ -94,12 +94,12 @@
         {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
           
             {% assign notebook = expertTest | sort %}
-          <script>console.log({{ notebook }})</script>
+          <script>console.log({{ notebook | json  }})</script>
             {% assign notebooks = notebooks | concat: notebook %}
           
         {% endfor %}
 
-          <script>console.log({{ notebooks }})</script>
+          <script>console.log({{ notebooks | json }})</script>
         
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
