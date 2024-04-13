@@ -218,7 +218,7 @@ class CartItems extends HTMLElement {
 
     let parsedHTML = new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
 
-    console.log(parsedHTML)
+    //console.log(parsedHTML)
 
     return parsedHTML
   }
