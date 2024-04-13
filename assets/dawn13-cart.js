@@ -216,7 +216,7 @@ class CartItems extends HTMLElement {
     //return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
     let parsedH = new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
     //parsedH.querySelector('.cart-drawer-call-expert-text').innerText = "TEST";
-    console.log(parsedH.querySelector('.cart-drawer-call-expert-text'))
+    //console.log(parsedH.querySelector('.cart-drawer-call-expert-text'))
      console.log(parsedH)
     return parsedH
   }
