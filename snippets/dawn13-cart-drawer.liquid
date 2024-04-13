@@ -69,9 +69,38 @@
       {%- endif -%}
       
       <div class=" checkchecktesttest drawer__header dawn13-drawer__header">
+{% comment %}
+  {% assign experts = settings.array_of_experts | split: "|" %}
+{% assign numberOfExperts = experts | size %}
+{% assign randomNumber = "now" | date: "%N" | modulo: numberOfExperts %}
+{% assign chosenExpert = experts[randomNumber]  %}
 
- 
-        
+        {% assign my_array = []  %}
+
+
+
+
+        {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
+          
+          {% assign my_array = my_array | concat: expertTest %}
+        {% endfor %}
+
+      
+
+        {% assign notebooks = null | sort %}
+
+        {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
+          
+            {% assign notebook = expertTest | sort %}
+          
+            {% assign notebooks = notebooks | concat: notebook  %}
+          
+        {% endfor %}
+
+        {% assign jasonified = notebooks | json %}
+
+          
+ {% endcomment %}       
         <h2 class="drawer__heading" style="margin:0px; border-top: 2px solid black;border-bottom: 2px solid black;">{% comment %}{{ 'sections.cart.title' | t }}{% endcomment %}CART</h2>
 
         <a href="{{ chosenExpert.phone }}" class="cart-drawer-call-expert-phone " style="display:flex;">
