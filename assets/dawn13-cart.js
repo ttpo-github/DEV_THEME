@@ -161,6 +161,9 @@ class CartItems extends HTMLElement {
             section.selector
           );
         });
+
+        console.log(document.querySelector('.cart-drawer-call-expert-text'))
+        
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';
         if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
