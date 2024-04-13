@@ -49,7 +49,7 @@ class CartItems extends HTMLElement {
   onCartUpdate() {
     //console.log('IN THE ON CART UPDATE CALLBACK. TOP')
     if (this.tagName === 'CART-DRAWER-ITEMS') {
-      console.log("In Cart Update")
+      //console.log("In Cart Update")
       fetch(`${routes.cart_url}?section_id=dawn13-cart-drawer`)
         .then((response) => response.text())
         .then((responseText) => {
@@ -67,7 +67,7 @@ class CartItems extends HTMLElement {
           console.error(e);
         });
     } else {
-      console.log('IN THE ON CART UPDATE CALLBACK. ELSE')
+      //console.log('IN THE ON CART UPDATE CALLBACK. ELSE')
       fetch(`${routes.cart_url}?section_id=main-cart-items`)
         .then((response) => response.text())
         .then((responseText) => {
@@ -157,7 +157,6 @@ class CartItems extends HTMLElement {
           const elementToReplace =
             document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
           elementToReplace.innerHTML = this.getSectionInnerHTML(
-            //console.log(parsedState.sections[section.section])
             parsedState.sections[section.section],
             section.selector
           );
