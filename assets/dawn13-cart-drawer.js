@@ -96,8 +96,8 @@ class CartDrawer extends HTMLElement {
     this.getSectionsToRender().forEach((section) => {
       //console.log(`Section Element: ${section.selector}`)
       const sectionElement = section ? document.querySelector(section.selector) : document.getElementById(section.id);
-      console.log("Section Element")
-      console.log(sectionElement)
+      //console.log("Section Element")
+      //console.log(sectionElement)
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
 
