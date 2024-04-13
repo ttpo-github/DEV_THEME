@@ -215,6 +215,7 @@ class CartItems extends HTMLElement {
   getSectionInnerHTML(html, selector) {
     //return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
     let parsedH = new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+    parsedH.querySelector('.cart-drawer-call-expert-text').innerText = "TEST
      console.log(parsedH)
     return parsedH
   }
