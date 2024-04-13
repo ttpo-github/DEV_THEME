@@ -94,6 +94,7 @@
         {% for expertTest in shop.metaobjects.trailer_parts_experts.values %}
           
             {% assign notebook = expertTest | sort %}
+          <script>console.log({{ notebook }})</script>
             {% assign notebooks = notebooks | concat: notebook %}
           
         {% endfor %}
