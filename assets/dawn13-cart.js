@@ -214,7 +214,13 @@ class CartItems extends HTMLElement {
   }
 
   getSectionInnerHTML(html, selector) {
-    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+    //return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+
+    let parsedHTML = new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;
+
+    console.log(parsedHTML)
+
+    return parsedHTML
   }
 
   enableLoading(line) {
