@@ -162,7 +162,14 @@ class CartItems extends HTMLElement {
           );
         });
 
-        console.log(document.querySelector('.cart-drawer-call-expert-text'))
+        //console.log(document.querySelector('.cart-drawer-call-expert-text'))
+
+        if(document.querySelector('.cart-drawer-call-expert-phone')){
+          let expertImage = document.querySelector('#expert_popup')
+          let expertButton = document.querySelector('.cart-drawer-call-expert-text')
+
+          console.log(window.chosen_expert)
+        }
         
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';
