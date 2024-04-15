@@ -165,10 +165,13 @@ class CartItems extends HTMLElement {
         //console.log(document.querySelector('.cart-drawer-call-expert-text'))
 
         if(document.querySelector('.cart-drawer-call-expert-phone')){
-          let expertImage = document.querySelector('#expert_popup')
-          let expertButton = document.querySelector('.cart-drawer-call-expert-text')
-
-          console.log(window.chosen_expert)
+          let expertLinkContainer = document.querySelector('.cart-drawer-call-expert-phone');
+          let expertImage = document.querySelector('#expert_popup img');
+          let expertButton = document.querySelector('.cart-drawer-call-expert-text');
+        
+          expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
+          expertImage.src = window.chosen_expert.image
+          expertButton.innerHTML = `Click to call ${window.chosen_expert.name} at <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
         }
         
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
