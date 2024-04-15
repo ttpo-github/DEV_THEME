@@ -9,8 +9,8 @@
                   
                   let img = document.createElement('img');  
                   let expertContent = document.querySelector('.cart-drawer-call-expert-text');
-                  let expertPhone = document.querySelector('.cart-drawer-call-expert-phone')
-                  //let textRefactor = expertContent.innerText.replace('[name]', random_expert.name).replace('[phone]', random_expert.phone)
+                  let expertPhone = document.querySelector('.cart-drawer-call-expert-phone');
+                  //let textRefactor = expertContent.innerText.replace('[name]', random_expert.name).replace('[phone]', random_expert.phone);
                   
                   document.querySelector('.help-images').innerHTML = ''
                   img.src = random_expert.image;    
