@@ -126,6 +126,24 @@
   
   //console.log('In Expert Section')
   //console.log(window.expert_data)
+
+  
+  let expertLinkContainer = document.querySelector('.cart-drawer-call-expert-phone');
+  let expertImage = document.querySelector('#expert_popup img');
+  let expertButton = document.querySelector('.cart-drawer-call-expert-text');
+
+  expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
+  expertImage.src = window.chosen_expert.image
+  expertButton.innerText = `Click to call ${window.chosen_expert.name} <br> ${window.chosen_expert.phone}`
+   
+  {% comment %}
+                  document.querySelector('.help-images').innerHTML = ''
+                  img.src = random_expert.image;    
+                  document.querySelector('.help-images').appendChild(img);
+                  expertPhone.href = `tel:${random_expert.phone.replace(/[()\-\s]/g, '').trim()}`
+                  expertContent.innerHTML = `Click to call ${random_expert.name} <br> ${random_expert.phone}`
+  {% endcomment %}
+  
 </script>
 {% schema %}
   {
