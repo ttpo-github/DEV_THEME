@@ -134,7 +134,7 @@
 
   expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
   expertImage.src = window.chosen_expert.image
-  expertButton.innerText = `Click to call ${window.chosen_expert.name} <br> ${window.chosen_expert.phone}`
+  expertButton.innerText = `Click to call ${window.chosen_expert.name} ${window.chosen_expert.phone}`
    
   {% comment %}
                   document.querySelector('.help-images').innerHTML = ''
