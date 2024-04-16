@@ -61,17 +61,6 @@
     "04f14fa8-377f-4782-8719-d9f6d464c0c9": {
       "type": "expert",
       "blocks": {
-        "2539d899-c607-4fc2-bc89-953da35c260b": {
-          "type": "expert",
-          "disabled": true,
-          "settings": {
-            "expert-image": "shopify:\/\/shop_images\/Juan.png",
-            "expert-heading": "Juan",
-            "expert-call": "(936)-349-5835",
-            "expert-mail": "Juan@ttpo.co",
-            "expert_addition": "se habla español"
-          }
-        },
         "f0563f60-6daf-44f4-8531-48f18e755aad": {
           "type": "expert",
           "settings": {
@@ -111,37 +100,13 @@
             "expert-mail": "kyle@ttpo.co",
             "expert_addition": ""
           }
-        },
-        "2e758cdd-17e7-4498-a1d7-ffeb6e146b65": {
-          "type": "service",
-          "settings": {
-            "service-image": "shopify:\/\/shop_images\/aanna3_654be731-1a36-4d39-9923-9d04f6c590f1.png",
-            "service-heading": "Anna",
-            "service-call": "(936) 220-4199",
-            "service-mail": "Anna@ttpo.co",
-            "service_addition": ""
-          }
-        },
-        "4de26bb7-7e74-4651-b0da-131bfa3bd44b": {
-          "type": "service",
-          "disabled": true,
-          "settings": {
-            "service-image": "shopify:\/\/shop_images\/callie2.png",
-            "service-heading": "Callie",
-            "service-call": "(936) 220-4724",
-            "service-mail": "Callie@ttpo.co",
-            "service_addition": ""
-          }
         }
       },
       "block_order": [
-        "2539d899-c607-4fc2-bc89-953da35c260b",
         "f0563f60-6daf-44f4-8531-48f18e755aad",
         "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc",
         "d90f0fcd-5131-487f-bc67-95e1db098b6d",
-        "6ab03ef7-06a3-45e4-9e1f-65049bca7166",
-        "2e758cdd-17e7-4498-a1d7-ffeb6e146b65",
-        "4de26bb7-7e74-4651-b0da-131bfa3bd44b"
+        "6ab03ef7-06a3-45e4-9e1f-65049bca7166"
       ],
       "settings": {
         "heading": "Contact Us Now",
