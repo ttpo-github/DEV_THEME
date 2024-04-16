@@ -164,7 +164,7 @@ class CartItems extends HTMLElement {
 
         //console.log(document.querySelector('.cart-drawer-call-expert-text'))
 
-        if(document.querySelector('.cart-drawer-call-expert-phone')){
+        if(document.querySelector('.cart-drawer-call-expert-phone') && window.chosen_expert != undefined){
           let expertLinkContainer = document.querySelector('.cart-drawer-call-expert-phone');
           let expertImage = document.querySelector('#expert_popup img');
           let expertButton = document.querySelector('.cart-drawer-call-expert-text');
