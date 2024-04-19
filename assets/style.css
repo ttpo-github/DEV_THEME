@@ -2977,27 +2977,16 @@ ul.tabing-header li.active:after,
   padding: 6px;
   background: #fff;
   height: 100%;
-  /*transition: all 0.3s;*/
-
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform .5s;
+  transition: all 0.3s;
 }
 .sub-collection-list .sub-collection-item:hover {
-  /*
+  
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-7px);
-  */
 
-  transform: translateZ(100px);
 }
 
-.sub-collection-list .sub-collection-item h4 {
-  transition: transform .5s;
-}
 
-.sub-collection-list .sub-collection-item:hover h4 {
-  transform: translateZ(100px) translateY(-20px);
 }
 
 .subcollection-wrap .sub-collection-item span {
