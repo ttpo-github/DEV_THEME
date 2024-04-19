@@ -2989,7 +2989,7 @@ ul.tabing-header li.active:after,
   transform: translateY(-7px);
   */
 
-  transform: translateZ(25px);
+  transform: translateZ(100px);
 }
 
 .sub-collection-list .sub-collection-item h4 {
