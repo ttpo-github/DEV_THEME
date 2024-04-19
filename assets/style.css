@@ -2959,11 +2959,15 @@ ul.tabing-header li.active:after,
   padding: 0 10px;
   margin-top: 20px;
 }
-.subcollection-wrap .sub-collection-item img {
+.sub-collection-list .sub-collection-item img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
   mix-blend-mode: multiply;
+}
+
+.sub-collection-list .sub-collection-item:hover img {
+  transform: translateZ(50px);
 }
 
 .sub-collection-list{
@@ -2989,7 +2993,7 @@ ul.tabing-header li.active:after,
   transform: translateY(-7px);
   */
 
-  transform: translateZ(50px);
+  transform: translateZ(25px);
 }
 .subcollection-wrap .sub-collection-item span {
   padding-top: 100%;
