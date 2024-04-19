@@ -2967,7 +2967,7 @@ ul.tabing-header li.active:after,
 }
 
 .sub-collection-list .sub-collection-item:hover span {
-  transform: translateZ(50px);
+  transform: translateZ(75px);
 }
 
 .sub-collection-list{
@@ -3000,6 +3000,7 @@ ul.tabing-header li.active:after,
   display: block;
   position: relative;
   background: #ededed;
+  transition: transform .5s;
 }
 .subcollection-wrap .sub-collection-item img {
   max-width: 100%;
