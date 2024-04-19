@@ -2972,7 +2972,11 @@ ul.tabing-header li.active:after,
   padding: 6px;
   background: #fff;
   height: 100%;
-  transition: all 0.3s;
+  /*transition: all 0.3s;*/
+
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
 }
 .subcollection-wrap .sub-collection-item:hover {
   /*
