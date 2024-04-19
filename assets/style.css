@@ -2966,7 +2966,7 @@ ul.tabing-header li.active:after,
   mix-blend-mode: multiply;
 }
 
-.sub-collection-list .sub-collection-item:hover img {
+.sub-collection-list .sub-collection-item:hover span {
   transform: translateZ(50px);
 }
 
