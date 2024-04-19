@@ -2975,8 +2975,12 @@ ul.tabing-header li.active:after,
   transition: all 0.3s;
 }
 .subcollection-wrap .sub-collection-item:hover {
+  /*
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-7px);
+  */
+
+  transform: translateZ(50px);
 }
 .subcollection-wrap .sub-collection-item span {
   padding-top: 100%;
