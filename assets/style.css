@@ -2966,11 +2966,11 @@ ul.tabing-header li.active:after,
   mix-blend-mode: multiply;
 }
 
-.subcollection-wrap{
+.sub-collection-list{
   perspective:500px;
 }
 
-.subcollection-wrap .sub-collection-item {
+.sub-collection-list .sub-collection-item {
   display: block;
   position: relative;
   text-align: center;
@@ -2983,7 +2983,7 @@ ul.tabing-header li.active:after,
   will-change: transform;
   transition: transform .5s;
 }
-.subcollection-wrap .sub-collection-item:hover {
+.sub-collection-list .sub-collection-item:hover {
   /*
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-7px);
