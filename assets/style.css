@@ -2997,7 +2997,7 @@ ul.tabing-header li.active:after,
 }
 
 .sub-collection-list .sub-collection-item:hover h4 {
-  transform: translateZ(150px);
+  transform: translateZ(100px);
 }
 
 .subcollection-wrap .sub-collection-item span {
