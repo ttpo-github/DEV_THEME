@@ -2989,8 +2989,13 @@ ul.tabing-header li.active:after,
   transform: translateY(-7px);
   */
 
-  transform: translateZ(25px);
+  transform: translateZ(25px) rotateX(10deg) rotateY(10deg);
 }
+
+.sub-collection-list .sub-collection-item:hover h4 {
+  transform: translateZ(50px);
+}
+
 .subcollection-wrap .sub-collection-item span {
   padding-top: 100%;
   display: block;
