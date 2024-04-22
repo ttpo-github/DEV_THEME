@@ -3757,7 +3757,7 @@ h2.cbb-also-bought-title {
   overflow: hidden;
 }
 .product-single .price span.badge {
-  display: none;
+  /*display: none;*/
 }
 .cbb-also-bought-slider  .cbb-also-bought-product-image {
   mix-blend-mode: multiply;
