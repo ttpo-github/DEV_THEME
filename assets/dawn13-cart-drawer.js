@@ -101,6 +101,16 @@ class CartDrawer extends HTMLElement {
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
 
+    if(document.querySelector('.cart-drawer-call-expert-phone') && window.chosen_expert != undefined){
+          let expertLinkContainer = document.querySelector('.cart-drawer-call-expert-phone');
+          let expertImage = document.querySelector('#expert_popup img');
+          let expertButton = document.querySelector('.cart-drawer-call-expert-text');
+        
+          expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
+          expertImage.src = window.chosen_expert.image
+          expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
+        }
+
     setTimeout(() => {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
