@@ -48,7 +48,7 @@
         {{ money_price }}
       </span>
     </div>
-    <div class="price__sale" style="display:flex;align-items:center;">
+    <div class="price__sale" style="display:flex;align-items:center; flex-direction:row-reverse;">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
