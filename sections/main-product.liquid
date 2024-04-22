@@ -104,7 +104,7 @@
   
           <div class="price_review-wrap">
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price-w-sale-badge', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
             {% if block.settings.show_shipping %}
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
