@@ -116,6 +116,8 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
     $('#hubface-selection').prop('disabled', true);
+
+    $('#disclaimer-container').css("display", "none");
   }
 });
 
