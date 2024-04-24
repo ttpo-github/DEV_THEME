@@ -15,6 +15,12 @@ if (!customElements.get('product-form')) {
       evt.preventDefault();
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
+      let disclaimerCheck = document.querySelector('#custom-disclaimer')
+      if(disclaimerCheck.required){
+        this.handleErrorMessage("Please check the box");
+        return;
+      }
+
       
 
       this.handleErrorMessage();
@@ -91,7 +97,7 @@ if (!customElements.get('product-form')) {
 
       if (errorMessage) {
         this.errorMessage.textContent = errorMessage;
-      }
+      } 
     }
   });
 }
