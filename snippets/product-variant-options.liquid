@@ -109,8 +109,7 @@
       </div>
     {% endif %}
 
-    <input type="checkbox" form="product-form-{{ section.id }}" required/>
-        <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
+    
     
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
@@ -127,3 +126,6 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
+<input type="checkbox" form="product-form-{{ section.id }}" required/>
+        <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
