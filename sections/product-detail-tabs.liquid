@@ -95,9 +95,10 @@
 
     let reviewsWrapper = document.querySelector('#reviews-wrapper')
     reviewsWrapper.addEventListener('click', function(){
-      console.log('Reviews Clicked!!!')
-      document.querySelector('.product_tabbing span[data-id="#reviews"]').click()
-      
+      //console.log('Reviews Clicked!!!')
+      let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]')
+      reviewsTab.click();
+      reviewsTab.scrollIntoView();
     })
     
     /*  
