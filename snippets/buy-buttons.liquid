@@ -42,6 +42,20 @@
           disabled
           class="product-variant-id"
         >
+
+        {% liquid
+                if product.selected_or_first_available_variant.title contains 'Custom'
+                  assign showDisclaimer = true
+                else
+                  assign showDisclaimer = false
+                endif                
+              %}
+              
+              <div id="disclaimer-container" style="display:{% if showDisclaimer %}inline-block{% else %}none{% endif %};">
+                <input type="checkbox" form="product-form-{{ section.id }}" id="custom-disclaimer" {% if showDisclaimer %}required{% endif %}/>
+                <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
+              </div>
+        
         <div class="product-form__buttons">
           <div class="quantity-button-wrap">
             <div id="Quantity-Form-{{ section.id }}"
@@ -123,23 +137,7 @@
                 endif
               -%}
 
-              <script>console.log({{ product.selected_or_first_available_variant | json }})</script>
-
-              {% liquid
-                if product.selected_or_first_available_variant.title contains 'Custom'
-                  assign showDisclaimer = true
-                else
-                  assign showDisclaimer = false
-                endif                
-              %}
-              <script>console.log("{{ showDisclaimer }}")</script>
-              <script>console.log("{{ product.selected_or_first_available_variant.title }}")</script>
-             
-              
-              <div id="disclaimer-container" style="display:{% if showDisclaimer %}inline-block{% else %}none{% endif %};">
-                <input type="checkbox" form="product-form-{{ section.id }}" id="custom-disclaimer" {% if showDisclaimer %}required{% endif %}/>
-                <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
-              </div>
+           
 
         
               <button id="ProductSubmitButton-{{ section_id }}" type="submit" name="add"
