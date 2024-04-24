@@ -1444,3 +1444,9 @@ a.product__text {
     display: none;
   }
 }
+
+#disclaimer-container {
+  margin-bottom:15px;
+}
+
+/*   CUSTOM   */
