@@ -16,7 +16,7 @@ if (!customElements.get('product-form')) {
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
       let disclaimerCheck = document.querySelector('#custom-disclaimer')
-      if(disclaimerCheck.required && disclaimerCheck.checked){
+      if(disclaimerCheck.required && !disclaimerCheck.checked){
         this.handleErrorMessage("Please check the box");
         return;
       }
