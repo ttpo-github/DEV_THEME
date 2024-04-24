@@ -69,6 +69,8 @@
       {% endfor %}
     </div>
   </div>
+
+  
   <script>
     document.addEventListener( 'DOMContentLoaded', function () {
       $('.product_tabbing').each(function(){
@@ -90,11 +92,18 @@
         });
       });
     }, false );
-      
+
+    let reviewsWrapper = document.querySelector('#reviews-wrapper')
+    reviewsWrapper.addEventListener('click', function(){
+      console.log('Reviews Clicked!!!')
+    })
+    
+    /*  
     $(document).on('click','#reviews-wrapper', function(){
       console.log('clicked')
       $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
+    */
     
     $('.faq-body h4').on('click',function(){
       $('.faq-body h4').not(this).removeClass('active');
