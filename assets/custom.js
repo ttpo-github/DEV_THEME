@@ -99,7 +99,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active")
     $('#hubface-selection').prop('disabled', true);
 
-    $('#disclaimer-container').display = "inline-block";
+    $('#disclaimer-container').css("display", "block");
   }
   // When the Custom Spring Center Option is selected
   else if ($('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\) \\+\\ $130"]').is(":checked")){
@@ -107,7 +107,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#hubface-selection').prop('disabled', false);
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
 
-    $('#disclaimer-container').display = "inline-block";
+    $('#disclaimer-container').css("display", "block");
   }
   // If Neither option is selected
   else {
