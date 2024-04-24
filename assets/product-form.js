@@ -5,7 +5,7 @@ if (!customElements.get('product-form')) {
 
       this.form = this.querySelector('form');
       this.form.querySelector('[name=id]').disabled = false;
-      this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+      //this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
       this.cart = document.querySelector('cart-notification') || document.querySelector('dawn13-cart-drawer');
       this.submitButton = this.querySelector('[type="submit"]');
       if (document.querySelector('dawn13-cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
@@ -14,6 +14,8 @@ if (!customElements.get('product-form')) {
     onSubmitHandler(evt) {
       evt.preventDefault();
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
+
+      
 
       this.handleErrorMessage();
 
