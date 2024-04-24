@@ -97,6 +97,7 @@ if (!customElements.get('product-form')) {
 
       if (errorMessage) {
         this.errorMessage.textContent = errorMessage;
+        this.errorMessage.scrollIntoView();
       } 
     }
   });
