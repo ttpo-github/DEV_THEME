@@ -90,6 +90,8 @@ $('variant-radios input[type="radio"]').change(function(){
 });
 */
 
+
+
 $('variant-radios input[type="radio"]').change(function(){
   // When the 2 Week Fully Custom Option is Selected
   if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\) \\+\\ $130"]').is(":checked")) {
