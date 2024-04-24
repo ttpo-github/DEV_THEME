@@ -17,7 +17,7 @@ if (!customElements.get('product-form')) {
 
       let disclaimerCheck = document.querySelector('#custom-disclaimer')
       if(disclaimerCheck.required && !disclaimerCheck.checked){
-        this.handleErrorMessage("Please check the box");
+        this.handleErrorMessage("Please read and confirm below...");
         return;
       }
 
