@@ -124,9 +124,11 @@
               -%}
 
               <script>console.log({{ product.selected_or_first_available_variant | json }})</script>
-              <input type="checkbox" form="product-form-{{ section.id }}" id="custom-disclaimer" required/>
-              <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
-
+              {% assign showDisclaimer = product.selected_or_first_available_variant.name contains: 'Custom'%}
+              <div style="{% if showDisclaimer %}inline-block;{% else %}none;{% endif %}">
+                <input type="checkbox" form="product-form-{{ section.id }}" id="custom-disclaimer" required/>
+                <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
+              </div>
 
         
               <button id="ProductSubmitButton-{{ section_id }}" type="submit" name="add"
