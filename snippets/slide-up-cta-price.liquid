@@ -55,7 +55,7 @@
       {% else %}
 
       
-    <div class="price__sale" style="flex-direction:row-reverse;">
+    <div class="price__sale" style="flex-direction:row-reverse; align-items:center;">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
         <span>
