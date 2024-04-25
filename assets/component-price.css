@@ -68,10 +68,26 @@
   display: inline-block;
 }
 
+/*
 .price--on-sale .price__sale {
   display: initial;
   flex-direction: row;
   flex-wrap: wrap;
+}
+*/
+
+.price--on-sale .price__sale {
+  flex-direction: row;
+
+  display:flex;
+}
+
+@media only screen and (max-width: 992px) {
+  .price--on-sale .price__sale {
+  flex-direction: column;
+
+  display:flex;
+}
 }
 
 .price--center {

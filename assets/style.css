@@ -3238,6 +3238,10 @@ ul.tabing-header li.active:after,
   color: #000646;
   line-height: 1;
   margin: 0;
+
+  display: flex;
+    align-items: end;
+    flex-direction: row;
 }
 .product-sku {
   font-weight: 600;
