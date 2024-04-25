@@ -6388,7 +6388,7 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
 }
 .price_review-wrap {
   display: flex;
-  align-items: center;
+  align-items: end;
   margin: 0 0 20px;
   justify-content:space-between;
 }
