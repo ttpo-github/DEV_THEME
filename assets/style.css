@@ -3232,7 +3232,7 @@ ul.tabing-header li.active:after,
 }
 .product-single .price {
   /*font-size: 28px;*/
-  font-size:2.5rem;
+  font-size:3rem;
   font-family: Inter;
   letter-spacing: 0;
   font-weight: 900;
