@@ -54,8 +54,7 @@
       
       {% else %}
 
-      {% assign priceLength = target.price | money_without_trailing_zeros | size %}
-      <script>console.log('{{ priceLength }}')</script>
+      
     <div class="price__sale" style="flex-direction:row-reverse;">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
