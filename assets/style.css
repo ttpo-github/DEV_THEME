@@ -3856,7 +3856,8 @@ select.cbb-recommendations-empty-variant-select {
 }
 html .product__info-container .yotpo-stars .yotpo-icon {
   color: #0000d8;
-  font-size: 22px!important;
+  /*font-size: 22px!important;*/
+  font-size:2.5rem !important;
   letter-spacing: 0;
   line-height: 1;
 }
@@ -6383,6 +6384,7 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
   display: flex;
   align-items: center;
   margin: 0 0 20px;
+  justify-content:space-between;
 }
 [class^=ot-estimated-shipping-basic-layout] p.ot-estimated-shipping-main-text {
   margin: 0;
