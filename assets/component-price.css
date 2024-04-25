@@ -77,7 +77,7 @@
 */
 
 .price--on-sale .price__sale {
-  flex-direction: row;
+  flex-direction: row-reverse;
 
   display:flex;
 }
