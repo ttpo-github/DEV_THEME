@@ -6422,7 +6422,8 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
   }
   html .product__info-container .yotpo-stars .yotpo-icon {
     color: #0000d8;
-    font-size: 15px!important;
+    /*font-size: 15px!important;*/
+    font-size:3rem;
     letter-spacing: 0;
     line-height: 1;
   }
