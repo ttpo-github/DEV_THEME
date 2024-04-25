@@ -2625,13 +2625,16 @@ details-disclosure > details {
 }
 
 .badge {
+  /*
   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
+  */
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: 1;
-  padding: 0.5rem .5rem 0.6rem .5rem;
+  /*padding: 0.5rem .5rem 0.6rem .5rem;*/
+  padding:1rem;
   text-align: center;
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
