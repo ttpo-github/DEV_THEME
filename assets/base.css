@@ -2630,7 +2630,7 @@ details-disclosure > details {
   border-radius: var(--badge-corner-radius);
   */
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   line-height: 1;
   /*padding: 0.5rem .5rem 0.6rem .5rem;*/
