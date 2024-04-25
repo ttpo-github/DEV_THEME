@@ -55,6 +55,7 @@
       {% else %}
 
       {% assign priceLength = target.price | size %}
+      <script>console.log('{{ priceLength }}')</script>
     <div class="price__sale" {% if priceLength > 4  %}style="flex-direction:column;"{% endif %}>
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
