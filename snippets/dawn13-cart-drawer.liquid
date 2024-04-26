@@ -237,13 +237,7 @@
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
                           {%- endif -%}
 
-                          <script defer>
-                            function propertyContainerToggle(event){
-                              //console.log(event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties'));
-                              let properties = event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties');
-                              properties.classList.toggle('custom-open');
-                            }
-                          </script>
+                          
                          
                           
                           <ul
@@ -589,6 +583,14 @@
     </div>
   </div>
 </dawn13-cart-drawer>
+
+                                  <script defer>
+                            function propertyContainerToggle(event){
+                              //console.log(event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties'));
+                              let properties = event.target.closest('.cart-drawer-properties-container').querySelector('.cart-drawer-properties');
+                              properties.classList.toggle('custom-open');
+                            }
+                          </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
