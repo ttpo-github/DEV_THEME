@@ -2987,6 +2987,7 @@ ul.tabing-header li.active:after,
    top: 0px;
   left: 0px;
   box-shadow: none;
+  background-color:grey;
 }
 
 /*
