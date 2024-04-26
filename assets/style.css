@@ -2983,7 +2983,7 @@ ul.tabing-header li.active:after,
 }
 
 .sub-collection-list .sub-collection-item:active {
-   top: 3px;
+   top: 6px;
   left: 0px;
   box-shadow: none;
 }
