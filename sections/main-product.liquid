@@ -553,7 +553,7 @@
 <script>console.log('Title')</script>
 <script>console.log('{{ product.title }}')</script>
   
-      
+{% unless product.title contains 'Torsion' %}
 <div style="display:flex; gap:10px; justify-content:center;">
       <div class="atc_desktop_image_container">
         {% if product.selected_or_first_available_variant.featured_image != null%}
@@ -658,7 +658,8 @@
 });
 
 </script>
-
+{% endunless %}
+  
   {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
