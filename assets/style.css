@@ -2983,9 +2983,10 @@ ul.tabing-header li.active:after,
 }
 
 .sub-collection-list .sub-collection-item:active {
+  transform: scale(0.98); 
    top: 6px;
   left: 0px;
-  box-shadow: none;
+  /*box-shadow: none;*/
 }
 
 /*
