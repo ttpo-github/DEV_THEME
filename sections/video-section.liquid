@@ -1,6 +1,22 @@
+
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Video Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Video Source (MP4)",
+      "id": "video_source",
+      "default": "#",
+      "info": "Enter the video URL for the background and popup modal. Works with Shopify hosted MP4s."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Section",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
