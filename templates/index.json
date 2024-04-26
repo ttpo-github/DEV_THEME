@@ -1,24 +1,9 @@
 {
   "sections": {
-    "c75a5c74-c373-4ac0-ae17-321e4fa26a1f": {
-      "type": "video-hero-banner",
+    "video_section_EJHJpk": {
+      "type": "video-section",
       "settings": {
-        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/686f074903ca4950abcdd3d52e0bb2d5.mp4",
-        "play_btn": "shopify:\/\/shop_images\/icons8-play-100_1.png",
-        "mobile_full_height": false,
-        "cta_button_1_text": "Shop Brakes",
-        "cta_button_1_href": "https:\/\/thetrailerpartsoutlet.com\/collections\/brake-assemblies",
-        "cta_button_2_text": "Shop Bearing Kits",
-        "cta_button_2_href": "https:\/\/thetrailerpartsoutlet.com\/collections\/bearing-kits",
-        "header_input_placeholder": "Day 9 - Buy Brakes <br> Get 5% off Bearing Kits",
-        "header_title_link": "https:\/\/thetrailerpartsoutlet.com\/collections\/brake-assemblies",
-        "header_subtext": "*discount automatically applies during checkout",
-        "ribbon_banner_text": "the 12 days of christmas",
-        "height_adjustment": 350,
-        "show_shipping": true,
-        "ship_icon": "shopify:\/\/shop_images\/delivery-truck-white.png",
-        "ship_text": "<span style=\"white-space:nowrap;\"><b>All orders placed before 12PM CST ship next day (<\/b> some exclusions apply <b>)<\/b><\/span>",
-        "ship_link": "shopify:\/\/policies\/shipping-policy"
+        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/686f074903ca4950abcdd3d52e0bb2d5.mp4"
       }
     },
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945": {
@@ -325,7 +310,7 @@
     }
   },
   "order": [
-    "c75a5c74-c373-4ac0-ae17-321e4fa26a1f",
+    "video_section_EJHJpk",
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
     "8c893e45-fcd3-4987-a4de-d1494b74dc72",
     "image_banner_MpxKfk",
