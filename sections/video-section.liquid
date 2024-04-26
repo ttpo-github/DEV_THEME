@@ -6,7 +6,11 @@
   }
 </style>
 
-<div style="height:100%; width:100%;">
+<div style="height:60vh; width:100%;">
+
+    <video autoplay playsinline muted loop preload>
+      <source src="{{ section.settings.video_source }}"/>
+    </video>
 
     <svg id="custom-svg-mask" height="100%" width="100%">
       <text y="1em" fill="red">SO THE</text>
