@@ -20,6 +20,20 @@
     font-weight:900;
   }
 
+  .overlay-text-block {
+    height:100%;
+    width:100%;
+    font-weight:900;
+    position:absolute;
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:3rem;
+    mix-blend-mode:multiply;
+  }
+
 </style>
 
 <div style="height:60vh; width:100%;">
@@ -28,6 +42,11 @@
       <source src="{{ section.settings.video_source }}"/>
     </video>
 
+  <div class="text-overlay-block">
+    <h1>SO THE DOERS CAN DO</h1>
+  </div>
+
+  /*
     <svg id="custom-svg-mask" height="100%" width="100%">
       <defs>
         <mask id="mask" x="0" y="0" height="100%" width="100%">
@@ -40,6 +59,7 @@
       </defs>
             <rect x="0" y="0" height="100%" width="100%" />
     </svg>
+  */
 </div>
   
 {% schema %}
