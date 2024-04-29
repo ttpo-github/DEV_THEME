@@ -48,6 +48,13 @@
     .collection-header-A{
       display:none;
     }
+
+    .subcollection-wrap-B{
+      border-radius: 50px;
+      background: #e0e0e0;
+      box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    }
   </style>
 
   {% comment %} Collection Header A {% endcomment %}
@@ -88,14 +95,15 @@
 
   {% comment %} Collection Header B {% endcomment %}
   <div class="bt-container custom-subcollections-list collection-header-B">
+    <h4>This is the question.</h4>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
-        <div class="subcollection-wrap">
+        <div class="subcollection-wrap subcollection-wrap-B">
           {% for _link in link.links %}
             <div class="sub-collection-list">
               <a href="{{ _link.url }}" class="sub-collection-item">
                 <span><img src="{{ _link.object.featured_image | img_url: '145x145' }}" alt="{{ _link.object.featured_image.alt }}" /></span>
-                <h4>{{ _link.title }} TEST</h4>
+                <h4>{{ _link.title }}</h4>
               </a>
             </div>
           {% endfor %}
@@ -110,7 +118,7 @@
               <div class="sub-collection-list">
                 <a href="{{ _link3.url }}" class="sub-collection-item">
                   <span><img src="{{ _link3.object.featured_image | img_url: '145x145' }}" alt="{{ _link3.object.featured_image.alt }}" /></span>
-                  <h4>{{ _link3.title }} TEST TEST</h4>
+                  <h4>{{ _link3.title }} </h4>
                 </a>
               </div>
             {% endfor %}
