@@ -1392,7 +1392,7 @@ span.message.show {
 }
 @media only screen and (max-width: 991px) {
   .section__title {
-    /*font-size: 22px;*/
+    font-size: 22px;
     margin-bottom: 20px;
   }
   .collection-list .card__content .card__information {
@@ -5642,7 +5642,7 @@ body .ku-searchfield {
     width: 100%;
   }
   .custom-article .section__title {
-    font-size: 20px;
+    font-size: 26px;
   }
   .custom-article .blog-single-header span {
     font-size: 14px;
