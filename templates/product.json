@@ -62,7 +62,7 @@
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "show",
+        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "bg_image": "shopify:\/\/shop_images\/axlemaking_c093db85-e5d4-4bbd-b762-2de6f7ff84ac.jpg",
