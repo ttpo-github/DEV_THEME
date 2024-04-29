@@ -9,7 +9,7 @@
   }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} section-spacing {% comment %}pb-0{% endcomment %}" style="padding:10px;">
+<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} section-spacing {% comment %}pb-0{% endcomment %}" style="padding:10px; padding-bottom:20px;">
   <div class="collection-hero__inner bt-container">
     <div class="collection-hero__text-wrapper">
       <h1 class="section__title">
@@ -60,7 +60,8 @@
 
     .collection-header-B h2 {
       margin-top:0px;
-      margin-bottom:10px
+      margin-bottom:10px;
+      font-weight: 700;
     }
 
     .collection-header-B .sub-collection-item {
@@ -110,7 +111,7 @@
 
   {% comment %} Collection Header B {% endcomment %}
   <div class="bt-container custom-subcollections-list collection-header-B">
-    <h2>Filter</h2>
+    <h2>Product Filter</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
         <div class="subcollection-wrap subcollection-wrap-B">
