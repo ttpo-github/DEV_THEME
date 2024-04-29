@@ -43,7 +43,15 @@
       </div>
     {%- endif -%}
   </div>
-  <div class="bt-container custom-subcollections-list">
+
+  <style>
+    .collection-header-A{
+      display:none;
+    }
+  </style>
+
+  {% comment %} Collection Header A {% endcomment %}
+  <div class="bt-container custom-subcollections-list collection-header-A">
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
         <div class="subcollection-wrap">
@@ -76,6 +84,44 @@
     
     {% endfor %}
   </div>
+  {% comment %} Collection Header A {% endcomment %}
+
+  {% comment %} Collection Header B {% endcomment %}
+  <div class="bt-container custom-subcollections-list collection-header-B">
+    {% for link in linklists['Collections'].links %}
+      {% if link.url == collection.url %}
+        <div class="subcollection-wrap">
+          {% for _link in link.links %}
+            <div class="sub-collection-list">
+              <a href="{{ _link.url }}" class="sub-collection-item">
+                <span><img src="{{ _link.object.featured_image | img_url: '145x145' }}" alt="{{ _link.object.featured_image.alt }}" /></span>
+                <h4>{{ _link.title }} TEST</h4>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        {% break %}
+      {% endif %}
+
+      {% for _link in link.links %}
+        {% if _link.url == collection.url %}
+          <div class="subcollection-wrap">
+            {% for _link3 in _link.links %}
+              <div class="sub-collection-list">
+                <a href="{{ _link3.url }}" class="sub-collection-item">
+                  <span><img src="{{ _link3.object.featured_image | img_url: '145x145' }}" alt="{{ _link3.object.featured_image.alt }}" /></span>
+                  <h4>{{ _link3.title }} TEST TEST</h4>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    
+    {% endfor %}
+  </div>
+  {% comment %} Collection Header B {% endcomment %}
+  
 </div>
 
 {% schema %}
