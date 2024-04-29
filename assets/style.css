@@ -1392,7 +1392,7 @@ span.message.show {
 }
 @media only screen and (max-width: 991px) {
   .section__title {
-    font-size: 22px;
+    /*font-size: 22px;*/
     margin-bottom: 20px;
   }
   .collection-list .card__content .card__information {
