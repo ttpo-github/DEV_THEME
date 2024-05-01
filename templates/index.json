@@ -2,6 +2,7 @@
   "sections": {
     "video_section_EJHJpk": {
       "type": "video-section",
+      "disabled": true,
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ed4682350f924f2dabb1aa98cac36c43.mp4"
       }
@@ -18,7 +19,6 @@
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
       "type": "hero-banner",
-      "disabled": true,
       "settings": {
         "head": "Prime Steel",
         "heading_link": "shopify:\/\/collections\/prime-steel",
