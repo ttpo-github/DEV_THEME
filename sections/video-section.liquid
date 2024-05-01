@@ -24,11 +24,16 @@
     font-weight:900;
   }
 
-  .text-overlay-block {
+  .content-block {
     height:100%;
+    position:absolute;
+  }
+
+  .text-overlay-block {
+    /*height:100%;*/
     width:100%;
     font-weight:900;
-    position:absolute;
+    /*position:absolute;*/
     background:#000;
     color:#fff;
     display:flex;
@@ -64,7 +69,7 @@
       <source src="{{ section.settings.video_source }}"/>
     </video>
 
-  <div>
+  <div class="content-block">
     <div class="text-overlay-block">
       <h1>SO THE DOERS CAN DO.</h1>
     </div>
