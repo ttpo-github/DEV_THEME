@@ -78,8 +78,20 @@
       <h1>SO THE DOERS CAN DO.</h1>
     </div>
     <div class="custom-btn-container">
+      <div>
         <button>TEST</button>
         <button>TEST</button>
+      </div>
+      <div class="shipping-text">
+        <a href="{{ section.settings.ship_link }}">
+          {% if section.settings.ship_icon != blank  %}
+            <img src="{{ section.settings.ship_icon | img_url:"small" }}" alt="Delivery Truck Icon">
+          {% endif %}
+          {% if section.settings.ship_text != blank %}
+            {{ section.settings.ship_text }}
+          {% endif %}
+        </a>
+      </div>
       </div>
   </div>
   {% comment %}
