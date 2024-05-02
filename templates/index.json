@@ -2,9 +2,29 @@
   "sections": {
     "video_section_EJHJpk": {
       "type": "video-section",
+      "settings": {
+        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
+      }
+    },
+    "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
+      "type": "hero-banner",
       "disabled": true,
       "settings": {
-        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ed4682350f924f2dabb1aa98cac36c43.mp4"
+        "head": "Prime Steel",
+        "heading_link": "shopify:\/\/collections\/prime-steel",
+        "subhead": "WEEKLY SALE",
+        "subhead_below_main": "Up to 74% Off This Week!",
+        "firstlink": "shopify:\/\/collections\/prime-steel",
+        "flinktext": "SHOP PRIME STEEL",
+        "secondlink": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
+        "slinktext": "SHOP ALL PRODUCTS",
+        "bgimg": "shopify:\/\/shop_images\/Artboard_1_ad3eb6b2-3f20-44ac-8cc9-f73692e2d52f.jpg",
+        "littleimg": "shopify:\/\/shop_images\/go_now.jpg",
+        "littleimg_link": "shopify:\/\/collections\/sale-page-2021",
+        "show_shipping": true,
+        "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
+        "ship_text": "All orders placed before 12PM CST ship next day ( some exclusions apply )",
+        "ship_link": "shopify:\/\/policies\/shipping-policy"
       }
     },
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945": {
@@ -15,26 +35,6 @@
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
-      "type": "hero-banner",
-      "settings": {
-        "head": "Prime Steel",
-        "heading_link": "shopify:\/\/collections\/prime-steel",
-        "subhead": "<strong>WEEKLY SALE<\/strong>",
-        "subhead_below_main": "<strong>Up to 74% Off This Week!  <\/strong>",
-        "firstlink": "shopify:\/\/collections\/prime-steel",
-        "flinktext": "SHOP PRIME STEEL",
-        "secondlink": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
-        "slinktext": "SHOP ALL PRODUCTS",
-        "bgimg": "shopify:\/\/shop_images\/Artboard_1_ad3eb6b2-3f20-44ac-8cc9-f73692e2d52f.jpg",
-        "littleimg": "shopify:\/\/shop_images\/go_now.jpg",
-        "littleimg_link": "shopify:\/\/collections\/sale-page-2021",
-        "show_shipping": true,
-        "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
-        "ship_text": "<span><b>All orders placed before 12PM CST ship next day (<\/b> <span style=\"color:#FFFFFF\">some exclusions apply<\/span> <b>)<\/b><\/span>",
-        "ship_link": "shopify:\/\/policies\/shipping-policy"
       }
     },
     "image_banner_MpxKfk": {
@@ -311,8 +311,8 @@
   },
   "order": [
     "video_section_EJHJpk",
-    "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
     "8c893e45-fcd3-4987-a4de-d1494b74dc72",
+    "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
     "image_banner_MpxKfk",
     "16520884405626e12c",
     "1652094941ece48291",
