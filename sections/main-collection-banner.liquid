@@ -115,10 +115,11 @@
   {% comment %} Collection Header A {% endcomment %}
 
   {% comment %} Collection Header B {% endcomment %}
-  {% assign linkListSize = linklists['Collections'].links | size %}
-  <script>console.log({{linklists['Collections'].links | json }})</script>
+  {% assign linkList = linklists['Collections'].links %}
+  {% assign linkListSize = linkList.links | size %}
+  <script>console.log({{linkListSize }})</script>
   
-  <div class="bt-container custom-subcollections-list collection-header-B"">
+  <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
