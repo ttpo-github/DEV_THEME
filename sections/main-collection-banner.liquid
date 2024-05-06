@@ -115,7 +115,7 @@
   {% comment %} Collection Header A {% endcomment %}
 
   {% comment %} Collection Header B {% endcomment %}
-  {% assign linkListSize = linklists['Collection'].links | size %}
+  {% assign linkListSize = linklists['Collections'].links | size %}
   <script>console.log({{ linkListSize }})</script>
   <div class="bt-container custom-subcollections-list collection-header-B" style="{% if linkListSize == 0 %}display:none{% endif %}">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
