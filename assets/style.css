@@ -955,7 +955,8 @@ html .menu-drawer__navigation {
 }
 @media only screen and (max-width: 800px) {
   .bt-header .header-small-block {
-    max-width: 70px;
+    /*max-width: 70px;*/
+    max-width:110px;
   }
   .bt-header .bt-search use {
     color: #000646;
