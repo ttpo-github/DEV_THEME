@@ -51,3 +51,8 @@ Gave links aria-labels to improve accessibility score.
 Refactored multiple cart elements to not have the same id.
 Increased sizing on search bar and footer menu links to improve tab target coverage (SEO score)
 */
+
+// 5.8.24
+- New slide out cart drawer
+- Form validation for custom option 
+- New collection UX improvments regarding product filters 
