@@ -826,8 +826,8 @@ html .menu-drawer__navigation {
     display: block;
   }
   .header-main .bt-container {
-    padding: 5.5px 5px;
-    /*padding:4px;*/
+    /*padding: 5.5px 5px;*/
+    padding:4px;
     display: block;
   }
   .icons-b-desc p {
