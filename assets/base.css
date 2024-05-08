@@ -2420,7 +2420,8 @@ details[open] .modal-overlay::after {
 
 /* Header menu drawer */
 .bt-header-menu .header__icon--menu .icon {
-  width: 23px;
+  /*width: 23px;*/
+  width:30px;
   display: block;
   position: absolute;
   opacity: 1;
