@@ -827,7 +827,7 @@ html .menu-drawer__navigation {
   }
   .header-main .bt-container {
     /*padding: 5.5px 5px;*/
-    padding:4px;
+    padding:8px;
     display: block;
   }
   .icons-b-desc p {
@@ -889,8 +889,8 @@ html .menu-drawer__navigation {
     padding-top:15px;
     padding-bottom: 15px;
     */
-    padding-top:8px;
-    padding-bottom: 8px;
+    padding-top:16px;
+    padding-bottom: 16px;
     margin: 0;
   }
   .bt-header .bt-search {
