@@ -850,11 +850,17 @@ html .menu-drawer__navigation {
     padding: 0;
   }
   .header-cart {
+    /*
     margin-left: 10px;
     width: 21px;
     height: 20px;
     margin-right: 20px;
     max-width: 21px;
+    */
+
+    margin-left: 10px;
+    width: 30px;    
+    margin-right: 20px;
   }
   .header-cart .icons-b-icon svg {
     width: 100%;
