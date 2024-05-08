@@ -941,7 +941,8 @@ html .menu-drawer__navigation {
   .bt-header form {
     margin: 0;
     max-width: 100%;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
+    border-radius: 4px;
   }
   .bt-header-head-wrap .header-medium-block {
     display: flex;
