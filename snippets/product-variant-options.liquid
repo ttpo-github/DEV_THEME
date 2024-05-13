@@ -46,6 +46,9 @@
   -%}
 
   {%- if block.settings.picker_type == 'button' -%}
+
+    <script>console.log({{ option | json }})</script>
+    
     <input
       type="radio"
       id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
@@ -59,10 +62,11 @@
         class="disabled"
       {% endif %}
     >
+      
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
       {{ value -}}
     </label>
-
+    
     
 
     {% if value == 'Custom Spring Center (+3 Day Build Time) + $130' %}
