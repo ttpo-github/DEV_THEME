@@ -25,7 +25,7 @@
       {%- for option in product.options_with_values -%}
 
         {% if option.name == "Axle Options:"%}
-        <fieldset class="js product-form__input" style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <fieldset class="js product-form__input" style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
 
