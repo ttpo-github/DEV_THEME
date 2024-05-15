@@ -33,6 +33,8 @@
   {% endunless %}
 {% endfor %}
 
+{% assign variantMediaArr = variantMedia | split: " !!! " %}
+
 <script>console.log('{{ variantMedia }}')</script>
 
 {%- for value in option.values -%}
