@@ -32,6 +32,8 @@
   {% endunless %}
 {% endfor %}
 
+<script>console.log({{ variantMedia }})</script>
+
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
