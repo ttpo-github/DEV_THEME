@@ -72,6 +72,10 @@
     
     {% if option.name == "Axle Options:" %}
 
+    {% for media in variantMediaArr %}
+    ---------------------------------------------------------
+    {% endfor %}
+
       
     <input
       type="radio"
@@ -88,7 +92,7 @@
     >
         
         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="variant-card" style="display:flex; flex-direction:column;">
-          <img src="{% if variantMediaArr contains value %}#{% endif %}" alt="3500 lb Drop Trailer Axles" style="width:100%; border-radius:4px;">
+          <img src="" alt="3500 lb Drop Trailer Axles" style="width:100%; border-radius:4px;">
           {{ value -}}
         </label>
       
