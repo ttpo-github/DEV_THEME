@@ -192,7 +192,7 @@ fieldset.product-form__input .form__label {
 .product-form__input input[type='radio'] + label.variant-card {
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items:center;
   padding:4px;
 }
