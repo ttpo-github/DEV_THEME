@@ -189,6 +189,14 @@ fieldset.product-form__input .form__label {
   font-weight: 600;
 }
 
+.product-form__input input[type='radio'] + label .variant-card {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:4px;
+}
+
 @media screen and (max-width: 749px){
   .product-form__input input[type='radio'] + label{
 	width:100%;
