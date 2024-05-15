@@ -173,7 +173,7 @@ fieldset.product-form__input .form__label {
   background-color: #fff;
   color: #000646;
   border-radius: 0;
-  display: inline-block !important;
+  display: inline-block;
   margin: 4px 4px 4px 0;
   padding: 9px 15px;
   font-size: 13px;
