@@ -25,6 +25,13 @@
 
 <script>console.log({{product.variants | json }})</script>
 
+{% assign variantMedia = '' %}
+{% for myVar in product.variants %}
+  {% unless variantMedia contains myVar.options[0] %}
+    {% assign variantMedia = variantMedia | append: myVar.options[0] %}
+  {% endunless %}
+{% endfor %}
+
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
