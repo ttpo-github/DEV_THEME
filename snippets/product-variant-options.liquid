@@ -23,20 +23,7 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
-<script>console.log({{product.variants | json }})</script>
 
-{% assign variantMedia = '' %}
-{% for myVar in product.variants %}
-  {% unless variantMedia contains myVar.options[0] %}
-    {% assign imageURL =  myVar.featured_image.src | img_url %}
-    {% assign comboTitleMedia = myVar.options[0] | append: ' -- ' | append: imageURL | append: ' !!! ' %}
-    {% assign variantMedia = variantMedia | append: comboTitleMedia %}
-  {% endunless %}
-{% endfor %}
-
-{% assign variantMediaArr = variantMedia | split: " !!! " %}
-
-<script>console.log({{variantMediaArr | json}})</script>
 
 
 
@@ -67,6 +54,24 @@
     <script>//console.log({{ option | json }})</script>
     
     {% if option.name == "Axle Options:" %}
+
+      {% comment %} Extract all option1 images from product object to be used in the variant label below {% endcomment %}
+      <script>console.log({{product.variants | json }})</script>
+
+      {% assign variantMedia = '' %}
+      {% for myVar in product.variants %}
+        {% unless variantMedia contains myVar.options[0] %}
+          {% assign imageURL =  myVar.featured_image.src | image_url %}
+          {% assign comboTitleMedia = myVar.options[0] | append: ' -- ' | append: imageURL | append: ' !!! ' %}
+          {% assign variantMedia = variantMedia | append: comboTitleMedia %}
+        {% endunless %}
+      {% endfor %}
+      
+      {% assign variantMediaArr = variantMedia | split: " !!! " %}
+      
+      <script>console.log({{variantMediaArr | json}})</script>
+      {% comment %} ====================================================================================== {% endcomment %}
+
       
     <input
       type="radio"
