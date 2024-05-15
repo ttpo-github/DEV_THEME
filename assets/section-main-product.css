@@ -173,7 +173,7 @@ fieldset.product-form__input .form__label {
   background-color: #fff;
   color: #000646;
   border-radius: 0;
-  display: inline-block;
+  display: inline-block; /*!important*/
   margin: 4px 4px 4px 0;
   padding: 9px 15px;
   font-size: 13px;
@@ -192,7 +192,7 @@ fieldset.product-form__input .form__label {
 .product-form__input input[type='radio'] + label.variant-card {
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:space-between;
   align-items:center;
   padding:4px;
 }
