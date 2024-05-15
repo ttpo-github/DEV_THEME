@@ -23,7 +23,7 @@
   assign product_form_id = 'product-form-' | append: section.id
 -%}
 
-<script>console.log({{product | json }})</script>
+<script>console.log({{variants_option1_arr | json }})</script>
 
 {%- for value in option.values -%}
   {%- liquid
@@ -49,7 +49,7 @@
 
   {%- if block.settings.picker_type == 'button' -%}
 
-    <script>console.log({{ option | json }})</script>
+    <script>//console.log({{ option | json }})</script>
     
     {% if option.name == "Axle Options:" %}
       
