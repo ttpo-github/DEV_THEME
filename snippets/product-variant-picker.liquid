@@ -28,9 +28,10 @@
         <fieldset class="js product-form__input" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:4px;">
           <legend class="form__label">{{ option.name }}</legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
-
         </fieldset>
+          
           {% else %}
+          
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }}</legend>
             {% render 'product-variant-options', product: product, option: option, block: block %}
@@ -80,6 +81,7 @@
       </script>
     </variant-selects>
   {%- endif -%}
+  
 {%- endunless -%}
 
 <noscript class="product-form__noscript-wrapper-{{ section.id }}">
