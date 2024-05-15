@@ -28,7 +28,8 @@
 {% assign variantMedia = '' %}
 {% for myVar in product.variants %}
   {% unless variantMedia contains myVar.options[0] %}
-    {% assign variantMedia = variantMedia | append: myVar.options[0] %}
+    {% assign comboTitleMedia = myVar.options[0] | append: myVar.featured_image.src | append: ' !!! ' %}
+    {% assign variantMedia = variantMedia | append: comboTitleMedia %}
   {% endunless %}
 {% endfor %}
 
