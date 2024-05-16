@@ -194,7 +194,7 @@ fieldset.product-form__input .form__label {
   flex-direction:column;
   /*justify-content:space-around;*/
   align-items:center;
-  padding:4px;
+  padding:4px 4px 0px 4px;
 }
 
 @media screen and (max-width: 749px){
