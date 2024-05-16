@@ -72,8 +72,11 @@
     
     {% if option.name == "Axle Options:" %}
 
-    {% for media in variantMediaArr %}
-    ---------------------------------------------------------
+    {% for mediaSet in variantMediaArr %}
+      {% if mediaSet contains value %}
+        {% assign mediaSplit = mediaSet | split: ' -- ' %}
+        {% assign foundImage = mediaSplit[1] %}
+      {% endif %}
     {% endfor %}
 
       
