@@ -6,6 +6,8 @@
   - option: {Object} current product_option object.
   - block: {Object} block object.
 
+  - forLoopIteration: forloop.index
+
 
   Usage:
   {% render 'product-variant-options',
@@ -24,7 +26,7 @@
 -%}
 
       {% comment %} Extract all option1 images from product object to be used in the variant label below {% endcomment %}
-        {% if option.name == "Axle Options:" or option.name == "Kit Options:" %}
+        {% if forLoopIteration == 1 %}
         <script>console.log({{product.variants | json }})</script>
   
         {% assign variantMedia = '' %}
@@ -70,7 +72,7 @@
 
     <script>//console.log({{ option | json }})</script>
     
-    {% if option.name == "Axle Options:" or option.name == "Kit Options:" %}
+    {% if forLoopIteration == 1 %}
 
     {% for mediaSet in variantMediaArr %}
       {% if mediaSet contains value %}
