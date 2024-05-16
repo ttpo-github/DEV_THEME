@@ -24,7 +24,7 @@
 -%}
 
       {% comment %} Extract all option1 images from product object to be used in the variant label below {% endcomment %}
-        {% if option.name == "Axle Options:" %}
+        {% if option.name == "Axle Options:" or option.name == "Kit Options:" %}
         <script>console.log({{product.variants | json }})</script>
   
         {% assign variantMedia = '' %}
@@ -70,7 +70,7 @@
 
     <script>//console.log({{ option | json }})</script>
     
-    {% if option.name == "Axle Options:" %}
+    {% if option.name == "Axle Options:" or option.name == "Kit Options:" %}
 
     {% for mediaSet in variantMediaArr %}
       {% if mediaSet contains value %}
