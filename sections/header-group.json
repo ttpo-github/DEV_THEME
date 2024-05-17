@@ -42,10 +42,17 @@
     "header": {
       "type": "header",
       "settings": {
+        "top_menu": "",
+        "new_window_link": "",
+        "top_right_text": "",
+        "top_right_link": "",
         "color_scheme": "background-1",
         "logo_position": "middle-left",
         "menu": "new-lending-menu",
         "menu_type_desktop": "dropdown",
+        "mobile_menu": "new-lending-menu-mobile",
+        "shipping_text": "",
+        "header_phone": "",
         "sticky_header_type": "always",
         "mobile_logo_position": "center",
         "margin_bottom": 0
