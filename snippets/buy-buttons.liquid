@@ -178,7 +178,25 @@
             {{ form | payment_button }}
           {%- endif -%}
 
-          <!--<div>Below Add to Cart Button</div>-->
+          <!-- Beginning of Buy With Prime Widget -->
+        <script defer src='https://code.buywithprime.amazon.com/default.variant.selector.shopify.js'></script>
+        <script async fetchpriority='high' src='https://code.buywithprime.amazon.com/bwp.v1.js'></script>
+        {% if product.sku %}
+            <div
+                id="amzn-buy-now"
+                data-site-id="jgp9wrxgke"
+                data-widget-id="w-zFiKXm4qDE1ASUQCn9Zjy9"
+                data-sku="{{product.sku}}"
+            ></div>
+        {% else %}
+            <div
+                id="amzn-buy-now"
+                data-site-id="jgp9wrxgke"
+                data-widget-id="w-zFiKXm4qDE1ASUQCn9Zjy9"
+                data-sku="{{product.selected_or_first_available_variant.sku}}"
+            ></div>
+        {% endif %}
+      <!-- End of Buy With Prime Widget -->
           
          <div {{ block.shopify_attributes }}>
           {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
@@ -187,7 +205,7 @@
           {%- endform -%}
         </div>
 
-        <!--<div>Below add to cart and payment installment message</div>-->
+        
           
         </div>
       {%- endform -%}
