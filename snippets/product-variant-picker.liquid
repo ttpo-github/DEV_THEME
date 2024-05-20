@@ -21,6 +21,8 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
+
+      {% assign hasImage = false %}
     
       {%- for option in product.options_with_values -%}
 
