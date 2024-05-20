@@ -95,14 +95,16 @@
         class="disabled"
       {% endif %}
     >
-        
+        {% unless foundImage == blank %}
         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="variant-card" style="display:flex; flex-direction:column;">
-          {% unless foundImage == blank %}
           <img src="{{ foundImage }}" alt="3500 lb Drop Trailer Axles" style="width:100%; border-radius:4px;">
-          {% endunless %}
           <div style="height:100%; display:flex; align-items:center; min-height:3rem; padding:4px 0px;"><span>{{ value -}}</span></div>
         </label>
-      
+          {% else %}
+          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+            {{ value -}}
+          </label>
+        {% endunless %}
     
     {% else %}
 
