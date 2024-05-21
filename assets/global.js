@@ -989,8 +989,8 @@ class VariantSelects extends HTMLElement {
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
         const captureCtaSlideupPrice = html.getElementsByClassName('atc_price')[0];
 
-        console.log("NEW PRICE HERE:")
-        console.log(captureCtaSlideupPrice)
+        //console.log("NEW PRICE HERE:")
+        //console.log(captureCtaSlideupPrice)
 
         let atcMenuButton = document.querySelector('.atc_bottom_menu_button')
         
@@ -1017,7 +1017,7 @@ class VariantSelects extends HTMLElement {
 
         let atcPrice = document.getElementsByClassName('atc_price')[0];
 
-        //atcPrice.innerHTML = price.innerHTML
+        atcPrice.innerHTML = captureCtaSlideupPrice.innerHTML
 
         //console.log(price)
 
