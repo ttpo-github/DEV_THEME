@@ -22,15 +22,31 @@
       {{ block.shopify_attributes }}
     >
 
-      {% assign hasImage = false %}
+      
     
       {%- for option in product.options_with_values -%}
+          {% assign hasImage = false %}
+          {% if forloop.index == 1 %}
+            {% assign variantMedia = '' %}
+            {% for myVar in product.variants %}
+              {% if myVar.featured_image.src != blank %}
+                {% assign hasImage = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
 
-        
-        <fieldset class="js product-form__input" {% if forloop.index == 1 %}style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;"{% endif %}>
-          <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
-        </fieldset>
+        {% if hasImage %}
+          <fieldset class="js product-form__input" {% if forloop.index == 1 %}style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;"{% endif %}>
+            <legend class="form__label">{{ option.name }}</legend>
+            {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
+          </fieldset>
+        {% else %}
+          <fieldset class="js product-form__input">
+            <legend class="form__label">{{ option.name }}</legend>
+            {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
+          </fieldset>
+        {% endif %}
           
           
         
