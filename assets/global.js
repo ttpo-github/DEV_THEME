@@ -1013,7 +1013,7 @@ class VariantSelects extends HTMLElement {
 
         let atcPrice = document.getElementsByClassName('atc_price')[0];
 
-        atcPrice.innerHTML = price.innerHTML
+        //atcPrice.innerHTML = price.innerHTML
 
         //console.log(price)
 
