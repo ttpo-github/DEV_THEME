@@ -248,29 +248,14 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 6px;
 }
 
- .or-separator::before {
-    content: "";
-    border-bottom: 1px solid black;
-    flex: 1;
-   margin-right:.5rem;
-}
 
-    .or-separator::after {
-    content: "";
-    border-bottom: 1px solid black;
-    flex: 1;
-      margin-left:.5rem;
-}
 
 </style>
 
 <div class="bwp-widget-and-separator-container">
-  
-<span class="or-separator">OR</span>
-  
 
   <!-- Beginning of Buy With Prime Widget -->
           <script defer src='https://code.buywithprime.amazon.com/default.variant.selector.shopify.js'></script>
@@ -298,7 +283,7 @@
           {% endif %}
         <!-- End of Buy With Prime Widget -->
 
-  
+    <span class="or-separator">OR</span>
 
 </div>
 
