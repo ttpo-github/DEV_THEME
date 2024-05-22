@@ -178,82 +178,9 @@
             {{ form | payment_button }}
           {%- endif -%}
 
-          <!-- Start of BwP button code with OR separator -->
-
- <style>
-
-    .bwp-widget-and-separator-container {
-
-        display: flex;
-
-        flex-direction: column;
-
-        width:100%;
-
-   }
-
-    @media (max-width: 740px) {
-
-        .bwp-widget-and-separator-container {
-
-        width: 100%;
-
-        }
-
-    }    
-
-    .or-separator {
-
-        text-align: center;
-
-        display: none;
-
-   }
-
-   .bwp-widget-loaded ~ .or-separator {
-
-      display: flex;
-
-      align-items: center;
-
-      text-align: center;
-
-      margin-top:6px;
-
-   }
-
-   .bwp-widget-loaded ~ .or-separator::before {
-
-      margin-right:.5em;
-
-  }
-
-  .bwp-widget-loaded ~ .or-separator::after {
-
-      margin-left:.5em;
-
-  }
-
-  .bwp-widget-loaded ~ .or-separator::after, .bwp-widget-loaded ~ .or-separator::before {
-
-      content: "";
-
-      border-bottom: 1px solid black;
-
-      flex: 1;
-
-}
-
-   .or-separator {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 6px;
-}
+          
 
 
-
-</style>
 
 <div class="bwp-widget-and-separator-container">
 
@@ -287,7 +214,7 @@
 
 </div>
 
-<!-- End of BwP button code with OR separator -->
+
 
         
 
