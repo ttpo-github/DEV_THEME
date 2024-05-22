@@ -244,11 +244,23 @@
 
 }
 
-   .bwp-widget-loaded ~ .or-separator {
+   .or-separator {
     display: flex;
     align-items: center;
     text-align: center;
     margin-top: 6px;
+}
+
+ .or-separator::before {
+    content: "";
+    border-bottom: 1px solid black;
+    flex: 1;
+}
+
+    .or-separator::after {
+    content: "";
+    border-bottom: 1px solid black;
+    flex: 1;
 }
 
 </style>
