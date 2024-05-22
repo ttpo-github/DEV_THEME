@@ -254,10 +254,10 @@
           <script defer src='https://code.buywithprime.amazon.com/default.variant.selector.shopify.js'></script>
           <script async fetchpriority='high' src='https://code.buywithprime.amazon.com/bwp.v1.js'></script>
 
-          <span class="or-separator">OR</span>
+         
   
           {% if product.sku %}
-            
+            <span class="or-separator">OR</span>
               <div
                   id="amzn-buy-now"
                   data-site-id="jgp9wrxgke"
@@ -266,6 +266,7 @@
               >
               </div>
           {% else %}
+            <span class="or-separator">OR</span>
               <div
                   id="amzn-buy-now"
                   data-site-id="jgp9wrxgke"
