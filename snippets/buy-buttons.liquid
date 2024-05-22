@@ -184,14 +184,80 @@
 
 
 
-  <!-- Beginning of Buy With Prime Widget -->
+  <!-- Start of BwP button code with OR separator -->
+
+ <style>
+
+    .bwp-widget-and-separator-container {
+
+        display: flex;
+
+        flex-direction: column-reverse;
+
+        width:100%;
+
+   }
+
+    @media (max-width: 740px) {
+
+        .bwp-widget-and-separator-container {
+
+        width: 100%;
+
+        }
+
+    }    
+
+    .or-separator {
+
+        text-align: center;
+
+        display: none;
+
+   }
+
+   .bwp-widget-loaded ~ .or-separator {
+
+      display: flex;
+
+      align-items: center;
+
+      text-align: center;
+
+      margin-top:16px;
+
+   }
+
+   .bwp-widget-loaded ~ .or-separator::before {
+
+      margin-right:.5em;
+
+  }
+
+  .bwp-widget-loaded ~ .or-separator::after {
+
+      margin-left:.5em;
+
+  }
+
+  .bwp-widget-loaded ~ .or-separator::after, .bwp-widget-loaded ~ .or-separator::before {
+
+      content: "";
+
+      border-bottom: 1px solid black;
+
+      flex: 1;
+
+}
+
+</style>
+
+<div class="bwp-widget-and-separator-container">
+
+    <!-- Beginning of Buy With Prime Widget -->
           <script defer src='https://code.buywithprime.amazon.com/default.variant.selector.shopify.js'></script>
           <script async fetchpriority='high' src='https://code.buywithprime.amazon.com/bwp.v1.js'></script>
-
-         
-  
-          {% if product.sku %}
-            
+          {% if product.sku %}            
               <div
                   id="amzn-buy-now"
                   data-site-id="jgp9wrxgke"
@@ -199,8 +265,7 @@
                   data-sku="{{product.sku}}"
               >
               </div>
-          {% else %}
-            
+          {% else %}            
               <div
                   id="amzn-buy-now"
                   data-site-id="jgp9wrxgke"
@@ -209,6 +274,12 @@
               ></div>
           {% endif %}
         <!-- End of Buy With Prime Widget -->
+
+    <span class="or-separator">OR</span>
+
+</div>
+
+<!-- End of BwP button code with OR separator -->
 
    
 
