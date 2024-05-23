@@ -3476,6 +3476,9 @@ quantity-input.quantity:after {
   border: 0;
   margin: 0;
   background: #00f;
+
+  /* CUSTOM */
+  padding: 19px 0px;
 }
 .custom-btn .path {
   stroke: #fff;
