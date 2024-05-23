@@ -3461,6 +3461,9 @@ quantity-input.quantity:after {
 }
 .quantity-button-wrap {
   display: flex;
+
+  /* CUSTOM */
+  flex-direction:column;
 }
 .quantity-button-wrap .product-form__quantity {
   margin-right: 15px;
