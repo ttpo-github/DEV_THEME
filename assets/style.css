@@ -3464,6 +3464,7 @@ quantity-input.quantity:after {
 
   /* CUSTOM */
   flex-direction:column;
+  gap: 15px;
 }
 .quantity-button-wrap .product-form__quantity {
   margin-right: 15px;
