@@ -127,7 +127,7 @@
   %}
 
   {% for link in linklists['Collections'].links  %}
-    <script>console.log({{ link }})</script>
+    <script>console.log('{{ link.url }}')</script>
   {% endfor %}
   
   <div class="bt-container custom-subcollections-list collection-header-B" style="{% if linkFound == false %}display:none{% endif %}">
