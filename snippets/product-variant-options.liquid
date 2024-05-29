@@ -68,6 +68,13 @@
     endfor
   -%}
 
+  {% if option.name contains 'Kit' %}
+    <script>
+      console.log('KIT FOUND')
+      console.log('{{ option.name }}')
+    </script>
+  {% endif %}
+
   {%- if block.settings.picker_type == 'button' -%}
 
     <script>//console.log({{ option | json }})</script>
