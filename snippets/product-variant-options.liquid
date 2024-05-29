@@ -27,7 +27,7 @@
 
       {% comment %} Extract all option1 images from product object to be used in the variant label below {% endcomment %}
         {% if forLoopIteration == 1 %}
-        <script>console.log({{product.variants | json }})</script>
+        <script>//console.log({{product.variants | json }})</script>
   
         {% assign variantMedia = '' %}
         {% for myVar in product.variants %}
@@ -75,7 +75,7 @@
     </script>
 
     {% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
-    {% assign kit_match = available_products.variants | where: "sku", {{ value.sku }} %}
+   
     <script>
       console.log('AVAILABLE PRODUCTS')
      console.log({{ available_products | json }})
