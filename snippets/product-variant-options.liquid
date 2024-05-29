@@ -74,7 +74,7 @@
       console.log('{{ value }}')
     </script>
 
-    {% for product in collections['tk-trailer-kits'].products %}
+    {% for product in collections['tk-trailer-kits'].products | where: "available" %}
       <script>
      console.log({{ product | json }})
     </script>
