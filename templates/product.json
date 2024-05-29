@@ -45,6 +45,7 @@
         },
         "617ae22b-7115-4c22-99a7-6674be4a3410": {
           "type": "shopify:\/\/apps\/glo-related-products-upsell\/blocks\/app-block-product\/75cf2d86-3988-45e7-8f28-ada23c99704f",
+          "disabled": true,
           "settings": {
             "widget": "0",
             "gashortcode": ""
