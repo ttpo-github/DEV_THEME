@@ -116,22 +116,9 @@
   {% comment %} Collection Header A {% endcomment %}
 
   {% comment %} Collection Header B {% endcomment %}
-  {% liquid
-     assign linkFound = false 
-   for link in linklists['Collections'].links 
-       if link.url == collection.url 
-           assign linkFound = true 
-            break
-       endif 
-   endfor 
-
-  %}
-
-  {% for link in linklists['Collections'].links  %}
-    <script>console.log('{{ link.url }}')</script>
-  {% endfor %}
+ 
   
-  <div class="bt-container custom-subcollections-list collection-header-B" style="{% if linkFound == false %}display:none{% endif %}">
+  <div class="bt-container custom-subcollections-list collection-header-B" ">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
