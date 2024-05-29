@@ -75,6 +75,9 @@
     </script>
 
     {% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
+    <script>
+     console.log({{ available_products }})
+    </script>
 
     {% for product in collections['tk-trailer-kits'].products %}
       <script>
