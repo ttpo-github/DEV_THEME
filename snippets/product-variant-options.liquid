@@ -75,7 +75,7 @@
     </script>
 
     {% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
-   
+    {% assign kit_match = available_products.variants | where: "sku", '35SLDSMKTTK6146545' %}
     <script>
       console.log('AVAILABLE PRODUCTS')
      console.log({{ available_products | json }})
