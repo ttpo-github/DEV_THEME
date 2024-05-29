@@ -122,14 +122,6 @@
        if link.url == collection.url 
            assign linkFound = true 
             break
-       else 
-          for _link in link.links
-            if _link.url == collection.url
-              assign linkFound = true
-            endif
-            break
-          endfor
-         
        endif 
    endfor 
 
