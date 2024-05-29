@@ -76,12 +76,12 @@
 
     {% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
     <script>
-     console.log({{ available_products }})
+     console.log({{ available_products | json }})
     </script>
 
     {% for product in collections['tk-trailer-kits'].products %}
       <script>
-     console.log({{ product | json }})
+     //console.log({{ product | json }})
     </script>
 
       
