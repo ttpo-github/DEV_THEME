@@ -121,6 +121,7 @@
    for link in linklists['Collections'].links 
        if link.url == collection.url 
            assign linkFound = true 
+            break
        else 
           for _link in link.links
             if _link.url == collection.url
@@ -128,7 +129,7 @@
             endif
             break
           endfor
-         break 
+         
        endif 
    endfor 
 
