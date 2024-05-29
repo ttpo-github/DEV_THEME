@@ -73,6 +73,12 @@
       console.log('KIT FOUND')
       console.log('{{ value }}')
     </script>
+
+    {% for product in collection['trailer-axles'].products %}
+      <script>
+     console.log('{{ product }}')
+    </script>
+    {% endfor %}
   {% endif %}
 
   {%- if block.settings.picker_type == 'button' -%}
