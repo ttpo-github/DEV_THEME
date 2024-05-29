@@ -44,7 +44,7 @@
       {% endif %}
       {% comment %} ======================================= END =============================================== {% endcomment %}
 
-
+{% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
 
 {%- for value in option.values -%}
   {%- liquid
@@ -69,26 +69,8 @@
   -%}
 
   {% if value contains 'Kit' %}
-    <script>
-      //console.log('KIT FOUND')
-      //console.log('{{ value }}')
-    </script>
-
-    {% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
-    {% assign kit_match = available_products.variants | where: "sku", '35SLDSMKTTK6146545' %}
-    <script>
-      console.log('Kit Match')
-     console.log('{{ kit_match }}')
-      console.log('KIT MATCH END')
-    </script>
-
-    {% for product in collections['tk-trailer-kits'].products %}
-      <script>
-     //console.log({{ product | json }})
-    </script>
-
-      
-    {% endfor %}
+    {% for product in available_products %}
+    {% endfor %}   
   {% endif %}
 
   {%- if block.settings.picker_type == 'button' -%}
