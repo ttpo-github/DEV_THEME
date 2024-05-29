@@ -130,7 +130,7 @@
 
 
   
-  <div class="bt-container custom-subcollections-list collection-header-B" >
+  <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
