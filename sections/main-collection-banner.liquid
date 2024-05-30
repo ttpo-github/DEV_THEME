@@ -120,7 +120,7 @@
   {% assign allLinks = '' %}
 
   {% for link in linklists['Collections'].links %}
-    {% assign allLinks = allLinks | append: link.title %}
+    {% assign allLinks = allLinks | append: link.title | append: "," %}
   {% endfor %}
 
   <script>console.log('{{ allLinks }}')</script>
