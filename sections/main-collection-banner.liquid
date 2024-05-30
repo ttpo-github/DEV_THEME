@@ -156,9 +156,7 @@
           <div class="subcollection-wrap">
             {% for _link3 in _link.links %}
 
-              {% if _link3 %}
-                <script>console.log('In the link3 block')</script>
-              {% endif %}
+              <script>console.log('{{ _link3 }}')</script>
               
               <div class="sub-collection-list">
                 <a href="{{ _link3.url }}" class="sub-collection-item">
