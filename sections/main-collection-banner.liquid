@@ -119,16 +119,24 @@
  
   {% liquid
      assign linkFound = false 
-   for link in linklists['Collections'].links 
-       if link.url == collection.url 
-           assign linkFound = true 
-            break
-       endif 
-   endfor 
+     for link in linklists['Collections'].links 
+         if link.url == collection.url 
+             assign linkFound = true 
+              break
+         endif 
+        for _link in link.links
+          if _link.url == collection.url
+               assign linkFound = true 
+                break
+           endif 
+         endfor
+     endfor 
 
   %}
 
-
+<script>
+  console.log('{{ linkFound }}')
+</script>
   
   <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
