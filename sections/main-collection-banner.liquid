@@ -129,6 +129,8 @@
 
   %}
 
+  {% assign totalLinks = 0 %}
+
 <script>
   console.log('{{ linkFound }}')
 </script>
@@ -141,7 +143,7 @@
         <div class="subcollection-wrap subcollection-wrap-B">
           {% for _link in link.links %}
 
-            <script>console.log('{{ _link }}')</script>
+            {% increment totalLinks %}
             
             <div class="sub-collection-list">
               <a href="{{ _link.url }}" class="sub-collection-item">
@@ -159,7 +161,7 @@
           <div class="subcollection-wrap">
             {% for _link3 in _link.links %}
 
-              <script>console.log('{{ _link3 }}')</script>
+              {% increment totalLinks %}
               
               <div class="sub-collection-list">
                 <a href="{{ _link3.url }}" class="sub-collection-item">
