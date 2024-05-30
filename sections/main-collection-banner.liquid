@@ -117,9 +117,13 @@
 
   {% comment %} Collection Header B {% endcomment %}
 
+  {% assign allLinks = '' %}
+
   {% for link in linklists['Collections'].links %}
-    <script>console.log('{{ link.title }}')</script>
+    {% assign allLinks = allLinks | append: link.title %}
   {% endfor %}
+
+  <script>console.log('{{ allLinks }}')</script>
   
   <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
