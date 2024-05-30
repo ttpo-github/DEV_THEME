@@ -129,11 +129,13 @@
     {% endfor %}
   {% endfor %}
 
+  {% comment %}
   <script>
     let allOfTheLinks = '{{ allLinks }}';
     let arrLinks = allOfTheLinks.split("|")
     console.log(arrLinks.join(","))
   </script>
+  {% endcomment %}
   
   <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
