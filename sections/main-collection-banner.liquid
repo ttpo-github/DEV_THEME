@@ -143,7 +143,7 @@
         <div class="subcollection-wrap subcollection-wrap-B">
           {% for _link in link.links %}
 
-            {% increment totalLinks %}
+            <div style="display:none;">{% increment totalLinks %}</div>
             
             <div class="sub-collection-list">
               <a href="{{ _link.url }}" class="sub-collection-item">
@@ -161,7 +161,7 @@
           <div class="subcollection-wrap">
             {% for _link3 in _link.links %}
 
-              {% increment totalLinks %}
+              <div style="display:none;">{% increment totalLinks %}</div>
               
               <div class="sub-collection-list">
                 <a href="{{ _link3.url }}" class="sub-collection-item">
