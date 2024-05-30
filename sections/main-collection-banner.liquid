@@ -140,6 +140,9 @@
         
         <div class="subcollection-wrap subcollection-wrap-B">
           {% for _link in link.links %}
+
+            <script>console.log('{{ _link }}')</script>
+            
             <div class="sub-collection-list">
               <a href="{{ _link.url }}" class="sub-collection-item">
                 <span><img src="{{ _link.object.featured_image | img_url: '145x145' }}" alt="{{ _link.object.featured_image.alt }}" /></span>
