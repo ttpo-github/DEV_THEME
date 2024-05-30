@@ -120,11 +120,11 @@
   {% assign allLinks = '' %}
 
   {% for link in linklists['Collections'].links %}
-    {% assign allLinks = allLinks | append: link.url | append: "|" %}
+    {% assign allLinks = allLinks | append: link.handle | append: "|" %}
     {% for _link in link.links %}
-      {% assign allLinks = allLinks| append: _link.url | append: "|" %}
+      {% assign allLinks = allLinks| append: _link.handle | append: "|" %}
       {% for _link3 in _link.links %}
-        {% assign allLinks = allLinks| append: _link3.url | append: "|" %}
+        {% assign allLinks = allLinks| append: _link3.handle | append: "|" %}
       {% endfor %}
     {% endfor %}
   {% endfor %}
