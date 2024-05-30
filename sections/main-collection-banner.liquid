@@ -129,7 +129,10 @@
     {% endfor %}
   {% endfor %}
 
-  <script>console.log('{{ allLinks }}')</script>
+  <script>
+    let allOfTheLinks = '{{ allLinks }}'
+    console.log(allOfTheLinks.join("|"))
+  </script>
   
   <div class="bt-container custom-subcollections-list collection-header-B">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
