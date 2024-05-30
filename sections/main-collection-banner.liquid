@@ -180,6 +180,10 @@
 
   <script>console.log('Total Links')</script>
   <script>console.log('{{ totalLinks }}')</script>
+
+  {% if totalLinks == blank %}
+    <script>console.log('THERE ARE NO LINKS')</script>
+  {% endif %}
   {% comment %} Collection Header B {% endcomment %}
 
   
