@@ -155,6 +155,11 @@
         {% if _link.url == collection.url %}
           <div class="subcollection-wrap">
             {% for _link3 in _link.links %}
+
+              {% if _link3 == blank %}
+                <script>console.log('In the link3 block')</script>
+              {% endif %}
+              
               <div class="sub-collection-list">
                 <a href="{{ _link3.url }}" class="sub-collection-item">
                   <span><img src="{{ _link3.object.featured_image | img_url: '145x145' }}" alt="{{ _link3.object.featured_image.alt }}" /></span>
