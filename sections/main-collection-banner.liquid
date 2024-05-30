@@ -130,8 +130,9 @@
   {% endfor %}
 
   <script>
-    let allOfTheLinks = '{{ allLinks }}'
-    console.log(allOfTheLinks)
+    let allOfTheLinks = '{{ allLinks }}';
+    let arrLinks = allOfTheLinks.join("|")
+    console.log(arrLinks)
   </script>
   
   <div class="bt-container custom-subcollections-list collection-header-B">
