@@ -69,13 +69,37 @@
   -%}
 
   {% if value contains 'Kit' %}
-    {% for product in available_products %}
-    {% endfor %}   
+    <!-- Kit Title Finder -->
+        {% assign sku_to_find = '02SLDSMKTTK6146440' %}
+        {% assign found_product = null %}
+        
+        {% for product in collection['tk-trailer-kits'].products %}
+          {% for variant in product.variants %}
+            {% if variant.sku == sku_to_find %}
+              {% assign found_product = product %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if found_product %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if found_product %}
+          <!-- Display the product information -->
+          <h2>{{ found_product.title }}</h2>
+          <p>{{ found_product.description }}</p>
+          <!-- Add more product details as needed -->
+        {% else %}
+          <p>Product with SKU {{ sku_to_find }} not found.</p>
+        {% endif %}
+
+      <!-- Kit Title Finder --> 
   {% endif %}
 
   {%- if block.settings.picker_type == 'button' -%}
 
-    <script>//console.log({{ option | json }})</script>
+    <script>console.log({{ option | json }})</script>
     
     {% if forLoopIteration == 1 %}
 
@@ -85,6 +109,8 @@
         {% assign foundImage = mediaSplit[1] %}
       {% endif %}
     {% endfor %}
+
+      
 
       
     <input
