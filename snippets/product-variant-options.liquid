@@ -70,10 +70,13 @@
 
   {% if value contains 'Kit' %}
     <!-- Kit Title Finder -->
-        {% assign sku_to_find = '02SLDSMKTTK6146440' %}
-        {% assign found_product = null %}
+    {% assign collection_handle = 'tk-trailer-kits' %}
+    {% assign sku_to_find = '02SLDSMKTTK6146440' %}
+    {% assign found_product = null %}
+    {% assign collection = collections[collection_handle] %}
+
         
-        {% for product in collection['tk-trailer-kits'].products %}
+        {% for product in collection.products %}
           {% for variant in product.variants %}
             <script>console.log({{variant | json}})</script>
             {% if variant.sku == sku_to_find %}
