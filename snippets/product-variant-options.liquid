@@ -75,6 +75,7 @@
         
         {% for product in collection['tk-trailer-kits'].products %}
           {% for variant in product.variants %}
+            <script>console.log({{variant | json}})</script>
             {% if variant.sku == sku_to_find %}
               {% assign found_product = product %}
               {% break %}
@@ -99,7 +100,7 @@
 
   {%- if block.settings.picker_type == 'button' -%}
 
-    <script>console.log({{ option | json }})</script>
+    <script>//console.log({{ option | json }})</script>
     
     {% if forLoopIteration == 1 %}
 
