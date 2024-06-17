@@ -23,7 +23,7 @@
   -webkit-animation-name: an-move-frames-1;
   animation-name: an-move-frames-1;
   -webkit-animation-duration: 30836ms;
-  animation-duration: 2s;
+  animation-duration: 1s;
   -webkit-animation-delay: 36509ms;
   animation-delay: 36509ms;
 }
@@ -57,7 +57,7 @@
   -webkit-animation-name: an-move-frames-2;
   animation-name: an-move-frames-2;
   -webkit-animation-duration: 36977ms;
-  animation-duration: 36977ms;
+  animation-duration: 2s;
   -webkit-animation-delay: 18420ms;
   animation-delay: 18420ms;
 }
@@ -91,7 +91,7 @@
   -webkit-animation-name: an-move-frames-3;
   animation-name: an-move-frames-3;
   -webkit-animation-duration: 34091ms;
-  animation-duration: 34091ms;
+  animation-duration: 1.5s;
   -webkit-animation-delay: 27559ms;
   animation-delay: 27559ms;
 }
@@ -125,7 +125,7 @@
   -webkit-animation-name: an-move-frames-4;
   animation-name: an-move-frames-4;
   -webkit-animation-duration: 36598ms;
-  animation-duration: 36598ms;
+  animation-duration: 2.5;
   -webkit-animation-delay: 14589ms;
   animation-delay: 14589ms;
 }
@@ -159,7 +159,7 @@
   -webkit-animation-name: an-move-frames-5;
   animation-name: an-move-frames-5;
   -webkit-animation-duration: 34524ms;
-  animation-duration: 34524ms;
+  animation-duration: 1.75s;
   -webkit-animation-delay: 4224ms;
   animation-delay: 4224ms;
 }
@@ -193,7 +193,7 @@
   -webkit-animation-name: an-move-frames-6;
   animation-name: an-move-frames-6;
   -webkit-animation-duration: 30761ms;
-  animation-duration: 30761ms;
+  animation-duration: 2.75;
   -webkit-animation-delay: 5863ms;
   animation-delay: 5863ms;
 }
@@ -227,7 +227,7 @@
   -webkit-animation-name: an-move-frames-7;
   animation-name: an-move-frames-7;
   -webkit-animation-duration: 35683ms;
-  animation-duration: 35683ms;
+  animation-duration: 1.25;
   -webkit-animation-delay: 335ms;
   animation-delay: 335ms;
 }
@@ -261,7 +261,7 @@
   -webkit-animation-name: an-move-frames-8;
   animation-name: an-move-frames-8;
   -webkit-animation-duration: 32920ms;
-  animation-duration: 32920ms;
+  animation-duration: 2.25;
   -webkit-animation-delay: 20271ms;
   animation-delay: 20271ms;
 }
@@ -295,7 +295,7 @@
   -webkit-animation-name: an-move-frames-9;
   animation-name: an-move-frames-9;
   -webkit-animation-duration: 35658ms;
-  animation-duration: 35658ms;
+  animation-duration: .75s;
   -webkit-animation-delay: 21515ms;
   animation-delay: 21515ms;
 }
@@ -329,7 +329,7 @@
   -webkit-animation-name: an-move-frames-10;
   animation-name: an-move-frames-10;
   -webkit-animation-duration: 28922ms;
-  animation-duration: 28922ms;
+  animation-duration: 3.25s;
   -webkit-animation-delay: 29337ms;
   animation-delay: 29337ms;
 }
