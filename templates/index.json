@@ -9,38 +9,6 @@
     },
     "dawn14_image_banner_fpPbh9": {
       "type": "dawn14-image-banner",
-      "blocks": {
-        "heading_cUzE7d": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_hFYmBY": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_jUmzwc": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_cUzE7d",
-        "text_hFYmBY",
-        "buttons_jUmzwc"
-      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/all__black_background.jpg",
         "image_2": "shopify:\/\/shop_images\/STOCK_041422_KL_2_1.jpg",
