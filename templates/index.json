@@ -7,14 +7,14 @@
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
       }
     },
-    "dawn14_image_banner_fpPbh9": {
-      "type": "dawn14-image-banner",
+    "spark_image_banner_wmRVUT": {
+      "type": "spark-image-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/all__black_background.jpg",
         "image_2": "shopify:\/\/shop_images\/STOCK_041422_KL_2_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
@@ -329,7 +329,7 @@
   },
   "order": [
     "video_section_EJHJpk",
-    "dawn14_image_banner_fpPbh9",
+    "spark_image_banner_wmRVUT",
     "8c893e45-fcd3-4987-a4de-d1494b74dc72",
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
     "image_banner_MpxKfk",
