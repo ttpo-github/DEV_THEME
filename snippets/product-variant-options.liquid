@@ -68,6 +68,7 @@
     endfor
   -%}
 
+  {% comment %}
   {% if value contains 'Kit' %}
     <!-- Kit Title Finder -->
     {% assign collection_handle = 'tk-trailer-kits' %}
@@ -97,9 +98,9 @@
         {% else %}
           <p>Product with SKU {{ sku_to_find }} not found.</p>
         {% endif %}
-
       <!-- Kit Title Finder --> 
   {% endif %}
+  {% endcomment %}
 
   {%- if block.settings.picker_type == 'button' -%}
 
