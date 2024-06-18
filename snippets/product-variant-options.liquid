@@ -92,8 +92,7 @@
         
         {% if found_product %}
           <!-- Display the product information -->
-          <h2>{{ found_product.title }}</h2>
-          <p>{{ found_product.description }}</p>
+          <p>{{ sku_to_find }} found!</p>
           <!-- Add more product details as needed -->
         {% else %}
           <p>Product with SKU {{ sku_to_find }} not found.</p>
