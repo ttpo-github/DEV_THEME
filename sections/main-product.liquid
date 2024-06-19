@@ -90,6 +90,33 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+         {% if product.title contains 'Kit' %}
+          <!-- Kit Title Finder -->
+            {% assign collection_handle = 'tk-trailer-kits' %}
+            {% assign sku_to_find = product.selected_or_first_available_variant.sku %}
+            {% assign found_product = null %}
+            {% assign collection = collections[collection_handle] %}
+        
+                
+                {% for product in collection.products %}
+                  {% for variant in product.variants %}
+                    <script>console.log('{{variant.sku}}')</script>
+                    {% if variant.sku == sku_to_find %}
+                      {% assign found_product = product %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                  {% if found_product %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% if found_product %}
+                  <script>console.log({{found_product}})</script>
+                {% endif %}
+              <!-- Kit Title Finder --> 
+          {% endif %}
+
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1 class="ttpo_product_title">Test {{ product.title | escape }}</h1>
           <a href="{{ product.url }}" class="product__title">
