@@ -101,9 +101,10 @@
 
         <script>//console.log({{product_is_kit}})</script>
 
+        {% assign dynamic_title = product.title %}
+
          {% if product.selected_or_first_available_variant.option1 contains 'Kit' and product_is_kit == false %}
           <!-- Kit Title Finder -->
-            {% assign altProductTitle = product.title %}
             {% assign collection_handle = 'tk-trailer-kits' %}
             {% assign sku_to_find = product.selected_or_first_available_variant.sku %}
             {% assign found_product = null %}
@@ -127,6 +128,7 @@
                 {% if found_product %}
                   <script>console.log("PRODUCT FOUND")</script>
                   <script>console.log({{found_product | json}})</script>
+                  {% assign dynamic_title = found_product.title %}
                 {% endif %}
               <!-- Kit Title Finder --> 
           {% endif %}
@@ -135,7 +137,8 @@
           <h1 class="ttpo_product_title">Test {{ product.title | escape }}</h1>
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1 ttpo_product_title">
-              {{ product.title | escape }}
+              {% comment %}{{ product.title | escape }}{% endcomment %}
+              {{ dynamic_title | escape }}
             </h2>
           </a>
         </div>
@@ -591,8 +594,7 @@
         {%- endcapture -%}
 
 
-<script>console.log('Title')</script>
-<script>console.log('{{ product.title }}')</script>
+
   
 {% unless product.title contains 'Torsion' %}
 <div style="display:flex; gap:10px; justify-content:center;">
@@ -624,10 +626,14 @@
         <div>
           <div >
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
-            <h1 class="ttpo_product_title">{{ product.title | truncate: 65 | escape }}</h1>
+            <h1 class="ttpo_product_title">
+              {% comment %}{{ product.title | truncate: 65 | escape }}{% endcomment %}
+              {{ dynamic_title | truncate: 65 | escape }}
+            </h1>
             <a href="{{ product.url }}" class="product__title">
               <h2 class="h1" class="ttpo_product_title">
-                {{ product.title | escape }}
+                {% comment %}{{ product.title | escape }}{% endcomment %}
+                {{ dynamic_title | escape }}
               </h2>
             </a>
           </div>
