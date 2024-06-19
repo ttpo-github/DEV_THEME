@@ -44,7 +44,7 @@
       {% endif %}
       {% comment %} ======================================= END =============================================== {% endcomment %}
 
-{% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}
+{% comment %}{% assign available_products = collections['tk-trailer-kits'].products | where: "available" %}{% endcomment %}
 
 {%- for value in option.values -%}
   {%- liquid
