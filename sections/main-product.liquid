@@ -103,7 +103,7 @@
                 
                 {% for product_item in collection.products %}
                   {% if product_item.id != product.id %}
-                  {% for variant in product.variants %}
+                  {% for variant in product_item.variants %}
                     {% if variant.sku == sku_to_find %}
                       {% assign found_product = product_item %}
                       {% break %}
