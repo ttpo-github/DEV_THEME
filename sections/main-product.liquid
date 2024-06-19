@@ -90,6 +90,8 @@
       >
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+        <script>console.log({{product.selected_or_first_available_variant | json}})</script>
+
          {% if product.title contains 'Kit' %}
           <!-- Kit Title Finder -->
             {% assign collection_handle = 'tk-trailer-kits' %}
