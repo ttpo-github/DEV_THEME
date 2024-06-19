@@ -92,7 +92,7 @@
 
         <script>console.log({{product.selected_or_first_available_variant | json}})</script>
 
-         {% if product.title contains 'Kit' %}
+         {% if product.selected_or_first_available_variant.option1 contains 'Kit' %}
           <!-- Kit Title Finder -->
             {% assign collection_handle = 'tk-trailer-kits' %}
             {% assign sku_to_find = product.selected_or_first_available_variant.sku %}
