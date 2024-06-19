@@ -94,16 +94,17 @@
 
          {% if product.selected_or_first_available_variant.option1 contains 'Kit' %}
           <!-- Kit Title Finder -->
+            {% assign altProductTitle = product.title %}
             {% assign collection_handle = 'tk-trailer-kits' %}
             {% assign sku_to_find = product.selected_or_first_available_variant.sku %}
             {% assign found_product = null %}
             {% assign collection = collections[collection_handle] %}
         
                 
-                {% for product in collection.products %}
+                {% for product_item in collection.products %}
                   {% for variant in product.variants %}
-                    {% if variant.sku == sku_to_find %}
-                      {% assign found_product = product %}
+                    {% if variant.sku == sku_to_find and product_item.id != product.id %}
+                      {% assign found_product = product_item %}
                       {% break %}
                     {% endif %}
                   {% endfor %}
@@ -114,6 +115,7 @@
                 
                 {% if found_product %}
                   <script>console.log("PRODUCT FOUND")</script>
+                  <script>console.log({{found_product | json}})</script>
                 {% endif %}
               <!-- Kit Title Finder --> 
           {% endif %}
