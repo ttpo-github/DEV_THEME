@@ -92,7 +92,16 @@
 
         <script>console.log({{product.selected_or_first_available_variant | json}})</script>
 
-         {% if product.selected_or_first_available_variant.option1 contains 'Kit' %}
+        {% if product.title contains 'Kit' %}
+          {% assign product_is_kit = true %}
+        {% else %}
+          {% assign product_is_kit = false %}
+        {% endif %}
+
+
+        <script>//console.log({{product_is_kit}})</script>
+
+         {% if product.selected_or_first_available_variant.option1 contains 'Kit' and product_is_kit == false %}
           <!-- Kit Title Finder -->
             {% assign altProductTitle = product.title %}
             {% assign collection_handle = 'tk-trailer-kits' %}
