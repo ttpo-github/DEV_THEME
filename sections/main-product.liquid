@@ -100,7 +100,6 @@
                 
                 {% for product in collection.products %}
                   {% for variant in product.variants %}
-                    <script>console.log('{{variant.sku}}')</script>
                     {% if variant.sku == sku_to_find %}
                       {% assign found_product = product %}
                       {% break %}
