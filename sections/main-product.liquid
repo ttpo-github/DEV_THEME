@@ -91,7 +91,7 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         <div class="product__title" {{ block.shopify_attributes }}>
-          <h1 class="ttpo_product_title">{{ product.title | escape }}</h1>
+          <h1 class="ttpo_product_title">Test {{ product.title | escape }}</h1>
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1 ttpo_product_title">
               {{ product.title | escape }}
