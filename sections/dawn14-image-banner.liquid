@@ -124,11 +124,28 @@
           right:0;
           bottom:0;
         }
+
+        @media (prefers-reduced-motion: no-preference) {
+          .animate--ambient > img,
+          .animate--ambient > svg {
+            animation: animateAmbient 30s linear infinite;
+          }
+        
+          @keyframes animateAmbient {
+            0% {
+              transform: rotate(0deg) translateX(1em) rotate(0deg) scale(1.2);
+            }
+            100% {
+              transform: rotate(360deg) translateX(1em) rotate(-360deg) scale(1.2);
+            }
+          }
+        }
       </style>
-      <div class="custom-overlay">
+      <div class="custom-overlay animate--ambient">
         <img width="100%" height="100%" src="{{ section.settings.image_3 | image_url }}"/>
       </div>
       <!-- OVERLAY IMAGE -->
+      
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
