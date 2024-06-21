@@ -150,11 +150,62 @@
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+
+      <sytle>
+        .custom-text-wipe {
+          white-space: nowrap;
+          color: transparent;
+          position: relative;
+          display: inline-block;
+          opacity:1
+        }
+
+      .custom-text-wipe:before {
+          color:white;
+          content: attr(data-text);
+          position: absolute;
+          top: 50%;
+          color: #262626;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          left: 0;
+          -webkit-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          -o-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          width: 0%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        .custom-text-wipe:before {
+          content: attr(data-text);
+          position: absolute;
+          top: 50%;
+          color: #262626;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          left: 0;
+          -webkit-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          -o-transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          transition: 1s cubic-bezier(.767, .01, .18, 1.01);
+          width: 0%;
+          white-space: nowrap;
+          overflow: hidden;
+          color: #ef0d33;
+          background: #f5f5f5;
+          -webkit-transition-delay: .3s;
+          -o-transition-delay: .3s;
+          transition-delay: .3s;
+        }
+      </sytle>
+      
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              class="custom-text-wipe banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
