@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "video_section_EJHJpk": {
@@ -5,6 +14,55 @@
       "disabled": true,
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
+      }
+    },
+    "dawn14_image_banner_QPAjKg": {
+      "type": "dawn14-image-banner",
+      "blocks": {
+        "heading_gDQrw9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_98C4zc": {
+          "type": "text",
+          "settings": {
+            "text": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+            "text_style": "body"
+          }
+        },
+        "buttons_4Dxp9X": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gDQrw9",
+        "text_98C4zc",
+        "buttons_4Dxp9X"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/all__black_background.jpg",
+        "image_2": "shopify:\/\/shop_images\/2292561_SparksOverlay-1200x1500_061724.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
@@ -311,6 +369,7 @@
   },
   "order": [
     "video_section_EJHJpk",
+    "dawn14_image_banner_QPAjKg",
     "8c893e45-fcd3-4987-a4de-d1494b74dc72",
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945",
     "image_banner_MpxKfk",
