@@ -113,6 +113,22 @@
           widths: widths,
           fetchpriority: fetch_priority
       }}
+
+
+      <!-- OVERLAY IMAGE -->
+      <style>
+        .custom-overlay {
+          display:absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+        }
+      </style>
+      <div class="custom-overlay">
+        <img width="100%" height="100%" src="{{ section.settings.image_3 | image_url }}"/>
+      </div>
+      <!-- OVERLAY IMAGE -->
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -184,6 +200,11 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 2 Overlay"
     },
     {
       "type": "range",
