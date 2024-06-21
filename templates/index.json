@@ -53,6 +53,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/all__black_background.jpg",
         "image_2": "shopify:\/\/shop_images\/2292561_SparksOverlay-1200x1500_061724.jpg",
+        "image_3": "shopify:\/\/shop_images\/2292561_SparksOverlay-1200x1500_061724.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
