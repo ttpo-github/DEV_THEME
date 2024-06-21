@@ -55,7 +55,7 @@
         "image_2": "shopify:\/\/shop_images\/2292561_SparksOverlay-1200x1500_061724.jpg",
         "image_3": "shopify:\/\/shop_images\/2292561_SparksOverlay-1200x1500-2_061724.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "desktop_content_alignment": "left",
