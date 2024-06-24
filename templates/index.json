@@ -52,7 +52,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/axlemaking_d01febe7-7b30-4c43-91c6-3a82f8e6ba74.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
