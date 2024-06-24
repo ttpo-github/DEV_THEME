@@ -201,7 +201,6 @@
             </div>
           {%- when 'buttons' -%}
             <div
-              style="color:#0000d8;"
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
@@ -213,6 +212,7 @@
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="background-color:#0000d8;"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
