@@ -164,25 +164,21 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
 
       <style>
-        .custom-text-wipe-container {
-          margin: 0;
-          text-align: center;
-          overflow: hidden;
-          line-height: 1;
-        }
-       .custom-text-wipe-container .custom-text-wipe {
-          display: block;
-          animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-        }
-        
-        @keyframes reveal {
-          0% {
-            transform: translate(0,100%);
-          }
-          100% {
-            transform: translate(0,0);
-          }
-        }
+        .agent-2 {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+  animation-delay: 0.4s;
+}
+
+        @keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
 
       </style>
       
@@ -190,11 +186,11 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="custom-text-wipe-container banner__heading inline-richtext {{ block.settings.heading_size }}"
+              class="agent-2 banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              <span class="custom-text-wipe">{{ block.settings.heading }}</span>
-              <span class="custom-text-wipe">Part 2</span>
+             {{ block.settings.heading }}
+              
             </h2>
 
             
