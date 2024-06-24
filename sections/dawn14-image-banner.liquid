@@ -215,6 +215,7 @@
       
       {%- for block in section.blocks -%}
         {%- case block.type -%}
+          <div>
           {%- when 'heading' -%}
             <h2
               style="text-transform:uppercase;"
@@ -234,6 +235,7 @@
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p style="color:#FFFFFF; font-size:1.5rem;">{{ block.settings.text }}</p>
             </div>
+          </div>
           {%- when 'buttons' -%}
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
