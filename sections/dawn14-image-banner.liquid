@@ -176,8 +176,12 @@
 }
 
         @media screen and (max-width: 749px){
-          .agent-2.banner__heading {
+          .heading-split-one {
             font-size: 3.4rem;
+          }
+
+          .heading-split-two {
+            font-size: 2.8rem;
           }
         }
 
@@ -203,9 +207,9 @@
               {{ block.shopify_attributes }}
             >
               {% assign split_heading = block.settings.heading | split:'///' %}
-              <span style="color:#0000d8;">{{ split_heading[0] }}</span>
+              <span class="heading-split-one">{{ split_heading[0] }}</span>
               <br>
-              <span>{{ split_heading[1] }}</span>
+              <span class="heading-split-two">{{ split_heading[1] }}</span>
                
               
             </h2>
