@@ -200,33 +200,61 @@
           transition-delay: .3s;
         }
 
-        /* ===============================================*/
+        /* ============================================== */
 
-        .reveal-container {
-            position: relative;
-            display: inline-block;
-            overflow: hidden;
-            font-size: 3rem;
-            font-weight: bold;
-            color: transparent;
-        }
         
-        .reveal-text {
-            position: relative;
-            display: inline-block;
-            animation: wipe-reveal 3s forwards;
-        }
-        
-        @keyframes wipe-reveal {
-            0% {
-                color: transparent;
-                clip-path: inset(0 100% 0 0);
-            }
-            100% {
-                color: black;
-                clip-path: inset(0 0 0 0);
-            }
-        }
+.title-fill {
+    white-space: nowrap;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.title-fill:before, .title-fill:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    color: #262626;
+    transform: translateY(-50%);
+    left: 0;
+    transition: width 1s cubic-bezier(.767, .01, .18, 1.01);
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.title-fill:before {
+    z-index: 1;
+    background-color: white;
+}
+
+.title-fill-anim {
+    color: transparent;
+    animation: reveal-text 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
+}
+
+@keyframes reveal-text {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+.title-fill-anim:after {
+    animation: reveal-text-after 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
+}
+
+@keyframes reveal-text-after {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
       </style>
       
       {%- for block in section.blocks -%}
@@ -239,9 +267,7 @@
               {{ block.settings.heading }}
             </h2>
 
-            <div class="reveal-container">
-                <span class="reveal-text">Your Revealed Text</span>
-            </div>
+            <span data-animation-child="" class="title-fill animated title-fill-anim" data-animation="title-fill-anim" data-text="From the past.">From the past.</span>
           
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
