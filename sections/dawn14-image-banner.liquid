@@ -203,57 +203,70 @@
         /* ============================================== */
 
         
-.title-fill {
-    white-space: nowrap;
-    color: transparent;
-    position: relative;
-    display: inline-block;
-}
+      .title-fill {
+          white-space: nowrap;
+          color: transparent;
+          position: relative;
+          display: inline-block;
+      }
+      
+      .title-fill:before {
+          content: attr(data-text);
+          position: absolute;
+          top: 50%;
+          color: #262626;
+          transform: translateY(-50%);
+          left: 0;
+          transition: width 1s cubic-bezier(.767, .01, .18, 1.01);
+          width: 0%;
+          white-space: nowrap;
+          overflow: hidden;
+      }
 
-.title-fill:before, .title-fill:after {
-    content: attr(data-text);
-    position: absolute;
-    top: 50%;
-    color: #262626;
-    transform: translateY(-50%);
-    left: 0;
-    transition: width 1s cubic-bezier(.767, .01, .18, 1.01);
-    width: 0%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.title-fill:before {
-    z-index: 1;
-    background-color: white;
-}
-
-.title-fill-anim {
-    color: transparent;
-    animation: reveal-text 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
-}
-
-@keyframes reveal-text {
-    0% {
-        color: transparent;
-    }
-    100% {
-        color: transparent;
-    }
-}
-
-.title-fill-anim:after {
-    animation: reveal-text-after 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
-}
-
-@keyframes reveal-text-after {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
+      .title-fill:after {
+          content: attr(data-text);
+          position: absolute;
+          top: 50%;
+          color: red;
+          transform: translateY(-50%);
+          left: 0;
+          transition: width 1s cubic-bezier(.767, .01, .18, 1.01);
+          width: 0%;
+          white-space: nowrap;
+          overflow: hidden;
+      }
+      
+      .title-fill:before {
+          z-index: 1;
+          background-color: white;
+      }
+      
+      .title-fill-anim {
+          color: transparent;
+          animation: reveal-text 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
+      }
+      
+      @keyframes reveal-text {
+          0% {
+              color: transparent;
+          }
+          100% {
+              color: transparent;
+          }
+      }
+      
+      .title-fill-anim:after {
+          animation: reveal-text-after 1s cubic-bezier(.767, .01, .18, 1.01) forwards;
+      }
+      
+      @keyframes reveal-text-after {
+          0% {
+              width: 0%;
+          }
+          100% {
+              width: 100%;
+          }
+      }
 
       </style>
       
