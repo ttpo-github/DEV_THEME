@@ -51,6 +51,7 @@
           bottom:0;
         }
 
+        /*
         @media (prefers-reduced-motion: no-preference) {
           .animate--ambient > img,
           .animate--ambient > svg {
@@ -63,6 +64,23 @@
             }
             100% {
               transform: rotate(360deg) translateX(1em) rotate(-360deg) scale(1.2);
+            }
+          }
+        }
+        */
+
+        @media (prefers-reduced-motion: no-preference) {
+          .animate--ambient > img,
+          .animate--ambient > svg {
+            animation: animateAmbient 20s linear infinite;
+          }
+        
+          @keyframes animateAmbient {
+            0% {
+              transform: rotate(0deg) translateX(.5em) rotate(0deg) scale(1.1);
+            }
+            100% {
+              transform: rotate(360deg) translateX(.5em) rotate(-360deg) scale(1.1);
             }
           }
         }
