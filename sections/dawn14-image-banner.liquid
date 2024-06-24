@@ -202,7 +202,10 @@
               class="agent-2 banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-             {{ block.settings.heading }}
+              {% assign split_heading = block.settings.heading | split:'///' %}
+              <span style="color:#000000;">{{ split_heading[0] }}</span>
+              <span>{{ split_heading[1] }}</span>
+               
               
             </h2>
 
