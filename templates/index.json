@@ -22,25 +22,25 @@
         "heading_gDQrw9": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Quality Trailer Parts for Every Journey",
+            "heading_size": "h0"
           }
         },
         "text_98C4zc": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-            "text_style": "body"
+            "text": "Discover a wide range of premium trailer parts designed to keep you moving. From axles and brakes to lights and hitches, we provide the highest quality components to ensure your trailer is always ready for the road. Shop now and enjoy fast shipping, expert support, and unbeatable prices.",
+            "text_style": "subtitle"
           }
         },
         "buttons_4Dxp9X": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Shop All Products",
+            "button_link_1": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
+            "button_label_2": "Shop Trailer Axles",
+            "button_link_2": "https:\/\/thetrailerpartsoutlet.com\/collections\/trailer-axles",
             "button_style_secondary_2": false
           }
         }
@@ -52,8 +52,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/axlemaking_d01febe7-7b30-4c43-91c6-3a82f8e6ba74.jpg",
-        "image_overlay_opacity": 50,
-        "image_height": "adapt",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
@@ -61,7 +61,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "8c893e45-fcd3-4987-a4de-d1494b74dc72": {
