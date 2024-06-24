@@ -189,14 +189,14 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2
+            <h3
               style="text-transform:uppercase;"
               class="agent-2 banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
              {{ block.settings.heading }}
               
-            </h2>
+            </h3>
 
             
           {%- when 'text' -%}
