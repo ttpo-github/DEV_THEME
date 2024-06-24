@@ -199,6 +199,34 @@
           -o-transition-delay: .3s;
           transition-delay: .3s;
         }
+
+        /* ===============================================*/
+
+        .reveal-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            font-size: 3rem;
+            font-weight: bold;
+            color: transparent;
+        }
+        
+        .reveal-text {
+            position: relative;
+            display: inline-block;
+            animation: wipe-reveal 3s forwards;
+        }
+        
+        @keyframes wipe-reveal {
+            0% {
+                color: transparent;
+                clip-path: inset(0 100% 0 0);
+            }
+            100% {
+                color: black;
+                clip-path: inset(0 0 0 0);
+            }
+        }
       </style>
       
       {%- for block in section.blocks -%}
@@ -210,6 +238,11 @@
             >
               {{ block.settings.heading }}
             </h2>
+
+            <div class="reveal-container">
+                <span class="reveal-text">Your Revealed Text</span>
+            </div>
+          
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
