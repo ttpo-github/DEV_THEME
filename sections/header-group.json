@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -100,17 +109,28 @@
             "expert-mail": "kyle@ttpo.co",
             "expert_addition": ""
           }
+        },
+        "expert_ieEEfR": {
+          "type": "expert",
+          "settings": {
+            "expert-image": "shopify:\/\/shop_images\/abram.jpg",
+            "expert-heading": "Abraham",
+            "expert-call": "936-245-8220",
+            "expert-mail": "",
+            "expert_addition": "se hablo espanol"
+          }
         }
       },
       "block_order": [
         "f0563f60-6daf-44f4-8531-48f18e755aad",
         "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc",
         "d90f0fcd-5131-487f-bc67-95e1db098b6d",
-        "6ab03ef7-06a3-45e4-9e1f-65049bca7166"
+        "6ab03ef7-06a3-45e4-9e1f-65049bca7166",
+        "expert_ieEEfR"
       ],
       "settings": {
         "heading": "Contact Us Now",
-        "sub_heading": "Have Questions or concerns about your order?<br class=\"mobile-break\"><span><a href=\"tel:+8339103416\"> Call Us now at (833) 910 3416!<\/a><\/span>",
+        "sub_heading": "Have Questions or concerns about your order? Call Us now at (833) 910 3416!",
         "button_label": "CLICK TO CALL",
         "button_link": "8339103416",
         "expert_title": "Trailer Parts Experts",
