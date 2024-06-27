@@ -819,7 +819,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateTitle(variantOb){
-    console.log("In the update Title callback")
+    console.log(this.currentVariant)
     let titles = document.getElementsByClassName('ttpo_product_title')
     Array.from(titles).forEach(function(el){
       el.innerText = variantOb.public_title
