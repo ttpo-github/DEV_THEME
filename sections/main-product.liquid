@@ -107,6 +107,8 @@
           {% assign dynamic_title = product.selected_or_first_available_variant.metafields.alt_title %}
         {% endif %}
 
+        <script>console.log('{{ dynamic_title }}')</script>
+        
         {% comment %}
          {% if product.selected_or_first_available_variant.option1 contains 'Kit' and product_is_kit == false %}
           <!-- Kit Title Finder -->
