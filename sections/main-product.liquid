@@ -103,7 +103,7 @@
         
         
 
-        {% if product.selected_or_first_available_variant.custom.metafields.alt_title != blank %}
+        {% if product.selected_or_first_available_variaant.metafields.custom.alt_title != blank %}
             {% assign dynamic_title = product.selected_or_first_available_variant.metafields.alt_title %}
           {% else %}
             {% assign dynamic_title = product.title %}
