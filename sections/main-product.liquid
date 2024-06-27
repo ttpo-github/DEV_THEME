@@ -101,10 +101,12 @@
 
         <script>//console.log({{product_is_kit}})</script>
         
-        {% assign dynamic_title = product.title %}
+        
 
         {% if product.selected_or_first_available_variant.metafields.alt_title != blank %}
-          {% assign dynamic_title = product.selected_or_first_available_variant.metafields.alt_title %}
+            {% assign dynamic_title = product.selected_or_first_available_variant.metafields.alt_title %}
+          {% else %}
+            {% assign dynamic_title = product.title %}
         {% endif %}
 
         <script>console.log('Dynamic Title: {{ dynamic_title }}')</script>
