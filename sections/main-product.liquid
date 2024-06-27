@@ -24,7 +24,7 @@
     }
   {%- endstyle -%}
 
-  {% for variant in product.variants %}
+  {% for variant in product.variants.option1 %}
     <script>console.log({{variant | json}})</script>
   {% endfor %}
 
