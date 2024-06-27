@@ -24,8 +24,8 @@
     }
   {%- endstyle -%}
 
-  {% for variant in product.variants.option1 %}
-    <script>console.log({{variant | json}})</script>
+  {% for variant in product.variants %}
+    <script>console.log({{variant.option1}})</script>
   {% endfor %}
 
   {% if product.selected_or_first_available_variant.metafields.custom.alt_title != blank %}
