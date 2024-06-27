@@ -24,6 +24,10 @@
     }
   {%- endstyle -%}
 
+  {% for variant in product.variants %}
+    <script>console.log({{variant | json}})</script>
+  {% endfor %}
+
   {% if product.selected_or_first_available_variant.metafields.custom.alt_title != blank %}
             {% assign dynamic_title =  product.selected_or_first_available_variant.metafields.custom.alt_title  %}
           {% else %}
