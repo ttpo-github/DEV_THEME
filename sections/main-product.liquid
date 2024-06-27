@@ -55,7 +55,8 @@
   {% include 'breadcrumb' %}
   {% endcomment %}
   <div class="product__title showonlymobile">
-    <h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
+    {% comment %}<h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>{% endcomment %}
+    <h1 itemprop="name" class="ttpo_product_title">{{ dynamic_title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
   </div>
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
