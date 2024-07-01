@@ -1,8 +1,17 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/new-logo.png",
     "logo_width": 220,
-    "favicon": "shopify:\/\/shop_images\/TTPOLogo_96x96-01.png",
+    "favicon": "shopify:\/\/shop_images\/2299009_Favicon-Rounded_062724.png",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
