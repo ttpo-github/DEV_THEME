@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "parent": "product.json",
   "context": {
@@ -11,7 +20,7 @@
         "show_image": false,
         "show_sku": false,
         "color_scheme": "",
-        "header-6f961e7b5c15d2fa920d13b6bf0f11ed": null,
+        "header-4ddbc00b8eb387cbfb67fee7a46eec41": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -20,6 +29,13 @@
       "block_order": [
 
       ]
+    },
+    "main": {
+      "settings": {
+        "show_bottom_cta": false
+      },
+      "blocks": {
+      }
     }
   },
   "order": [
