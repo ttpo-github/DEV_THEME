@@ -504,6 +504,8 @@
     </modal-dialog>
   {%- endfor -%}
 
+  {% if section.settings.show_bottom_cta %}
+{% unless product.title contains 'Torsion' %}
   <style>
 
   #bottomMenu {
@@ -617,7 +619,7 @@
 
 
   
-{% unless product.title contains 'Torsion' %}
+
 <div style="display:flex; gap:10px; justify-content:center;">
       <div class="atc_desktop_image_container">
         {% if product.selected_or_first_available_variant.featured_image != null%}
@@ -702,7 +704,7 @@
 
 <div id="trigger"></div>
 
-<script>
+<script defer>
 
   document.addEventListener("DOMContentLoaded", function() {
   var targetElement = document.getElementById('ProductSubmitButton-{{ section.id }}');
@@ -726,7 +728,11 @@
 });
 
 </script>
+ 
+
+    
 {% endunless %}
+    {% endif %}
   
   {%- if product.media.size > 0 -%}
     <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
@@ -1107,6 +1113,12 @@
           "id": "text",
           "default": "Text block",
           "label": "t:sections.main-product.blocks.text.settings.text.label"
+        },
+         {
+          "type": "checkbox",
+          "id": "show_bottom_cta",
+          "label": "Activate Bottom Slide up CTA?",
+          "default": true
         },
         {
           "type": "select",
