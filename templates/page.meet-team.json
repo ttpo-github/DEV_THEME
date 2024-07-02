@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "meet-team-banner": {
@@ -108,6 +117,16 @@
             "phone_info": "936-218-1280"
           }
         },
+        "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/abram.png",
+            "title": "Abraham",
+            "designation": "Trailer Parts Expert",
+            "add_info": "se habla español",
+            "phone_info": "936-245-8220"
+          }
+        },
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae": {
           "type": "title",
           "settings": {
@@ -158,16 +177,6 @@
             "phone_info": ""
           }
         },
-        "8b86c970-9d8b-4373-8584-f78c052382f6": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/chase_a7fbdab7-8d77-4d45-8a64-3beeb6688fd3.png",
-            "title": "Chase",
-            "designation": "Fulfilment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "dbb35d2e-4431-48e5-a6cb-97d4b495acaf": {
           "type": "title",
           "settings": {
@@ -178,41 +187,11 @@
             "phone_info": ""
           }
         },
-        "51de812e-547c-47ff-9090-735d305c3223": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/dallas.jpg",
-            "title": "Dallas",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e": {
           "type": "title",
           "settings": {
             "image": "shopify:\/\/shop_images\/jimmy-1648147839258_1200x_9e9e3fde-808c-4ad8-9ff5-06a8a1a8ecb6.png",
             "title": "Jimmy",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "97c50f0a-d69d-49e6-a2eb-8b7de73cd96f": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/deandre_a5e6a5de-8c7b-43bb-8a0b-839f4d905526.png",
-            "title": "Deontae",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/abram.png",
-            "title": "Abraham",
             "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
@@ -327,26 +306,6 @@
             "add_info": "",
             "phone_info": ""
           }
-        },
-        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bridgette_b2b3d392-bab1-4461-91e2-cd4b65d36c26.png",
-            "title": "Bridget",
-            "designation": "Finance Admin",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "title_gaaQgz": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Kadie_c21e1a05-42a4-44d1-a8d8-893af609c36b.jpg",
-            "title": "Kadie",
-            "designation": "Finance Admin",
-            "add_info": "",
-            "phone_info": ""
-          }
         }
       },
       "block_order": [
@@ -354,17 +313,14 @@
         "89cf4160-acac-4e25-aba7-5306c9902460",
         "0ee36b37-fc60-4b3f-8697-89d30f999d22",
         "d5b011a3-2ca1-4be0-8b77-ae0799272be9",
+        "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7",
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae",
         "6eb46a13-3873-44a7-a52c-441f571494a4",
         "0f1ddfbe-1867-499b-85a1-29594d75cc8b",
         "a36ee9f0-13ce-4b5b-9d35-885f1404e217",
         "edaf7f50-a42e-4332-bac3-a57396568fdc",
-        "8b86c970-9d8b-4373-8584-f78c052382f6",
         "dbb35d2e-4431-48e5-a6cb-97d4b495acaf",
-        "51de812e-547c-47ff-9090-735d305c3223",
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e",
-        "97c50f0a-d69d-49e6-a2eb-8b7de73cd96f",
-        "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7",
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6",
         "112f30af-cbdb-4a83-9e27-540d203a1586",
         "ba15bbd3-e261-49f6-a16c-80add243c702",
@@ -375,9 +331,7 @@
         "4d3ed014-5698-44d9-8388-d4e5c92528e0",
         "f1ef1ef5-e136-42c5-9a51-8587714bcd79",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
-        "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
-        "ad8ef9b9-fdc0-45ad-9e64-49d70b3a3fea",
-        "title_gaaQgz"
+        "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1"
       ],
       "settings": {
         "title": "Our Team",
