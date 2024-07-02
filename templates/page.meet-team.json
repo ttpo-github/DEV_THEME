@@ -120,7 +120,7 @@
         "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/abram.png",
+            "image": "shopify:\/\/shop_images\/AB.jpg",
             "title": "Abraham",
             "designation": "Trailer Parts Expert",
             "add_info": "se habla español",
@@ -167,6 +167,16 @@
             "phone_info": ""
           }
         },
+        "title_nDbw6e": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Loretta.jpg",
+            "title": "Loretta",
+            "designation": "Purchasing",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
         "edaf7f50-a42e-4332-bac3-a57396568fdc": {
           "type": "title",
           "settings": {
@@ -192,6 +202,56 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/jimmy-1648147839258_1200x_9e9e3fde-808c-4ad8-9ff5-06a8a1a8ecb6.png",
             "title": "Jimmy",
+            "designation": "Fulfillment",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_EARfqf": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Alejandro.jpg",
+            "title": "Alejandro",
+            "designation": "Fulfillment",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_RWBFCg": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jonjon.jpg",
+            "title": "John",
+            "designation": "Fulfillment",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_WwKj7w": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lane.jpg",
+            "title": "Lane",
+            "designation": "Fulfillment",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_kTK4XN": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Manny.jpg",
+            "title": "Manny",
+            "designation": "Fulfillment",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_EXTz7K": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tank.jpg",
+            "title": "Tank",
             "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
@@ -270,7 +330,7 @@
         "4d3ed014-5698-44d9-8388-d4e5c92528e0": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brandon2.png",
+            "image": "shopify:\/\/shop_images\/Brandon_Away.jpg",
             "title": "Brandon",
             "designation": "SEO Specialist",
             "add_info": "",
@@ -306,6 +366,26 @@
             "add_info": "",
             "phone_info": ""
           }
+        },
+        "title_JEL9VH": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kadie_26d21c8a-09a5-44a1-8725-d82b685dd4a4.jpg",
+            "title": "Kadie",
+            "designation": "Finance",
+            "add_info": "",
+            "phone_info": ""
+          }
+        },
+        "title_PxVVma": {
+          "type": "title",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Taylor.jpg",
+            "title": "Taylor",
+            "designation": "Finance",
+            "add_info": "",
+            "phone_info": ""
+          }
         }
       },
       "block_order": [
@@ -318,9 +398,15 @@
         "6eb46a13-3873-44a7-a52c-441f571494a4",
         "0f1ddfbe-1867-499b-85a1-29594d75cc8b",
         "a36ee9f0-13ce-4b5b-9d35-885f1404e217",
+        "title_nDbw6e",
         "edaf7f50-a42e-4332-bac3-a57396568fdc",
         "dbb35d2e-4431-48e5-a6cb-97d4b495acaf",
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e",
+        "title_EARfqf",
+        "title_RWBFCg",
+        "title_WwKj7w",
+        "title_kTK4XN",
+        "title_EXTz7K",
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6",
         "112f30af-cbdb-4a83-9e27-540d203a1586",
         "ba15bbd3-e261-49f6-a16c-80add243c702",
@@ -331,7 +417,9 @@
         "4d3ed014-5698-44d9-8388-d4e5c92528e0",
         "f1ef1ef5-e136-42c5-9a51-8587714bcd79",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
-        "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1"
+        "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
+        "title_JEL9VH",
+        "title_PxVVma"
       ],
       "settings": {
         "title": "Our Team",
