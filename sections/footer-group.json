@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -35,6 +44,27 @@
         "full_width": true,
         "padding_top": 152,
         "padding_bottom": 152
+      }
+    },
+    "1720028631f21bb697": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_EJXcpi": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "#TheTrailerPartsOutlet",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_EJXcpi"
+      ],
+      "settings": {
+        "include_margins": false,
+        "css_id_selector": ""
       }
     },
     "1652095692bb977336": {
@@ -142,6 +172,7 @@
   },
   "order": [
     "bf501a9e-f7e8-4a77-b6c3-a0d41c9cdbe1",
+    "1720028631f21bb697",
     "1652095692bb977336",
     "new-footer"
   ]
