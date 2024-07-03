@@ -315,7 +315,7 @@
 }
 
 .disclosure__link:hover {
-  color: rgb(var(--color-foreground));
+  /*color: rgb(var(--color-foreground));*/
 }
 
 .disclosure__link .icon-checkmark {
