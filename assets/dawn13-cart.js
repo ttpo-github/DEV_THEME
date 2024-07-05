@@ -136,6 +136,7 @@ class CartItems extends HTMLElement {
         if (parsedState.errors) {
           quantityElement.value = quantityElement.getAttribute('value');
           this.updateLiveRegions(line, parsedState.errors);
+          console.log("ERROR FOUND")
           return;
         }
 
