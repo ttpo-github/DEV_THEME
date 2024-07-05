@@ -26,7 +26,7 @@ class CartDrawer extends HTMLElement {
   */
 
   setHeaderCartIconAccessibility() {
-    const cartLink = document.querySelectorAll('#cart-icon-bubble');
+    const cartLink = document.querySelectorAll('#dawn13-cart-icon-bubble');
     cartLink.forEach((btn) => {
     btn.setAttribute('role', 'button');
     btn.setAttribute('aria-haspopup', 'dialog');
@@ -151,7 +151,7 @@ class CartDrawerItems extends CartItems {
         selector: '.dawn13-drawer__inner',
       },
       {
-        id: 'cart-icon-bubble',
+        id: 'dawn13-cart-icon-bubble',
         section: 'dawn13-cart-icon-bubble',
         selector: '.shopify-section',
       },
