@@ -151,7 +151,7 @@ class CartDrawerItems extends CartItems {
         selector: '.dawn13-drawer__inner',
       },
       {
-        id: 'cart-icon-bubble',
+        id: 'dawn13-cart-icon-bubble',
         section: 'cart-icon-bubble',
         selector: '.shopify-section',
       },
