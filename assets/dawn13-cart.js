@@ -120,6 +120,7 @@ class CartItems extends HTMLElement {
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
       .then((response) => {
+        console.log('In first then block - cart.js')
         return response.text();
       })
       .then((state) => {
