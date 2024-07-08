@@ -639,7 +639,7 @@ details[open]>.header__menu-item{
   text-transform: capitalize;
 }
 html .menu-drawer__navigation {
-  padding: 0 0 65px;
+  padding: 30 0 35px;
 }
 .heightlinghted__menu .header__submenu .header__submenu {
   position: absolute;
