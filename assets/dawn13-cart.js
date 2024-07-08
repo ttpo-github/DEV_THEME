@@ -124,6 +124,7 @@ class CartItems extends HTMLElement {
         return response.text();
       })
       .then((state) => {
+        console.log('In second then block - cart.js')
         const parsedState = JSON.parse(state);
         
         //console.log(parsedState.sections)
