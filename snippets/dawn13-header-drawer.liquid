@@ -141,8 +141,8 @@
               </a>
             {%- endif -%}
             {%- if localization.available_countries or localization.available_languages -%}
+              {% comment %}
               <div class="menu-drawer__localization header-localization">
-                {% comment %}
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
                   <noscript>
                     {%- form 'localization', id: 'HeaderCountryMobileFormNoScriptDrawer', class: 'localization-form' -%}
@@ -232,9 +232,10 @@
                   </localization-form>
                   
                 {%- endif -%}
+              </div>
               {% endcomment %}
 
-                <pk-localization-form>
+              <pk-localization-form>
                       {% form 'localization' %}
                        
                         <div class="disclosure">
@@ -295,7 +296,6 @@
                   <!-- Language Selector -->
                   
                 </div>
-              </div>
               </div>
             {%- endif -%}
             
