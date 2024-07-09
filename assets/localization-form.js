@@ -27,17 +27,17 @@ if (!customElements.get('localization-form')) {
           this.elements.search.addEventListener('blur', this.onSearchBlur.bind(this));
           this.elements.search.addEventListener('keydown', this.onSearchKeyDown.bind(this));
         }
-        /*
+        
         if (this.elements.closeButton) {
           this.elements.closeButton.addEventListener('click', this.hidePanel.bind(this));
         }
-        */
-        /*
+        
+      
         if (this.elements.resetButton) {
           this.elements.resetButton.addEventListener('click', this.resetFilter.bind(this));
           this.elements.resetButton.addEventListener('mousedown', (event) => event.preventDefault());
         }
-        */
+        
         this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
       }
 
@@ -131,7 +131,7 @@ if (!customElements.get('localization-form')) {
         document.querySelector('.menu-drawer').classList.add('country-selector-open');
       }
 
-      /*
+      
       closeSelector(event) {
         if (
           event.target.classList.contains('country-selector__overlay') ||
@@ -141,7 +141,7 @@ if (!customElements.get('localization-form')) {
           this.hidePanel();
         }
       }
-      */
+      
 
       filterCountries() {
         const searchValue = this.elements.search.value.toLowerCase();
