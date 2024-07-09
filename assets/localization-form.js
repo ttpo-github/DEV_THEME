@@ -23,7 +23,7 @@ if (!customElements.get('localization-form')) {
 
         if (this.elements.search) {
           this.elements.search.addEventListener('keyup', this.filterCountries.bind(this));
-          this.elements.search.addEventListener('focus', this.onSearchFocus.bind(this));
+          //this.elements.search.addEventListener('focus', this.onSearchFocus.bind(this));
           this.elements.search.addEventListener('blur', this.onSearchBlur.bind(this));
           this.elements.search.addEventListener('keydown', this.onSearchKeyDown.bind(this));
         }
