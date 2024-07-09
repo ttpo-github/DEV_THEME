@@ -732,6 +732,7 @@
 
                   <span style="color:white;"> | </span>
 
+                  {% comment %}
                   <pk-localization-form>
                       {% form 'localization' %}
                        
@@ -791,7 +792,7 @@
                   customElements.define('pk-localization-form', LocalizationForm);
                   </script>
                   <!-- Language Selector -->
-                  
+                  {% endcomment %}
                 </div>
               </div>
               {% endif %}
