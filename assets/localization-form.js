@@ -11,7 +11,7 @@ if (!customElements.get('localization-form')) {
           button: this.querySelector('button.localization-form__select'),
           panel: this.querySelector('.disclosure__list-wrapper'),
           search: this.querySelector('input[name="country_filter"]'),
-          //closeButton: this.querySelector('.country-selector__close-button'),
+          closeButton: this.querySelector('.country-selector__close-button'),
           resetButton: this.querySelector('.country-filter__reset-button'),
           searchIcon: this.querySelector('.country-filter__search-icon'),
           liveRegion: this.querySelector('#sr-country-search-results'),
