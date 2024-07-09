@@ -18,7 +18,7 @@ if (!customElements.get('localization-form')) {
         };
         this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
         this.addEventListener('keydown', this.onContainerKeyDown.bind(this));
-        //this.addEventListener('focusout', this.closeSelector.bind(this));
+        this.addEventListener('focusout', this.closeSelector.bind(this));
         this.elements.button.addEventListener('click', this.openSelector.bind(this));
 
         if (this.elements.search) {
