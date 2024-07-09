@@ -263,6 +263,66 @@
               </div>
             {%- endform -%}
           </localization-form>
+
+          <pk-localization-form>
+                      {% form 'localization' %}
+                       
+                        <div class="disclosure">
+                        <select class="language-selector" aria-label="Language Selector">
+                          {% for language in localization.available_languages %}
+                              <option class="disclosure__item"  {% if language.iso_code == localization.language.iso_code %}selected aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+                                
+                                  {{ language.endonym_name | capitalize }}
+                               
+                              </option>
+
+                            
+                            {% endfor %}
+                        </select>
+                  
+                          <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+                        </div>
+                      {% endform %}
+                    </pk-localization-form>
+          
+                  <script defer>
+                  class LocalizationForm extends HTMLElement {
+                    constructor() {
+                      super();
+                      this.elements = {
+                        input: this.querySelector('input[name="language_code"]'),
+                        selector: this.querySelector('select')
+                      };
+                      
+                      this.elements.selector.addEventListener('change', (event) => {
+                        let selectElement = event.currentTarget;
+                        let selectedOption = selectElement.options[selectElement.selectedIndex]
+                        event.preventDefault();
+                        const form = this.querySelector('form');
+                        this.elements.input.value = selectedOption.dataset.value;
+                        if (form) form.submit();
+                      })
+                    }
+                  
+                   
+                  
+                    onSelection(optionEl) {
+                      console.log(optionEl)
+                      event.preventDefault();
+                      /*
+                      const form = this.querySelector('form');
+                      this.elements.input.value = event.currentTarget.dataset.value;
+                      if (form) form.submit();
+                      */
+                    }
+                  
+                    
+                    
+                  }
+                  
+                  customElements.define('pk-localization-form', LocalizationForm);
+                  </script>
+                  <!-- Language Selector -->
         {% endif %}
 
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
