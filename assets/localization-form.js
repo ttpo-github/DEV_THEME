@@ -131,6 +131,7 @@ if (!customElements.get('localization-form')) {
         document.querySelector('.menu-drawer').classList.add('country-selector-open');
       }
 
+      /*
       closeSelector(event) {
         if (
           event.target.classList.contains('country-selector__overlay') ||
@@ -140,6 +141,7 @@ if (!customElements.get('localization-form')) {
           this.hidePanel();
         }
       }
+      */
 
       filterCountries() {
         const searchValue = this.elements.search.value.toLowerCase();
