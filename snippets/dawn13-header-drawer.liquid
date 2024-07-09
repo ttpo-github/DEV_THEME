@@ -230,6 +230,15 @@
                       </div>
                     {%- endform -%}
                   </localization-form>
+
+                  <localization-form class="small-hide medium-hide no-js-hidden">
+                  {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+                    <div>
+                      <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                      {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
                   
                 {%- endif -%}
               </div>
