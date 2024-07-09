@@ -32,11 +32,12 @@ if (!customElements.get('localization-form')) {
           this.elements.closeButton.addEventListener('click', this.hidePanel.bind(this));
         }
         */
+        /*
         if (this.elements.resetButton) {
           this.elements.resetButton.addEventListener('click', this.resetFilter.bind(this));
           this.elements.resetButton.addEventListener('mousedown', (event) => event.preventDefault());
         }
-
+        */
         this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
       }
 
