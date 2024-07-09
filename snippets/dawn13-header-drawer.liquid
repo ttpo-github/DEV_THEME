@@ -142,6 +142,7 @@
             {%- endif -%}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
+                {% comment %}
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
                   <noscript>
                     {%- form 'localization', id: 'HeaderCountryMobileFormNoScriptDrawer', class: 'localization-form' -%}
@@ -183,7 +184,8 @@
                     {%- endform -%}
                   </localization-form>
                 {% endif %}
-
+                {% endcomment %}
+              
                 {%- if localization.available_languages and localization.available_languages.size > 1 -%}
                   <noscript>
                     {%- form 'localization',
@@ -227,9 +229,11 @@
                       </div>
                     {%- endform -%}
                   </localization-form>
+                  
                 {%- endif -%}
               </div>
             {%- endif -%}
+            
             <ul class="list list-social list-unstyled" role="list">
               {%- if settings.social_twitter_link != blank -%}
                 <li class="list-social__item">
