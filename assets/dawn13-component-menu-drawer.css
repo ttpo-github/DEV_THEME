@@ -234,7 +234,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1rem 0;
   font-size: 1.4rem;
   /*color: rgb(var(--color-foreground));*/
-  color: #FFFFFF;
+  color: #000;
   margin-bottom: 0;
 }
 
