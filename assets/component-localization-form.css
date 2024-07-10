@@ -101,7 +101,7 @@
 }
 
 .localization-selector option {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .localization-selector + .disclosure__list-wrapper {
@@ -228,6 +228,10 @@
 }
 
 @media screen and (max-width: 749px) {
+  .localization-selector option {
+  color: #FFFFFF;
+}
+  
   .disclosure__list-wrapper.country-selector:not([hidden]) + .country-selector__overlay:empty {
     display: block;
   }
