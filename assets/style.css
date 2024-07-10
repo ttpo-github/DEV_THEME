@@ -3006,6 +3006,11 @@ ul.tabing-header li.active:after,
   box-shadow: none;
 }
 
+.category-card-text {
+  font-size:11px;
+  margin-top:5px;
+}
+
 /*
 .sub-collection-list .sub-collection-item:hover {
   
