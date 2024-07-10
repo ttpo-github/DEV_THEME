@@ -62,8 +62,8 @@
         "enable_language_selector": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 8,
-        "padding_bottom": 12
+        "padding_top": 12,
+        "padding_bottom": 16
       }
     },
     "04f14fa8-377f-4782-8719-d9f6d464c0c9": {
