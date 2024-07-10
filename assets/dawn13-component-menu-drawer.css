@@ -3,6 +3,13 @@
   box-shadow: 0 3px 6px #00000080;
 }
 
+.category-card:active {
+  transform: scale(0.98); 
+  top: 0px;
+  left: 0px;
+  box-shadow: none;
+}
+
 .header__icon--menu {
   position: initial;
 }
