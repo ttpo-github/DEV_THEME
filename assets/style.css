@@ -3006,7 +3006,7 @@ ul.tabing-header li.active:after,
   box-shadow: none;
 }
 
-.category-card-text {
+.custom-collections-list .collection-lists .item-wrapper .category-card-text {
   font-size:11px;
   margin-top:5px;
 }
