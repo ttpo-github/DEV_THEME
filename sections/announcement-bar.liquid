@@ -1,6 +1,15 @@
 <style>
   #shopify-section-{{section.id}} {
-    position:sticky; top:calc(var(--viewport-height, 100vh) -(var(--header-bottom-position, 100%)));z-index:2; width:100%;
+    position:sticky; 
+    top:66px;
+    z-index:2;
+    width:100%;
+  }
+
+  @media screen and (max-width: 989px){
+    #shopify-section-{{section.id}} {
+      top:107px;
+    }
   }
 </style>
 
