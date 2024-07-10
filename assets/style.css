@@ -6072,7 +6072,8 @@ html .kuMulticheck .kuHover .kuFilterNames ul li a:hover span.kuFilterLabel:afte
   background: #e9e9e9;
 }
 .custom-collections-list>div:first-child .grid__item:last-child > .collection-lists {
-    background-color: #000646;
+    /*background-color: #000646;*/
+    background-color: #e9e9e9;
 }
 .collection-lists > div {
   width: 100%;
