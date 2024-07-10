@@ -1,3 +1,8 @@
+.category-card {
+  border-radius:4px; 
+  box-shadow: 0 3px 6px #00000080;
+}
+
 .header__icon--menu {
   position: initial;
 }
