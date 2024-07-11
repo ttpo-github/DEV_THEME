@@ -228,7 +228,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .header--has-social .menu-drawer__utility-links {
-  padding: 2rem 1rem;
+  padding: 8px 1rem;
 }
 
 @media screen and (max-width: 749px) {
