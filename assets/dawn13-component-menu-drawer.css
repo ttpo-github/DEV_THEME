@@ -245,7 +245,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__account {
   display: inline-flex;
-  align-items: center;
+  /*align-items: center;*/
   text-decoration: none;
   padding: 1rem 0;
   font-size: 1.4rem;
