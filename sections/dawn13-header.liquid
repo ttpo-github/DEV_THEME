@@ -376,7 +376,7 @@
                   
 
                   <localization-form class="medium-hide no-js-hidden">
-            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
+            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form', style:'padding:0;' -%}
               <div>
                 <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
                 {%- render 'custom-language-localization', localPosition: 'HeaderLanguage' -%}
