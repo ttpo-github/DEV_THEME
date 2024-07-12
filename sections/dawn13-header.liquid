@@ -238,6 +238,8 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+
+      {% comment %}
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript class="small-hide medium-hide">
@@ -257,7 +259,7 @@
             {%- endform -%}
           </noscript>
 
-          {% comment %}
+          
           <localization-form class="small-hide medium-hide no-js-hidden">
             {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
               <div>
@@ -266,7 +268,7 @@
               </div>
             {%- endform -%}
           </localization-form>
-          {% endcomment %}
+      
           
         {% endif %}
 
@@ -297,7 +299,7 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
-
+{% endcomment %}
         
       </div>
       {% render 'dawn13-header-search', input_id: 'Search-In-Modal' %}
