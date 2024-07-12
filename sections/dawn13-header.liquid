@@ -365,20 +365,54 @@
 
   <div class="announcement-bar color-accent-1 gradient" role="region" aria-label="Announcement"><div class="page-width">
                 <div class="announcement-bar__message center h5 custom-announcement-bar">
-                  <span style="white-space:pre;">🚚Free Shipping</span><span>📞</span><a href="+19362893191" style="white-space:pre;text-decoration:underline; color:#FFFFFF;">(936) 289-3191</a>
+                  <span style="white-space:pre;">🚚Free Shipping</span><div><span>📞</span><a href="+19362893191" style="white-space:pre;text-decoration:underline; color:#FFFFFF;">(936) 289-3191</a></div>
                   
-                  <localization-form class="small-hide medium-hide no-js-hidden">
-                  {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-                    <div>
-                      <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                      {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-                    </div>
-                  {%- endform -%}
-                </localization-form>
-                  {% comment %}<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                  <localization-form class="small-hide medium-hide no-js-hidden"><form method="post" action="/localization" id="HeaderLanguageForm" accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data" style="
+    padding: 0rem;
+    margin: 0rem;
+"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/?_ab=0&amp;_fd=0&amp;_sc=1"><div>
+                      <h2 class="visually-hidden" id="HeaderLanguageLabel">Language</h2><div class="disclosure">
+  <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="HeaderLanguageList" aria-describedby="HeaderLanguageLabel" fdprocessedid="dwso5" style="
+    margin: 0;
+    padding: .25rem 4rem .25rem 1.5rem;
+    height: auto;
+    min-height: auto;
+">
+    <span>English</span>
+    <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
 </path></svg>
-{% endcomment %}
+
+  </button>
+  <div class="disclosure__list-wrapper" hidden="true">
+    <ul id="HeaderLanguageList" role="list" class="disclosure__list list-unstyled"><li class="disclosure__item" tabindex="-1">
+          <a class="link link--text disclosure__link caption-large focus-inset" href="#" hreflang="en" lang="en" aria-current="true" data-value="en">
+            <span><svg class="icon icon-checkmark color-foreground-text" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"></path>
+</svg>
+</span>
+            <span>
+              English
+            </span>
+          </a>
+        </li><li class="disclosure__item" tabindex="-1">
+          <a class="link link--text disclosure__link caption-large focus-inset" href="#" hreflang="es" lang="es" data-value="es">
+            <span class="visibility-hidden"><svg class="icon icon-checkmark color-foreground-text" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z" fill="currentColor"></path>
+</svg>
+</span>
+            <span>
+              Español
+            </span>
+          </a>
+        </li></ul>
+  </div>
+</div>
+<input type="hidden" name="locale_code" value="en">
+
+
+</div></form></localization-form>
+                  
 
 </div>
               </div></div>
