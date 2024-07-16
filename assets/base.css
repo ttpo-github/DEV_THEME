@@ -2066,7 +2066,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .announcement-bar__message {
-  padding: 1rem 0;
+  padding: .5rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
 }
