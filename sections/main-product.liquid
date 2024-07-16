@@ -720,6 +720,11 @@
   var bottomMenuClosed = false;
 
     console.log(bottomMenuCloseBtn)
+
+  bottomMenuCloseBtn.addEventListener('click', function(){
+    bottomMenu.classList.remove('visible');
+    bottomMenuClosed = true;
+  })
   
   function toggleBottomMenu() {
     var rect = targetElement.getBoundingClientRect();
