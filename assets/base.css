@@ -2438,6 +2438,7 @@ details:not([open]) > .header__icon--menu .icon-close,
 details[open] > .header__icon--menu .icon-hamburger {
   /*visibility: hidden;*/
   display:none;
+  position:absolute;
   opacity: 0;
   transform: scale(0.8);
 }
