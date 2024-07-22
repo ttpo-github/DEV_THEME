@@ -308,6 +308,7 @@
       
       {% comment %}{% render 'dawn13-header-search', input_id: 'Search-In-Modal' %}{% endcomment %}
 
+      {% comment %}
       <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
           <div class="field">
             <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
@@ -324,6 +325,7 @@
               </use></svg>
             </button>
           </div></form></search-form>
+          {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
@@ -409,7 +411,22 @@
 
   <div class="announcement-bar color-accent-1 gradient" role="region" aria-label="Announcement"><div class="page-width">
 
-                
+                <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
+          <div class="field">
+            <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
+            <label class="field__label" for="Search-In-Modal">Search</label>
+            <input type="hidden" name="options[prefix]" value="last">
+            <button type="reset" class="reset__button field__button hidden" aria-label="Clear search term">
+              <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-reset">
+              </use></svg>
+            </button>
+            <button class="search__button field__button" aria-label="Search">
+              <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                <use href="#icon-search">
+              </use></svg>
+            </button>
+          </div></form></search-form>
     
                 <div class="announcement-bar__message center h5 custom-announcement-bar">
                   <span style="white-space:pre;">🚚Free Shipping</span><div><span>📞</span><a href="tel:+19362893191" style="white-space:pre;text-decoration:underline; color:#FFFFFF;">(936) 289-3191</a></div>
