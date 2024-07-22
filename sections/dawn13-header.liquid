@@ -119,7 +119,7 @@
   <script src="{{ 'dawn13-cart-drawer.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-{% comment %}
+
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
@@ -135,24 +135,6 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-{% endcomment %}
-
-<search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
-          <div class="field">
-            <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
-            <label class="field__label" for="Search-In-Modal">Search</label>
-            <input type="hidden" name="options[prefix]" value="last">
-            <button type="reset" class="reset__button field__button hidden" aria-label="Clear search term">
-              <svg class="icon icon-close" aria-hidden="true" focusable="false">
-                <use xlink:href="#icon-reset">
-              </use></svg>
-            </button>
-            <button class="search__button field__button" aria-label="Search">
-              <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                <use href="#icon-search">
-              </use></svg>
-            </button>
-          </div></form></search-form>
 
 {%- liquid
   for block in section.blocks
@@ -323,7 +305,25 @@
         {% endcomment %}
         
       </div>
-      {% render 'dawn13-header-search', input_id: 'Search-In-Modal' %}
+      
+      {% comment %}{% render 'dawn13-header-search', input_id: 'Search-In-Modal' %}{% endcomment %}
+
+      <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
+          <div class="field">
+            <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
+            <label class="field__label" for="Search-In-Modal">Search</label>
+            <input type="hidden" name="options[prefix]" value="last">
+            <button type="reset" class="reset__button field__button hidden" aria-label="Clear search term">
+              <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-reset">
+              </use></svg>
+            </button>
+            <button class="search__button field__button" aria-label="Search">
+              <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                <use href="#icon-search">
+              </use></svg>
+            </button>
+          </div></form></search-form>
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
