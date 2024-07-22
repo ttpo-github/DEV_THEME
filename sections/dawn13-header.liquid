@@ -388,6 +388,10 @@
       gap:0rem;
     }
 
+    .desktop_search_form {
+      display:none;
+    }
+
     @media screen and (min-width: 990px){
       .custom-announcement-bar{
         justify-content:center;
@@ -399,11 +403,19 @@
         flex-direction:row;
         gap:4rem
       }
+
+       .desktop_search_form{
+         display:block;
+       }
+
+      .mobile_search_form{
+        display:none;
+      }
     }
   </style>
 
- {% comment %}
-  <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
+ 
+  <search-form class="search-modal__form mobile_search_form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
           <div class="field">
             <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
             <label class="field__label" for="Search-In-Modal">Search</label>
@@ -419,12 +431,12 @@
               </use></svg>
             </button>
           </div></form></search-form>
-  {% endcomment %}      
+    
 
   <div class="announcement-bar color-accent-1 gradient" role="region" aria-label="Announcement">
     <div class="page-width sub-header-container" >
 
-                <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form" style="max-width: 40em">
+                <search-form class="search-modal__form desktop_search_form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form" style="max-width: 40em">
           <div class="field">
             <input style="background-color: #fff; color: #000;" class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
             <label style="color:#000;" class="field__label" for="Search-In-Modal">Search</label>
