@@ -17,8 +17,8 @@
       "type": "quick-order-list",
       "disabled": false,
       "settings": {
-        "show_image": true,
-        "show_sku": false,
+        "show_image": false,
+        "show_sku": true,
         "color_scheme": "",
         "header-c9133d3d953ebabeb0b130e0d75d6e5a": null,
         "padding_top": 36,
