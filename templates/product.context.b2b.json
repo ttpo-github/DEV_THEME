@@ -17,10 +17,10 @@
       "type": "quick-order-list",
       "disabled": false,
       "settings": {
-        "show_image": false,
+        "show_image": true,
         "show_sku": false,
         "color_scheme": "",
-        "header-4ddbc00b8eb387cbfb67fee7a46eec41": null,
+        "header-c9133d3d953ebabeb0b130e0d75d6e5a": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -40,7 +40,7 @@
           "disabled": true,
           "settings": {
             "show_dynamic_checkout": true,
-            "header-f81e59ae520a3e0e5172bed71326291f": null,
+            "header-26c53c339dd6bc011c75a62be3de24b5": null,
             "phone_text": "",
             "phone_link": ""
           }
