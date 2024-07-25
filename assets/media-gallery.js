@@ -43,11 +43,16 @@ if (!customElements.get('media-gallery')) {
           let atcMobileImage = document.querySelector('.atc_mobile_image_container img')
           let atcDesktopImage = document.querySelector('.atc_desktop_image_container img')
 
-          atcMobileImage.src = newImage.src
-          atcMobileImage.srcset = newImage.srcset
+          if(atcMobileImage){
+            atcMobileImage.src = newImage.src
+          }
+          if(atcDesktopImage){
+            atcMobileImage.srcset = newImage.srcset
+            atcDesktopImage.src = newImage.src
+          }
 
-          atcDesktopImage.src = newImage.src
-          atcDesktopImage.srcset = newImage.srcset
+          //atcDesktopImage.src = newImage.src
+          //atcDesktopImage.srcset = newImage.srcset
           
           
           activeThumbnail.parentElement.prepend(activeThumbnail);
