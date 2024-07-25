@@ -1153,9 +1153,11 @@ class VariantSelects extends HTMLElement {
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
+        
         let atcPrice = document.getElementsByClassName('atc_price')[0];
-
-        atcPrice.innerHTML = captureCtaSlideupPrice.innerHTML
+        if(atcPrice){
+          atcPrice.innerHTML = captureCtaSlideupPrice.innerHTML
+        }
 
         //console.log(price)
 
