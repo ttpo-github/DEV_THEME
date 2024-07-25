@@ -125,6 +125,10 @@ quick-order-list .quantity__button {
   border-radius:4px;
 }
 
+img.variant-item__image {
+  border-radius:4px;
+}
+
 @media screen and (min-width: 990px) {
   .variant-item__image {
     max-width: 100%;
