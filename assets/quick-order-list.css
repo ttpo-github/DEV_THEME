@@ -129,7 +129,7 @@ img.variant-item__image {
   border-radius:4px;
 }
 
-@media screen and (min-width: 989px){
+@media screen and (max-width: 989px){
   .variant-item__image-container {
     display: inline-flex;
     align-items: flex-start;
