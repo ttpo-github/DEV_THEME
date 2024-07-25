@@ -245,7 +245,8 @@ quick-order-list-remove-button .button {
 }
 
 quick-order-list-remove-button .button:not([disabled]):hover {
-  color: rgb(var(--color-foreground));
+  /*color: rgb(var(--color-foreground));*/
+  color: #FFFFFF;
 }
 
 quick-order-list-remove-button .icon-remove {
