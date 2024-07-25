@@ -76,8 +76,9 @@ quick-order-list .quantity__button {
   text-align: left;
   padding-bottom: 2rem;
   opacity: 0.85;
-  font-weight: normal;
-  font-size: 1.1rem;
+  font-weight: 900;
+  font-size: 1.7rem;
+  text-decoration:underline;
 }
 
 .variant-item__quantity-wrapper {
