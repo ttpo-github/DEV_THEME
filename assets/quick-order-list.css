@@ -114,6 +114,7 @@ quick-order-list .quantity__button {
   height: 4.5rem;*/
   width:8rem;
   margin-right: 1.2rem;
+  border-radius: 4px;
 }
 
 .variant-item__image {
