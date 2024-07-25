@@ -129,6 +129,23 @@ img.variant-item__image {
   border-radius:4px;
 }
 
+@media screen and (min-width: 989px){
+  .variant-item__image-container {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius:4px;
+  }
+  
+  .variant-item__media {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 1.2rem;
+    border-radius: 4px;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .variant-item__image {
     max-width: 100%;
