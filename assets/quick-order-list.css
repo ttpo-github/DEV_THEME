@@ -98,6 +98,7 @@ quick-order-list .quantity__button {
 
 .quick-order-list__table *.right {
   text-align: right;
+  padding-right:1.6rem;
 }
 
 .variant-item__image-container {
