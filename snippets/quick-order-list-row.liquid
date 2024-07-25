@@ -436,6 +436,7 @@
     {% # theme-check-enable %}
   </td>
 </tr>
+            {% comment %}
 <tr class="small-hide medium-hide hidden desktop-row-error">
   <td></td>
   <td>
@@ -457,6 +458,7 @@
   <td></td>
   <td></td>
 </tr>
+{% endcomment %}
 
 {%- if product.quantity_price_breaks_configured? -%}
   <volume-pricing class="hidden" id="Volume-{{ variant.id }}">
