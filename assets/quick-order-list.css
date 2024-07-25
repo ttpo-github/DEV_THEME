@@ -133,6 +133,7 @@ quick-order-list .quantity__button {
 
   .variant-item:not(.variant-item--no-media) .variant-item__inner {
     display: flex;
+    padding-left: 1.6rem;
   }
 
   .variant-item__discounted-prices {
