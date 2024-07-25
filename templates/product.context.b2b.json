@@ -21,7 +21,7 @@
         "show_sku": true,
         "color_scheme": "",
         "header-59e367d982fdd8f6955a7ad2c6683a89": null,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       },
       "blocks": {
@@ -55,10 +55,46 @@
         "ef203090-7a02-4883-850a-501b94d93af1",
         "617ae22b-7115-4c22-99a7-6674be4a3410"
       ]
+    },
+    "rich_text_JqcDL": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "header-a28dd1847dd8020768e9fbccda1d7eca": null,
+        "padding_top": 40,
+        "padding_bottom": 52
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "custom_liquid_WpKN7": {
+      "type": "custom-liquid",
+      "disabled": false,
+      "settings": {
+        "custom_liquid": "<h2 style=\"text-align:center; font-size:4rem;\">QUICK ORDER FORM<\/h2>",
+        "color_scheme": "inverse",
+        "header-5abc2ab92c3dc9eaa010a07d65842e2f": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
     }
   },
   "order": [
     "main",
+    "rich_text_JqcDL",
+    "custom_liquid_WpKN7",
     "d062b0a0-455d-4a86-9e6d-40f9a94cc2f1",
     "related-products",
     "product_detail_tabs_UPzfLk"
