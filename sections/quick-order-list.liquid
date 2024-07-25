@@ -12,8 +12,6 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  tr.variant-item:nth-child(odd)   { background-color:#eee; }
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -21,6 +19,10 @@
     }
   }
 {%- endstyle -%}
+
+<style>
+  tr.variant-item:nth-child(odd)   { background-color:#eee; }
+</style>
 
 {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
 {% # theme-check-disable %}
