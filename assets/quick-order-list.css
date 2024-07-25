@@ -104,13 +104,15 @@ quick-order-list .quantity__button {
 .variant-item__image-container {
   display: inline-flex;
   align-items: flex-start;
-  height: 4.5rem;
-  width: 4.5rem;
+  /*height: 4.5rem;
+  width: 4.5rem;*/
+  width:8rem;
 }
 
 .variant-item__media {
-  width: 4.5rem;
-  height: 4.5rem;
+  /*width: 4.5rem;
+  height: 4.5rem;*/
+  width:8rem;
   margin-right: 1.2rem;
 }
 
