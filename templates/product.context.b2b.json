@@ -13,6 +13,22 @@
     "b2b": true
   },
   "sections": {
+    "custom_liquid_WpKN7": {
+      "type": "custom-liquid",
+      "disabled": false,
+      "settings": {
+        "custom_liquid": "<h2 style=\"text-align:center; font-size:4rem;\">QUICK ORDER FORM<\/h2>",
+        "color_scheme": "inverse",
+        "header-c2544025fdd81c7ef9feed0881b308ae": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
     "d062b0a0-455d-4a86-9e6d-40f9a94cc2f1": {
       "type": "quick-order-list",
       "disabled": false,
@@ -20,7 +36,7 @@
         "show_image": true,
         "show_sku": true,
         "color_scheme": "",
-        "header-59e367d982fdd8f6955a7ad2c6683a89": null,
+        "header-eab3ff5c3a487c8061aa2df4d609805e": null,
         "padding_top": 0,
         "padding_bottom": 36
       },
@@ -37,10 +53,10 @@
       "blocks": {
         "buy_buttons_nydiG": {
           "type": "buy_buttons",
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "show_dynamic_checkout": true,
-            "header-5b97e4e29c66015af4f4d1fccef8e370": null,
+            "header-e8191b193f643bdcc10da4f03b8cb812": null,
             "phone_text": "",
             "phone_link": ""
           }
@@ -54,22 +70,6 @@
         "quantity_selector",
         "ef203090-7a02-4883-850a-501b94d93af1",
         "617ae22b-7115-4c22-99a7-6674be4a3410"
-      ]
-    },
-    "custom_liquid_WpKN7": {
-      "type": "custom-liquid",
-      "disabled": false,
-      "settings": {
-        "custom_liquid": "<h2 style=\"text-align:center; font-size:4rem;\">QUICK ORDER FORM<\/h2>",
-        "color_scheme": "inverse",
-        "header-5abc2ab92c3dc9eaa010a07d65842e2f": null,
-        "padding_top": 0,
-        "padding_bottom": 0
-      },
-      "blocks": {
-      },
-      "block_order": [
-
       ]
     }
   },
