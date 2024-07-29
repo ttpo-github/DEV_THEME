@@ -44,6 +44,18 @@
                       >
                         {{ childlink.title | escape }}
                       </a>
+
+
+                      <div class="item-wrapper">
+            
+                        <a class="category-card"  href="{{ childlink.url }}">
+                          <div style="border-radius:4px;" class="img-wrap">
+                          	<img src="{{ _link.object.featured_image | img_url: '145x145' }}" alt="Trailer Axle">
+                          </div>
+                          <p class="category-card-text">{{ childlink.title | escape }}</p>
+                        </a>
+          			</div>
+                      
                     {%- else -%}
                       <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
                         <summary
