@@ -138,6 +138,7 @@
   {% endcomment %}
   
   <div class="bt-container custom-subcollections-list collection-header-B">
+    <div style="border-radius: 4px;padding: 10px;padding-bottom: 20px;background: #e9e9e9;">
     <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
@@ -190,7 +191,7 @@
   {% endif %}
   {% comment %} Collection Header B {% endcomment %}
 
-  
+  </div>
 </div>
 
 {% schema %}
