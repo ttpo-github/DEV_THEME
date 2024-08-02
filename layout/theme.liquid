@@ -581,32 +581,7 @@ window.addEventListener("load", function() {
     {% assign menu_handle = 'collections' %}
 {% assign main_menu = linklists[menu_handle] %}
 
-{% if main_menu %}
-  {% for link in main_menu.links %}
-    <p>Main Link: {{ link.title }}</p>
-    
-    {% if link.links.size > 0 %}
-      {% for child_link in link.links %}
-        <p>&nbsp;&nbsp;Child Link: {{ child_link.title }}</p>
-        
-        {% if child_link.links.size > 0 %}
-          {% for grandchild_link in child_link.links %}
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;Grandchild Link: {{ grandchild_link.title }}</p>
-            
-            {% if grandchild_link.links.size > 0 %}
-              {% for great_grandchild_link in grandchild_link.links %}
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Great Grandchild Link: {{ great_grandchild_link.title }}</p>
-              {% endfor %}
-            {% endif %}
-            
-          {% endfor %}
-        {% endif %}
-        
-      {% endfor %}
-    {% endif %}
-    
-  {% endfor %}
-{% endif %}
+<script>console.log('{{ main_menu }}')</script>
 
 
     
