@@ -14,7 +14,7 @@ if (!customElements.get('product-form')) {
     onSubmitHandler(evt) {
       evt.preventDefault();
 
-      console.log("FORM SUBMISSION")
+     
       
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
@@ -28,7 +28,7 @@ if (!customElements.get('product-form')) {
 
       this.handleErrorMessage();
 
-      console.log("IN THE PRODUCT_FORM")
+     
       this.submitButton.setAttribute('aria-disabled', true);
       this.submitButton.classList.add('loading');
       this.querySelector('.loading-overlay__spinner').classList.remove('hidden');

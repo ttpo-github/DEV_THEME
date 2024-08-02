@@ -3489,6 +3489,12 @@ quantity-input.quantity:after {
   /* CUSTOM */
   padding: 18px 0px;
 }
+
+.product-form__buttons .custom-btn .loading {
+    color: transparent;
+    position: relative;
+}
+
 .custom-btn .path {
   stroke: #fff;
 }
@@ -3499,6 +3505,12 @@ quantity-input.quantity:after {
   vertical-align: top;
   margin: -2px -26px -3px 4px;
   width: 18px;
+
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
 }
 
 
