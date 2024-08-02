@@ -3490,7 +3490,7 @@ quantity-input.quantity:after {
   padding: 18px 0px;
 }
 
-.product-form__buttons .custom-btn .loading {
+.product-form__buttons .custom-btn.loading {
     color: transparent;
     position: relative;
 }
