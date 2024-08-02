@@ -3490,7 +3490,7 @@ quantity-input.quantity:after {
 
   /* CUSTOM */
   padding: 18px 0px;
-  transition:all .0s linear;
+  transition:all .1s linear;
 }
 
 .product-form__buttons .custom-btn:active {
