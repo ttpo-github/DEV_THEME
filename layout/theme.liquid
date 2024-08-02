@@ -476,11 +476,9 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       <div class="globoRecommendationsTop"></div>{{ content_for_layout }}<div class="globoRecommendationsBottom"></div>
       
-      {% assign menu_handle = 'collections' %}
-{% assign main_menu = linklists[menu_handle] %}
+     
 
-
-    {% for link in linklists.menu_handle.links %}
+    {% for link in linklists['Collections'].links %}
   <a class="custom-linkadoodles" href="{{ link.url }}">{{ link.title }}</a>
 {% endfor %}
     </main>
