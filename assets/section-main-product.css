@@ -189,7 +189,7 @@ fieldset.product-form__input .form__label {
   font-weight: 600;
 
    box-shadow: 0 3px 6px #00000080;
-    transition:all .01s linear;
+    transition:all .05s linear;
 }
 
 .product-form__input input[type='radio'] + label.variant-card {
