@@ -3488,7 +3488,7 @@ quantity-input.quantity:after {
 
   /* CUSTOM */
   padding: 18px 0px;
-  tansition:all .1s ease-out;
+  tansition:all .2s linear;
 }
 
 .product-form__buttons .custom-btn:active {
