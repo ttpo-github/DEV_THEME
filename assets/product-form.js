@@ -13,6 +13,9 @@ if (!customElements.get('product-form')) {
 
     onSubmitHandler(evt) {
       evt.preventDefault();
+
+      console.log("FORM SUBMISSION")
+      
       if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
       let disclaimerCheck = document.querySelector('#custom-disclaimer')
