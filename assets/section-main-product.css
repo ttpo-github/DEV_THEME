@@ -232,6 +232,9 @@ fieldset.product-form__input .form__label {
   color: #fff;
   /*border-color: #000646;*/
 
+  top:0;
+  left:0;
+
   transform:scale(0.999);
   box-shadow:none;
 }
