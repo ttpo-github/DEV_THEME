@@ -34,7 +34,7 @@
                 {%- for childlink in link.links -%}
                   <li>
                     {%- if childlink.links == blank -%}
-                      {% comment %}
+                     
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
@@ -45,8 +45,9 @@
                       >
                         {{ childlink.title | escape }}
                       </a>
-                      {% endcomment %}
+                      
 
+                      {% comment %}
                       <div class="item-wrapper">
             
                         <a class="category-card"  href="{{ childlink.url }}">
@@ -56,6 +57,7 @@
                           <p class="category-card-text">{{ childlink.title | escape }}</p>
                         </a>
           			</div>
+                    {% endcomment %}
                       
                     {%- else -%}
                       <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
