@@ -743,7 +743,7 @@ summary::-webkit-details-marker {
 */
 
 *:focus {
-  outline: none !important;
+  outline: 0;
   box-shadow: none;
 }
 
