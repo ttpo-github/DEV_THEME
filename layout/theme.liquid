@@ -577,6 +577,67 @@ window.addEventListener("load", function() {
 </script> 
 
 
+
+    {% assign menu_handle = 'collections' %}
+{% assign main_menu = linklists[menu_handle] %}
+
+{% assign menu_structure = '' %}
+
+{% if main_menu %}
+  {% assign menu_structure = '[' %}
+  {% for link in main_menu.links %}
+    {% assign link_json = '{"title": "' | append: link.title | append: '", "url": "' | append: link.url | append: '"}' %}
+    
+    {% if link.links.size > 0 %}
+      {% assign child_links = '' %}
+      {% for child_link in link.links %}
+        {% assign child_link_json = '{"title": "' | append: child_link.title | append: '", "url": "' | append: child_link.url | append: '"' %}
+        
+        {% if child_link.links.size > 0 %}
+          {% assign grandchild_links = '' %}
+          {% for grandchild_link in child_link.links %}
+            {% assign grandchild_link_json = '{"title": "' | append: grandchild_link.title | append: '", "url": "' | append: grandchild_link.url | append: '"' %}
+            
+            {% if grandchild_link.links.size > 0 %}
+              {% assign great_grandchild_links = '' %}
+              {% for great_grandchild_link in grandchild_link.links %}
+                {% assign great_grandchild_link_json = '{"title": "' | append: great_grandchild_link.title | append: '", "url": "' | append: great_grandchild_link.url | append: '"}' %}
+                {% assign great_grandchild_links = great_grandchild_links | append: great_grandchild_link_json | append: ',' %}
+              {% endfor %}
+              {% assign great_grandchild_links = great_grandchild_links | slice: 0, -1 %}
+              {% assign grandchild_link_json = grandchild_link_json | append: ', "links": [' | append: great_grandchild_links | append: ']}' %}
+            {% else %}
+              {% assign grandchild_link_json = grandchild_link_json | append: '}' %}
+            {% endif %}
+            
+            {% assign grandchild_links = grandchild_links | append: grandchild_link_json | append: ',' %}
+          {% endfor %}
+          {% assign grandchild_links = grandchild_links | slice: 0, -1 %}
+          {% assign child_link_json = child_link_json | append: ', "links": [' | append: grandchild_links | append: ']}' %}
+        {% else %}
+          {% assign child_link_json = child_link_json | append: '}' %}
+        {% endif %}
+        
+        {% assign child_links = child_links | append: child_link_json | append: ',' %}
+      {% endfor %}
+      {% assign child_links = child_links | slice: 0, -1 %}
+      {% assign link_json = link_json | append: ', "links": [' | append: child_links | append: ']}' %}
+    {% else %}
+      {% assign link_json = link_json | append: '}' %}
+    {% endif %}
+    
+    {% assign menu_structure = menu_structure | append: link_json | append: ',' %}
+  {% endfor %}
+  {% assign menu_structure = menu_structure | slice: 0, -1 %}
+  {% assign menu_structure = menu_structure | append: ']' %}
+{% endif %}
+
+<script>
+  var menuLinks = {{ menu_structure | json }};
+  console.log(menuLinks);
+</script>
+
+
     
  <!-- theme.liquid content -->
   {% render 'cookies-banner' %}
