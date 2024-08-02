@@ -581,7 +581,7 @@ window.addEventListener("load", function() {
     {% assign menu_handle = 'collections' %}
 {% assign main_menu = linklists[menu_handle] %}
 
-<script>console.log('{{ main_menu | json}}')</script>
+<script>console.log({{ main_menu | json}})</script>
 
 
     
