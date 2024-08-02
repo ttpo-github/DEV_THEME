@@ -201,6 +201,8 @@ fieldset.product-form__input .form__label {
 
    box-shadow: 0 3px 6px #00000080;
     transition:all .01s linear;
+
+  position:relative;
 }
 
 @media screen and (max-width: 749px){
