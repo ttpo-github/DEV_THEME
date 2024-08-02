@@ -3481,6 +3481,13 @@ quantity-input.quantity:after {
 .quantity-button-wrap .product-inner__buttons {
   flex: 1 1 auto;
 }
+
+@media only screen and (max-width: 991px){
+  margin-right:0;
+  display:flex;
+  justify-content:end;
+}
+
 .product-form__buttons .custom-btn {
   border: 0;
   margin: 0;
