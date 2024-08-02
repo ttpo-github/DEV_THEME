@@ -3483,9 +3483,11 @@ quantity-input.quantity:after {
 }
 
 @media only screen and (max-width: 991px){
-  margin-right:0;
-  display:flex;
-  justify-content:end;
+  .quantity-button-wrap .product-form__quantity{
+    margin-right:0;
+    display:flex;
+    justify-content:end; 
+  }
 }
 
 .product-form__buttons .custom-btn {
