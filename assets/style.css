@@ -3486,6 +3486,8 @@ quantity-input.quantity:after {
   margin: 0;
   background: #00f;
 
+  box-shadow: 0 3px 6px #00000080;
+
   /* CUSTOM */
   padding: 18px 0px;
   tansition:all .05s linear;
@@ -3493,6 +3495,7 @@ quantity-input.quantity:after {
 
 .product-form__buttons .custom-btn:active {
   transform:scale(0.93);
+  box-shadow:none;
 }
 
 .product-form__buttons .custom-btn.loading {
