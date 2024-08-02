@@ -3492,7 +3492,7 @@ quantity-input.quantity:after {
 }
 
 .product-form__buttons .custom-btn:active {
-  transform:scale(0.97);
+  transform:scale(0.93);
 }
 
 .product-form__buttons .custom-btn.loading {
