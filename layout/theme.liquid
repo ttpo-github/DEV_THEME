@@ -483,38 +483,31 @@
 {% endfor %}
 {% endcomment %}
 
-     <ul>
+      <ul>
   {% for link in linklists['Collections'].links %}
-    {% if link.url contains 'collections' %}
-      <li>
-        <a class="custom-linkadoodles" href="{{ link.url }}">{{ link.title }}</a>
-        {% if link.links %}
-          <ul>
-            {% for child_link in link.links %}
-              {% if child_link.url contains 'collections' %}
-                <li>
-                  <a class="custom-linkadoodles" href="{{ child_link.url }}">{{ child_link.title }}</a>
-                  {% if child_link.links %}
-                    <ul>
-                      {% for grandchild_link in child_link.links %}
-                        {% if grandchild_link.url contains 'collections' %}
-                          <li>
-                            <a class="custom-linkadoodles" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
-                          </li>
-                        {% endif %}
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                </li>
+    <li>
+      <a class="custom-linkadoodles" href="{{ link.url }}">{{ link.title }}</a>
+      {% if link.links %}
+        <ul>
+          {% for child_link in link.links %}
+            <li>
+              <a class="custom-linkadoodles" href="{{ child_link.url }}">{{ child_link.title }}</a>
+              {% if child_link.links %}
+                <ul>
+                  {% for grandchild_link in child_link.links %}
+                    <li>
+                      <a class="custom-linkadoodles" href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
               {% endif %}
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </li>
-    {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
   {% endfor %}
 </ul>
-
 
       
     </main>
