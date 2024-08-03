@@ -511,23 +511,29 @@
 </ul>
 {% endcomment %}
 
-      <ul>
+     <ul>
   {% for link in linklists['Collections'].links %}
     {% if link.url contains 'collections' %}
+      {% assign handle = link.url | split: '/' | last %}
+      {% assign collection = collections[handle] %}
       <li>
-        <a class="custom-linkadoodles" href="{{ link.url }}">{{ link.collection_name }}</a>
+        <a class="custom-linkadoodles" href="{{ link.url }}">{{ collection.title }}</a>
         {% if link.links %}
           <ul>
             {% for child_link in link.links %}
               {% if child_link.url contains 'collections' %}
+                {% assign child_handle = child_link.url | split: '/' | last %}
+                {% assign child_collection = collections[child_handle] %}
                 <li>
-                  <a class="custom-linkadoodles" href="{{ child_link.url }}">{{ child_link.collection_name }}</a>
+                  <a class="custom-linkadoodles" href="{{ child_link.url }}">{{ child_collection.title }}</a>
                   {% if child_link.links %}
                     <ul>
                       {% for grandchild_link in child_link.links %}
                         {% if grandchild_link.url contains 'collections' %}
+                          {% assign grandchild_handle = grandchild_link.url | split: '/' | last %}
+                          {% assign grandchild_collection = collections[grandchild_handle] %}
                           <li>
-                            <a class="custom-linkadoodles" href="{{ grandchild_link.url }}">{{ grandchild_link.collection_name }}</a>
+                            <a class="custom-linkadoodles" href="{{ grandchild_link.url }}">{{ grandchild_collection.title }}</a>
                           </li>
                         {% endif %}
                       {% endfor %}
@@ -542,6 +548,7 @@
     {% endif %}
   {% endfor %}
 </ul>
+
 
       
     </main>
