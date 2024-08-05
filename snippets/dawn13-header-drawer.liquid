@@ -147,7 +147,7 @@
          {% for link in linklists['mobile-grid-menu'].links %}
            {% assign current_collection = collections[link.handle] %}
 
-           <script>console.log('{{link.url}}')</script>
+           <script>console.log('{{link.handle}}')</script>
             <script>console.log({{ current_collection | json}})</script>
            
            <div class="item-wrapper">
