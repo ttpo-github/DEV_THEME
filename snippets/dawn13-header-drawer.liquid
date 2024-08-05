@@ -145,7 +145,14 @@
     <div  class="grid__item medium-up--five-sixths">
       <div class="collection-lists">
          {% for link in linklists['mobile-grid-menu'].links %}
-           {% assign current_collection = collections[link.handle] %}
+           {% if link.handle == 'trailer-plans' %}
+               {% assign current_collection = collections['trailer-plans-blueprints'] %}
+            {% elsif link.handle == 'trailer-axle-suspension' %}
+               {% assign current_collection = collections['axle-suspension'] %}
+             {% else %}
+               {% assign current_collection = collections[link.handle] %}
+            {% endif %}
+           
 
            <script>console.log('{{link.handle}}')</script>
             <script>console.log({{ current_collection | json}})</script>
