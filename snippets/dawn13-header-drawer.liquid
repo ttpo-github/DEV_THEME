@@ -145,7 +145,7 @@
     <div  class="grid__item medium-up--five-sixths">
       <div class="collection-lists">
          {% for link in linklists['mobile-grid-menu'].links %}
-           {% assign current_collection = collections['link.handle'] %}
+           {% assign current_collection = collections[link.handle] %}
 
             <script>console.log('{{ current_collection }}')</script>
            
