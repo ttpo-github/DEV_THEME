@@ -146,6 +146,9 @@
       <div class="collection-lists">
          {% for link in linklists['mobile-grid-menu'].links %}
            {% assign current_collection = collections['link.handle'] %}
+
+            <script>console.log('{{ current_collection | json }}')</script>
+           
            <div class="item-wrapper">
             
               <a class="category-card"  href="{{ link.url }}">
