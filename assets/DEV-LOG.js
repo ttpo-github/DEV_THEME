@@ -56,3 +56,15 @@ Increased sizing on search bar and footer menu links to improve tab target cover
 - New slide out cart drawer
 - Form validation for custom option 
 - New collection UX improvments regarding product filters 
+
+// 8.5.24
+  /*
+- Phone number layout bug fix
+- Language drop down bug fix
+- Depth and interactivity UX improvements to ATC. ATC button needed some interactivity improvments so the user knows an add to cart action is taking place during the breif time their cart updates. 
+  ATC button now pops up using box shadow and "thunks" down when clicked while also replacing the text with a loading spinner. Should now be much more clear that an action has taken place. 
+- Refactored mobile menu grid to dynamically accept entries from the nav "Mobile Grid Menu" instead of being hardcoded. I will still need to be informed of any changes to the menu as there are some
+ small workaarounds for collections that were giving alternate handles or redirects after their initial creation. 
+- All collection product filter grids now have a natural language question associated with them. A/B Test for "Product Filter" VS new questions will be set up after this theme is published.
+- Depth and tactile UX improvments for product page variant buttons as well. Using box shadows and scaling to give the impression that the buttons are lifted and press down when clicked. 
+   */
