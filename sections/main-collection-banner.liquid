@@ -75,6 +75,14 @@
     .collection-header-B .sub-collection-item span {
       border-radius:4px;
     }
+
+    .meta-filter-title {
+      display: inline;
+    }
+
+    .general-filter-title {
+      display:none;
+    }
   </style>
 
   {% comment %} Collection Header A {% endcomment %}
@@ -137,7 +145,8 @@
   
   <div class="bt-container custom-subcollections-list collection-header-B">
     <div style="border-radius: 4px;padding: 10px;padding-bottom: 20px;background: #e9e9e9;">
-    <h2>{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
+    <h2 class="meta-filter-title">{% if collection.metafields.custom.collection_filter_question != blank %}{{ collection.metafields.custom.collection_filter_question }}{% else %}Product Filter{% endif %}</h2>
+    <h2 class="general-filter-title">Product Filter</h2>
     {% for link in linklists['Collections'].links %}
       {% if link.url == collection.url %}
         
