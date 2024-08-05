@@ -144,7 +144,20 @@
     {% endcomment %}
     <div  class="grid__item medium-up--five-sixths">
       <div class="collection-lists">
+         {% for link in linklists['mobile-grid-menu'].links %}
+           {% assign current_collection = collections['link.handle'] %}
+           <div class="item-wrapper">
             
+              <a class="category-card"  href="{{ link.url }}">
+                <div style="border-radius:4px;" class="img-wrap">
+                	<img src="{{ current_collection.image | img_url }}" alt="{{ current_collection.title }}">
+                </div>
+                <p class="category-card-text">{{ current_collection.title }}</p>
+              </a>
+			</div>
+          {% endfor %}
+
+        {% comment %}
             <div class="item-wrapper">
             
               <a class="category-card"  href="https://thetrailerpartsoutlet.com/collections/trailer-axles">
@@ -234,7 +247,7 @@
                 <p class="category-card-text">Towing Accessories</p>
               </a>
 			</div>
-
+            {% endcomment %}
          
       </div>
   </div>
