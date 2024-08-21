@@ -362,3 +362,9 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+div.yotpo .standalone-bottomline.star-clickable, .yotpo .standalone-bottomline .star-clickable{
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
