@@ -367,4 +367,5 @@ div.yotpo .standalone-bottomline.star-clickable, .yotpo .standalone-bottomline .
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  margin-bottom: 12px;
 }
