@@ -371,7 +371,7 @@ div.yotpo-product-card.yotpo .standalone-bottomline.star-clickable, .yotpo .stan
   margin-top:6px;
 }
 
-div.yotpo-product-card.yotpo div{
+div.yotpo-product-card.yotpo{
   display:flex;
   justify-content:center;
   align-items:center;
