@@ -363,7 +363,7 @@
   margin-top: 1rem;
 }
 
-
+/* CUSTOM YOTPO STYLES FOR PRODUCT CARDS */
 div.yotpo-product-card.yotpo .standalone-bottomline.star-clickable {
   flex-direction:column;
   align-items:center;
