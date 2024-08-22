@@ -364,7 +364,7 @@
 }
 
 
-div.yotpo-product-card.yotpo .standalone-bottomline.star-clickable, .yotpo .standalone-bottomline .star-clickable {
+div.yotpo-product-card.yotpo .standalone-bottomline.star-clickable {
   flex-direction:column;
   align-items:center;
   justify-content:center;
