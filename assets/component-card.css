@@ -363,15 +363,15 @@
   margin-top: 1rem;
 }
 
-/*
-div.yotpo .standalone-bottomline.star-clickable, .yotpo .standalone-bottomline .star-clickable{
+
+.yotpo-product-card.yotpo .standalone-bottomline.star-clickable, .yotpo .standalone-bottomline .star-clickable{
   flex-direction:column;
   align-items:center;
   justify-content:center;
   margin-top:6px;
 }
 
-div.yotpo div, .yotpo span, .yotpo p, .yotpo a, .yotpo img, .yotpo i, .yotpo strong, .yotpo sup, .yotpo ul, .yotpo li, .yotpo form, .yotpo label{
+.yotpo-product-card.yotpo div, .yotpo span, .yotpo p, .yotpo a, .yotpo img, .yotpo i, .yotpo strong, .yotpo sup, .yotpo ul, .yotpo li, .yotpo form, .yotpo label{
   display:flex;
   justify-content:center;
   align-items:center;
