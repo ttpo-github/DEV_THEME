@@ -958,10 +958,12 @@ class VariantSelects extends HTMLElement {
 
   updateTitle(variantOb){
     console.log(this.currentVariant)
+    /*
     let titles = document.getElementsByClassName('ttpo_product_title')
     Array.from(titles).forEach(function(el){
       el.innerText = variantOb.public_title
     })
+    */
   }
 
   updateOptions() {
@@ -992,7 +994,7 @@ class VariantSelects extends HTMLElement {
 
     console.log(this.currentVariant)
 
-    //this.updateTitle(this.currentVariant)
+    this.updateTitle(this.currentVariant)
     //this.updateTitle(this.option2)
     
     for(let variant of CFA){
