@@ -156,7 +156,7 @@
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
           {% assign options_length = product.options.length %}
 
-          <script>console.log('{{ titles_array.length }}')</script>
+          <script>console.log({{ titles_array | json }})</script>
           <script>console.log('{{ options_length }}')</script>
         {% endif %}
         
