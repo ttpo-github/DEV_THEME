@@ -152,9 +152,13 @@
 
         <script>//console.log({{product | json}})</script>
 
-        {% for variant in product.variants %}
-          <script>console.log('Option: {{variant.option1}}')</script>
-        {% endfor %}
+        {% if product.metafields.custom.option_1_alt_titles %}
+          {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
+          {% assign options_length = product.options.length %}
+
+          <script>console.log('{{ titles_array }}')</script>
+          <script>console.log('{{ options_length }}')</script>
+        {% endif %}
         
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1 class="ttpo_product_title">
