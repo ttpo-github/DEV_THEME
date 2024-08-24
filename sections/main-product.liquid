@@ -150,6 +150,8 @@
           {% endif %}
         {% endcomment %}
 
+        <script>console.log({{product | json}})</script>
+
         {% for option in product.options %}
           <script>console.log('Option: {{option.position}}')</script>
         {% endfor %}
