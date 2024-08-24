@@ -957,6 +957,7 @@ class VariantSelects extends HTMLElement {
   }
 
   updateTitle(variantOb){
+    console.log('Here')
     console.log(this.currentVariant)
     /*
     let titles = document.getElementsByClassName('ttpo_product_title')
