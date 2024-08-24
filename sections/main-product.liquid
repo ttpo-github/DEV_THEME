@@ -150,10 +150,10 @@
           {% endif %}
         {% endcomment %}
 
-        <script>console.log({{product | json}})</script>
+        <script>//console.log({{product | json}})</script>
 
-        {% for option in product.options %}
-          <script>console.log('Option: {{option.position}}')</script>
+        {% for variant in product.variants %}
+          <script>console.log('Option: {{variant.option1}}')</script>
         {% endfor %}
         
         <div class="product__title" {{ block.shopify_attributes }}>
