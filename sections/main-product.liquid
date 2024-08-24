@@ -150,7 +150,7 @@
           {% endif %}
         {% endcomment %}
 
-        <script>//console.log({{product | json}})</script>
+        <script>console.log({{product | json}})</script>
 
         {% if product.metafields.custom.option_1_alt_titles %}
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
