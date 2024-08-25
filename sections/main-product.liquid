@@ -159,8 +159,10 @@
             {% for product_option in product.options_with_values %}
                 {% for value in product_option.values %}
                   {% if forloop.index == 1 %}
-                    {% assign product_option_one_values = product_option_one_values | append: product_option %}
+                    {% assign product_option_one_values = product_option_one_values | append: value %}
+                    
                   {% endif %}
+                  
                 {% endfor %}
             {% endfor %}
             <script>console.log({{ product_option_one_values | json}})</script>
