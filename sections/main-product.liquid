@@ -159,7 +159,7 @@
             {% for product_option in product.options_with_values %}
                 {% for value in product_option.values %}
                   {% if forloop.index == 1 %}
-                    {% assign product_option_one_values = product_option_one_values | append: value %}
+                    {% assign product_option_one_values = product_option_one_values | append: value | append: ","%}
                     
                   {% endif %}
                   
