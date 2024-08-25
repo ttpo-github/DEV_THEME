@@ -151,8 +151,19 @@
         {% endcomment %}
 
         <script>console.log({{product | json}})</script>
+        
 
-        {% if product.metafields.custom.option_1_alt_titles %}
+          {% if product.metafields.custom.option_1_alt_titles %}
+            {% assign product_option1_values = '' %}
+            
+            {% for product_option in product.options_with_values %}
+              {% if forloop.index == 1 %}
+                  {% assign product_option1_values = product_option1_values | append: product_option | append: ','%}
+              {% endif %}
+            {% endfor %}
+            <script>console.log({{product_option1_values | split:","}})</script>
+          {% endif %}
+          
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
           {% assign product_options = product.options %}
           {% assign options_length = product.options.length %}
@@ -160,7 +171,7 @@
           <script>console.log({{ titles_array | json}})</script>
           <script>console.log({{ product_options | json}})</script>
           <script>console.log('{{ options_length }}')</script>
-        {% endif %}
+      
         
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1 class="ttpo_product_title">
