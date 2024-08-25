@@ -161,7 +161,7 @@
                   {% assign product_option_one_values = product_option_one_values | append: product_option %}
               {% endif %}
             {% endfor %}
-            <script>console.log('{{product_option_one_values}}')</script>
+            <script>console.log({{product_option_one_values | json}})</script>
           {% endif %}
           
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
