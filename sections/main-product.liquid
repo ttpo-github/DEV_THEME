@@ -176,7 +176,7 @@
             {% if titles_array.size == product_option_one_values_array.size %}
               {% assign options_w_titles = '' %}
               {% for option_1 in product_option_one_values_array %}
-                {% assign options_w_titles = options_w_titles | append: product_option_one_values_array[forloop.index] | append: " - " | append: titles_array[forloop.index] | append: ", "%}
+                {% assign options_w_titles = options_w_titles | append: product_option_one_values_array[forloop.index0] | append: " - " | append: titles_array[forloop.index0] | append: ", "%}
               {% endfor %}
             {% endif %}
 
