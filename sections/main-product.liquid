@@ -157,13 +157,15 @@
             {% assign product_option_one_values = '' %}
             
             {% for product_option in product.options_with_values %}
+              {% if forloop.index == 1 %}
                 {% for value in product_option.values %}
-                  {% if forloop.index == 1 %}
+                  
                     {% assign product_option_one_values = product_option_one_values | append: value | append: ","%}
                     
-                  {% endif %}
+                  
                   
                 {% endfor %}
+                  {% endif %}
             {% endfor %}
             <script>console.log("{{ product_option_one_values }}")</script>
           {% endif %}
