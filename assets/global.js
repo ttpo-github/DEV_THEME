@@ -965,6 +965,18 @@ class VariantSelects extends HTMLElement {
       el.innerText = variantOb.public_title
     })
     */
+
+    let altTitlesArr = document.getElementById('alt-titles-container');
+    if(altTitlesArr){
+      let foundMatch = altTitlesArr.innerHTML
+      console.log(foundMatch)
+      /*
+      let titles = document.getElementsByClassName('ttpo_product_title')
+      Array.from(titles).forEach(function(el){
+      el.innerText = variantOb.public_title
+    })
+      */
+    }
   }
 
   updateOptions() {
