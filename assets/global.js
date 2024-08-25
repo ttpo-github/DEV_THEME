@@ -968,7 +968,7 @@ class VariantSelects extends HTMLElement {
 
     let altTitlesArr = document.getElementById('alt-titles-container');
     if(altTitlesArr){
-      let foundMatch = altTitlesArr.innerHTML.split(",").forEach(el => el.trim())
+      let foundMatch = altTitlesArr.innerHTML.split(",").filter(el => el.trim())
       console.log(foundMatch)
       /*
       let titles = document.getElementsByClassName('ttpo_product_title')
