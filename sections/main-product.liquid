@@ -169,6 +169,17 @@
                 {% endfor %}
                   {% endif %}
             {% endfor %}
+            
+            {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
+            {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
+
+            {% if titles_array.size == product_option_one_values_array.size %}
+              {% assign options_w_titles = '' %}
+              {% for option_1 in product_option_one_values_array %}
+                {% assign options_w_titles = options_w_titles | append: product_option_one_values_array[forloop.index] | append: " - " | append: titles_array[forloop.index] | append: ", "%}
+              {% endfor %}
+            {% endif %}
+            
             <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
           {% endif %}
           
