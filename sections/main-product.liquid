@@ -156,7 +156,9 @@
           {% if product.metafields.custom.option_1_alt_titles %}
             {% assign product_option_one_values = '' %}
             
-            {% for product_option in product.options_with_values %}
+            
+
+            {% for value in product_option.values %}
               {% if forloop.index == 1 %}
                   {% assign product_option_one_values = product_option_one_values | append: product_option %}
               {% endif %}
