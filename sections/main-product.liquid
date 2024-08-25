@@ -179,6 +179,8 @@
                 {% assign options_w_titles = options_w_titles | append: product_option_one_values_array[forloop.index] | append: " - " | append: titles_array[forloop.index] | append: ", "%}
               {% endfor %}
             {% endif %}
+
+            <script>console.log({{ options_w_titles | split: ", " | json}})</script>
             
             <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
           {% endif %}
