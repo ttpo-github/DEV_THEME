@@ -159,12 +159,12 @@
             {% for product_option in product.options_with_values %}
                 {% for value in product_option.values %}
                   {% if forloop.index == 1 %}
-                  {% assign product_option_one_values = product_option_one_values | append: product_option %}
-              {% endif %}
+                    {% assign product_option_one_values = product_option_one_values | append: product_option %}
+                  {% endif %}
                 {% endfor %}
-          {% endfor %}
-
-           {% endif %}
+            {% endfor %}
+            <script>console.log({{ product_option_one_values | json}})</script>
+          {% endif %}
           
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
           {% assign product_options = product.options %}
