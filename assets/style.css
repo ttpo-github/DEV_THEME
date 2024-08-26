@@ -7022,7 +7022,7 @@ to {top:0; opacity:1}
 /* Experts Product Page Modal Opener */
 
 /* Yotpo Customizations */
-div.yotpo-base-layout{
+div#reviews div.yotpo-base-layout{
   margin:auto;
 }
 
