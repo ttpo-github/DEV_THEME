@@ -7021,6 +7021,11 @@ to {top:0; opacity:1}
 }
 /* Experts Product Page Modal Opener */
 
+/* Yotpo Customizations */
+div.yotpo-base-layout{
+  margin:auto;
+}
+
 @media only screen and (max-width: 768px){
   .help-images {
     max-width: 80px;
