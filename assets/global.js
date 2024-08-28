@@ -975,7 +975,7 @@ class VariantSelects extends HTMLElement {
       Array.from(titles).forEach(function(el){
         el.innerText = trimmedAndFoundArr.join("").split(" --- ")[1];
       })
-      console.log(trimmedAndFoundArr)
+      //console.log(trimmedAndFoundArr)
       /*
       let titles = document.getElementsByClassName('ttpo_product_title')
       Array.from(titles).forEach(function(el){
