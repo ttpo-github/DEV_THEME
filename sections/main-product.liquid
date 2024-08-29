@@ -191,7 +191,7 @@
               <script>console.log({{arrayed_options_w_titles | json}})</script>
               
               {% for option_title_combo in arrayed_options_w_titles %}        
-                <script>console.log(option_title_combo)</script>
+                <script>console.log('{{ option_title_combo }}')</script>
                 {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
                   {% assign title_to_use_array = option_title_combo | split:" --- " %}
 
