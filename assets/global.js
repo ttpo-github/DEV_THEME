@@ -983,6 +983,8 @@ class VariantSelects extends HTMLElement {
     })
       */
     }
+
+    
   }
 
   updateOptions() {
