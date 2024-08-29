@@ -189,8 +189,12 @@
 
               {% assign options_w_titles_array = options_w_titles | split: "," %}
               {% for option_title_combo in options_w_titles_array %}
-                <script>console.log('{{ option_title_combo }}')</script>
+                {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
+                  <script>console.log('Option Title Combo: {{ option_title_combo }}')</script>
+                {% endif %}
               {% endfor %}
+
+               
 
               <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
