@@ -144,17 +144,7 @@
 
         <script>console.log({{product | json}})</script>
 
-         {% for variant in product.variants %}
-            <script>console.log('{{variant.option1}}')</script>
-          {% endfor %}
-        
-          {% if product.selected_or_first_available_variant.metafields.custom.alt_product_title != blank %}
-                    {% assign dynamic_title =  product.selected_or_first_available_variant.metafields.custom.alt_product_title  %}
-                  {% else %}
-                    {% assign dynamic_title = product.title %}
-        {% endif %}
-
-        <script>console.log('Dynamic Title: {{ dynamic_title }}')</script>
+         
         
 
           {% if product.metafields.custom.option_1_alt_titles %} <!-- If the option1 metafield has a value, run the following code that checks for validity and structure -->
