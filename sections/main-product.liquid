@@ -24,17 +24,7 @@
     }
   {%- endstyle -%}
 
-  {% for variant in product.variants %}
-    <script>console.log('{{variant.option1}}')</script>
-  {% endfor %}
-
-  {% if product.selected_or_first_available_variant.metafields.custom.alt_product_title != blank %}
-            {% assign dynamic_title =  product.selected_or_first_available_variant.metafields.custom.alt_product_title  %}
-          {% else %}
-            {% assign dynamic_title = product.title %}
-        {% endif %}
-
-        <script>console.log('Dynamic Title: {{ dynamic_title }}')</script>
+ 
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -150,22 +140,34 @@
           {% endif %}
         {% endcomment %}
 
+        <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
+
         <script>console.log({{product | json}})</script>
+
+         {% for variant in product.variants %}
+            <script>console.log('{{variant.option1}}')</script>
+          {% endfor %}
+        
+          {% if product.selected_or_first_available_variant.metafields.custom.alt_product_title != blank %}
+                    {% assign dynamic_title =  product.selected_or_first_available_variant.metafields.custom.alt_product_title  %}
+                  {% else %}
+                    {% assign dynamic_title = product.title %}
+        {% endif %}
+
+        <script>console.log('Dynamic Title: {{ dynamic_title }}')</script>
         
 
-          {% if product.metafields.custom.option_1_alt_titles %}
+          {% if product.metafields.custom.option_1_alt_titles %} <!-- If the option1 metafield has a value, run the following code that checks for validity and structure -->
             {% assign product_option_one_values = '' %}
             
-            {% for product_option in product.options_with_values %}
+            {% for product_option in product.options_with_values %} <!-- Grabbing the option values for the first option and placing them into an array for the next conditional check --> 
               {% if forloop.index == 1 %}
                 {% for value in product_option.values %}
                   {% if forloop.last %}
                     {% assign product_option_one_values = product_option_one_values | append: value %}
                   {% else %}
                     {% assign product_option_one_values = product_option_one_values | append: value | append: ", "%}
-                  {% endif %}
-                  
-                  
+                  {% endif %}                 
                 {% endfor %}
                   {% endif %}
             {% endfor %}
@@ -173,7 +175,7 @@
             {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
             {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
 
-            {% if titles_array.size == product_option_one_values_array.size %}
+            {% if titles_array.size == product_option_one_values_array.size %} <!-- Continue if the size of the option1 value array is the same as the titles_array (meaning the titles_array was properly formatted) -->
               {% assign options_w_titles = '' %}
               {% for option_1 in product_option_one_values_array %}
                 {% if forloop.last %}
@@ -183,14 +185,21 @@
                 {% endif %}
               {% endfor %}
 
-              <script id="alt-titles-container" type="application/json">{{ options_w_titles}}</script>
+              <script>console.log('Selected Variant')</script>
+              <script>console.log({{product.selected_variant | json}})</script>
+
+              <script id="alt-titles-container" type="application/json">{{ options_w_titles}}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
 
-            <script>console.log({{ options_w_titles | split: ", " | json}})</script>
-            
-            <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
+            <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
+
+            {% comment %}
+              <script>console.log({{ options_w_titles | split: ", " | json}})</script>            
+              <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
+            {% endcomment %}
           {% endif %}
-          
+
+        {% comment %}
           {% assign titles_array = product.metafields.custom.option_1_alt_titles | split: '//' %}
           {% assign product_options = product.options %}
           {% assign options_length = product.options.length %}
@@ -198,7 +207,7 @@
           <script>console.log({{ titles_array | json}})</script>
           <script>console.log({{ product_options | json}})</script>
           <script>console.log('{{ options_length }}')</script>
-      
+        {% endcomment %}
         
         <div class="product__title" {{ block.shopify_attributes }}>
           <h1 class="ttpo_product_title">
