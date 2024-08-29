@@ -185,32 +185,9 @@
                 {% endif %}
               {% endfor %}
 
-              {% assign title_to_use = product.title %}
+              <script>console.log('Options with Titles: {{ options_w_titles }}')</script>
 
-              {% assign arrayed_options_w_titles = options_w_titles | split: ',' %}
-             
-              
-              {% for option_title_combo in arrayed_options_w_titles %}        
-               
-                {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
-                  {% assign title_to_use_array = option_title_combo | split:" --- " %}
-
-                  <script>console.log('HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')</script>
-                  <script>console.log('{{title_to_use_array}}')</script>
-                  
-                  {% if title_to_use_array[1] != 'default' %}
-                    {% assign title_to_use = title_to_use_array[1] %}
-                  {% endif %}
-                {% endif %}
-                
-              {% endfor %}
-
-              {% assign dynamic_title = title_to_use %}
-
-              <script>console.log('Selected Variant')</script>
-              <script>console.log('{{ dynamic_title }}')</script>
-
-              <script id="alt-titles-container" type="application/json">{{ options_w_titles}}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
+              <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
 
             <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
