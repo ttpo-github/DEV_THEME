@@ -187,6 +187,11 @@
 
               <script>console.log('Options with Titles: {{ options_w_titles }}')</script>
 
+              {% assign options_w_titles_array = options_w_titles | split: "," %}
+              {% for option_title_combo in options_w_titles_array %}
+                <script>console.log('{{ option_title_combo }}')</script>
+              {% endfor %}
+
               <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
 
