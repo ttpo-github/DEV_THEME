@@ -193,12 +193,13 @@
                 <script>console.log('In the Loop')</script>
                 {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
                   {% assign option_title_combo_array = option_title_combo | split: ' --- ' %}
+                  {% assign title_to_use = option_title_combo_array[1] %}
                   <script>console.log('Option Title Combo:{{ option_title_combo_array[1] }}')</script>
                   {% break %}
                 {% endif %}
               {% endfor %}
 
-               
+              {% assign dynamic_title = title_to_use %}
 
               <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
