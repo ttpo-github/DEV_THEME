@@ -189,7 +189,7 @@
               
               {% for option_title_combo in options_w_titles %}                
                 {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
-                  {% assign title_to_use_array = option_title_combo | split:" --- " %}
+                  {% assign title_to_use_array = option_title_combo %}
 
                   <script>console.log('{{title_to_use_array}}')</script>
                   
