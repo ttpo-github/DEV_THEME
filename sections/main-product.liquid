@@ -185,8 +185,15 @@
                 {% endif %}
               {% endfor %}
 
+              {% assign title_to_use = product.title %}
+              {% for option_title_combo in options_w_titles %}                
+                {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
+                  {% assign title_to_use = option_title_combo | split:" --- " %}
+                {% endif %}
+              {% endfor %}
+
               <script>console.log('Selected Variant')</script>
-              <script>console.log({{ product.selected_or_first_available_variant | json }})</script>
+              <script>console.log({{ product | json }})</script>
 
               <script id="alt-titles-container" type="application/json">{{ options_w_titles}}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
             {% endif %}
