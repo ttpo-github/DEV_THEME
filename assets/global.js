@@ -973,6 +973,8 @@ class VariantSelects extends HTMLElement {
       let titles = document.getElementsByClassName('ttpo_product_title')
       let splitFoundTitle = trimmedAndFoundArr.join("").split(" --- ")[1]
       let titleToUse = splitFoundTitle == 'default' ? this.currentVariant.title : splitFoundTitle
+
+      console.log(this.currentVariant)
       
       Array.from(titles).forEach(function(el){
         el.innerText = titleToUse;
