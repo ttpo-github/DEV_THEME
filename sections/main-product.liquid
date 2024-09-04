@@ -125,7 +125,7 @@
               <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
             {% endcomment %}
 
-            {% else %}
+            {% else %} <!-- If the product does not have a value in the alt title metafield, just render the normal title and do no produce the array for global.js to do it's work (meaning nothing will happen when variants change.)
 
             {% assign dynamic_title = product.title %}
           {% endif %}
