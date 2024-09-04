@@ -37,7 +37,7 @@
 
    <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
 
-        <script>console.log({{product | json}})</script>
+        
 
          
         
@@ -70,16 +70,16 @@
                 {% endif %}
               {% endfor %}
 
-              <script>console.log('Options with Titles: {{ options_w_titles }}')</script>
+             
 
               {% assign title_to_use = product.title %}
               {% assign options_w_titles_array = options_w_titles | split: "," %}
               {% for option_title_combo in options_w_titles_array %}
-                <script>console.log('In the Loop')</script>
+                
                 {% if option_title_combo contains product.selected_or_first_available_variant.option1 %}
                   {% assign option_title_combo_array = option_title_combo | split: ' --- ' %}
                   {% assign title_to_use = option_title_combo_array[1] %}
-                  <script>console.log('Option Title Combo:{{ option_title_combo_array[1] }}')</script>
+                  
                   {% break %}
                 {% endif %}
               {% endfor %}
