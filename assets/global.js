@@ -972,9 +972,9 @@ class VariantSelects extends HTMLElement {
       let trimmedAndFoundArr = foundMatch.map(el => el.trim()).filter(el => el.indexOf(this.currentVariant.option1) != -1)
       let titles = document.getElementsByClassName('ttpo_product_title')
       let splitFoundTitle = trimmedAndFoundArr.join("").split(" --- ")[1]
-      let titleToUse = splitFoundTitle == 'default' ? this.currentVariant.title : splitFoundTitle
+      let titleToUse = splitFoundTitle == 'default' ? this.currentVariant.name.replace(` - ${this.currentVariant.title}`, "") : splitFoundTitle
 
-      console.log(this.currentVariant.name.replace(` - ${this.currentVariant.title}`, ""))
+      //console.log(this.currentVariant.name.replace(` - ${this.currentVariant.title}`, ""))
       
       Array.from(titles).forEach(function(el){
         el.innerText = titleToUse;
