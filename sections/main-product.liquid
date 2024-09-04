@@ -105,6 +105,12 @@
 
               {% assign dynamic_title = title_to_use %}
 
+              {% if title_to_use == 'default' %}
+                {% assign dynamic_title = product.title %}
+              {% endif %}
+              
+              
+
              
 
               <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
