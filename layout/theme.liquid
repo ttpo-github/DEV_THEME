@@ -458,7 +458,19 @@
     <!-- End FigPii Asynchronous Tracking Code -->
 
     
-    
+    <!-- BEGIN MerchantWidget Code -->
+    <script id='merchantWidgetScript'
+            src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+            defer>
+    </script>
+    <script type="text/javascript">
+      merchantWidgetScript.addEventListener('load', function () {
+        merchantwidget.start({
+         position: 'LEFT_BOTTOM'
+       });
+      });
+    </script>
+    <!-- END MerchantWidget Code -->
     
   </head>
 
