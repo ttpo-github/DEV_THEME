@@ -114,6 +114,9 @@
              
 
               <script id="alt-titles-container" type="application/json">{{ options_w_titles }}</script> <!-- Renders a script holding the option value names with alt titles for comparison in the updateTitle function in global.js --> 
+
+              {% else %}
+              {% assign dynamic_title = product.title %}
             {% endif %}
 
             <script>console.log('{{ dynamic_title }}')</script>
