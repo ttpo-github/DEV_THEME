@@ -82,7 +82,7 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div style="outline: 20px solid rgb(255,255,255); padding:0; border-radius:50%;" class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div style="outline: 20px solid rgb(255,255,255); padding:0; border-radius:50%; position:relative; z-index:2;" class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
@@ -105,7 +105,7 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div style="background:rgb(255,255,255); border-radius:4px; padding:1.5rem;" class="multicolumn-card__info">
+              <div style="background:rgb(255,255,255); border-radius:4px; padding:1.5rem; padding-top:9rem; position:relative; top: -7rem;" class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3>{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
