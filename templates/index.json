@@ -286,6 +286,7 @@
         "column_dCdCte": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_AmericanOwned_2_062724_aa513e99-5d21-43fb-a5bf-2497fe2be94d.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -295,6 +296,7 @@
         "column_dapM8p": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_IndustryExperts_2_062724_f6b9eb5c-4d98-4dfb-bc53-9fe5d1b0de68.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
