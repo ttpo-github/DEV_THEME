@@ -107,10 +107,10 @@
               {%- endif -%}
               <div style="background:rgb(255,255,255); border-radius:4px; padding:20px; padding-top:9rem; position:relative; top: -7rem;" class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
+                  <h3 style="font-size:3rem;">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div style="font-size:1.5rem;" class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
