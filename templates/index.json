@@ -273,22 +273,32 @@
     "ttpo_multicolumn_x9jpWp": {
       "type": "ttpo-multicolumn",
       "blocks": {
-        "column_Rh8KdX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_FastShipping_1_062724_b2899127-287c-4029-82e5-27dd1862fff3.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_dCdCte": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/2297273_TrustBadges_AmericanOwned_2_062724_aa513e99-5d21-43fb-a5bf-2497fe2be94d.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "AMERICAN OWNED",
+            "text": "<p>Operating out of Madisonville Texas<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Rh8KdX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_FastShipping_1_062724_b2899127-287c-4029-82e5-27dd1862fff3.png",
+            "title": "NEXT DAY SHIPPING",
+            "text": "<p>Order before 12 CST for next dat shipping<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_f6Q6q7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_CustomTailoredSolutions_2_062724_c2c1ffea-8a9f-44ac-924f-68734612a951.png",
+            "title": "CUSTOM SOLUTIONS",
+            "text": "<p>On-site experts to build exactly what you need<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -297,16 +307,17 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/2297273_TrustBadges_IndustryExperts_2_062724_f6b9eb5c-4d98-4dfb-bc53-9fe5d1b0de68.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "INDUSTRY EXPERTS",
+            "text": "<p>Our dedicated staff of trailer experts are ready for your call<\/p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_Rh8KdX",
         "column_dCdCte",
+        "column_Rh8KdX",
+        "column_f6Q6q7",
         "column_dapM8p"
       ],
       "settings": {
@@ -314,9 +325,9 @@
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "button_label": "Button label",
         "button_link": "",
         "color_scheme": "background-1",
