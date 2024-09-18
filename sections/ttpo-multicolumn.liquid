@@ -39,9 +39,37 @@
     background-repeat: no-repeat;
   }
 
-  .ttpo-mc-header{
+  .ttpo-mc-header {
+    font-size:3rem; 
+    text-decoration:underline;
+  }
+
+  .ttpo-mc-text-content {
+    font-size:2rem;
+  }
+
+  .ttpo-mc-image-container {
+    outline: 20px solid rgb(255,255,255); 
+    padding:0; 
+    border-radius:50%; 
+    position:relative; 
+    z-index:2;
+  }
+
+  .ttpo-mc-info {
+    background:rgb(255,255,255); 
+    border-radius:4px; 
+    padding:20px; 
+    padding-top:9rem; 
+    position:relative; 
+    top: -7rem; 
+    min-height:210px;
+  }
+
+  @media screen and (max-width: 749px){
     
   }
+  
   
 </style>
 
@@ -93,7 +121,7 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div style="outline: 20px solid rgb(255,255,255); padding:0; border-radius:50%; position:relative; z-index:2;" class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div  class="ttpo-mc-image-container multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
@@ -116,12 +144,12 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div style="background:rgb(255,255,255); border-radius:4px; padding:20px; padding-top:9rem; position:relative; top: -7rem; min-height:210px;" class="multicolumn-card__info">
+              <div  class="ttpo-mc-info multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3 class="ttpo-mc-header">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div style="font-size:2rem;" class="rte ttpo-mc-text-content">{{ block.settings.text }}</div>
+                  <div  class="rte ttpo-mc-text-content">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
