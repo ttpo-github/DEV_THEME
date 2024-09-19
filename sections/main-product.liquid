@@ -62,9 +62,9 @@
   {% assign dynamic_title = product.title %}
 
   <script>console.log('Grabbing Object...')</script>
-  <script>console.log('{{product.metafields.custom.option_information.values}}')</script>
+  <script>console.log('{{product.metafields.custom.option_information.value}}')</script>
 
-  {% for metaobject in product.metafields.custom.option_information %}
+  {% for metaobject in product.metafields.custom.option_information.value %}
     <script>console.log('METAOBJECTS')</script>
   {% endfor %}
   
