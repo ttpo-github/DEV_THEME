@@ -65,13 +65,9 @@
   <script>console.log('{{product.metafields.custom.option_information.value}}')</script>
 
   {% for metaobject in product.metafields.custom.option_information.value %}
-    <script>console.log({{metaobject | json}})</script>
+    <script>console.log({{metaobject.variant_description | json}})</script>
   {% endfor %}
   
-  {% for object in product.metaobject_option_information.values %}
-
-  <script>console.log('{{object}}')</script>
-    {% endfor %}
 
   <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
    
