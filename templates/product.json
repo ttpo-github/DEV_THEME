@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -6,12 +15,6 @@
         "de33ab67-42c9-4872-810b-42453bde1c0a": {
           "type": "shopify:\/\/apps\/aftership-order-tracking\/blocks\/edd\/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
           "settings": {
-            "description": "Estimated delivery",
-            "background-color": "#ffffff",
-            "text-color": "#232933",
-            "icon-color": "#5c5f62",
-            "top-padding": 0,
-            "bottom-padding": 0
           }
         },
         "variant_picker": {
@@ -62,7 +65,8 @@
         "617ae22b-7115-4c22-99a7-6674be4a3410"
       ],
       "settings": {
-        "enable_sticky_info": false,
+        "show_bottom_cta": true,
+        "enable_sticky_info": true,
         "media_size": "medium",
         "constrain_to_viewport": false,
         "media_fit": "contain",
