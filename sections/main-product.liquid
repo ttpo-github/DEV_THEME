@@ -61,7 +61,10 @@
 
   {% assign dynamic_title = product.title %}
 
-  <script>console.log('{{product.metafields.custom.option_information  }}')</script>
+  {% for object in product.metafields.custom.option_information %}
+
+  <script>console.log('{{object  }}')</script>
+    {% endfor %}
 
   <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
    
