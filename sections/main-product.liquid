@@ -66,6 +66,7 @@
 
   <script>console.log('Rich Text: {{product.metafields.custom.rich_text_test | metafield_tag }}')</script>
 
+  <script>console.log('Meta...')</script>
   {% for metaobject in product.metafields.custom.option_information.value %}
     <script>console.log('{{metaobject.variant_description | metafield_tag }}')</script>
   {% endfor %}
