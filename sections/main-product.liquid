@@ -65,7 +65,7 @@
   
 
   {% for metaobject in product.metafields.custom.option_information %}
-    <script>console.log({{metaobject}})</script>
+    <script>console.log('{{metaobject}}')</script>
   {% endfor %}
   
   {% for object in product.metaobject_option_information.values %}
