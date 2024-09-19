@@ -281,7 +281,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/2297273_TrustBadges_FastShipping_1_062724_b2899127-287c-4029-82e5-27dd1862fff3.png",
             "title": "NEXT DAY SHIPPING",
-            "text": "<p>Order before 12 CST for next day shipping<\/p>",
+            "text": "<p>Order before 12 CST for next day shipping (M-F)<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -362,6 +362,7 @@
     },
     "video_section_EJHJpk": {
       "type": "video-section",
+      "disabled": true,
       "settings": {
         "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
       }
