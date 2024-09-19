@@ -64,6 +64,8 @@
   <script>console.log('Grabbing Object...')</script>
   <script>console.log('{{product.metafields.custom.option_information.value}}')</script>
 
+  <script>console.log('{{product.metafields.custom.rich_text_test}}')</script>
+
   {% for metaobject in product.metafields.custom.option_information.value %}
     <script>console.log({{metaobject.variant_description}})</script>
   {% endfor %}
