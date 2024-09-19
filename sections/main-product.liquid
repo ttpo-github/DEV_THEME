@@ -64,7 +64,7 @@
   <script>console.log('Grabbing Object...')</script>
   
 
-  {% for metaobject in product.metafields.custom.option_information %}
+  {% for metaobject in product.metafields.custom.option_information.values %}
     <script>console.log('{{metaobject}}')</script>
   {% endfor %}
   
