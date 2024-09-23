@@ -957,15 +957,15 @@ class VariantSelects extends HTMLElement {
   }
 
   updateTitle(variantOb){
-    console.log('Here')
-    console.log(this.currentVariant)
+    //console.log('Here')
+    //console.log(this.currentVariant)
     /*
     let titles = document.getElementsByClassName('ttpo_product_title')
     Array.from(titles).forEach(function(el){
       el.innerText = variantOb.public_title
     })
     */
-
+    /*
     let altTitlesArr = document.getElementById('alt-titles-container');
     if(altTitlesArr){
       let foundMatch = altTitlesArr.innerHTML.split(",")
@@ -979,6 +979,7 @@ class VariantSelects extends HTMLElement {
       Array.from(titles).forEach(function(el){
         el.innerText = titleToUse;
       })
+      */
       //console.log(trimmedAndFoundArr)
       /*
       let titles = document.getElementsByClassName('ttpo_product_title')
