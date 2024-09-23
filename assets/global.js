@@ -986,9 +986,9 @@ class VariantSelects extends HTMLElement {
       Array.from(titles).forEach(function(el){
       el.innerText = variantOb.public_title
     })
-      */
+      
     }
-
+    */
     
   }
 
