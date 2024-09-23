@@ -15,7 +15,7 @@
         "heading_gDQrw9": {
           "type": "heading",
           "settings": {
-            "heading": "Quality Trailer Parts \/\/\/ for Every Journey",
+            "heading": "Quality Trailer Parts /// for Every Journey",
             "heading_size": "h0"
           }
         },
@@ -31,10 +31,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop All Products",
-            "button_link_1": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
+            "button_link_1": "https://thetrailerpartsoutlet.com/pages/collections-list",
             "button_style_secondary_1": false,
             "button_label_2": "Shop Trailer Axles",
-            "button_link_2": "https:\/\/thetrailerpartsoutlet.com\/collections\/trailer-axles",
+            "button_link_2": "https://thetrailerpartsoutlet.com/collections/trailer-axles",
             "button_style_secondary_2": false
           }
         }
@@ -45,7 +45,7 @@
         "buttons_4Dxp9X"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/image.jpg",
+        "image": "shopify://shop_images/image.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "top-center",
@@ -65,27 +65,27 @@
       "disabled": true,
       "settings": {
         "head": "Prime Steel",
-        "heading_link": "shopify:\/\/collections\/prime-steel",
+        "heading_link": "shopify://collections/prime-steel",
         "subhead": "WEEKLY SALE",
         "subhead_below_main": "Up to 74% Off This Week!",
-        "firstlink": "shopify:\/\/collections\/prime-steel",
+        "firstlink": "shopify://collections/prime-steel",
         "flinktext": "SHOP PRIME STEEL",
-        "secondlink": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
+        "secondlink": "https://thetrailerpartsoutlet.com/pages/collections-list",
         "slinktext": "SHOP ALL PRODUCTS",
-        "bgimg": "shopify:\/\/shop_images\/Artboard_1_ad3eb6b2-3f20-44ac-8cc9-f73692e2d52f.jpg",
-        "littleimg": "shopify:\/\/shop_images\/go_now.jpg",
-        "littleimg_link": "shopify:\/\/collections\/sale-page-2021",
+        "bgimg": "shopify://shop_images/Artboard_1_ad3eb6b2-3f20-44ac-8cc9-f73692e2d52f.jpg",
+        "littleimg": "shopify://shop_images/go_now.jpg",
+        "littleimg_link": "shopify://collections/sale-page-2021",
         "show_shipping": true,
-        "ship_icon": "shopify:\/\/shop_images\/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
+        "ship_icon": "shopify://shop_images/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
         "ship_text": "All orders placed before 12PM CST ship next day ( some exclusions apply )",
-        "ship_link": "shopify:\/\/policies\/shipping-policy"
+        "ship_link": "shopify://policies/shipping-policy"
       }
     },
     "0c86a7f0-1797-4cf6-83aa-d824eb69c945": {
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "{% if localization.available_countries.size > 1 %}\n  <pk-localization-form>\n    {% form 'localization' %}\n      <div class=\"disclosure\">\n        <button type=\"button\" class=\"disclosure__button\" aria-expanded=\"false\" aria-controls=\"CountryList\">\n          {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})\n\n          <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-caret\" viewBox=\"0 0 10 6\">\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\">\n          <\/svg>\n        <\/button>\n\n        <ul id=\"CountryList\" role=\"list\" class=\"disclosure__list\" hidden>\n          {% for country in localization.available_countries %}\n            <li class=\"disclosure__item\" tabindex=\"-1\">\n              <a href=\"#\"{% if country.iso_code == localization.country.iso_code %} aria-current=\"true\"{% endif %} data-value=\"{{ country.iso_code }}\">\n                {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})\n              <\/a>\n            <\/li>\n          {% endfor %}\n        <\/ul>\n\n        <input type=\"hidden\" name=\"country_code\" value=\"{{ localization.country.iso_code }}\">\n      <\/div>\n    {% endform %}\n  <\/localization-form>\n{% endif %}\n\n\n<!-- Language Selector -->\n{% if localization.available_languages.size > 1 %}\n  <pk-localization-form>\n    {% form 'localization' %}\n      <div class=\"disclosure\">\n        <button type=\"button\" class=\"disclosure__button\" aria-expanded=\"false\" aria-controls=\"LanguageList\">\n          {{ localization.language.endonym_name | capitalize }}\n\n          <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-caret\" viewBox=\"0 0 10 6\">\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\">\n          <\/svg>\n        <\/button>\n\n        <ul id=\"LanguageList\" role=\"list\" class=\"disclosure__list\" hidden>\n          {% for language in localization.available_languages %}\n            <li class=\"disclosure__item\" tabindex=\"-1\">\n              <a href=\"#\"{% if language.iso_code == localization.language.iso_code %} aria-current=\"true\"{% endif %} hreflang=\"{{ language.iso_code }}\" lang=\"{{ language.iso_code }}\" data-value=\"{{ language.iso_code }}\">\n                {{ language.endonym_name | capitalize }}\n              <\/a>\n            <\/li>\n          {% endfor %}\n        <\/ul>\n\n        <input type=\"hidden\" name=\"language_code\" value=\"{{ localization.language.iso_code }}\">\n      <\/div>\n    {% endform %}\n  <\/pk-localization-form>\n{% endif %}\n\n<script>\nclass LocalizationForm extends HTMLElement {\n  constructor() {\n    super();\n    this.elements = {\n      input: this.querySelector('input[name=\"language_code\"], input[name=\"country_code\"]'),\n      button: this.querySelector('button'),\n      panel: this.querySelector('ul'),\n    };\n    this.elements.button.addEventListener('click', this.openSelector.bind(this));\n    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));\n    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));\n\n    this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));\n  }\n\n  hidePanel() {\n    this.elements.button.setAttribute('aria-expanded', 'false');\n    this.elements.panel.setAttribute('hidden', true);\n  }\n\n  onContainerKeyUp(event) {\n    if (event.code.toUpperCase() !== 'ESCAPE') return;\n\n    this.hidePanel();\n    this.elements.button.focus();\n  }\n\n  onItemClick(event) {\n    event.preventDefault();\n    const form = this.querySelector('form');\n    this.elements.input.value = event.currentTarget.dataset.value;\n    if (form) form.submit();\n  }\n\n  openSelector() {\n    this.elements.button.focus();\n    this.elements.panel.toggleAttribute('hidden');\n    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());\n  }\n\n  closeSelector(event) {\n    const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';\n    if (event.relatedTarget === null || shouldClose) {\n      this.hidePanel();\n    }\n  }\n}\n\ncustomElements.define('pk-localization-form', LocalizationForm);\n<\/script>",
+        "custom_liquid": "{% if localization.available_countries.size > 1 %}\n  <pk-localization-form>\n    {% form 'localization' %}\n      <div class=\"disclosure\">\n        <button type=\"button\" class=\"disclosure__button\" aria-expanded=\"false\" aria-controls=\"CountryList\">\n          {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})\n\n          <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-caret\" viewBox=\"0 0 10 6\">\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\">\n          </svg>\n        </button>\n\n        <ul id=\"CountryList\" role=\"list\" class=\"disclosure__list\" hidden>\n          {% for country in localization.available_countries %}\n            <li class=\"disclosure__item\" tabindex=\"-1\">\n              <a href=\"#\"{% if country.iso_code == localization.country.iso_code %} aria-current=\"true\"{% endif %} data-value=\"{{ country.iso_code }}\">\n                {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})\n              </a>\n            </li>\n          {% endfor %}\n        </ul>\n\n        <input type=\"hidden\" name=\"country_code\" value=\"{{ localization.country.iso_code }}\">\n      </div>\n    {% endform %}\n  </localization-form>\n{% endif %}\n\n\n<!-- Language Selector -->\n{% if localization.available_languages.size > 1 %}\n  <pk-localization-form>\n    {% form 'localization' %}\n      <div class=\"disclosure\">\n        <button type=\"button\" class=\"disclosure__button\" aria-expanded=\"false\" aria-controls=\"LanguageList\">\n          {{ localization.language.endonym_name | capitalize }}\n\n          <svg aria-hidden=\"true\" focusable=\"false\" role=\"presentation\" class=\"icon icon-caret\" viewBox=\"0 0 10 6\">\n            <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z\" fill=\"currentColor\">\n          </svg>\n        </button>\n\n        <ul id=\"LanguageList\" role=\"list\" class=\"disclosure__list\" hidden>\n          {% for language in localization.available_languages %}\n            <li class=\"disclosure__item\" tabindex=\"-1\">\n              <a href=\"#\"{% if language.iso_code == localization.language.iso_code %} aria-current=\"true\"{% endif %} hreflang=\"{{ language.iso_code }}\" lang=\"{{ language.iso_code }}\" data-value=\"{{ language.iso_code }}\">\n                {{ language.endonym_name | capitalize }}\n              </a>\n            </li>\n          {% endfor %}\n        </ul>\n\n        <input type=\"hidden\" name=\"language_code\" value=\"{{ localization.language.iso_code }}\">\n      </div>\n    {% endform %}\n  </pk-localization-form>\n{% endif %}\n\n<script>\nclass LocalizationForm extends HTMLElement {\n  constructor() {\n    super();\n    this.elements = {\n      input: this.querySelector('input[name=\"language_code\"], input[name=\"country_code\"]'),\n      button: this.querySelector('button'),\n      panel: this.querySelector('ul'),\n    };\n    this.elements.button.addEventListener('click', this.openSelector.bind(this));\n    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));\n    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));\n\n    this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));\n  }\n\n  hidePanel() {\n    this.elements.button.setAttribute('aria-expanded', 'false');\n    this.elements.panel.setAttribute('hidden', true);\n  }\n\n  onContainerKeyUp(event) {\n    if (event.code.toUpperCase() !== 'ESCAPE') return;\n\n    this.hidePanel();\n    this.elements.button.focus();\n  }\n\n  onItemClick(event) {\n    event.preventDefault();\n    const form = this.querySelector('form');\n    this.elements.input.value = event.currentTarget.dataset.value;\n    if (form) form.submit();\n  }\n\n  openSelector() {\n    this.elements.button.focus();\n    this.elements.panel.toggleAttribute('hidden');\n    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());\n  }\n\n  closeSelector(event) {\n    const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';\n    if (event.relatedTarget === null || shouldClose) {\n      this.hidePanel();\n    }\n  }\n}\n\ncustomElements.define('pk-localization-form', LocalizationForm);\n</script>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
@@ -127,7 +127,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg",
+        "image": "shopify://shop_images/Untitled-1_c9741658-587e-4a0e-8f58-8b64e7159114.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -146,18 +146,18 @@
           "type": "title",
           "disabled": true,
           "settings": {
-            "bg_image": "shopify:\/\/shop_images\/Untitled-2_8c5dfd72-78c5-4299-a95b-a44269db0e7e.jpg",
+            "bg_image": "shopify://shop_images/Untitled-2_8c5dfd72-78c5-4299-a95b-a44269db0e7e.jpg",
             "sub_heading": "Memorial Day Week",
-            "title": "<font color=\"#ff0000 \">MARK DOWNS<\/font> SITE WIDE",
+            "title": "<font color=\"#ff0000 \">MARK DOWNS</font> SITE WIDE",
             "text": "",
             "button_text1": "SHOP SPECIALS",
-            "button_link1": "shopify:\/\/collections\/sale-page-2021",
+            "button_link1": "shopify://collections/sale-page-2021",
             "background_color1": "#ffffff",
             "text_color1": "#0031ff",
             "background_hover_color1": "#0031ff",
             "text_hover_color1": "#ffffff",
             "button_text2": "ALL PRODUCTS",
-            "button_link2": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list?utm_source=The+Trailer+Parts+Outlet&utm_campaign=85e20d88e3-EMAIL_CAMPAIGN_2023_01_04_02_22&utm_medium=email&utm_term=0_-85e20d88e3-%5BLIST_EMAIL_ID%5D&mc_cid=85e20d88e3&mc_eid=19e7dcef36",
+            "button_link2": "https://thetrailerpartsoutlet.com/pages/collections-list?utm_source=The+Trailer+Parts+Outlet&utm_campaign=85e20d88e3-EMAIL_CAMPAIGN_2023_01_04_02_22&utm_medium=email&utm_term=0_-85e20d88e3-%5BLIST_EMAIL_ID%5D&mc_cid=85e20d88e3&mc_eid=19e7dcef36",
             "background_color2": "#ffffff",
             "text_color2": "#0031ff",
             "background_hover_color2": "#0031ff",
@@ -258,7 +258,7 @@
       "settings": {
         "title": "",
         "image_ratio": "square",
-        "collection_link": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list",
+        "collection_link": "https://thetrailerpartsoutlet.com/pages/collections-list",
         "columns_mobile": "1",
         "swipe_on_mobile": false
       }
@@ -269,9 +269,9 @@
         "column_dCdCte": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_AmericanOwned_2_062724_aa513e99-5d21-43fb-a5bf-2497fe2be94d.png",
+            "image": "shopify://shop_images/2297273_TrustBadges_AmericanOwned_2_062724_aa513e99-5d21-43fb-a5bf-2497fe2be94d.png",
             "title": "AMERICAN OWNED",
-            "text": "<p>Operating out of Madisonville Texas<\/p>",
+            "text": "<p>Operating out of Madisonville Texas</p>",
             "link_label": "",
             "link": ""
           }
@@ -279,9 +279,9 @@
         "column_Rh8KdX": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_FastShipping_1_062724_b2899127-287c-4029-82e5-27dd1862fff3.png",
+            "image": "shopify://shop_images/2297273_TrustBadges_FastShipping_1_062724_b2899127-287c-4029-82e5-27dd1862fff3.png",
             "title": "NEXT DAY SHIPPING",
-            "text": "<p>Order before 12 CST for next day shipping (M-F)<\/p>",
+            "text": "<p>Order before 12 CST for next day shipping (M-F)</p>",
             "link_label": "",
             "link": ""
           }
@@ -289,9 +289,9 @@
         "column_f6Q6q7": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_CustomTailoredSolutions_2_062724_c2c1ffea-8a9f-44ac-924f-68734612a951.png",
+            "image": "shopify://shop_images/2297273_TrustBadges_CustomTailoredSolutions_2_062724_c2c1ffea-8a9f-44ac-924f-68734612a951.png",
             "title": "CUSTOM SOLUTIONS",
-            "text": "<p>On-site experts to build exactly what you need<\/p>",
+            "text": "<p>On-site experts to build exactly what you need</p>",
             "link_label": "",
             "link": ""
           }
@@ -299,9 +299,9 @@
         "column_dapM8p": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2297273_TrustBadges_IndustryExperts_2_062724_f6b9eb5c-4d98-4dfb-bc53-9fe5d1b0de68.png",
+            "image": "shopify://shop_images/2297273_TrustBadges_IndustryExperts_2_062724_f6b9eb5c-4d98-4dfb-bc53-9fe5d1b0de68.png",
             "title": "INDUSTRY EXPERTS",
-            "text": "<p>Our dedicated staff of trailer experts are ready for your call<\/p>",
+            "text": "<p>Our dedicated staff of trailer experts are ready for your call</p>",
             "link_label": "",
             "link": ""
           }
@@ -321,8 +321,8 @@
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "SHOP",
-        "button_link": "shopify:\/\/pages\/collections-list",
+        "button_label": "SHOP  PRODUCTS",
+        "button_link": "shopify://pages/collections-list",
         "color_scheme": "background-1",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
@@ -364,17 +364,17 @@
       "type": "video-section",
       "disabled": true,
       "settings": {
-        "video_source": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
+        "video_source": "https://cdn.shopify.com/videos/c/o/v/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
       }
     },
     "16523705464bc2103a": {
       "type": "home-range",
       "settings": {
-        "image": "shopify:\/\/shop_images\/DSC09446-1.jpg",
+        "image": "shopify://shop_images/DSC09446-1.jpg",
         "title": "We Deliver Solutions Faster,  So The DOERS Can DO!",
         "text": "",
         "button_text": "Meet Our Team",
-        "button_link": "shopify:\/\/pages\/meet-the-team"
+        "button_link": "shopify://pages/meet-the-team"
       }
     },
     "1652094941ece48291": {
@@ -383,27 +383,27 @@
         "bfda7fb2-7136-4342-a239-18d729314f59": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_2.jpg",
+            "image": "shopify://shop_images/Artboard_2.jpg",
             "svg": "",
-            "link": "https:\/\/www.inc.com\/profile\/tk-trailer-parts",
+            "link": "https://www.inc.com/profile/tk-trailer-parts",
             "image_alt": "Inc 500"
           }
         },
         "bf003ea6-1075-44f5-9494-83f647db2758": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Untitled-7_23b12895-b49d-4f3b-b896-f5e09c4d61b9.png",
+            "image": "shopify://shop_images/Untitled-7_23b12895-b49d-4f3b-b896-f5e09c4d61b9.png",
             "svg": "",
-            "link": "https:\/\/www.natda.org",
+            "link": "https://www.natda.org",
             "image_alt": "NATDA Member"
           }
         },
         "db0dba57-e908-4dbb-866f-76a3b2ef4489": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Artboard_6_ef91d630-815c-4188-b325-9f6018f2e7c9.jpg",
+            "image": "shopify://shop_images/Artboard_6_ef91d630-815c-4188-b325-9f6018f2e7c9.jpg",
             "svg": "",
-            "link": "https:\/\/www.greatplacetowork.com\/certified-company\/7021936",
+            "link": "https://www.greatplacetowork.com/certified-company/7021936",
             "image_alt": "Great Place to Work Certified 2022"
           }
         }
@@ -420,8 +420,8 @@
     "1652380251ad044f2c": {
       "type": "home-subscription",
       "settings": {
-        "image": "shopify:\/\/shop_images\/18-wheeler.jpg",
-        "title": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"site\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> <\/div>",
+        "image": "shopify://shop_images/18-wheeler.jpg",
+        "title": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"site\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> </div>",
         "text": "",
         "button_text1": "",
         "button_link1": "",
@@ -434,7 +434,7 @@
       "disabled": true,
       "settings": {
         "title": "Blog",
-        "blog_url": "shopify:\/\/blogs\/products",
+        "blog_url": "shopify://blogs/products",
         "show_view_all": true
       }
     }
