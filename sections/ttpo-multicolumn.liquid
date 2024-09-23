@@ -227,6 +227,7 @@
     <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
         <a
+          style="margin:0;"
           class="button button--primary"
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"
