@@ -61,6 +61,8 @@
 
   {% assign dynamic_title = product.title %}
 
+  {% comment %}
+
   <script>console.log('Grabbing Object...')</script>
   <script>console.log('{{product.metafields.custom.option_information.value}}')</script>
 
@@ -153,7 +155,7 @@
 
          <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
 
-<script>console.log('HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')</script>
+{% endcomment %}
   
   <div class="product__title showonlymobile">
     {% comment %}<h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>{% endcomment %}
