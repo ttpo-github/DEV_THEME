@@ -458,7 +458,8 @@
     <!-- End FigPii Asynchronous Tracking Code -->
 
     
-    <!-- BEGIN MerchantWidget Code -->
+   <!-- BEGIN MerchantWidget Code -->
+    <!--
     <script id='merchantWidgetScript'
             src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
             defer>
@@ -471,6 +472,22 @@
         bottomMargin: .1,
         mobileSideMargin: 80,
         mobileBottomMargin: .1
+       });
+      });
+    </script>
+    -->
+    <script id='merchantWidgetScript'
+            src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+            defer>
+    </script>
+    <script type="text/javascript">
+      merchantWidgetScript.addEventListener('load', function () {
+        merchantwidget.start({
+        position: 'LEFT_BOTTOM',
+        sideMargin: 0,
+        bottomMargin: 0.1,
+        mobileSideMargin: 0,
+        mobileBottomMargin: 0.1
        });
       });
     </script>
