@@ -61,6 +61,7 @@
 
   {% assign dynamic_title = product.title %}
 
+  {% capture myProductDescription %}{{ product.description | json }}{% endcapture %}
   
 
   <script>console.log('Grabbing Object...')</script>
