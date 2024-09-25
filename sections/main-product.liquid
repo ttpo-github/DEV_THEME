@@ -64,18 +64,18 @@
   
 
   <script>console.log('Grabbing Object...')</script>
-  <script>console.log('{{product.metafields.custom.product_alt_title_and_description.value}}')</script>
+  <script>console.log('{{product.metafields.custom.alt_titles_and_descriptions.value}}')</script>
 
   <script>//console.log('Rich Text: {{product.metafields.custom.rich_text_test | metafield_tag }}')</script>
 
   <script>console.log('Meta Object...')</script>
-  {% for metaobject in product.metafields.custom.product_alt_title_and_description.value %}
+  {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
     <script>console.log({{metaobject.product_title | metafield_tag | json}})</script>
     <script>console.log({{metaobject.description_body | metafield_tag | json }})</script>
   {% endfor %}
 
   <script>console.log('Descriptions...')</script>
-  {% for metaobject in product.metafields.custom.product_alt_title_and_description.value %}
+  {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
     <script>console.log({{metaobject.description_body | metafield_tag | json }})</script>
   {% endfor %}
   
