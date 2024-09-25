@@ -66,8 +66,6 @@
   <script>console.log('Grabbing Object...')</script>
   <script>console.log('{{product.metafields.custom.alt_titles_and_descriptions}}')</script>
 
-  <script>//console.log('Rich Text: {{product.metafields.custom.rich_text_test | metafield_tag }}')</script>
-
   <script>console.log('Meta Object...')</script>
   {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
     <script>console.log({{metaobject.product_title | metafield_tag | json}})</script>
