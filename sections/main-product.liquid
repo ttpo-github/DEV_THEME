@@ -74,10 +74,10 @@
     <script>console.log({{metaobject.description_body | metafield_tag | json }})</script>
     <script>console.log({{metaobject.description_bottom_image | metafield_tag | json}})</script>
     <script>console.log('//')</script>
-    <script>console.log('{{metaobject.product_title}}')</script>
-    <script>console.log('{{metaobject.description_top_image}}')</script>
-    <script>console.log('{{metaobject.description_body }}')</script>
-    <script>console.log('{{metaobject.description_bottom_image}}')</script>
+    <script>console.log('{{metaobject.product_title | metafield_text }}')</script>
+    <script>console.log('{{metaobject.description_top_image | metafield_text}}')</script>
+    <script>console.log('{{metaobject.description_body | metafield_text}}')</script>
+    <script>console.log('{{metaobject.description_bottom_image | metafield_text}}')</script>
     
   {% endfor %}
 
