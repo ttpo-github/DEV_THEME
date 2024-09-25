@@ -70,13 +70,13 @@
 
   <script>console.log('Meta Object...')</script>
   {% for metaobject in product.metafields.custom.alt_title_and_description.value %}
-    <script>console.log({{metaobject.option_name | metafield_tag | json}})</script>
-    <script>console.log({{metaobject.variant_description | metafield_tag | json }})</script>
+    <script>console.log({{metaobject.alt_title | metafield_tag | json}})</script>
+    <script>console.log({{metaobject.description | metafield_tag | json }})</script>
   {% endfor %}
 
   <script>console.log('Descriptions...')</script>
   {% for metaobject in product.metafields.custom.alt_title_and_description.value %}
-    <script>console.log({{metaobject.variant_description | metafield_tag | json }})</script>
+    <script>console.log({{metaobject.description | metafield_tag | json }})</script>
   {% endfor %}
   
 {% comment %}
