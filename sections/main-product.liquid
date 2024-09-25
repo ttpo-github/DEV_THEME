@@ -69,7 +69,7 @@
   <script>console.log('Meta Object...')</script>
   {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
     <script>console.log('{{product.title | metafield_tag | json}}')</script>
-    <script>console.log('{{product.desctiption | metafield_tag | json}}')</script>
+    <script>console.log('{{product.descrtiption | metafield_tag | json}}')</script>
     <script>console.log('<============================================>')</script>
     <script>console.log('{{metaobject.alternate_title | metafield_tag | json}}')</script>
     <script>console.log('{{metaobject.description_top_image | metafield_tag | json}}')</script>
