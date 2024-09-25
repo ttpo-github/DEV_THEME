@@ -61,25 +61,25 @@
 
   {% assign dynamic_title = product.title %}
 
-  {% comment %}
+  
 
   <script>console.log('Grabbing Object...')</script>
-  <script>console.log('{{product.metafields.custom.option_information.value}}')</script>
+  <script>console.log('{{product.metafields.custom.alt_title_and_description.value}}')</script>
 
   <script>//console.log('Rich Text: {{product.metafields.custom.rich_text_test | metafield_tag }}')</script>
 
   <script>console.log('Meta Object...')</script>
-  {% for metaobject in product.metafields.custom.option_information.value %}
+  {% for metaobject in product.metafields.custom.alt_title_and_description.value %}
     <script>console.log({{metaobject.option_name | metafield_tag | json}})</script>
     <script>console.log({{metaobject.variant_description | metafield_tag | json }})</script>
   {% endfor %}
 
   <script>console.log('Descriptions...')</script>
-  {% for metaobject in product.metafields.custom.option_information.value %}
+  {% for metaobject in product.metafields.custom.alt_title_and_description.value %}
     <script>console.log({{metaobject.variant_description | metafield_tag | json }})</script>
   {% endfor %}
   
-
+{% comment %}
   <!-- ========================================================= DYNAMIC TITLE CODE ========================================================= -->
    
           {% if product.metafields.custom.option_1_alt_titles %} <!-- If the option1 metafield has a value, run the following code that checks for validity and structure -->
