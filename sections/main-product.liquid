@@ -87,6 +87,24 @@
     
   {% endfor %}
 
+
+  {% if product.metafields.custom.alt_titles_and_descriptions.value %} <!-- If the option1 metafield has a value, run the following code that checks for validity and structure -->
+    
+            <script>console.log('ITS GOOD!!!)</script>
+            
+            
+             
+            {% endif %}
+
+            <script>console.log('{{ dynamic_title }}')</script>
+
+           
+
+            {% comment %}
+              <script>console.log({{ options_w_titles | split: ", " | json}})</script>            
+              <script>console.log({{ product_option_one_values | split: ", " | json}})</script>
+            {% endcomment %}
+
   
   
 {% comment %}
