@@ -116,7 +116,7 @@
             <script>console.log('NUMBER CHECK')</script>
   
 
-            {% if product.metafields.custom.alt_titles_and_descriptions.values_count == product_option_one_values_array.size %} <!-- Continue if the size of the option1 value array is the same as the titles_array (meaning the titles_array was properly formatted) -->
+            {% if numberOfAltTitlesAndDescriptions == product_option_one_values_array.size %} <!-- Continue if the size of the option1 value array is the same as the titles_array (meaning the titles_array was properly formatted) -->
 
               <script>console.log('MetaObject number matches base option number!!!!!!')</script>
               
