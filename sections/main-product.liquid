@@ -59,6 +59,7 @@
   {% include 'breadcrumb' %}
   {% endcomment %}
 
+  {% assign dynamic_green_light = false %}
   {% assign dynamic_title = product.title | metafield_tag %}
 
   {% comment %}
@@ -111,68 +112,10 @@
             {% endfor %}
 
             {% if numberOfAltTitlesAndDescriptions == product_option_one_values_array.size %} <!-- Continue if the size of the option1 value array is the same as the titles_array (meaning the titles_array was properly formatted) -->
+              {% assign dynamic_green_light = true %} 
 
-              <script>console.log('MetaObject number matches base option number!!!!!!')</script>
-
-              {% assign options_w_titles_and_description = '' %}
-              
-               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-
-                 {% if forloop.last %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.desciption_body | metafield_text  %}
-                {% else %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.desciption_body | metafield_text | append: ", "%}
-                {% endif %}
-
-                 <script>//console.log('{{metaobject.description_body | metafield_tag | json }}')</script>
-
-                 {% capture list %}
-                      {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                        ['{{ product_option_one_values_array[forloop.index0]}}','{{ metaobject.alternate_title | metafield_tag | replace: "'", "sinlgeQuote" | replace: '"', "doubleQuote"}}',{{ product.description | replace: "'", "sinlgeQuote" | replace: '"', "doubleQuote" | json}}]{% unless forloop.last %}^^^{% endunless %}
-                      {% endfor %}
-                  {% endcapture %}
-                  {% assign p_list = list | split: "^^^" %}
-
-                  <script>console.log({{p_list}})</script>
-                 
-
-                  {% for p_item in p_list %}
-                      {% assign item = p_item | split: "|||" %}
-                     <script>//console.log({{item | replace: "'", "sinlgeQuote"}})</script>
-                  {% endfor %}
-                 
-
-                 {% comment %}
-                <script>console.log('{{product.title | metafield_tag | json}}')</script>
-                <script>console.log({{product.description | json }})</script>
-                <script>console.log('<============================================>')</script>
-                <script>console.log('{{metaobject.alternate_title | metafield_tag | json}}')</script>
-                <script>console.log('{{metaobject.description_top_image | metafield_tag | json}}')</script>
-                <script>console.log('{{metaobject.description_body | metafield_tag | json }}')</script>
-                <script>console.log('{{metaobject.description_bottom_image | metafield_tag | json}}')</script>
-                <script>console.log('////////')</script>
-                <script>console.log('{{metaobject.alternate_title | metafield_text }}')</script>
-                <script>console.log('{{metaobject.description_top_image | metafield_text}}')</script>
-                <script>console.log('{{metaobject.description_body | metafield_text}}')</script>
-                <script>console.log('{{metaobject.description_bottom_image | metafield_text}}')</script>
-                <script>console.log('<============================================>')</script>
-                {% endcomment %}
-              {% endfor %}
-
-              <script>console.log('{{options_w_titles_and_description | metafield_tag}}')</script>
-
-              {% comment %}
-              {% assign options_w_titles = '' %}
-              {% for option_1 in product_option_one_values_array %}
-                {% if forloop.last %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: titles_array[forloop.index0]%}
-                {% else %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: titles_array[forloop.index0] | append: ", "%}
-                {% endif %}
-              {% endfor %}
-              {% endcomment %}
-            {% endif %}
-                                     
+              <script>console.log('GREEN LIGHT')</script>
+            {% endif %}                                    
   {% endif %}
 
             <script>//console.log('{{ dynamic_title }}')</script>
