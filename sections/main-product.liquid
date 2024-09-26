@@ -106,7 +106,7 @@
             {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
     
             <script>console.log('NUMBER CHECK')</script>
-            <script>console.log({{ product.metafields.custom.alt_titles_and_descriptions.value[0] }})</script>
+            <script>console.log({{ product.metafields.custom.alt_titles_and_descriptions }})</script>
             <script>console.log({{ product_option_one_values_array | size }})</script>
             <script>console.log('NUMBER CHECK')</script>
   
