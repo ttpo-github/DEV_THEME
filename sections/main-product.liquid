@@ -126,6 +126,19 @@
 
                  <script>//console.log('{{metaobject.description_body | metafield_tag | json }}')</script>
 
+                 {% capture list %}
+                      {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                        {{ product_option_one_values_array[forloop.index0]}}|{{ metaobject.alternate_title | metafield_tag }}|{{ metaobject.description_body}}|{% if forloop.last %}^{% endif %}
+                      {% endfor %}
+                  {% endcapture %}
+                  {% assign p_list = list | split: "^" %}
+
+                  {% for p_item in p_list %}
+                      {% assign item = p_item | split: "|" %}
+                      <h4>{{ item[0] }}</h4>
+                      <p>{{ item[2] }}<p>
+                  {% endfor %}
+
                  {% comment %}
                 <script>console.log('{{product.title | metafield_tag | json}}')</script>
                 <script>console.log({{product.description | json }})</script>
