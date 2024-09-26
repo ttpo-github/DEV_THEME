@@ -13,8 +13,36 @@
         {% endfor %}
         
       </ul>
+      <!-- ======================================================= PRODUCT DESCRIPTION SECTION ======================================================= -->
       <div id="descriptions" class="product-tabing-body">
         <div class="product__description rte quick-add-hidden">
+
+          {% if dynamic_green_light %}
+                    {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                      {% assign metaObjDescription = metaobject.alternate_title | metafield_text %}
+                      {% if metaObjDescription == 'DEFAULT' %}
+                        <div {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_description">{{product.description}}</div>
+                      {% else %}
+                        <div {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_description">{{metaobject.description_body | metafield_text}}</div>
+                      {% endif %}
+                    {% endfor %}
+        
+                    {% else %}
+        
+                    <div>
+                      {% if product.metafields.custom.product_information_image %}
+                        <img src="{{ product.metafields.custom.product_information_image.value.image | img_url : 'master' }}" alt="{{ image.image.alt | escape }}">
+                      {% endif %}
+                      {%- if product.metafields.custom.product_information_description %}
+                        {{ product.metafields.custom.product_information_description | metafield_tag }}
+                        {% endif %}
+                      </div>
+                      {{ product.description }}
+                      
+                    
+                  {% endif %}
+
+        
           <div>
           {% if product.metafields.custom.product_information_image %}
             <img src="{{ product.metafields.custom.product_information_image.value.image | img_url : 'master' }}" alt="{{ image.image.alt | escape }}">
@@ -25,7 +53,10 @@
           </div>
           {{ product.description }}
           </div>
+        
       </div>
+        
+      <!-- ======================================================= PRODUCT DESCRIPTION SECTION ======================================================= -->
       <div id="reviews" class="product-tabing-body">
         {% comment %}
         <div class="yotpo yotpo-main-widget"
