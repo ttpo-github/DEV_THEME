@@ -216,9 +216,9 @@
       {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
         {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
         {% if metaObjTitle == 'DEFAULT' %}
-          <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo-product-title">{{product.title}}</span>
+          <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
         {% else %}
-          <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo-product-title">{{metaobject.alternate_title | metafield_text}}</span>
+          <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
         {% endif %}
       {% endfor %}
     </h1>
