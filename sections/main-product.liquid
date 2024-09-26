@@ -316,15 +316,29 @@
         {% endcomment %}
         
         <div class="product__title TESTING" {{ block.shopify_attributes }}>
-          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{{ dynamic_title }}</h1>
+          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{% comment %}{{ dynamic_title }}{% endcomment %}</h1>
 
-          
+          {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+            {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
+            {% if metaObjTitle == 'DEFAULT' %}
+              <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
+            {% else %}
+              <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
+            {% endif %}
+          {% endfor %}
           
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1 ttpo_product_title">
               {% comment %}{{ product.title | escape }}{% endcomment %}
-              {{ dynamic_title }}
-
+              {% comment %}{{ dynamic_title }}{% endcomment %}
+              {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
+                {% if metaObjTitle == 'DEFAULT' %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
+                {% else %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
+                {% endif %}
+              {% endfor %}
               
             </h2>
           </a>
