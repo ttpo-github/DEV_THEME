@@ -314,7 +314,6 @@
               {% comment %}{{ dynamic_title }}{% endcomment %}
 
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                <script>console.log('{{ product_option_one_values_array[forloop.index0] }}')</script>
                 {{metaobject.alternate_title | metafield_tag | json}}
               {% endfor %}
             </h2>
