@@ -61,7 +61,7 @@
 
   {% assign dynamic_title = product.title %}
 
-  {% comment %}
+ 
   {% capture myProductDescription %}{{ product.description | json }}{% endcapture %}
 
   <script>//console.log('{{product.description}}')</script>
@@ -71,6 +71,7 @@
   <script>console.log('{{product.metafields.custom.alt_titles_and_descriptions}}')</script>
 
   <script>console.log('Meta Object...')</script>
+  <script>console.log({{product.metafields.custom.alt_titles_and_descriptions.values_count}})</script>
   {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
     <script>console.log('{{product.title | metafield_tag | json}}')</script>
     <script>console.log({{product.description | json }})</script>
@@ -87,7 +88,7 @@
     <script>console.log('<============================================>')</script>
     
   {% endfor %}
-  {% endcomment %}
+  
 
   {% if product.metafields.custom.alt_titles_and_descriptions %} <!-- If the alt_titles_and_descriptions metaobject has a value, run the following code that checks for validity and structure -->
     
