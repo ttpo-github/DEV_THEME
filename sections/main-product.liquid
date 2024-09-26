@@ -135,8 +135,9 @@
 
                   {% for p_item in p_list %}
                       {% assign item = p_item | split: "|" %}
-                      <h4>{{ item[0] }}</h4>
-                      <p>{{ item[2] }}<p>
+                      
+
+                      <script>console.log({{list}})</script>
                   {% endfor %}
 
                  {% comment %}
