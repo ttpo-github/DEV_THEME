@@ -91,19 +91,7 @@
 
   {% if product.metafields.custom.alt_titles_and_descriptions %} <!-- If the alt_titles_and_descriptions metaobject has a value, run the following code that checks for validity and structure -->
     
-            {% for product_option in product.options_with_values %} <!-- Grabbing the option values for the first option and placing them into an array for the next conditional check --> 
-              {% if forloop.index == 1 %}
-                {% for value in product_option.values %}
-                  {% if forloop.last %}
-                    {% assign product_option_one_values = product_option_one_values | append: value %}
-                  {% else %}
-                    {% assign product_option_one_values = product_option_one_values | append: value | append: ", "%}
-                  {% endif %}                 
-                {% endfor %}
-                  {% endif %}
-            {% endfor %}
-
-            {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
+            
 
             <script>console.log('SIZE: {{ product.metafields.custom.alt_titles_and_descriptions.values_count }}')</script>
                                      
