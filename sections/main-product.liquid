@@ -104,6 +104,9 @@
             {% endfor %}
 
             {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
+
+            <script>console.log({{product.metafields.custom.alt_titles_and_descriptions.values_count}})</script>
+            <script>console.log({{product_option_one_values_array.size}})</script>
   
 
             {% if product.metafields.custom.alt_titles_and_descriptions.values_count == product_option_one_values_array.size %} <!-- Continue if the size of the option1 value array is the same as the titles_array (meaning the titles_array was properly formatted) -->
