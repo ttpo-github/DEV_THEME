@@ -42,7 +42,7 @@
                     
                   {% endif %}
 
-        
+          {% comment %}
           <div>
           {% if product.metafields.custom.product_information_image %}
             <img src="{{ product.metafields.custom.product_information_image.value.image | img_url : 'master' }}" alt="{{ image.image.alt | escape }}">
@@ -52,8 +52,9 @@
             {% endif %}
           </div>
           {{ product.description }}
+          {% endcomment %}
           </div>
-        
+          
       </div>
         
       <!-- ======================================================= PRODUCT DESCRIPTION SECTION ======================================================= -->
