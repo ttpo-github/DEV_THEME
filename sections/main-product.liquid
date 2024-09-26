@@ -89,7 +89,7 @@
   {% endfor %}
   {% endcomment %}
 
-  {% if product.metafields.custom.alt_titles_and_descriptions.value %} <!-- If the alt_titles_and_descriptions metaobject has a value, run the following code that checks for validity and structure -->
+  {% if product.metafields.custom.alt_titles_and_descriptions %} <!-- If the alt_titles_and_descriptions metaobject has a value, run the following code that checks for validity and structure -->
     
             {% for product_option in product.options_with_values %} <!-- Grabbing the option values for the first option and placing them into an array for the next conditional check --> 
               {% if forloop.index == 1 %}
