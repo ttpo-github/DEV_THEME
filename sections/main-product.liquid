@@ -128,7 +128,7 @@
 
                  {% capture list %}
                       {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                        '{{ product_option_one_values_array[forloop.index0]}}|||{{ metaobject.alternate_title | metafield_tag }}|||{{ product.description | replace: "'", "sinlgeQuote"}}'{% unless forloop.last %}^^^{% endunless %}
+                        {{ product_option_one_values_array[forloop.index0]}}|||{{ metaobject.alternate_title | metafield_tag }}|||'{{ product.description | replace: "'", "sinlgeQuote"}}'{% unless forloop.last %}^^^{% endunless %}
                       {% endfor %}
                   {% endcapture %}
                   {% assign p_list = list | split: "^^^" %}
