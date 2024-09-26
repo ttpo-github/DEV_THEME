@@ -105,7 +105,7 @@
     
             {% assign numberOfAltTitlesAndDescriptions = 0 %}
             {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-              {% increment numberOfAltTitlesAndDescriptions %}
+              {% assign numberOfAltTitlesAndDescriptions = numberOfAltTitlesAndDescriptions | plus: 1 %}
             {% endfor %}
 
             {% assign product_option_one_values_array = product_option_one_values | split: ", " %}
