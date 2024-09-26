@@ -124,7 +124,7 @@
                   {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.alternate_title | metafield_text | append: " --- " | append: metaobject.desciption_body | metafield_tag | append: ", "%}
                 {% endif %}
 
-                 <script>console.log('{{metaobject.description_body | metafield_tag | json }}')</script>
+                 <script>//console.log('{{metaobject.description_body | metafield_tag | json }}')</script>
 
                  {% comment %}
                 <script>console.log('{{product.title | metafield_tag | json}}')</script>
