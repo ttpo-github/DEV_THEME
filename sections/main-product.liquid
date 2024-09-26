@@ -138,7 +138,7 @@
 
                   {% for p_item in p_list %}
                       {% assign item = p_item | split: "|" %}
-                     <script>console.log({{item}})</script>
+                     <script>console.log({{item | replace: "'", "sinlgeQuote"}})</script>
                   {% endfor %}
                  
 
