@@ -143,7 +143,7 @@
                 {% endcomment %}
               {% endfor %}
 
-              <script>console.log('{{options_w_titles_and_description}}')</script>
+              <script>console.log('{{options_w_titles_and_description | metafield_tag}}')</script>
 
               {% comment %}
               {% assign options_w_titles = '' %}
