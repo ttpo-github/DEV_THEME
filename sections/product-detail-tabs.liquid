@@ -54,7 +54,7 @@
                       {% if metaObjDescription == 'DEFAULT' %}
                         <div {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_description">{{product.description}}</div>
                       {% else %}
-                        <div {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_description">{{metaobject.description_body | metafield_text}}</div>
+                        <div {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_description">{{metaobject.description_body | metafield_tag}}</div>
                       {% endif %}
                     {% endfor %}
         
