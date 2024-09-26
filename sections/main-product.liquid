@@ -307,15 +307,18 @@
         {% endcomment %}
         
         <div class="product__title" {{ block.shopify_attributes }}>
-          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{{ dynamic_title }}</h1>
+          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{% comment %}{{ dynamic_title }}{% endcomment %}</h1>
+
+          {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                {{metaobject.alternate_title | metafield_tag | json}}
+              {% endfor %}
+          
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1 ttpo_product_title">
               {% comment %}{{ product.title | escape }}{% endcomment %}
               {% comment %}{{ dynamic_title }}{% endcomment %}
 
-              {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                {{metaobject.alternate_title | metafield_tag | json}}
-              {% endfor %}
+              
             </h2>
           </a>
         </div>
