@@ -59,7 +59,7 @@
   {% include 'breadcrumb' %}
   {% endcomment %}
 
-  {% assign dynamic_title = product.title | metafield_tag | json %}
+  {% assign dynamic_title = product.title | metafield_tag %}
 
   {% comment %}
   {% capture myProductDescription %}{{ product.description | json }}{% endcapture %}
