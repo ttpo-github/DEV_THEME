@@ -212,7 +212,11 @@
   
   <div class="product__title showonlymobile">
     {% comment %}<h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>{% endcomment %}
-    <h1 itemprop="name" class="ttpo_product_title">{{ dynamic_title }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>
+    <h1 itemprop="name" class="ttpo_product_title">{% comment %}{{ dynamic_title }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}{% endcomment %}
+      {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                {{metaobject.alternate_title | metafield_tag }}
+              {% endfor %}
+    </h1>
   </div>
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
@@ -307,16 +311,14 @@
         {% endcomment %}
         
         <div class="product__title TESTING" {{ block.shopify_attributes }}>
-          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{% comment %}{{ dynamic_title }}{% endcomment %}</h1>
+          <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{{ dynamic_title }}</h1>
 
-          {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                {{metaobject.alternate_title | metafield_tag }}
-              {% endfor %}
+          
           
           <a href="{{ product.url }}" class="product__title">
             <h2 class="h1 ttpo_product_title">
               {% comment %}{{ product.title | escape }}{% endcomment %}
-              {% comment %}{{ dynamic_title }}{% endcomment %}
+              {{ dynamic_title }}
 
               
             </h2>
