@@ -306,7 +306,7 @@
           <script>console.log('{{ options_length }}')</script>
         {% endcomment %}
         
-        <div class="product__title" {{ block.shopify_attributes }}>
+        <div class="product__title TESTING" {{ block.shopify_attributes }}>
           <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{% comment %}{{ dynamic_title }}{% endcomment %}</h1>
 
           {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
