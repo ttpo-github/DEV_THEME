@@ -310,7 +310,7 @@
           <h1 class="ttpo_product_title">{% comment %}Test {{ product.title | escape }}{% endcomment %}{% comment %}{{ dynamic_title }}{% endcomment %}</h1>
 
           {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
-                {{metaobject.alternate_title | metafield_tag | json}}
+                {{metaobject.alternate_title | metafield_tag }}
               {% endfor %}
           
           <a href="{{ product.url }}" class="product__title">
