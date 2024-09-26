@@ -119,9 +119,9 @@
                {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
 
                  {% if forloop.last %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.alternate_title | metafield_text  %}
+                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.alternate_title | append: " --- " | append: metaobject.desciption_body | metafield_text  %}
                 {% else %}
-                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.alternate_title | metafield_text  | append: ", "%}
+                  {% assign options_w_titles_and_description = options_w_titles_and_description | append: product_option_one_values_array[forloop.index0] | append: " --- " | append: metaobject.alternate_title | append: " --- " | append: metaobject.desciption_body | metafield_text  | append: ", "%}
                 {% endif %}
 
                  {% comment %}
