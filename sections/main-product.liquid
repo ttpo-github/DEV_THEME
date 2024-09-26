@@ -215,7 +215,7 @@
     <h1 itemprop="name" class="ttpo_product_title">{% comment %}{{ dynamic_title }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}{% endcomment %}
       {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
         {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-        {% if metaObjTitle  == 'DEFAULT' %}
+        {% if metaObjTitle == 'DEFAULT' %}
           <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo-product-title">{{product.title }}</span>
         {% else %}
           <span data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo-product-title">{{metaobject.alternate_title | metafield_text }}</span>
