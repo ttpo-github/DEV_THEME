@@ -803,12 +803,12 @@
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1 class="ttpo_product_title">
               {% comment %}{{ product.title | truncate: 65 | escape }}{% endcomment %}
-              {{ dynamic_title | truncate: 65 | escape }}
+              {{ dynamic_title | truncate: 65  }}
             </h1>
             <a href="{{ product.url }}" class="product__title">
               <h2 class="h1" class="ttpo_product_title">
                 {% comment %}{{ product.title | escape }}{% endcomment %}
-                {{ dynamic_title | escape }}
+                {{ dynamic_title  }}
               </h2>
             </a>
           </div>
