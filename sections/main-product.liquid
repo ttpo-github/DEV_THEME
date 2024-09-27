@@ -117,7 +117,6 @@
 
               <script id="dynamic-titles-and-descriptions-check"></script>
 
-              <script>console.log('GREEN LIGHT')</script>
             {% endif %}                                    
   {% endif %}
 
@@ -214,7 +213,7 @@
   
   <div class="product__title showonlymobile">
     {% comment %}<h1 itemprop="name" class="ttpo_product_title">{{ product.title | escape }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}</h1>{% endcomment %}
-    <h1 itemprop="name" class="ttpo_product_title">{% comment %}{{ dynamic_title }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}{% endcomment %}
+    <h1 itemprop="name" >{% comment %}{{ dynamic_title }}{% if product.tags contains 'unavailable' %} - Call For Availability{% endif %}{% endcomment %}
       {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                 {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
