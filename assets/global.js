@@ -1007,11 +1007,9 @@ class VariantSelects extends HTMLElement {
 
       let currentOptionOne = this.currentVariant.option1
 
-      console.log(currentOptionOne)
+      //console.log(currentOptionOne)
 
       Array.from(productTitles).forEach(function(el, index){
-        console.log(typeof el.dataset.productOptionOne)
-        console.log(typeof currentOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
           el.style.display = 'block';
         } else {
