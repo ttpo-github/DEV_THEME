@@ -990,7 +990,7 @@ class VariantSelects extends HTMLElement {
     }
     */
 
-    let dynamicCheck = document.getElementsById('dynamic-titles-and-descriptions-check');
+    let dynamicCheck = document.getElementById('dynamic-titles-and-descriptions-check');
 
     console.log(dynamicCheck)
 
