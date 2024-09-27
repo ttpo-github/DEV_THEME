@@ -1000,6 +1000,8 @@ class VariantSelects extends HTMLElement {
       let productDescriptions = document.getElementsByClassName('ttpo_product_description');
 
       Array.from(productTitles).forEach(function(el, index){
+        console.log(productTitles[index])
+        console.log(productDescriptions[index])
         productTitles[index].style.display = 'none';
         productDescriptions[index].style.display = 'none';
       })
