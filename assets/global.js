@@ -1003,7 +1003,7 @@ class VariantSelects extends HTMLElement {
       //console.log(productDescriptions)
 
       Array.from(productTitles).forEach(function(el, index){
-        if(dataset.productOptionOne == this.currentVariant.option1){
+        if(dataset.productOptionOne && dataset.productOptionOne == this.currentVariant.option1){
           productTitles[index].style.display = 'block';
         } else {
           productTitles[index].style.display = 'none';
@@ -1011,7 +1011,7 @@ class VariantSelects extends HTMLElement {
       })
 
       Array.from(productDescriptions).forEach(function(el, index){
-        if(dataset.productOptionOne == this.currentVariant.option1){
+        if(dataset.productOptionOne && dataset.productOptionOne == this.currentVariant.option1){
           productDescriptions[index].style.display = 'block';
         } else {
           productDescriptions[index].style.display = 'none';
