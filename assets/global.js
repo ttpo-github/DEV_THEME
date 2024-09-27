@@ -1002,12 +1002,15 @@ class VariantSelects extends HTMLElement {
       //console.log(productTitles)
       //console.log(productDescriptions)
 
-      console.log('CURRENT CURRENT CURRENT')
-      console.log(this.currentVariant.option1)
+      //console.log('CURRENT CURRENT CURRENT')
+      //console.log(this.currentVariant.option1)
 
       let currentOptionOne = this.currentVariant.option1
 
+      console.log(currentOptionOne)
+
       Array.from(productTitles).forEach(function(el, index){
+        console.log(el.dataset.productOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
           productTitles[index].style.display = 'block';
         } else {
@@ -1016,6 +1019,7 @@ class VariantSelects extends HTMLElement {
       })
 
       Array.from(productDescriptions).forEach(function(el, index){
+        console.log(el.dataset.productOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
           productDescriptions[index].style.display = 'block';
         } else {
