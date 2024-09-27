@@ -1003,16 +1003,10 @@ class VariantSelects extends HTMLElement {
         console.log(productDescriptions)
 
       Array.from(productTitles).forEach(function(el, index){
-        //console.log(productTitles[index])
-        //console.log(productDescriptions[index])
-        //console.log(index)
         productTitles[index].style.display = 'none';
       })
 
       Array.from(productDescriptions).forEach(function(el, index){
-        //console.log(productDescriptions[index])
-        //console.log(productDescriptions[index])
-        //console.log(index)
         productDescriptions[index].style.display = 'none';
       })
 
