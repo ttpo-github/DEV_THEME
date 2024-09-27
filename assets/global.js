@@ -1005,8 +1005,8 @@ class VariantSelects extends HTMLElement {
       Array.from(productTitles).forEach(function(el, index){
         //console.log(productTitles[index])
         //console.log(productDescriptions[index])
-        productTitles[index].style.display = 'none';
-        productDescriptions[index].style.display = 'none';
+        productTitles[index].style.display = 'none'
+        productDescriptions[index].style.display = 'none'
       })
 
       let currentVariantOptionOne = document.querySelectorAll(`[data-product-option-one="${this.currentVariant.option1}"]`);
