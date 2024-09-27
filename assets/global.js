@@ -995,12 +995,12 @@ class VariantSelects extends HTMLElement {
     console.log(dynamicCheck)
 
     if(dynamicCheck){
-      console.log("CHECK CHECK CHECK")
+      //console.log("CHECK CHECK CHECK")
       let productTitles = document.getElementsByClassName('ttpo_product_title');
       let productDescriptions = document.getElementsByClassName('ttpo_product_description');
 
       //console.log(productTitles)
-        console.log(productDescriptions)
+      //console.log(productDescriptions)
 
       Array.from(productTitles).forEach(function(el, index){
         if(dataset.productOptionOne == this.currentVariant.option1){
@@ -1018,10 +1018,8 @@ class VariantSelects extends HTMLElement {
         }
       })
 
-      let currentVariantOptionOne = document.querySelectorAll(`[data-product-option-one="${this.currentVariant.option1}"]`);
-      console.log(currentVariantOptionOne)
-
-      currentVariantOptionOne
+      //let currentVariantOptionOne = document.querySelectorAll(`[data-product-option-one="${this.currentVariant.option1}"]`);
+      //console.log(currentVariantOptionOne)
     }
     
   }
