@@ -1006,7 +1006,7 @@ class VariantSelects extends HTMLElement {
         //console.log(productTitles[index])
         console.log(productDescriptions[index])
         productTitles[index].style.display = 'none';
-        productDescriptions[index].style.display = 'none';
+        //productDescriptions[index].style.display = 'none';
       })
 
       let currentVariantOptionOne = querySelectAll(`[data-product-option-one=${this.currentVariant.option1}]`);
