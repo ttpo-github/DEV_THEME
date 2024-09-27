@@ -999,6 +999,9 @@ class VariantSelects extends HTMLElement {
       let productTitles = document.getElementsByClassName('ttpo_product_titles');
       let productDescriptions = document.getElementsByClassName('ttpo_product_description');
 
+      console.log(productTitles)
+        console.log(productDescriptions)
+
       Array.from(productTitles).forEach(function(el, index){
         console.log(productTitles[index])
         console.log(productDescriptions[index])
