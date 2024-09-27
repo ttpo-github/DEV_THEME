@@ -999,15 +999,17 @@ class VariantSelects extends HTMLElement {
       let productTitles = document.getElementsByClassName('ttpo_product_title');
       let productDescriptions = document.getElementsByClassName('ttpo_product_description');
 
-      console.log(productTitles)
-        console.log(productDescriptions)
+      //console.log(productTitles)
+        //console.log(productDescriptions)
 
       Array.from(productTitles).forEach(function(el, index){
-        console.log(productTitles[index])
-        console.log(productDescriptions[index])
+        //console.log(productTitles[index])
+        //console.log(productDescriptions[index])
         productTitles[index].style.display = 'none';
         productDescriptions[index].style.display = 'none';
       })
+
+      let currentVariantOptionOne = querySelectAll(`[data-product-option-one=${this.currentVariant.option1}]`)
     }
     
   }
