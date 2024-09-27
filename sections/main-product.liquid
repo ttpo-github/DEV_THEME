@@ -868,12 +868,42 @@
             <div class="product__title atc_title" {{ block.shopify_attributes }} style="margin:0;">
             <h1 class="ttpo_product_title">
               {% comment %}{{ product.title | truncate: 65 | escape }}{% endcomment %}
-              {{ dynamic_title | truncate: 65  }}
+              {% comment %}{{ dynamic_title | truncate: 65  }}{% endcomment %}
+              {% if dynamic_green_light %}
+              {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
+                {% if metaObjTitle == 'DEFAULT' %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
+                {% else %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
+                {% endif %}
+              {% endfor %}
+  
+              {% else %}
+  
+              {{ product.title }}
+              
+             {% endif %}
             </h1>
             <a href="{{ product.url }}" class="product__title">
               <h2 class="h1" class="ttpo_product_title">
                 {% comment %}{{ product.title | escape }}{% endcomment %}
-                {{ dynamic_title  }}
+                {% comment %}{{ dynamic_title  }}{% endcomment %}
+                {% if dynamic_green_light %}
+              {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
+                {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
+                {% if metaObjTitle == 'DEFAULT' %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
+                {% else %}
+                  <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
+                {% endif %}
+              {% endfor %}
+  
+              {% else %}
+  
+              {{ product.title }}
+              
+             {% endif %}
               </h2>
             </a>
           </div>
