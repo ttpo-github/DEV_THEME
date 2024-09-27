@@ -995,6 +995,7 @@ class VariantSelects extends HTMLElement {
     console.log(dynamicCheck)
 
     if(dynamicCheck){
+      console.log("CHECK CHECK CHECK")
       let productTitles = document.getElementsByClassName('ttpo_product_titles');
       let productDescriptions = document.getElementsByClassName('ttpo_product_description');
 
