@@ -1012,18 +1012,18 @@ class VariantSelects extends HTMLElement {
       Array.from(productTitles).forEach(function(el, index){
         console.log(el.dataset.productOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
-          productTitles[index].style.display = 'block';
+          el.style.display = 'block';
         } else {
-          productTitles[index].style.display = 'none';
+          el.style.display = 'none';
         }
       })
 
       Array.from(productDescriptions).forEach(function(el, index){
         console.log(el.dataset.productOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
-          productDescriptions[index].style.display = 'block';
+          el.style.display = 'block';
         } else {
-          productDescriptions[index].style.display = 'none';
+          el.style.display = 'none';
         }
       })
 
