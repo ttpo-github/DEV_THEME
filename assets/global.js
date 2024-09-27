@@ -1003,7 +1003,7 @@ class VariantSelects extends HTMLElement {
       //console.log(productDescriptions)
 
       console.log('CURRENT CURRENT CURRENT')
-      console.log(this.currentVariant)
+      console.log(this.currentVariant.option1)
 
       Array.from(productTitles).forEach(function(el, index){
         if(el.dataset.productOptionOne == this.currentVariant.option1){
