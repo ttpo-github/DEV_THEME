@@ -108,6 +108,7 @@
                 {% for variant in product.variants %}
                   {% if variant_card_string contains variant.option1 %}
                     {% else %}
+                    {% if variant.option1 contains "Kit" %}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
@@ -127,6 +128,7 @@
                   %}
                 </li>
                     {% assign variant_card_string = variant_card_string | append: variant.option1 %}
+                      {% endif %}
                     {% endif %}
                   {% endfor %}
               {%- endfor -%}
