@@ -99,7 +99,7 @@
           <h3 class="product-card__heading{% if card_variant.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_variant.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_variant.id }}"{% endif %}>
             <a href="{{ card_variant.url }}" class="full-unstyled-link">
               {% assign option_title_dollar_split = card_variant.option1 | split: " $" %}
-              {{ card_product.title }} - <span style="font-weight:900;">{{ option_title_dollar_split[0] }}</span>
+              {{ card_product.title }} <br> <span style="font-weight:900;">{{ option_title_dollar_split[0] }}</span>
             </a>
           </h3>
           {%- if show_vendor -%}
