@@ -108,6 +108,7 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
+                <script>console.log({{product | json }})</script>
                 <li class="product-grid__item">
                   {% render 'card-product',
                     card_product: product,
