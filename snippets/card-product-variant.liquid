@@ -98,7 +98,7 @@
         <div class="product-card__information">
           <h3 class="product-card__heading{% if card_variant.featured_media or settings.card_style == 'standard' %} h5{% endif %}"{% if card_variant.featured_media or settings.card_style == 'card' %} id="title-{{ section_id }}-{{ card_variant.id }}"{% endif %}>
             <a href="{{ card_variant.url }}" class="full-unstyled-link">
-              {{ card_variant.public_title | escape }}
+              {{ card_variant.title | escape }}
             </a>
           </h3>
           {%- if show_vendor -%}
