@@ -104,14 +104,15 @@
 
             <ul id="product-grid" data-id="{{ section.id }}" class="product-grid">
               {%- for product in collection.products -%}
+                {% for variant in product.variants %}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                <script>console.log({{product | json }})</script>
+                <script>//console.log({{product | json }})</script>
                 <li class="product-grid__item">
                   {% render 'card-product',
-                    card_product: product,
+                    card_product: variant,
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
@@ -121,6 +122,7 @@
                     section_id: section.id
                   %}
                 </li>
+                  {% endfor %}
               {%- endfor -%}
             </ul>
 
