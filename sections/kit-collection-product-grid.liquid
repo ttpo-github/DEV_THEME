@@ -103,13 +103,16 @@
             <div class="loading-overlay gradient"></div>
 
             <ul id="product-grid" data-id="{{ section.id }}" class="product-grid">
+              {% assign variant_card_string = "" %}
               {%- for product in collection.products -%}
                 {% for variant in product.variants %}
+                  {% if variant_card_string contains variant.option1 %}
+                    {% else %}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                <script>console.log({{variant | json }})</script>
+                <script>//console.log({{variant | json }})</script>
                 <li class="product-grid__item">
                   {% render 'card-product-variant',
                     card_product: product,
@@ -123,6 +126,8 @@
                     section_id: section.id
                   %}
                 </li>
+                    {% assign variant_card_string = variant_card_string | append: variant.option1 %}
+                    {% endif %}
                   {% endfor %}
               {%- endfor -%}
             </ul>
