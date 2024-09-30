@@ -217,7 +217,7 @@
       {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                 {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-                {% if metaObjTitle == 'DEFAULT' %}
+                {% if metaObjTitle == 'DEFAULT' or metaObjTitle == blank %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
                 {% else %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
@@ -328,7 +328,7 @@
             {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                 {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-                {% if metaObjTitle == 'DEFAULT' %}
+                {% if metaObjTitle == 'DEFAULT' or metaObjTitle == blank %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
                 {% else %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
@@ -348,7 +348,7 @@
               {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                   {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-                  {% if metaObjTitle == 'DEFAULT' %}
+                  {% if metaObjTitle == 'DEFAULT' or metaObjTitle == blank %}
                     <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
                   {% else %}
                     <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
@@ -872,7 +872,7 @@
               {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                 {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-                {% if metaObjTitle == 'DEFAULT' %}
+                {% if metaObjTitle == 'DEFAULT' or metaObjTitle == blank %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
                 {% else %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
@@ -892,7 +892,7 @@
                 {% if dynamic_green_light %}
               {% for metaobject in product.metafields.custom.alt_titles_and_descriptions.value %}
                 {% assign metaObjTitle = metaobject.alternate_title | metafield_text %}
-                {% if metaObjTitle == 'DEFAULT' %}
+                {% if metaObjTitle == 'DEFAULT' or metaObjTitle == blank %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{product.title}}</span>
                 {% else %}
                   <span {% if product_option_one_values_array[forloop.index0] contains product.selected_or_first_available_variant.option1 %}{% else %}style="display:none;"{% endif %} data-product-option-one="{{ product_option_one_values_array[forloop.index0] }}" class="ttpo_product_title">{{metaobject.alternate_title | metafield_text}}</span>
