@@ -833,8 +833,10 @@
     birthday = dayMonth + nextYear;
   }
   //end
+
   
-  const countDown = new Date(birthday).getTime(),
+  //const countDown = new Date().getTime(),
+  const coundDown = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0); // Set to today at noon
       x = setInterval(function() {    
 
         const now = new Date().getTime(),
