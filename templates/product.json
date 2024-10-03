@@ -36,7 +36,7 @@
         "announcement_timer_49C6xB": {
           "type": "announcement-timer",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Order before 12 CST for next day shipping!",
             "color_scheme": "accent-1",
             "link": "",
             "hide-announcment-bar": false,
