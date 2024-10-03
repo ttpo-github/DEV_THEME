@@ -676,6 +676,176 @@
               {% render 'icon-with-text',
                 block: block
               %}
+
+            {%- when 'next-day-timer' -%}
+              {%- when 'announcement-timer' -%}
+        <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }} style="top:0px;">
+          {%- if block.settings.text != blank -%}
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow" style="padding:5.5px 5px;">
+            {%- endif -%}
+                <div class="page-width" style="padding:0;">
+                  <div class=" {{ block.settings.text_alignment }} h5">
+                    
+                     <div id="custom-countdown">
+                      <span class="custom-countdown-message">{{ block.settings.text | escape }} </span>
+                      <ul class="custom-countdown-list">
+                        <li class="custom-time" {% if block.settings.show_day == false %}style="display:none;"{% endif %}><span id="days"></span> Days </li>
+                        <li class="custom-time" {% if block.settings.show_hour == false%}style="display:none;"{% endif %}><span id="hours"></span> Hours </li>
+                        <li class="custom-time" {% if block.settings.show_min == false%}style="display:none;"{% endif %}><span id="minutes"></span> Minutes </li>
+                        <li class="custom-time" {% if block.settings.show_second == false%}style="display:none;"{% endif %}><span id="seconds"></span> Seconds </li>
+                      </ul>
+                       <span id="custom-link-arrow">
+                          {%- if block.settings.link != blank -%}
+                          {% render 'icon-arrow' %}
+                          {%- endif -%}
+                       </span>
+                    </div>
+                    <span id="countdown-content" >
+                      <span>{{ block.settings.timer-end-message }}</span>
+                    </span>
+                    
+                    
+                  </div>
+                </div>
+
+                
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          {%- endif -%}
+
+          
+          <div>
+            {{ block.settings.custom_liquid }}
+          </div>
+
+
+           <style>
+#custom-countdown{
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  font-size:.8em;
+  flex-direction:column;
+}
+
+.custom-countdown-message {
+  line-height:2em;
+  padding-right:3px;
+  font-size:1em;
+}
+
+.custom-countdown-list {
+  display: flex;
+  list-style: none;
+  grid-template-columns: auto auto auto auto;
+  padding: 0px;
+  line-height: 0;
+  gap:5px;
+  justify-content:center;
+}
+
+  
+#countdown-content {
+  display: none;
+  padding:0px;
+   text-align:center;
+  flex-direction:row;
+}
+
+#countdown-content span {
+  padding: 0px
+}
+
+#custom-link-arrow{
+  display:none;
+}
+
+@media screen and (min-width: 990px){
+  #custom-countdown{
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    font-size:1em;
+    flex-direction:row;
+  }
+
+  .custom-countdown-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: auto auto auto auto;
+  padding: 0px;
+  line-height: 0;
+  gap:5px;
+}
+
+  .custom-countdown-list{
+    gap:10px;
+  }
+  
+  .custom-countdown-message{
+    line-height:2em;
+  }
+
+  #custom-link-arrow{
+  display:flex;
+}
+}
+            
+</style>
+
+<script defer>
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = '{{block.settings.timer-end}}' + '/',
+      birthday = dayMonth + yyyy,
+      hideBar = {{ block.settings.hide-announcment-bar }};
+      
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+          
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          //document.getElementById("headline").innerText = "It's my birthday!";
+          if(hideBar){
+            document.getElementById('shopify-section-{{ section.id }}').style.display = "none";
+          }
+          document.getElementById("custom-countdown").style.display = "none";
+          document.getElementById("countdown-content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+</script>          
+        </div>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1367,6 +1537,96 @@
     {
       "type": "@app"
     },
+    {
+      "type": "announcement-timer",
+      "name": "Announcment w/ Timer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "accent-1",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type":"checkbox",
+          "id":"hide-announcment-bar",
+          "label":"Hide announcment bar on timmer end?",
+          "default": false
+        },
+        {
+          "type":"checkbox",
+          "id":"show_day",
+          "label":"Show Day Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_hour",
+          "label":"Show Hour Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_min",
+          "label":"Show Minute Count",
+          "default": true
+        },
+        {
+          "type":"checkbox",
+          "id":"show_second",
+          "label":"Show Seconds Count",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "timer-end-message",
+          "default": "It's the final countdown...",
+          "label": "End Timer Message",
+          "info": "For testing, set the date below to todays date."
+        },
+        {
+          "type": "text",
+          "id": "timer-end",
+          "default": "12/25",
+          "label": "End Timer",
+          "info": "Format: MM/DD. Time will end at 12am of the day it is set to then will either display the end timer message, or remove the announcment bar from view depending on the selection above."
+        }
+      ]
+    },
+    
     {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
@@ -2684,7 +2944,8 @@
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
         }
       ]
-    }
+    },
+    
   ],
   "settings": [
     {
@@ -2966,7 +3227,8 @@
 "type": "url",
 "id": "help-button",
 "label": ".help-button"
-}
+},
+    
   ]
 }
 {% endschema %}
