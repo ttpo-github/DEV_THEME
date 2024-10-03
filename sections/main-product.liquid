@@ -813,13 +813,19 @@
       hideBar = {{ block.settings.hide-announcment-bar }};
 
       console.log("Is weekend!")
-      function isWeekend(date , locale="en-US") {
-      return new Intl.Locale(locale).weekInfo.weekend.includes(date.getUTCDay()||7);
+        function isWeekend(date , locale="en-US") {
+        return new Intl.Locale(locale).weekInfo.weekend.includes(date.getUTCDay()||7);
       }
       
       //==== test for 2023-11-24 (Friday) =======
-      let myDate = new Date();
+      let myDate = new Date("2024-10-04");
+      let time = myDate.getTime();
+      console.log("DATE!!!")
+      console.log(time)
       console.log(isWeekend(myDate));         // false in USA
+
+      
+      
       
   
   today = mm + "/" + dd + "/" + yyyy;
