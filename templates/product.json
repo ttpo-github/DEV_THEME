@@ -13,7 +13,7 @@
       "type": "main-product",
       "blocks": {
         "de33ab67-42c9-4872-810b-42453bde1c0a": {
-          "type": "shopify:\/\/apps\/aftership-order-tracking\/blocks\/edd\/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
+          "type": "shopify://apps/aftership-order-tracking/blocks/edd/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
           "settings": {
           }
         },
@@ -24,13 +24,28 @@
           }
         },
         "easify_options_easify_product_options_hYBR4M": {
-          "type": "shopify:\/\/apps\/easify-options\/blocks\/easify-product-options\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
+          "type": "shopify://apps/easify-options/blocks/easify-product-options/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
           "settings": {
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
+          }
+        },
+        "announcement_timer_49C6xB": {
+          "type": "announcement-timer",
+          "settings": {
+            "text": "Welcome to our store",
+            "color_scheme": "accent-1",
+            "link": "",
+            "hide-announcment-bar": false,
+            "show_day": false,
+            "show_hour": true,
+            "show_min": true,
+            "show_second": true,
+            "timer-end-message": "It's the final countdown...",
+            "timer-end": "10/15"
           }
         },
         "buy_buttons": {
@@ -42,12 +57,12 @@
           }
         },
         "ef203090-7a02-4883-850a-501b94d93af1": {
-          "type": "shopify:\/\/apps\/yanet-professional-faq-page\/blocks\/app-block\/b70c1465-6820-4911-8d5d-2299efd66134",
+          "type": "shopify://apps/yanet-professional-faq-page/blocks/app-block/b70c1465-6820-4911-8d5d-2299efd66134",
           "settings": {
           }
         },
         "617ae22b-7115-4c22-99a7-6674be4a3410": {
-          "type": "shopify:\/\/apps\/glo-related-products-upsell\/blocks\/app-block-product\/75cf2d86-3988-45e7-8f28-ada23c99704f",
+          "type": "shopify://apps/glo-related-products-upsell/blocks/app-block-product/75cf2d86-3988-45e7-8f28-ada23c99704f",
           "disabled": true,
           "settings": {
             "widget": "0",
@@ -60,6 +75,7 @@
         "variant_picker",
         "easify_options_easify_product_options_hYBR4M",
         "quantity_selector",
+        "announcement_timer_49C6xB",
         "buy_buttons",
         "ef203090-7a02-4883-850a-501b94d93af1",
         "617ae22b-7115-4c22-99a7-6674be4a3410"
@@ -76,12 +92,12 @@
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "bg_image": "shopify:\/\/shop_images\/axlemaking_c093db85-e5d4-4bbd-b762-2de6f7ff84ac.jpg",
+        "bg_image": "shopify://shop_images/axlemaking_c093db85-e5d4-4bbd-b762-2de6f7ff84ac.jpg",
         "experts_link": "tel:8334169396",
-        "experts_image2": "shopify:\/\/shop_images\/kyle.png",
-        "experts_image3": "shopify:\/\/shop_images\/Krystal.png",
-        "experts_image4": "shopify:\/\/shop_images\/trevor.jpg",
-        "experts_image5": "shopify:\/\/shop_images\/jason_20337737-c08b-4a0f-ba81-e23cb4157f62.png",
+        "experts_image2": "shopify://shop_images/kyle.png",
+        "experts_image3": "shopify://shop_images/Krystal.png",
+        "experts_image4": "shopify://shop_images/trevor.jpg",
+        "experts_image5": "shopify://shop_images/jason_20337737-c08b-4a0f-ba81-e23cb4157f62.png",
         "expert_link_txt1": "Pricing Question?",
         "expert_link1": "",
         "expert_link_txt2": "Availability Questions?",
