@@ -813,8 +813,13 @@
       hideBar = {{ block.settings.hide-announcment-bar }};
 
       console.log("Current Day!")
-      console.log(new Intl.Locale("en-US").weekInfo.weekend);
-      //[6,7]  // weekend is days 6 and 7 (Sat and Sun) in USA
+      function isWeekend(date , locale="en-US") {
+      return new Intl.Locale(locale).weekInfo.weekend.includes(date.getUTCDay()||7);
+      }
+      
+      //==== test for 2023-11-24 (Friday) =======
+      let myDate = new Date("2023-11-24");
+      console.log(isWeekend(myDate));         // false in USA
       
   
   today = mm + "/" + dd + "/" + yyyy;
