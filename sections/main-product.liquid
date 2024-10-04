@@ -834,12 +834,31 @@
   }
   //end
 
+  function isDaylightSavingTime(date) {
+    const jan = new Date(date.getFullYear(), 0, 1);
+    const jul = new Date(date.getFullYear(), 6, 1);
+    const stdTimezoneOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+    return date.getTimezoneOffset() < stdTimezoneOffset;
+}
+
+function getLocalNoonEquivalent() {
+    const now = new Date();
+    const isDst = isDaylightSavingTime(now);
+
+    // Use 17:00 UTC during CDT (UTC-5), or 18:00 UTC during CST (UTC-6)
+    const utcHour = isDst ? 17 : 18;
+
+    const countDown = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), utcHour, 0, 0));
+    
+    return countDown;
+}
+
   let now = new Date(); 
 
   let currentUTCTime = new Date().getTime()
   //const countDown = new Date().getTime(),
   //const countDown = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0); // Set to today at noon
-  const countDown = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0)); // 18:00 UTC (12:00 CST)
+  const countDown = getLocalNoonEquivalent()
 
   console.log(currentUTCTime)
   console.log(countDown)
