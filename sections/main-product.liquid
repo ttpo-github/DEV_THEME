@@ -834,7 +834,14 @@
   }
   //end
 
-  let now = new Date();
+  let now = new Date(Date.UTC(
+    now.getUTCFullYear(), 
+    now.getUTCMonth(), 
+    now.getUTCDate(), 
+    now.getUTCHours(), 
+    now.getUTCMinutes(), 
+    now.getUTCSeconds()
+  ));;
   //const countDown = new Date().getTime(),
   //const countDown = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0); // Set to today at noon
   const countDown = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0)); // 18:00 UTC (12:00 CST)
