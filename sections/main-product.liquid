@@ -834,7 +834,9 @@
   }
   //end
 
-  let now = new Date(Date.UTC(
+  let now = new Date(); 
+
+  let currentUTCTime = new Date(Date.UTC(
     now.getUTCFullYear(), 
     now.getUTCMonth(), 
     now.getUTCDate(), 
@@ -847,7 +849,7 @@
   const countDown = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0)); // 18:00 UTC (12:00 CST)
 
   //console.log(new Date().getTime())
-  console.log(countDown)
+  //console.log(countDown)
 
   //const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   //console.log(tz);
@@ -856,7 +858,7 @@
       x = setInterval(function() {    
 
         const now = new Date().getTime(),
-              distance = countDown - now;
+              distance = countDown - currentUTCTime;
 
         //console.log(now)
 
