@@ -9,9 +9,9 @@
 */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/new-logo.png",
+    "logo": "shopify://shop_images/new-logo.png",
     "logo_width": 220,
-    "favicon": "shopify:\/\/shop_images\/2299009_Favicon-Rounded_062724.png",
+    "favicon": "shopify://shop_images/2299009_Favicon-Rounded_062724.png",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -118,9 +118,9 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
-    "social_facebook_link": "https:\/\/www.facebook.com\/thetrailerpartsoutlet\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/thetrailerpartsoutlet\/",
-    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCv1fB-NgVMPiRzFXJ5VeNmg",
+    "social_facebook_link": "https://www.facebook.com/thetrailerpartsoutlet/",
+    "social_instagram_link": "https://www.instagram.com/thetrailerpartsoutlet/",
+    "social_youtube_link": "https://www.youtube.com/channel/UCv1fB-NgVMPiRzFXJ5VeNmg",
     "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
@@ -134,7 +134,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "array_of_experts": "{\n        \"image\": \"\/\/thetrailerpartsoutlet.com\/cdn\/shop\/files\/jason_500x500_bcabf219-9812-48f6-97c0-def31ad5e0fd.webp?v=1699544640\",\n        \"name\": \"Jason\",\n        \"phone\": \"(936) 312-3337\"\n    } |\n    {\n        \"image\": \"\/\/thetrailerpartsoutlet.com\/cdn\/shop\/files\/trevor.jpg?v=1666643179\",\n        \"name\": \"Trevor\",\n        \"phone\": \"(936) 349-6220\"\n    } |\n    {\n        \"image\": \"\/\/thetrailerpartsoutlet.com\/cdn\/shop\/files\/Krystal_1.png?v=1694600723\",\n        \"name\": \"Krystal\",\n        \"phone\": \"(936) 218-1280\"\n    } |\n    {\n        \"image\": \"\/\/thetrailerpartsoutlet.com\/cdn\/shop\/files\/Kyle_13fe604a-f1c1-456d-8dc9-e976581d10d2.jpg?v=1704474670\",\n        \"name\": \"Kyle\",\n        \"phone\": \"(936) 226-3664\"\n    }",
+    "array_of_experts": "{\n        \"image\": \"//thetrailerpartsoutlet.com/cdn/shop/files/jason_500x500_bcabf219-9812-48f6-97c0-def31ad5e0fd.webp?v=1699544640\",\n        \"name\": \"Jason\",\n        \"phone\": \"(936) 312-3337\"\n    } |\n    {\n        \"image\": \"//thetrailerpartsoutlet.com/cdn/shop/files/trevor.jpg?v=1666643179\",\n        \"name\": \"Trevor\",\n        \"phone\": \"(936) 349-6220\"\n    } |\n    {\n        \"image\": \"//thetrailerpartsoutlet.com/cdn/shop/files/Krystal_1.png?v=1694600723\",\n        \"name\": \"Krystal\",\n        \"phone\": \"(936) 218-1280\"\n    } |\n    {\n        \"image\": \"//thetrailerpartsoutlet.com/cdn/shop/files/Kyle_13fe604a-f1c1-456d-8dc9-e976581d10d2.jpg?v=1704474670\",\n        \"name\": \"Kyle\",\n        \"phone\": \"(936) 226-3664\"\n    }",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -184,46 +184,53 @@
     ],
     "blocks": {
       "2412377359038555501": {
-        "type": "shopify:\/\/apps\/yanet-professional-faq-page\/blocks\/app-embed\/b70c1465-6820-4911-8d5d-2299efd66134",
+        "type": "shopify://apps/yanet-professional-faq-page/blocks/app-embed/b70c1465-6820-4911-8d5d-2299efd66134",
         "disabled": true,
         "settings": {
         }
       },
       "9144908965052497053": {
-        "type": "shopify:\/\/apps\/glo-related-products-upsell\/blocks\/app-embed\/75cf2d86-3988-45e7-8f28-ada23c99704f",
+        "type": "shopify://apps/glo-related-products-upsell/blocks/app-embed/75cf2d86-3988-45e7-8f28-ada23c99704f",
         "disabled": false,
         "settings": {
         }
       },
       "6279071938380501511": {
-        "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {
         }
       },
       "17985673643287205206": {
-        "type": "shopify:\/\/apps\/estimated-delivery-date-plus\/blocks\/app_setting\/4a0685bc-c234-45b2-8382-5ad6a8e3e3fd",
+        "type": "shopify://apps/estimated-delivery-date-plus/blocks/app_setting/4a0685bc-c234-45b2-8382-5ad6a8e3e3fd",
         "disabled": false,
         "settings": {
         }
       },
       "316487575649303945": {
-        "type": "shopify:\/\/apps\/easify-options\/blocks\/app-embed-block\/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
+        "type": "shopify://apps/easify-options/blocks/app-embed-block/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
         "disabled": false,
         "settings": {
         }
       },
       "14339172867238703359": {
-        "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews_tab\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {
           "product": ""
         }
       },
       "7570552984445421165": {
-        "type": "shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/settings\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
         "disabled": false,
         "settings": {
+        }
+      },
+      "733389323033596483": {
+        "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
         }
       }
     }
@@ -337,7 +344,7 @@
       "sold_out_badge_color_scheme": "inverse",
       "accent_icons": "text",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
