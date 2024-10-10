@@ -386,7 +386,7 @@
             {% endif %}
             
             {% comment %}<div id="reviews-wrapper"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></div>{% endcomment %}
-            <div id="reviews-wrapper"><div id="okendo-main-widget-wrapper">{% render 'okendo-reviews-product-rating-summary', product: product %}</div></div>
+            <div id="reviews-wrapper">{% render 'okendo-reviews-product-rating-summary', product: product %}</div>
           </div>
   
         </div>
