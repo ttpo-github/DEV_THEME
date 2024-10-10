@@ -105,7 +105,7 @@
         <div class="yotpo-widget-instance yotpo yotpo-main-widget yotpo-nav-content" data-yotpo-instance-id="428239" data-yotpo-product-id="{{product.id}}" data-yotpo-name="{{ product.title | escape }}" data-yotpo-url="{{ shop.url }}{{ product.url }}" data-yotpo-image-url="{{ product.featured_image | product_img_url: "large" | prepend: "https:" | replace: '?', '%3F' | replace: '&','%26'}}" data-yotpo-price="{{ product.price | divided_by: 100.00 }}" data-yotpo-currency="{{ shop.currency }}" data-yotpo-description="{{ product.description | escape }}"></div>
         {% endcomment %}
 
-        {% render 'okendo-reviews-widget', product: product %}
+        <div id="okendo-main-widget-wrapper">{% render 'okendo-reviews-widget', product: product %}</div>
       </div>
       
       {%- if product.metafields.custom.video_link %}<div id="video" class="product-tabing-body">
