@@ -863,9 +863,9 @@ function getLocalNoonEquivalent() {
   //const countDown = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0); // Set to today at noon
   const countDown = getLocalNoonEquivalent()
 
-  console.log(now)
+  //console.log(now)
   //console.log(currentUTCTime)
-  console.log(countDown)
+  //console.log(countDown)
 
   
   //console.log(countDown - now)
@@ -901,7 +901,9 @@ function getLocalNoonEquivalent() {
       }, 1000)
   }());
 
-  }
+  } else {
+    document.getElementById("custom-countdown").style.display = "none";
+ }
 </script>          
         </div>
           {%- endcase -%}
