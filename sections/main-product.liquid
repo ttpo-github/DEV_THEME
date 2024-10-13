@@ -883,13 +883,15 @@ function getLocalNoonEquivalent() {
 
           
           document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          if(Math.floor((distance % (day)) / (hour)) != 0){
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour))
+          } else {
+            document.querySelector('#hours').closest('.custom-time').style.display = "none";
+          }
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-        if(Math.floor((distance % (day)) / (hour)) == 0){
-          const parentElement = document.querySelector('#hours').closest('.custom-time').style.display = "none";
-        }
+        
 
         //do something later when date is reached
         if (distance < 0) {
