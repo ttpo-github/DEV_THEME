@@ -813,8 +813,9 @@
       birthday = dayMonth + yyyy,
       hideBar = {{ block.settings.hide-announcment-bar }};
 
-      console.log("Is weekend!")
-        function isWeekend(date , locale="en-US") {
+      //console.log("Is weekend!")
+  
+      function isWeekend(date , locale="en-US") {
         return new Intl.Locale(locale).weekInfo.weekend.includes(date.getUTCDay()||7);
       }
       
