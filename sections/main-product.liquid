@@ -888,7 +888,7 @@ function getLocalNoonEquivalent() {
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
         if(Math.floor((distance % (day)) / (hour)) == 0){
-          document.querySelector(".custom-time > #hours").display = "none";
+          document.querySelector(".custom-time #hours").display = "none";
         }
 
         //do something later when date is reached
