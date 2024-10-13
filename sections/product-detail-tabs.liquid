@@ -165,7 +165,7 @@
 
     let reviewsWrapper = document.querySelector('#reviews-wrapper')
     reviewsWrapper.addEventListener('click', function(){
-      console.log('Reviews Clicked!!!')
+      //console.log('Reviews Clicked!!!')
       let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]')
       reviewsTab.click();
       document.querySelector('#okendo-main-widget-wrapper').scrollIntoView();
@@ -179,20 +179,12 @@
     });
     */
     
-   $('.faq-body h4').on('click', function() {
-  // Remove 'active' class from all other headings
-  $('.faq-body h4').not(this).removeClass('active');
-  
-  // Slide up and remove 'active' class from all other content
-  $('.faq-content').not($(this).next()).slideUp().removeClass('active');
-  
-  // Toggle 'active' class on the clicked heading
-  $(this).toggleClass('active');
-  
-  // Slide toggle and toggle 'active' class on the next sibling (assuming it's the content)
-  $(this).next('.faq-content').slideToggle().toggleClass('active');
-});
-
+    $('.faq-body h4').on('click',function(){
+      $('.faq-body h4').not(this).removeClass('active');
+      $('.faq-content').not($(this).siblings()).slideUp().removeClass('active')
+      $(this).toggleClass('active');
+      $(this).siblings().slideToggle().toggleClass('active');
+    });
 
  
     
