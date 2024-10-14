@@ -148,7 +148,7 @@
       });
     }, false );
 
-    /*
+    
     let reviewsWrapper = document.querySelector('#reviews-wrapper')
     reviewsWrapper.addEventListener('click', function(){
       console.log('Reviews Clicked!!!')
@@ -156,21 +156,48 @@
       reviewsTab.click();
       //document.querySelector('#okendo-main-widget-wrapper').scrollIntoView();    
     })
-    */
     
-     
+    
+     /*
     $('#reviews-wrapper').on('click', function(){
       console.log('clicked')
       $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
+    */
     
-    
+    /*
     $('.faq-body h4').on('click',function(){
       $('.faq-body h4').not(this).removeClass('active');
       $('.faq-content').not($(this).siblings()).slideUp().removeClass('active')
       $(this).toggleClass('active');
       $(this).siblings().slideToggle().toggleClass('active');
     });
+    */
+
+    document.querySelectorAll('.faq-body h4').forEach(function(header) {
+    header.addEventListener('click', function() {
+        document.querySelectorAll('.faq-body h4').forEach(function(otherHeader) {
+            if (otherHeader !== header) {
+                otherHeader.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.faq-content').forEach(function(content) {
+            if (content !== header.nextElementSibling) {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            }
+        });
+
+        header.classList.toggle('active');
+        
+        let siblingContent = header.nextElementSibling;
+        if (siblingContent) {
+            siblingContent.style.display = (siblingContent.style.display === 'block') ? 'none' : 'block';
+            siblingContent.classList.toggle('active');
+        }
+    });
+});
 
  
     
