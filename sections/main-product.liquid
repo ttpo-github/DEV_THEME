@@ -851,7 +851,9 @@ function getLocalNoonEquivalent() {
     // Use 17:00 UTC during CDT (UTC-5), or 18:00 UTC during CST (UTC-6)
     const utcHour = isDst ? 17 : 18;
 
-    const currentNoon = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), utcHour, 0, 0));
+  {% comment %}const currentNoon = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), utcHour, 0, 0));{% endcomment %}
+
+  const currentNoon = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 30, 0, 0));
     
     return currentNoon;
 }
