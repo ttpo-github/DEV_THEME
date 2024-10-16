@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "dawn14_image_banner_QPAjKg": {
@@ -420,9 +420,10 @@
     },
     "1652380251ad044f2c": {
       "type": "home-subscription",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/18-wheeler.jpg",
-        "title": "<div class=\"yotpo yotpo-reviews-carousel\" data-background-color=\"transparent\" data-mode=\"top_rated\" data-type=\"site\" data-count=\"9\" data-show-bottomline=\"1\" data-autoplay-enabled=\"1\" data-autoplay-speed=\"3000\" data-show-navigation=\"1\"> </div>",
+        "title": " ",
         "text": "",
         "button_text1": "",
         "button_link1": "",
@@ -437,6 +438,27 @@
         "title": "Blog",
         "blog_url": "shopify://blogs/products",
         "show_view_all": true
+      }
+    },
+    "17291121922714e5bf": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_carousel_3b8Lxx": {
+          "type": "shopify://apps/okendo/blocks/reviews-carousel/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "show_heading": true,
+            "heading": "What our customers are saying...",
+            "badge_link": "",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_carousel_3b8Lxx"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_id_selector": ""
       }
     }
   },
@@ -453,6 +475,7 @@
     "16523705464bc2103a",
     "1652094941ece48291",
     "1652380251ad044f2c",
-    "16520963705d40640a"
+    "16520963705d40640a",
+    "17291121922714e5bf"
   ]
 }
