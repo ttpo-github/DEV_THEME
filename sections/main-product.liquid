@@ -1157,7 +1157,9 @@ function getLocalNoonEquivalent() {
                 {%- render 'slide-up-cta-price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                 
               </div>
-            <a href="#reviews"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></a>
+            {% comment %}<a href="#reviews"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></a>{% endcomment %}
+            
+            <a href="#reviews"><div>{% render 'okendo-reviews-product-rating-summary', product: card_product %}</div></a>
           </div>
           </div>
         </div>
