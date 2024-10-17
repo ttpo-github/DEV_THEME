@@ -680,6 +680,7 @@
 
             {%- when 'next-day-timer' -%}
               {%- when 'announcement-timer' -%}
+      <div id="shipping-timer-figpii-container">
         <div id="noon-shipping-timer" class="announcement-bar color-{{ block.settings.color_scheme }} gradient" style="border-radius:4px; border:1px solid rgb(204, 204, 204); padding:0; background:#FFFFFF; color:#000000;" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }} style="top:0px;">
           {%- if block.settings.text != blank -%}
             {%- if block.settings.link != blank -%}
@@ -709,13 +710,13 @@
                     
                   </div>
                 </div>
-
+            
                 
             {%- if block.settings.link != blank -%}
               </a>
             {%- endif -%}
           {%- endif -%}
-
+        </div>
           
           <div>
             {{ block.settings.custom_liquid }}
