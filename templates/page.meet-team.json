@@ -1,22 +1,22 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "meet-team-banner": {
       "type": "meet-team-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/DSC09446-1.jpg",
+        "image": "shopify://shop_images/DSC09446-1.jpg",
         "title": "WE ARE PROUD",
         "text": "to be one of America's fastest growing online retailer and wholesaler of trailer parts and trailer accessories and still family owned. Founded in 2013, our combined decades of experience allow us to offer quality products at competitive prices, with excellent customer service delivered by knowledgeable experts. When you pick up the phone and call us, you will be confident in knowing that you’re speaking to not only a real human being, but a real trailer parts expert out of Texas.",
         "subtitle": "Our Focus & Values",
-        "Para2": "<strong><\/strong>Focus:<br>Faster Solutions. Superior Service. So the <strong>DOERS<\/strong> can <strong>DO<\/strong>!<br><br>\n<strong><\/strong>Our Values\n<br>• <strong><\/strong>Transparent\n<br>• <strong><\/strong> Growth Oriented\n<br>• <strong><\/strong> Adaptive<br>• <strong><\/strong> Disciplined<br>• <strong><\/strong> Own It"
+        "Para2": "<strong></strong>Focus:<br>Faster Solutions. Superior Service. So the <strong>DOERS</strong> can <strong>DO</strong>!<br><br>\n<strong></strong>Our Values\n<br>• <strong></strong>Transparent\n<br>• <strong></strong> Growth Oriented\n<br>• <strong></strong> Adaptive<br>• <strong></strong> Disciplined<br>• <strong></strong> Own It"
       }
     },
     "meetteam-member": {
@@ -25,9 +25,9 @@
         "fd64f92e-2011-4587-b154-00c1d475c6dc": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tyler-1648484334352_1200x_c439692f-d709-45b8-8e45-1ef59de2af03.png",
+            "image": "shopify://shop_images/tyler-1648484334352_1200x_c439692f-d709-45b8-8e45-1ef59de2af03.png",
             "title": "Tyler Bray",
-            "designation": "CEO \/ Founder",
+            "designation": "CEO / Founder",
             "add_info": "",
             "phone_info": ""
           }
@@ -35,7 +35,7 @@
         "eac63a68-7bb0-4425-bb16-c563f3e39003": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/caitlin2.png",
+            "image": "shopify://shop_images/caitlin2.png",
             "title": "Caitlin Jugert",
             "designation": "President",
             "add_info": "",
@@ -45,7 +45,7 @@
         "b731b02d-dc5d-4d7f-b40d-19ad04ce65e8": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lcaey-1648147839270_1200x_fba9e693-f42c-4767-b075-f91a53f283d2.png",
+            "image": "shopify://shop_images/lcaey-1648147839270_1200x_fba9e693-f42c-4767-b075-f91a53f283d2.png",
             "title": "Lacey Baker",
             "designation": "VP of  Revenue",
             "add_info": "",
@@ -68,7 +68,7 @@
     "1655391239618296bd": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<center\/><iframe width=\"100%\" height=\"720\" src=\"https:\/\/www.youtube.com\/embed\/Y_aAZvNUW7s\" title=\"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe><\/center>",
+        "custom_liquid": "<center/><iframe width=\"100%\" height=\"720\" src=\"https://www.youtube.com/embed/Y_aAZvNUW7s\" title=\"\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></center>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
@@ -80,7 +80,7 @@
         "15ddfb96-c8ca-47a6-937b-28033e1d6fe3": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/trevor.jpg",
+            "image": "shopify://shop_images/trevor.jpg",
             "title": "Trevor",
             "designation": "Sales & Purchasing Manager",
             "add_info": "",
@@ -90,7 +90,7 @@
         "89cf4160-acac-4e25-aba7-5306c9902460": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jason_20337737-c08b-4a0f-ba81-e23cb4157f62.png",
+            "image": "shopify://shop_images/jason_20337737-c08b-4a0f-ba81-e23cb4157f62.png",
             "title": "Jason",
             "designation": "Trailer Parts Expert",
             "add_info": "",
@@ -100,7 +100,7 @@
         "0ee36b37-fc60-4b3f-8697-89d30f999d22": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kyle_9ca622fc-8c76-48d5-8ccc-2e4b186716a0.jpg",
+            "image": "shopify://shop_images/Kyle_9ca622fc-8c76-48d5-8ccc-2e4b186716a0.jpg",
             "title": "Kyle",
             "designation": "Trailer Parts Expert",
             "add_info": "",
@@ -110,7 +110,7 @@
         "d5b011a3-2ca1-4be0-8b77-ae0799272be9": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Krystal.png",
+            "image": "shopify://shop_images/Krystal.png",
             "title": "Krystal",
             "designation": "Trailer Parts Expert",
             "add_info": "",
@@ -120,7 +120,7 @@
         "dee9d63f-130f-45cc-bbd1-7f7b8a5b92c7": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/AB.jpg",
+            "image": "shopify://shop_images/AB.jpg",
             "title": "Abraham",
             "designation": "Trailer Parts Expert",
             "add_info": "se habla español",
@@ -130,7 +130,7 @@
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/qanna2.png",
+            "image": "shopify://shop_images/qanna2.png",
             "title": "Anna",
             "designation": "Customer Service",
             "add_info": "",
@@ -140,7 +140,7 @@
         "6eb46a13-3873-44a7-a52c-441f571494a4": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sydney_2ef7a8e6-d603-4424-b668-57af89634674.jpg",
+            "image": "shopify://shop_images/sydney_2ef7a8e6-d603-4424-b668-57af89634674.jpg",
             "title": "Sydney",
             "designation": "Customer Service",
             "add_info": "",
@@ -150,19 +150,9 @@
         "0f1ddfbe-1867-499b-85a1-29594d75cc8b": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/brandon-1648147839231_1200x_e8032aae-60d4-4488-9692-104a9c8a7072.png",
+            "image": "shopify://shop_images/brandon-1648147839231_1200x_e8032aae-60d4-4488-9692-104a9c8a7072.png",
             "title": "Brandon",
             "designation": "Supply Chain Director",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "a36ee9f0-13ce-4b5b-9d35-885f1404e217": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/sam-1648147839294_1200x_2119fe1b-9d47-4260-85c0-e66379de6660.png",
-            "title": "Samantha",
-            "designation": "Logistics",
             "add_info": "",
             "phone_info": ""
           }
@@ -170,29 +160,9 @@
         "title_nDbw6e": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Loretta.jpg",
+            "image": "shopify://shop_images/Loretta.jpg",
             "title": "Loretta",
             "designation": "Purchasing",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "edaf7f50-a42e-4332-bac3-a57396568fdc": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/brad_f7eaf22c-5ee1-410b-a352-d3b1ad0a7563.png",
-            "title": "Brad",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "dbb35d2e-4431-48e5-a6cb-97d4b495acaf": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/curtis.jpg",
-            "title": "Curtis",
-            "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
           }
@@ -200,7 +170,7 @@
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jimmy-1648147839258_1200x_9e9e3fde-808c-4ad8-9ff5-06a8a1a8ecb6.png",
+            "image": "shopify://shop_images/jimmy-1648147839258_1200x_9e9e3fde-808c-4ad8-9ff5-06a8a1a8ecb6.png",
             "title": "Jimmy",
             "designation": "Fulfillment",
             "add_info": "",
@@ -210,48 +180,8 @@
         "title_EARfqf": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Alejandro.jpg",
+            "image": "shopify://shop_images/Alejandro.jpg",
             "title": "Alejandro",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "title_RWBFCg": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Jonjon.jpg",
-            "title": "John",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "title_WwKj7w": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Lane.jpg",
-            "title": "Lane",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "title_kTK4XN": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Manny.jpg",
-            "title": "Manny",
-            "designation": "Fulfillment",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "title_EXTz7K": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Tank.jpg",
-            "title": "Tank",
             "designation": "Fulfillment",
             "add_info": "",
             "phone_info": ""
@@ -260,7 +190,7 @@
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/will.jpg",
+            "image": "shopify://shop_images/will.jpg",
             "title": "Will",
             "designation": "Videographer",
             "add_info": "",
@@ -270,7 +200,7 @@
         "112f30af-cbdb-4a83-9e27-540d203a1586": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Jamal_1_002fdeba-d31d-43eb-9440-021457a98f77.jpg",
+            "image": "shopify://shop_images/Jamal_1_002fdeba-d31d-43eb-9440-021457a98f77.jpg",
             "title": "Jamal",
             "designation": "Photographer",
             "add_info": "",
@@ -280,7 +210,7 @@
         "ba15bbd3-e261-49f6-a16c-80add243c702": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/scott.png",
+            "image": "shopify://shop_images/scott.png",
             "title": "Scott",
             "designation": "E-Commerce Manager",
             "add_info": "",
@@ -290,7 +220,7 @@
         "00c4a01d-02fa-43dc-8f5b-df7b820357a2": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Patrcik_34a333ed-469b-4a6a-b1e1-ede0eef23aa1.jpg",
+            "image": "shopify://shop_images/Patrcik_34a333ed-469b-4a6a-b1e1-ede0eef23aa1.jpg",
             "title": "Patrick",
             "designation": "Web Developer",
             "add_info": "",
@@ -300,7 +230,7 @@
         "b8888a92-a204-4478-8a05-ad60729e9f1f": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jaycie-1648484966070_1200x_9ba48e57-d358-4ccc-bc2c-84bd57bc010c.png",
+            "image": "shopify://shop_images/jaycie-1648484966070_1200x_9ba48e57-d358-4ccc-bc2c-84bd57bc010c.png",
             "title": "Jaycie",
             "designation": "Product Manager",
             "add_info": "",
@@ -310,7 +240,7 @@
         "f060a828-0dd2-481a-828a-0b18a593fcd0": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/matt.jpg",
+            "image": "shopify://shop_images/matt.jpg",
             "title": "Matt",
             "designation": "Marketplace Specialist",
             "add_info": "",
@@ -320,7 +250,7 @@
         "049e7266-07ec-4b18-a053-368986832dc3": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mary.jpg",
+            "image": "shopify://shop_images/Mary.jpg",
             "title": "Mary",
             "designation": "SEO Specialist",
             "add_info": "",
@@ -330,19 +260,9 @@
         "4d3ed014-5698-44d9-8388-d4e5c92528e0": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Brandon_Away.jpg",
+            "image": "shopify://shop_images/Brandon_Away.jpg",
             "title": "Brandon",
             "designation": "SEO Specialist",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
-        "f1ef1ef5-e136-42c5-9a51-8587714bcd79": {
-          "type": "title",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/jimmy2.jpg",
-            "title": "Jimmy",
-            "designation": "Ad Specialist",
             "add_info": "",
             "phone_info": ""
           }
@@ -350,7 +270,7 @@
         "773b232e-999e-4eb0-8bd2-a323c3748888": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/amanda.jpg",
+            "image": "shopify://shop_images/amanda.jpg",
             "title": "Amanda",
             "designation": "Lead Finance",
             "add_info": "",
@@ -360,7 +280,7 @@
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/stevie.png",
+            "image": "shopify://shop_images/stevie.png",
             "title": "Stevie",
             "designation": "Finance Admin",
             "add_info": "",
@@ -370,7 +290,7 @@
         "title_JEL9VH": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Kadie_26d21c8a-09a5-44a1-8725-d82b685dd4a4.jpg",
+            "image": "shopify://shop_images/Kadie_26d21c8a-09a5-44a1-8725-d82b685dd4a4.jpg",
             "title": "Kadie",
             "designation": "Finance",
             "add_info": "",
@@ -380,7 +300,7 @@
         "title_PxVVma": {
           "type": "title",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Taylor.jpg",
+            "image": "shopify://shop_images/Taylor.jpg",
             "title": "Taylor",
             "designation": "Finance",
             "add_info": "",
@@ -397,16 +317,9 @@
         "47fa80ff-4b28-4a00-9d6f-26261feda2ae",
         "6eb46a13-3873-44a7-a52c-441f571494a4",
         "0f1ddfbe-1867-499b-85a1-29594d75cc8b",
-        "a36ee9f0-13ce-4b5b-9d35-885f1404e217",
         "title_nDbw6e",
-        "edaf7f50-a42e-4332-bac3-a57396568fdc",
-        "dbb35d2e-4431-48e5-a6cb-97d4b495acaf",
         "3c435a76-d0fd-4fc8-b7ee-8c4caccd803e",
         "title_EARfqf",
-        "title_RWBFCg",
-        "title_WwKj7w",
-        "title_kTK4XN",
-        "title_EXTz7K",
         "fc56db6b-fcbd-443c-b11a-bddd797be7b6",
         "112f30af-cbdb-4a83-9e27-540d203a1586",
         "ba15bbd3-e261-49f6-a16c-80add243c702",
@@ -415,7 +328,6 @@
         "f060a828-0dd2-481a-828a-0b18a593fcd0",
         "049e7266-07ec-4b18-a053-368986832dc3",
         "4d3ed014-5698-44d9-8388-d4e5c92528e0",
-        "f1ef1ef5-e136-42c5-9a51-8587714bcd79",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
         "title_JEL9VH",
