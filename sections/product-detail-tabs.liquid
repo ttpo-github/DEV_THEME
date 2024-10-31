@@ -90,9 +90,16 @@
         
       <!-- ======================================================= PRODUCT DESCRIPTION SECTION ======================================================= -->
       <div id="reviews" class="product-tabing-body">
-        <div id="okendo-main-widget-wrapper">{% render 'okendo-reviews-widget', product: product %}</div>
+        {% comment %}<div id="okendo-main-widget-wrapper">{% render 'okendo-reviews-widget', product: product %}</div>{% endcomment %}
+
+        <div id="okendo-main-widget-wrapper">
+        <div class="okeReviews-widget-holder" data-oke-reviews-widget-holder data-oke-reviews-product-id="shopify-{{ product.id }}">
+          <div data-oke-reviews-nav-bar></div>
+          <div data-oke-reviews-widget>{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+          <div data-oke-reviews-qanda></div>
+        </div>
       </div>
-      
+      </div>
       {%- if product.metafields.custom.video_link %}<div id="video" class="product-tabing-body">
         <div class="video-container">{{ product.metafields.custom.video_link }}</div>
       </div>{%- endif %}
