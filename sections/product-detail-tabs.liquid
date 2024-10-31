@@ -90,7 +90,13 @@
         
       <!-- ======================================================= PRODUCT DESCRIPTION SECTION ======================================================= -->
       <div id="reviews" class="product-tabing-body">
+        {% comment %}
         <div id="okendo-main-widget-wrapper">{% render 'okendo-reviews-widget', product: product %}</div>      
+        {% endcomment %}
+
+        {%- for block in section.blocks -%}
+          {% render block %}
+        {%- endfor -%}
       </div>
       
       {%- if product.metafields.custom.video_link %}<div id="video" class="product-tabing-body">
