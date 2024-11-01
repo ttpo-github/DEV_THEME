@@ -992,7 +992,7 @@ class VariantSelects extends HTMLElement {
 
     let dynamicCheck = document.getElementById('dynamic-titles-and-descriptions-check');
 
-    console.log(dynamicCheck)
+    //console.log(dynamicCheck)
 
     if(dynamicCheck){
       //console.log("CHECK CHECK CHECK")
@@ -1018,7 +1018,7 @@ class VariantSelects extends HTMLElement {
       })
 
       Array.from(productDescriptions).forEach(function(el, index){
-        console.log(el.dataset.productOptionOne)
+        //console.log(el.dataset.productOptionOne)
         if(el.dataset.productOptionOne == currentOptionOne){
           el.style.display = 'block';
         } else {
@@ -1205,7 +1205,7 @@ class VariantSelects extends HTMLElement {
         refactoredPhoneLink.style.display = "block";
         refactoredPhoneLink.style.color = "white";
         refactoredPhoneLink.href = `tel:+${refactoredPhoneLink.href.split("+")[1]}`
-        console.log(refactoredPhoneLink)
+        //console.log(refactoredPhoneLink)
         //console.log(dynamicPhoneLink)
 
        //let theLink = dynamicPhoneLink == undefined ? `<a href="tel:${window.variantStrings.linkStoreNumber}" style="padding:0px;" class="TEST TEST custom-btn button--full-width">Call for Availability <br> ${window.variantStrings.soldOut}</a>` : `<a href="tel:${dynamicPhoneLink.href.split("tel+")[1]}" style="padding:0px;" class="custom-btn button--full-width">${dynamicPhoneLink.textContent}</a>`; 
