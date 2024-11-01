@@ -43,6 +43,7 @@
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
 
+          {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
           <div id="video-modal" class="video-modal">
             <div class="video-modal-container">
               <span class="close-modal close" onclick="closeVideoModal()">X</span>
@@ -51,6 +52,7 @@
                 Your browser does not support the video tag.
               </video>
             </div>
+            {% endif %}
           
         {% else %}
           <fieldset class="js product-form__input">
@@ -59,6 +61,7 @@
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
 
+            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
           <div id="video-modal" class="video-modal">
           <div class="video-modal-container">
             <span class="close-modal close" onclick="closeVideoModal()">X</span>
@@ -67,6 +70,7 @@
               Your browser does not support the video tag.
             </video>
           </div>
+          {% endif %}
           
         {% endif %}
 
