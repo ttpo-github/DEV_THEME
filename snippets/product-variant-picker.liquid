@@ -43,6 +43,7 @@
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
 
+          {% comment %}
           {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
           <div id="video-modal" class="video-modal">
             <div class="video-modal-container">
@@ -53,6 +54,7 @@
               </video>
             </div>
             {% endif %}
+          {% endcomment %}
           
         {% else %}
           <fieldset class="js product-form__input">
@@ -61,6 +63,7 @@
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
 
+          {% comment %}
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
           <div id="video-modal" class="video-modal">
           <div class="video-modal-container">
@@ -71,6 +74,7 @@
             </video>
           </div>
           {% endif %}
+          {% endcomment %}
           
         {% endif %}
 
