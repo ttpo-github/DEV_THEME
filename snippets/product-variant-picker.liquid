@@ -42,13 +42,75 @@
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>{% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
+
+          <div id="video-modal" class="video-modal">
+            <div class="video-modal-container">
+              <span class="close-modal close" onclick="closeVideoModal()">X</span>
+              <!-- Dynamic creation of the modal video element -->
+              <video class="modal-video" loop controls>
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          
         {% else %}
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }}</legend>
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>{% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
+
+          <div id="video-modal" class="video-modal">
+          <div class="video-modal-container">
+            <span class="close-modal close" onclick="closeVideoModal()">X</span>
+            <!-- Dynamic creation of the modal video element -->
+            <video class="modal-video" loop controls>
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
         {% endif %}
+
+        <script defer>
+        const heroVideo = document.getElementById("heroVideo");
+        const modalVideo = document.querySelector('.modal-video');
+      
+        document.getElementById("video-modal").addEventListener('click', function (e) {
+          if (e.target.id == "video-modal") {
+            closeVideoModal();
+          }
+        });
+      
+        
+      
+        function openVideoModal() {
+          var modal = document.getElementById('video-modal');
+          var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+          videoModalContainer.classList.add('open');
+          modal.classList.add('open');
+          document.body.classList.add('modal-open');
+      
+          // Set the source for the modal video when the modal is opened
+          modalVideo.src = "{{ section.settings.video_source }}";
+          modalVideo.play();
+          heroVideo.pause();
+      
+          console.log("Open Video Modal Script");
+        }
+      
+        function closeVideoModal() {
+          var modal = document.getElementById('video-modal');
+          var videoModalContainer = document.getElementsByClassName('video-modal-container')[0];
+          videoModalContainer.classList.remove('open');
+          modal.classList.remove('open');
+          document.body.classList.remove('modal-open');
+      
+          // Pause the modal video when the modal is closed
+          modalVideo.pause();
+          heroVideo.play();
+      
+          console.log("Close Video Modal Script");
+        }
+      </script>
           
           
         
