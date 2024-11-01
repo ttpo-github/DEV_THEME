@@ -39,13 +39,13 @@
         {% if hasImage %}
           <fieldset class="js product-form__input" {% if forloop.index == 1 %}style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;"{% endif %}>
             <legend class="form__label">{{ option.name }}</legend>
-            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#">How to measure your axle</a>{% endif %}
+            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#">How to measure your axle</a><span>▶️</span>{% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
         {% else %}
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }}</legend>
-            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#">How to measure your axle</a>{% endif %}
+            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#">How to measure your axle</a><span>▶️</span>{% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
         {% endif %}
