@@ -45,6 +45,7 @@
         {% else %}
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }}</legend>
+            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<a href="#">How to measure your axle</a>{% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
           </fieldset>
         {% endif %}
