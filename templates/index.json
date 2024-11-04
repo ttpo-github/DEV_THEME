@@ -196,8 +196,15 @@
             "collection": "tk-trailer-kits"
           }
         },
+        "featured_collection_JjtgHk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "axle-service-kits"
+          }
+        },
         "359d1ad5-d31c-464f-b356-6fc01dfa2276": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "trailer-plans-blueprints"
           }
@@ -247,6 +254,7 @@
         "99cf2eec-3cd8-4713-bf79-27d600b8b3e1",
         "1652088758fa161805-0",
         "1652088758fa161805-1",
+        "featured_collection_JjtgHk",
         "359d1ad5-d31c-464f-b356-6fc01dfa2276",
         "1652088758fa161805-2",
         "75fd4919-e49f-4157-a313-ab2b519c3088",
