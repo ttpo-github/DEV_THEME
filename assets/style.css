@@ -7035,7 +7035,8 @@ to {top:0; opacity:1}
 }
 
 .variant-picker-modal-video{
-  
+  width:100%
+  border-radius:4px;
 }
 
 .variant-picker-video-close{
