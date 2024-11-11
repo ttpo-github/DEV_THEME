@@ -7028,7 +7028,7 @@ to {top:0; opacity:1}
 }
 
 .variant-picker-video-modal-container{
-  position:relative
+  position:relative;
   transition: all 3s ease-in-out;
 }
 
