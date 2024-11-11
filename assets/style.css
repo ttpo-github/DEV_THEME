@@ -7058,6 +7058,7 @@ video.variant-picker-modal-video--active{
     line-height: .75;
     z-index:2;
     margin:8px;
+    display:none;
 }
 /* Variant Picker Video Modal */
 
