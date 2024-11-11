@@ -57,7 +57,7 @@
               
               <div id="video-modal" class="variant-picker-video-modal">
               <div class="variant-picker-video-modal-container">
-                <span class="variant-picker-close-modal variant-picker-video-close" onclick="closeVideoModal()">X</span>
+                <span class="variant-picker-close-modal variant-picker-video-close" onclick="closeVariantPickerVideoModal()">X</span>
                 <!-- Dynamic creation of the modal video element -->
                 <video class="variant-picker-modal-video" loop controls>
                   Your browser does not support the video tag.
@@ -75,6 +75,11 @@
               event.preventDefault();
               let variantPickerVideo = document.getElementsByClassName("variant-picker-modal-video")[0].classList.add("variant-picker-modal-video--active");
               let variantPickerVideoClose = document.getElementsByClassName("variant-picker-video-close")[0].classList.add("variant-picker-video-close--active");
+            }
+
+            function closeVariantPickerVideoModal(){
+              let variantPickerVideo = document.getElementsByClassName("variant-picker-modal-video")[0].classList.remove("variant-picker-modal-video--active");
+              let variantPickerVideoClose = document.getElementsByClassName("variant-picker-video-close")[0].classList.remove("variant-picker-video-close--active");
             }
           </script>
           
