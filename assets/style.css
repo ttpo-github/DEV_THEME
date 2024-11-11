@@ -7037,6 +7037,14 @@ to {top:0; opacity:1}
 .variant-picker-modal-video{
   
 }
+
+.variant-picker-video-close{
+    color: #0000d8;
+    float: right;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 10px;
+}
 /* Variant Picker Video Modal */
 
 /* Yotpo Customizations */
