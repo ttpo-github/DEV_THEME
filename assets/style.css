@@ -7060,6 +7060,10 @@ video.variant-picker-modal-video--active{
     margin:8px;
     display:none;
 }
+
+.variant-picker-video-close--active{
+  display:block;
+}
 /* Variant Picker Video Modal */
 
 /* Yotpo Customizations */
