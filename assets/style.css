@@ -7039,7 +7039,7 @@ to {top:0; opacity:1}
 .variant-picker-modal-video{
   width:100%;
   border-radius:4px;
-  transition: all 3s ease-in-out;
+  transition: all .3s ease-in-out;
   max-height:750px;
 }
 
