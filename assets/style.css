@@ -7027,7 +7027,7 @@ to {top:0; opacity:1}
 }
 
 .video-modal-container{
-  
+  position:relative;
 }
 
 .variant-picker-close-modal{
@@ -7048,6 +7048,7 @@ to {top:0; opacity:1}
     position: absolute;
     right: 0;
     line-height: .75;
+    z-index:2;
 }
 /* Variant Picker Video Modal */
 
