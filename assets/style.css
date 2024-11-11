@@ -7043,6 +7043,10 @@ to {top:0; opacity:1}
   max-height:0px;
 }
 
+video.variant-picker-modal-video--active{
+  max-height:750px
+}
+
 .variant-picker-video-close{
     color: #0000d8;
     /* float: right; */
