@@ -7023,7 +7023,7 @@ to {top:0; opacity:1}
 
 /* Variant Picker Video Modal */
 .variant-picker-video-modal{
-  
+  margin-top:4px;
 }
 
 .variant-picker-video-modal-container{
@@ -7049,6 +7049,7 @@ to {top:0; opacity:1}
     right: 0;
     line-height: .75;
     z-index:2;
+    margin:4px;
 }
 /* Variant Picker Video Modal */
 
