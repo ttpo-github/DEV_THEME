@@ -40,7 +40,21 @@
           <fieldset class="js product-form__input" {% if forloop.index == 1 %}style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;"{% endif %}>
             <legend class="form__label">{{ option.name }}</legend>
             
-            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<div><a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span></div>{% endif %}
+             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
+              <div>
+              <a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
+              
+              <div id="video-modal" class="video-modal">
+              <div class="video-modal-container">
+                <span class="close-modal close" onclick="closeVideoModal()">X</span>
+                <!-- Dynamic creation of the modal video element -->
+                <video class="modal-video" loop controls>
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              </div>
+            </div>
+            {% endif %}
               
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
             
@@ -51,7 +65,21 @@
         {% else %}
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }} </legend>
-            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}<div><a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span></div>{% endif %}
+            {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
+              <div>
+              <a href="#" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
+              
+              <div id="video-modal" class="video-modal">
+              <div class="video-modal-container">
+                <span class="close-modal close" onclick="closeVideoModal()">X</span>
+                <!-- Dynamic creation of the modal video element -->
+                <video class="modal-video" loop controls>
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              </div>
+            </div>
+            {% endif %}
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
            
           </fieldset>
