@@ -7040,6 +7040,7 @@ to {top:0; opacity:1}
   width:100%;
   border-radius:4px;
   transition: all 3s ease-in-out;
+  max-height:750px;
 }
 
 .variant-picker-video-close{
