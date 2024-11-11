@@ -7040,10 +7040,13 @@ to {top:0; opacity:1}
 
 .variant-picker-video-close{
     color: #0000d8;
-    float: right;
+    /* float: right; */
     font-size: 3em;
     font-weight: 700;
-    margin: 10px;
+    /* margin: 10px; */
+    position: absolute;
+    right: 0;
+    line-height: .75;
 }
 /* Variant Picker Video Modal */
 
