@@ -40,21 +40,7 @@
           <fieldset class="js product-form__input" {% if forloop.index == 1 %}style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:4px;"{% endif %}>
             <legend class="form__label">{{ option.name }}</legend>
             
-             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
-              <div>
-              <a href="#" class="variant-picker-modal-opener" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
-              
-              <div id="video-modal" class="variant-picker-video-modal">
-              <div class="variant-picker-video-modal-container">
-                <span class="variant-picker-close-modal variant-picker-video-close" onclick="closeVideoModal()">X</span>
-                <!-- Dynamic creation of the modal video element -->
-                <video class="variant-picker-modal-video" loop controls>
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              </div>
-            </div>
-            {% endif %}
+             <!-- PLACEHOLDER FOR FUTURE VIDEO MODAL??? -->
               
             {% render 'product-variant-options', product: product, option: option, block: block, forLoopIteration: forloop.index %}
             
@@ -67,7 +53,7 @@
             <legend class="form__label">{{ option.name }} </legend>
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
               <div>
-              <a href="#" class="variant-picker-modal-opener" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
+              <a href="#" id="variant-picker-modal-opener" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
               
               <div id="video-modal" class="variant-picker-video-modal">
               <div class="variant-picker-video-modal-container">
