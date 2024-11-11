@@ -7024,6 +7024,7 @@ to {top:0; opacity:1}
 /* Variant Picker Video Modal */
 .variant-picker-video-modal{
   margin-top:4px;
+  line-height:0;
 }
 
 .variant-picker-video-modal-container{
