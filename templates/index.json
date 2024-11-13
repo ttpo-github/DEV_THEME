@@ -74,7 +74,7 @@
         "slinktext": "SHOP ALL PRODUCTS",
         "bgimg": "shopify://shop_images/Artboard_1_ad3eb6b2-3f20-44ac-8cc9-f73692e2d52f.jpg",
         "littleimg": "shopify://shop_images/go_now.jpg",
-        "littleimg_link": "shopify://collections/sale-page-2021",
+        "littleimg_link": "shopify://collections/specials",
         "show_shipping": true,
         "ship_icon": "shopify://shop_images/Untitled-2_32cddabe-28de-41e3-b107-6ba1c20b3c7f.png",
         "ship_text": "All orders placed before 12PM CST ship next day ( some exclusions apply )",
@@ -151,7 +151,7 @@
             "title": "<font color=\"#ff0000 \">MARK DOWNS</font> SITE WIDE",
             "text": "",
             "button_text1": "SHOP SPECIALS",
-            "button_link1": "shopify://collections/sale-page-2021",
+            "button_link1": "shopify://collections/specials",
             "background_color1": "#ffffff",
             "text_color1": "#0031ff",
             "background_hover_color1": "#0031ff",
@@ -172,8 +172,7 @@
       "custom_css": [
         "p {font-size: 12px; color: #ffffff;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "16520887583eb58262": {
       "type": "collection-list",
@@ -246,7 +245,7 @@
           "type": "featured_collection",
           "disabled": true,
           "settings": {
-            "collection": "sale-page-2021"
+            "collection": "specials"
           }
         }
       },
