@@ -1169,7 +1169,7 @@ function getLocalNoonEquivalent() {
       
       </div>
   
-         <button type="submit" name="add" form="product-form-{{ section.id }}" style="margin:0px; background-color: #00f;"
+         <button type="submit" name="add" form="product-form-{{ section.id }}" style="margin:0px; background-color: #00f; font-size:2rem;"
                 class="atc_bottom_menu_button product-form__submit custom-btn button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
         {% comment %}
                 {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}hidden{% endif %} {% if product.tags contains 'unavailable' %}hidden{% endif %}"
