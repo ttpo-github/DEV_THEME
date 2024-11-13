@@ -7045,6 +7045,10 @@ to {top:0; opacity:1}
   max-height:0px;
 }
 
+.variant-picker-modal-video:hover{
+  cursor:pointer;
+}
+
 video.variant-picker-modal-video--active{
   max-height:750px
 }
