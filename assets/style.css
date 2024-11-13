@@ -7061,6 +7061,7 @@ video.variant-picker-modal-video--active{
     z-index:2;
     margin:8px;
     display:none;
+  transition: all .3s ease-in-out;
 }
 
 .variant-picker-video-close--active{
