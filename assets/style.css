@@ -7032,8 +7032,8 @@ to {top:0; opacity:1}
   
 }
 
-.variant-picker-close-modal{
-  
+.variant-picker-close-modal:hover{
+    cursor:pointer;
 }
 
 .variant-picker-modal-video{
