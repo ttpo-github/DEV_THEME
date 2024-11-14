@@ -386,9 +386,11 @@
             {% endif %}
 
             <style>
-              #shopify-{{product.id}}{
-                pointer-events:none;
+              [data-oke-reviews-product-id="shopify-{{product.id}}"] {
+                  /* Your styles here */
+                  pointer-events:none;
               }
+
             
             </style>
             {% comment %}<div id="reviews-wrapper"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></div>{% endcomment %}
