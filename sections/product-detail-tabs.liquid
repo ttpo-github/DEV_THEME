@@ -133,7 +133,8 @@
 
   
   <script>
-                 
+   
+                              
     document.addEventListener( 'DOMContentLoaded', function () {
       $('.product_tabbing').each(function(){
         var active, content, links = $(this).find('span');
@@ -153,23 +154,6 @@
           return false;
         });
       });
-
-      let reviewsWrapper = document.querySelector('#reviews-wrapper');
-    //console.log(reviewsWrapper);
-
-    if (reviewsWrapper) { // Check if the element exists
-        reviewsWrapper.addEventListener('click', function() {
-            let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
-            if (reviewsTab) { // Check if reviewsTab exists
-                reviewsTab.click();
-                let widgetWrapper = document.querySelector('#okendo-main-widget-wrapper');
-                if (widgetWrapper) { // Check if the widgetWrapper exists
-                    widgetWrapper.scrollIntoView();
-                }
-            }
-        });
-    }
-      
     }, false );
 
     
@@ -216,7 +200,21 @@
     });
 });
 
- 
+ let reviewsWrapper = document.querySelector('#reviews-wrapper');
+    //console.log(reviewsWrapper);
+
+    if (reviewsWrapper) { // Check if the element exists
+        reviewsWrapper.addEventListener('click', function() {
+            let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
+            if (reviewsTab) { // Check if reviewsTab exists
+                reviewsTab.click();
+                let widgetWrapper = document.querySelector('#okendo-main-widget-wrapper');
+                if (widgetWrapper) { // Check if the widgetWrapper exists
+                    widgetWrapper.scrollIntoView();
+                }
+            }
+        });
+    }
     
   </script>
 
