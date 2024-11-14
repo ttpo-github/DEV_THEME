@@ -135,15 +135,15 @@
   <script>
     //console.log("IN PRODUCT DETAILS")
     document.addEventListener('DOMContentLoaded', function() {
-    let reviewsWrapper = document.querySelector('#reviews-wrapper')
-    console.log(reviewsWrapper)
-    reviewsWrapper.addEventListener('click', function(){
-      //console.log('Reviews Clicked!!!')
-      let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]')
-      reviewsTab.click();
-      document.querySelector('#okendo-main-widget-wrapper').scrollIntoView();    
-    })
-    }, false );
+      let reviewsWrapper = document.querySelector('#reviews-wrapper')
+      console.log(reviewsWrapper)
+      reviewsWrapper.addEventListener('click', function(){
+        //console.log('Reviews Clicked!!!')
+        let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]')
+        reviewsTab.click();
+        document.querySelector('#okendo-main-widget-wrapper').scrollIntoView();    
+      })
+    }, flase );
                               
     document.addEventListener( 'DOMContentLoaded', function () {
       $('.product_tabbing').each(function(){
