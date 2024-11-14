@@ -156,17 +156,23 @@
 
     //console.log("IN PRODUCT DETAILS")
 
-      document.addEventListener('DOMContentLoaded', function() {
-        let okendoReviewStars = document.querySelector('#reviews-wrapper')
-        console.log(okendoReviewStars);
-        console.log("TEST TEST")
-    
-        okendoReviewStars.addEventListener('click', function(){
-          console.log('Reviews Clicked!!!')
-          //let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]')
-          //reviewsTab.click();
-        })
+     document.addEventListener('DOMContentLoaded', function() {
+          let okendoReviewStars = document.querySelector('#reviews-wrapper');
+          console.log(okendoReviewStars);
+          console.log("TEST TEST");
+      
+          if (okendoReviewStars) {
+              okendoReviewStars.addEventListener('click', function() {
+                  console.log('Reviews Clicked!!!');
+                  // Uncomment the following lines if you need to trigger the click on reviewsTab
+                  // let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
+                  // if (reviewsTab) reviewsTab.click();
+              });
+          } else {
+              console.log("Element #reviews-wrapper not found!");
+          }
       });
+
     
      /*
     $('#reviews-wrapper').on('click', function(){
