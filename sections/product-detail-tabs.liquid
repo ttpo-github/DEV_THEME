@@ -135,11 +135,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
     let reviewsWrapper = document.querySelector('#reviews-wrapper');
-    console.log(reviewsWrapper);
+    //console.log(reviewsWrapper);
 
     if (reviewsWrapper) { // Check if the element exists
         reviewsWrapper.addEventListener('click', function() {
-            // console.log('Reviews Clicked!!!')
+            console.log('Reviews Clicked!!!')
             let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
             if (reviewsTab) { // Check if reviewsTab exists
                 reviewsTab.click();
