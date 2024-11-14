@@ -139,7 +139,6 @@
 
     if (reviewsWrapper) { // Check if the element exists
         reviewsWrapper.addEventListener('click', function() {
-            console.log('Reviews Clicked!!!')
             let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
             if (reviewsTab) { // Check if reviewsTab exists
                 reviewsTab.click();
@@ -150,7 +149,7 @@
             }
         });
     }
-}, true);
+}, flase);
                               
     document.addEventListener( 'DOMContentLoaded', function () {
       $('.product_tabbing').each(function(){
