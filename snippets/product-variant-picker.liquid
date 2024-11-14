@@ -73,31 +73,7 @@
            
           </fieldset>
 
-          <script defer>
-            let variantPickerVideo = document.getElementsByClassName("variant-picker-modal-video")[0]
-            let variantPickerVideoClose = document.getElementsByClassName("variant-picker-video-close")[0]
-            
-            function openVariantPickerVideoModal(){
-              event.preventDefault();
-              variantPickerVideo.classList.add("variant-picker-modal-video--active");
-              variantPickerVideoClose.classList.add("variant-picker-video-close--active");
-              variantPickerVideo.play();
-            }
-
-            function closeVariantPickerVideoModal(){
-              variantPickerVideo.classList.remove("variant-picker-modal-video--active");
-              variantPickerVideoClose.classList.remove("variant-picker-video-close--active");
-              variantPickerVideo.pause();
-            }
-
-            function togglePlayPause(video) {
-                if (video.paused) {
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            }
-          </script>
+          
           
 
           {% comment %}
