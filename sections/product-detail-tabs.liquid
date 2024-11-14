@@ -133,10 +133,26 @@
 
   
   <script>
-   
-                              
-    document.addEventListener( 'DOMContentLoaded', function () {
-      $('.product_tabbing').each(function(){
+   document.addEventListener('DOMContentLoaded', function() {
+    // Set up #reviews-wrapper click behavior
+    let reviewsWrapper = document.querySelector('#reviews-wrapper');
+    console.log(reviewsWrapper);
+
+    if (reviewsWrapper) {
+        reviewsWrapper.addEventListener('click', function() {
+            let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
+            if (reviewsTab) {
+                reviewsTab.click();
+                let widgetWrapper = document.querySelector('#okendo-main-widget-wrapper');
+                if (widgetWrapper) {
+                    widgetWrapper.scrollIntoView();
+                }
+            }
+        });
+    }
+
+    // Set up jQuery tabbing behavior
+    $('.product_tabbing').each(function(){
         var active, content, links = $(this).find('span');
         active = links.first().addClass('active');
 
@@ -153,74 +169,36 @@
           content.show();
           return false;
         });
-      });
-    }, false );
-
-    
-    
-    
-     /*
-    $('#reviews-wrapper').on('click', function(){
-      console.log('clicked')
-      $('.product_tabbing span[data-id="#reviews"]').trigger( "click" );
     });
-    */
-    
-    /*
-    $('.faq-body h4').on('click',function(){
-      $('.faq-body h4').not(this).removeClass('active');
-      $('.faq-content').not($(this).siblings()).slideUp().removeClass('active')
-      $(this).toggleClass('active');
-      $(this).siblings().slideToggle().toggleClass('active');
-    });
-    */
 
+    // Set up FAQ toggle behavior
     document.querySelectorAll('.faq-body h4').forEach(function(header) {
-    header.addEventListener('click', function() {
-        document.querySelectorAll('.faq-body h4').forEach(function(otherHeader) {
-            if (otherHeader !== header) {
-                otherHeader.classList.remove('active');
+        header.addEventListener('click', function() {
+            document.querySelectorAll('.faq-body h4').forEach(function(otherHeader) {
+                if (otherHeader !== header) {
+                    otherHeader.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.faq-content').forEach(function(content) {
+                if (content !== header.nextElementSibling) {
+                    content.style.display = 'none';
+                    content.classList.remove('active');
+                }
+            });
+
+            header.classList.toggle('active');
+            
+            let siblingContent = header.nextElementSibling;
+            if (siblingContent) {
+                siblingContent.style.display = (siblingContent.style.display === 'block') ? 'none' : 'block';
+                siblingContent.classList.toggle('active');
             }
         });
-
-        document.querySelectorAll('.faq-content').forEach(function(content) {
-            if (content !== header.nextElementSibling) {
-                content.style.display = 'none';
-                content.classList.remove('active');
-            }
-        });
-
-        header.classList.toggle('active');
-        
-        let siblingContent = header.nextElementSibling;
-        if (siblingContent) {
-            siblingContent.style.display = (siblingContent.style.display === 'block') ? 'none' : 'block';
-            siblingContent.classList.toggle('active');
-        }
     });
 });
+</script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    let reviewsWrapper = document.querySelector('#reviews-wrapper');
-    console.log(reviewsWrapper);
-
-    if (reviewsWrapper) { // Check if the element exists
-        reviewsWrapper.addEventListener('click', function() {
-            // console.log('Reviews Clicked!!!')
-            let reviewsTab = document.querySelector('.product_tabbing span[data-id="#reviews"]');
-            if (reviewsTab) { // Check if reviewsTab exists
-                reviewsTab.click();
-                let widgetWrapper = document.querySelector('#okendo-main-widget-wrapper');
-                if (widgetWrapper) { // Check if the widgetWrapper exists
-                    widgetWrapper.scrollIntoView();
-                }
-            }
-        });
-    }
-}, false);
-
-    
-  </script>
 
   
 
