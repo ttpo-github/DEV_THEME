@@ -384,7 +384,13 @@
               </div>
             {%- endif -%}
             {% endif %}
+
+            <style>
+              #shopify-{{product.id}}{
+                pointer-events:none;
+              }
             
+            </style>
             {% comment %}<div id="reviews-wrapper"><div class="yotpo bottomLine" data-product-id="{{ product.id }}"></div></div>{% endcomment %}
             <div id="reviews-wrapper" style="cursor:pointer;">{% render 'okendo-reviews-product-rating-summary', product: product %}</div>
           </div>
