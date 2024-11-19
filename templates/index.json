@@ -30,11 +30,13 @@
         "buttons_4Dxp9X": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop All Products",
-            "button_link_1": "https://thetrailerpartsoutlet.com/pages/collections-list",
+            "button_label_1": "BLACK FRIDAY DEALS",
+            "button_link_1": "#",
             "button_style_secondary_1": false,
-            "button_label_2": "Shop Trailer Axles",
-            "button_link_2": "https://thetrailerpartsoutlet.com/collections/trailer-axles",
+            "button_label_2": "Shop All Products",
+            "button_link_2": "https://thetrailerpartsoutlet.com/pages/collections-list",
+            "button_label_3": "Shop Trailer Axles",
+            "button_link_3": "https://thetrailerpartsoutlet.com/collections/trailer-axles",
             "button_style_secondary_2": false
           }
         }
