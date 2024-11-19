@@ -88,7 +88,7 @@
               <quantity-input class="quantity">
                 <button class="quantity__button no-js-hidden" name="minus" type="button">
                   <span class="visually-hidden">
-                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}} <span>with free shipping</span>
+                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}} 
                   </span>
                   {% render 'icon-minus' %}
                 </button>
@@ -153,7 +153,7 @@
                     <a style="padding:0;" href="tel:8339103416" class="hidden-link custom-btn button--full-width">Call for Availability: <br> (833) 910-3416</a>
                   {%- else -%}                    
                       {{ 'products.product.add_to_cart' | t }}
-                    
+                      <span>with free shipping</span>
                   {%- endif -%}
                 </span>
                 <div class="loading-overlay__spinner main-atc-spinner hidden">
