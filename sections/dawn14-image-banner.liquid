@@ -264,6 +264,13 @@
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
+
+              style="padding: 20px;
+              backdrop-filter: blur(4px) saturate(154%);
+              -webkit-backdrop-filter: blur(4px) saturate(154%);
+              background-color: rgba(255, 255, 255, 0.45);
+              border-radius: 4px;
+              border: 1px solid rgba(209, 213, 219, 0.3);"
             >
               {%- if block.settings.button_label_1 != blank -%}
                 <a
@@ -284,6 +291,19 @@
                     role="link" aria-disabled="true"
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="background-color:#0000d8;  border-radius:4px; width:100%; font-size:2rem;"
+                >
+                  {{- block.settings.button_label_2 | escape -}}
+                </a>
+              {%- endif -%}
+              {%- if block.settings.button_label_3 != blank -%}
+                <a
+                  {% if block.settings.button_link_3 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_3 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                   style="background-color:#0000d8;  border-radius:4px; width:100%; font-size:2rem;"
@@ -651,6 +671,18 @@
         {
           "type": "url",
           "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+         {
+          "type": "text",
+          "id": "button_label_3",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
         },
         {
