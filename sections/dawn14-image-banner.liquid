@@ -305,10 +305,10 @@
                   {% else %}
                     href="{{ block.settings.button_link_3 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
                   style="background-color:#0000d8;  border-radius:4px; width:100%; font-size:2rem;"
                 >
-                  {{- block.settings.button_label_2 | escape -}}
+                  {{- block.settings.button_label_3 | escape -}}
                 </a>
               {%- endif -%}
             </div>
@@ -677,13 +677,13 @@
           "type": "text",
           "id": "button_label_3",
           "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_3.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_3.info"
         },
         {
           "type": "url",
           "id": "button_link_3",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_3.label"
         },
         {
           "type": "checkbox",
