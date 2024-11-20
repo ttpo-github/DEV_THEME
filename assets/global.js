@@ -1292,7 +1292,8 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
-      //console.log(text)
+      console.log("Variant change toggle add button")
+      console.log(text)
       if (text) { 
         addButtonText.innerHTML = text;
         atcMenuButton.innerHTML = text;
