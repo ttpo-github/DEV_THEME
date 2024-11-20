@@ -1292,14 +1292,16 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
-      console.log("Variant change toggle add button")
-      console.log(text)
+      //console.log("Variant change toggle add button")
+      //console.log(text)
       if (text) { 
         addButtonText.innerHTML = text;
         atcMenuButton.innerHTML = text;
       }
     } else {
       addButton.removeAttribute('disabled');
+      console.log("Variant Change inner HTML")
+      console.log(addButtonText.innerHTML)
       addButtonText.innerHTML = window.variantStrings.addToCart;
       atcMenuButton.innerHTML = window.variantStrings.addToCart;
       
