@@ -199,6 +199,7 @@
         },
         "112f30af-cbdb-4a83-9e27-540d203a1586": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Jamal_1_002fdeba-d31d-43eb-9440-021457a98f77.jpg",
             "title": "Jamal",
