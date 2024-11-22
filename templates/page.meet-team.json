@@ -257,16 +257,6 @@
             "phone_info": ""
           }
         },
-        "4d3ed014-5698-44d9-8388-d4e5c92528e0": {
-          "type": "title",
-          "settings": {
-            "image": "shopify://shop_images/Brandon_Away.jpg",
-            "title": "Brandon",
-            "designation": "SEO Specialist",
-            "add_info": "",
-            "phone_info": ""
-          }
-        },
         "773b232e-999e-4eb0-8bd2-a323c3748888": {
           "type": "title",
           "settings": {
@@ -327,7 +317,6 @@
         "b8888a92-a204-4478-8a05-ad60729e9f1f",
         "f060a828-0dd2-481a-828a-0b18a593fcd0",
         "049e7266-07ec-4b18-a053-368986832dc3",
-        "4d3ed014-5698-44d9-8388-d4e5c92528e0",
         "773b232e-999e-4eb0-8bd2-a323c3748888",
         "250fd4c6-79d7-4bfb-a43b-6c2101fde8f1",
         "title_JEL9VH",
