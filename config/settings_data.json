@@ -152,8 +152,7 @@
         "block_order": [
           "announcement-bar-0"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
@@ -179,46 +178,27 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "2412377359038555501": {
         "type": "shopify://apps/yanet-professional-faq-page/blocks/app-embed/b70c1465-6820-4911-8d5d-2299efd66134",
         "disabled": true,
-        "settings": {
-        }
+        "settings": {}
       },
       "9144908965052497053": {
         "type": "shopify://apps/glo-related-products-upsell/blocks/app-embed/75cf2d86-3988-45e7-8f28-ada23c99704f",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6279071938380501511": {
         "type": "shopify://apps/powerful-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "316487575649303945": {
         "type": "shopify://apps/easify-options/blocks/app-embed-block/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "14339172867238703359": {
-        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
-        "settings": {
-          "product": ""
-        }
-      },
-      "7570552984445421165": {
-        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "733389323033596483": {
         "type": "shopify://apps/okendo/blocks/theme-settings/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
@@ -226,6 +206,18 @@
         "settings": {
           "show_preview_data": true
         }
+      },
+      "14339172867238703359": {
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/reviews_tab/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": true,
+        "settings": {
+          "product": ""
+        }
+      },
+      "7570552984445421165": {
+        "type": "shopify://apps/yotpo-product-reviews-ugc/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
