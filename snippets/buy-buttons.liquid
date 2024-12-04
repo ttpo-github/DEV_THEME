@@ -154,7 +154,9 @@
                   {%- else -%}                    
                       {{ 'products.product.add_to_cart' | t }}
                     <br>
+                    {% unless localization.country.iso_code == 'CA' %}
                       <span id="atc-free-shipping-message" style="font-size:1.5rem;">Includes free shipping</span>
+                    {% endunless %}
                   {%- endif -%}
                 </span>
                 <div class="loading-overlay__spinner main-atc-spinner hidden">
