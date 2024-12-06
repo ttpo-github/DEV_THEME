@@ -109,8 +109,8 @@
     {% if forLoopIteration == 1 %}
 
     {% for mediaSet in variantMediaArr %}
-      {% if mediaSet contains value %}
-        {% assign mediaSplit = mediaSet | split: ' -- ' %}
+      {% assign mediaSplit = mediaSet | split: ' -- ' %}
+      {% if mediaSplit[0] == value %}
         {% assign foundImage = mediaSplit[1] %}
       {% endif %}
 
