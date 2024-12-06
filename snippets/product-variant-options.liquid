@@ -113,6 +113,9 @@
         {% assign mediaSplit = mediaSet | split: ' -- ' %}
         {% assign foundImage = mediaSplit[1] %}
       {% endif %}
+
+      <script>console.log("Value")</script>
+      <script>console.log('{{value}}')</script>
     {% endfor %}
 
       
