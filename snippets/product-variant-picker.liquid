@@ -51,6 +51,7 @@
         {% else %}
           <fieldset class="js product-form__input">
             <legend class="form__label">{{ option.name }} </legend>
+            {% comment %}
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
               <div>
               <a href="#" id="variant-picker-modal-opener" onclick="openVariantPickerVideoModal()" style="text-decoration:underline">How to measure your axle</a><span>▶️</span>
@@ -66,6 +67,7 @@
               </div>
             </div>
             {% endif %}
+            {% endcomment %}
 
 
             
@@ -73,6 +75,7 @@
            
           </fieldset>
 
+          {% comment %}
           <script defer>
             let variantPickerVideo = document.getElementsByClassName("variant-picker-modal-video")[0]
             variantPickerVideo.load();
@@ -99,7 +102,7 @@
                 }
             }
           </script>
-          
+          {% endcomment %}
 
           {% comment %}
             {% if option.name == 'Hubface/Spring Center (Frame Width):' %}
