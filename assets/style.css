@@ -3279,8 +3279,10 @@ ul.tabing-header li.active:after,
   line-height: 1;
 }
 variant-radios {
+  /*
   border-top: 1px solid #eee;
-  /*padding-top: 20px;*/
+  padding-top: 20px;
+  */
 }
 .product-recommendations-section {
   background: #f5f5f5;
