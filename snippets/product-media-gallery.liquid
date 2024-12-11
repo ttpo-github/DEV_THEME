@@ -84,7 +84,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: false,
+            priority_load: true
           %}
         </li>
       {%- endif -%}
@@ -114,7 +115,8 @@
                 media_width: media_width,
                 media_fit: section.settings.media_fit,
                 constrain_to_viewport: section.settings.constrain_to_viewport,
-                lazy_load: lazy_load
+                lazy_load: lazy_load,
+              priority_load: false
               %}
           </li>
         {%- endunless -%}
