@@ -347,8 +347,16 @@
 
     
     
+    {% if canonical_url == "/" %}
+      {{ 'hero-banner.css' | asset_url | stylesheet_tag: preload:true }}
+    {% endif %}
+
+    {% if canonical_url contains 'products' %}
+       {%- if product.selected_or_first_available_variant.featured_media != null -%}
+         <link rel="preload" as="image" href="{{ product.selected_or_first_available_variant.featured_media | img_url }}">
+        {% endif %}
+    {% endif %}
     
-    {{ 'hero-banner.css' | asset_url | stylesheet_tag: preload:true }}
     {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'pk-custom.css' | asset_url | stylesheet_tag: preload: true }}
     {% comment %}{{ 'pk-custom.css' | asset_url | stylesheet_tag: preload:true }}{% endcomment %}
