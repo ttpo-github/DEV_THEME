@@ -14,8 +14,11 @@
       "blocks": {
         "de33ab67-42c9-4872-810b-42453bde1c0a": {
           "type": "shopify://apps/aftership-order-tracking/blocks/edd/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
-          "settings": {
-          }
+          "settings": {}
+        },
+        "shipping_info_text_c4PzTU": {
+          "type": "shipping-info-text",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -25,13 +28,11 @@
         },
         "easify_options_easify_product_options_hYBR4M": {
           "type": "shopify://apps/easify-options/blocks/easify-product-options/d2288b18-c1ba-42f5-b3b3-26c75c8820bf",
-          "settings": {
-          }
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "announcement_timer_49C6xB": {
           "type": "announcement-timer",
@@ -58,8 +59,7 @@
         },
         "ef203090-7a02-4883-850a-501b94d93af1": {
           "type": "shopify://apps/yanet-professional-faq-page/blocks/app-block/b70c1465-6820-4911-8d5d-2299efd66134",
-          "settings": {
-          }
+          "settings": {}
         },
         "617ae22b-7115-4c22-99a7-6674be4a3410": {
           "type": "shopify://apps/glo-related-products-upsell/blocks/app-block-product/75cf2d86-3988-45e7-8f28-ada23c99704f",
@@ -72,6 +72,7 @@
       },
       "block_order": [
         "de33ab67-42c9-4872-810b-42453bde1c0a",
+        "shipping_info_text_c4PzTU",
         "variant_picker",
         "easify_options_easify_product_options_hYBR4M",
         "quantity_selector",
@@ -144,8 +145,7 @@
       "block_order": [
         "okendo_reviews_widget_M4ifBD"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
