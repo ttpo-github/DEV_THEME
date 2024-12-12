@@ -94,7 +94,7 @@ $('variant-radios input[type="radio"]').change(function(){
 
 $('variant-radios input[type="radio"]').change(function(){
   // When the 2 Week Fully Custom Option is Selected
-  if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\) \\+\\ $130"]').is(":checked")) {
+  if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\)"]').is(":checked")) {
     $(this).siblings('.fully_custom_variant').addClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active")
     $('#hubface-selection').prop('disabled', true);
@@ -103,7 +103,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#custom-disclaimer').prop('required', true);
   }
   // When the Custom Spring Center Option is selected
-  else if ($('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\) \\+\\ $130"]').is(":checked")){
+  else if ($('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\)"]').is(":checked")){
     $(this).siblings('.custom_spring_center_variant').addClass("custom-slide-active");
     $('#hubface-selection').prop('disabled', false);
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
