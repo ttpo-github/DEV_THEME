@@ -29,8 +29,7 @@
         },
         "sections--15107364356177__bf501a9e-f7e8-4a77-b6c3-a0d41c9cdbe1-email_form-1": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -57,6 +56,7 @@
             "title_size": 35,
             "alignment": "center",
             "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
@@ -87,8 +87,7 @@
         },
         "318fe3b4-b82d-4c71-8ab9-39a572abb702": {
           "type": "email_form",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -162,7 +161,7 @@
       "settings": {
         "footer_logo": "shopify://shop_images/new-logo.png",
         "footer_logo_title": "The Trailer Parts Outlet",
-        "footer_logo_text": "Our Company is Dedicated To Deliver Solutions Faster Than Anyone Else, So The <strong></strong>DOERS Can <strong></strong>DO!<br>\n<br>Our Core Values: <br>• <strong>Transparent</strong>\n<br>• <strong>Growth Oriented</strong> \n<br>• <strong>Adaptive</strong> <br>• <strong>Disciplined</strong> <br>• <strong>Own It</strong> ",
+        "footer_logo_text": "Our Company is Dedicated To Deliver Solutions Faster Than Anyone Else, So The <strong></strong>DOERS Can <strong></strong>DO!<br>\n<br>Our Core Values: \n<br>• <strong>Integrity</strong>\n<br>• <strong>Reliability</strong> \n<br>• <strong>Adaptability</strong> ",
         "footer_address": "2209 Interstate 45 North, Madisonville, TX 77864",
         "footer_phone": "(833) 910-3416",
         "footer_mail": "Customerservice@thetrailerpartsoutlet.com",
