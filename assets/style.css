@@ -2734,7 +2734,7 @@ ul.product_item-color_variant li {
   transition: all .3s;
   padding-top: 20px;
   text-align: center;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
 .collection slider-component:not(:first-child) {
   margin-top: 60px;
