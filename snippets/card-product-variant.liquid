@@ -86,12 +86,14 @@
         {%- endif -%}
 
         <script>//console.log('{{ card_variant.compare_at_price }} : {{ card_variant.price }}')</script>
-          
+
+        {% comment %}
         {% if card_variant.compare_at_price > card_variant.price %}
         <div class="card__badge">
           -{{ card_variant.compare_at_price | minus: card_variant.price | times: 100.0 |divided_by: card_variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%
         </div>
         {% endif %}
+        {% endcomment %}
   
       </div>
       <div class="product-card__content">
