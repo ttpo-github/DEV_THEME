@@ -379,6 +379,7 @@
     },
     "16523705464bc2103a": {
       "type": "home-range",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DSC09446-1.jpg",
         "title": "We Deliver Solutions Faster,  So The DOERS Can DO!",
