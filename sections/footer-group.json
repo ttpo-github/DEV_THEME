@@ -55,6 +55,7 @@
             "title_color": "",
             "title_size": 35,
             "alignment": "center",
+            "margin_bottom": 60,
             "background_color": "",
             "feed_id": "",
             "html_area": ""
