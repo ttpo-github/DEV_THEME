@@ -65,7 +65,7 @@
         "instafeed_app_block_EJXcpi"
       ],
       "settings": {
-        "include_margins": false,
+        "include_margins": true,
         "css_id_selector": ""
       }
     },
