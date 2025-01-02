@@ -11,6 +11,7 @@
   "sections": {
     "video_section_EJHJpk": {
       "type": "video-section",
+      "disabled": true,
       "settings": {
         "video_source": "https://cdn.shopify.com/videos/c/o/v/e49556c32b2e4c6aad55a70ae3f41ecb.mp4"
       }
