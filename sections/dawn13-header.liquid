@@ -399,7 +399,7 @@
       flex-direction:row;
       justify-content:space-between;
       align-items:center;
-      font-size:1rem;
+      font-size:1.2rem;
     }
 
     .sub-header-container{
@@ -413,6 +413,10 @@
       display:none;
     }
 
+    .sub-banner-messaging{
+        font-size:1rem;
+      }
+    
     @media screen and (min-width: 990px){
       .custom-announcement-bar{
         justify-content:center;
@@ -431,6 +435,10 @@
 
       .mobile_search_form{
         display:none;
+      }
+
+      .sub-banner-messaging{
+        font-size:1.7rem;
       }
     }
   </style>
@@ -477,7 +485,7 @@
                 <div class="announcement-bar__message center h5 custom-announcement-bar">
                   {% comment %}<span style="white-space:pre;">🚚Free Shipping</span>{% endcomment %}<div style="display:flex; flex-direction:row;"><span>📞</span><a href="tel:+8339103416" style="white-space:pre;text-decoration:underline; color:#FFFFFF;">(833)910-3416</a></div>
                   
-                  <span style="white-space:pre;" style="font-size:1rem; font-weight:900;">Order today - Ships Tomorrow</span>
+                  <span class="sub-banner-messaging" style="white-space:pre; font-weight:900;">Order today - Ships Tomorrow</span>
 
                   <localization-form class="medium-hide no-js-hidden">
             {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form', style:'padding:0;' -%}
