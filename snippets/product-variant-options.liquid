@@ -190,7 +190,7 @@
           <br>
           
           <label for="properties[Custom Spring Center]">Custom Spring Center Measurement:</label>
-          <input aria-label="Custom Spring Center" id="custom-spring-center" class="" type="text" name="properties[Custom Spring Center]" form="product-form-{{ section.id }}">
+          <input aria-label="Custom Spring Center" id="custom-spring-center" class="" type="text" name="properties[Custom Spring Center]" form="product-form-{{ section.id }}" {% if option.selected_value == value %}disabled="false"{% else %}disabled="true"{% endif %}>
           <br>
           <a href="#" class="axle_reference_chart">Custom Axle Reference Guide</a>
 
