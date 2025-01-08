@@ -176,6 +176,7 @@
     {% if value == 'Custom Spring Center (+3 Day Build Time)' %}
       <script>console.log('{{ option.selected_value }}')</script>
       <script>console.log('{{ value }}')</script>
+      <script>console.log({{ option.selected_value }} == {{ value }})</script>
       <div id="{{ option.name | replace: " ","-"}}" class="custom_spring_center_variant custom-option-slide {% if option.selected_value == value %}custom-slide-active{% endif %}" >
         <div class="custom-option-inner-container">
           
