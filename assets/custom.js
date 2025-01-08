@@ -98,6 +98,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.fully_custom_variant').addClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active")
     $('#hubface-selection').prop('disabled', true);
+    $('#custom-spring-center').prop('disabled', true);
 
     $('#disclaimer-container').css("display", "block");
     $('#custom-disclaimer').prop('required', true);
@@ -106,6 +107,7 @@ $('variant-radios input[type="radio"]').change(function(){
   else if ($('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\)"]').is(":checked")){
     $(this).siblings('.custom_spring_center_variant').addClass("custom-slide-active");
     $('#hubface-selection').prop('disabled', false);
+    $('#custom-spring-center').prop('disabled', true);
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
 
     $('#disclaimer-container').css("display", "block");
@@ -118,6 +120,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
     $('#hubface-selection').prop('disabled', true);
+    $('#custom-spring-center').prop('disabled', true);
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
