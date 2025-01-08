@@ -101,6 +101,8 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#hubface-selection').prop('disabled', true);
     $('#custom-spring-center').prop('disabled', true);
 
+    $('#custom-hubface').prop('disabled', false);
+
     $('#disclaimer-container').css("display", "block");
     $('#custom-disclaimer').prop('required', true);
   }
@@ -110,6 +112,8 @@ $('variant-radios input[type="radio"]').change(function(){
     
     $('#hubface-selection').prop('disabled', false);
     $('#custom-spring-center').prop('disabled', false);
+
+    $('#custom-hubface').prop('disabled', true);
     
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
 
@@ -125,6 +129,8 @@ $('variant-radios input[type="radio"]').change(function(){
     
     $('#hubface-selection').prop('disabled', true);
     $('#custom-spring-center').prop('disabled', true);
+
+    $('#custom-hubface').prop('disabled', false);
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
