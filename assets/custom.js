@@ -130,7 +130,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#hubface-selection').prop('disabled', true);
     $('#custom-spring-center').prop('disabled', true);
 
-    $('#custom-hubface').prop('disabled', false);
+    $('#custom-hubface').prop('disabled', true);
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
