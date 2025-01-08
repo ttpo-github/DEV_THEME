@@ -97,6 +97,7 @@ $('variant-radios input[type="radio"]').change(function(){
   if ($('variant-radios input[value*="Custom"]').is(":checked") && !$('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\)"]').is(":checked")) {
     $(this).siblings('.fully_custom_variant').addClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active")
+    
     $('#hubface-selection').prop('disabled', true);
     $('#custom-spring-center').prop('disabled', true);
 
@@ -106,8 +107,10 @@ $('variant-radios input[type="radio"]').change(function(){
   // When the Custom Spring Center Option is selected
   else if ($('variant-radios input[value="Custom Spring Center \\(+3 Day Build Time\\)"]').is(":checked")){
     $(this).siblings('.custom_spring_center_variant').addClass("custom-slide-active");
+    
     $('#hubface-selection').prop('disabled', false);
-    $('#custom-spring-center').prop('disabled', true);
+    $('#custom-spring-center').prop('disabled', false);
+    
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
 
     $('#disclaimer-container').css("display", "block");
@@ -119,6 +122,7 @@ $('variant-radios input[type="radio"]').change(function(){
     //$('.custom_spring_center_variant input').val('');
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
+    
     $('#hubface-selection').prop('disabled', true);
     $('#custom-spring-center').prop('disabled', true);
 
