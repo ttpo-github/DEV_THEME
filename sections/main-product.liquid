@@ -413,6 +413,10 @@
             
             {%- when 'shipping-info-text' -%}  
               <div style="padding:8px 0px 16px"><span style="font-weight:700;">Shipping: </span><span>Calculated at Checkout</span></div>
+
+              <div style="padding:8px 0px 16px"><a href="/cart/#tax-exempt-target" style="text-decoration:underline; font-weight:600;">Tax Exempt?</a><span> Enter info in cart.</span></div>
+
+            
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
