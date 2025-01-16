@@ -506,6 +506,51 @@
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 
+<style>
+  #variant-notification-wrapper{
+     position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
+  }
+
+  .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+    }
+    
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .closebtn:hover {
+      color: black;
+    }
+  
+  @media screen and (min-width: 990px) {
+    #variant-notification-wrapper{
+    
+    }
+  }
+  
+</style> 
+
+<div id="variant-notification-wrapper">
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>Updated:</strong> This is a notification
+  </div>
+</div>
+  
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
