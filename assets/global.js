@@ -942,6 +942,8 @@ class VariantSelects extends HTMLElement {
     this.updatePickupAvailability();
     this.removeErrorMessage();
     this.updateVariantStatuses();
+
+    this.variantChangeAlert()
     
 
     if (!this.currentVariant) {
@@ -954,6 +956,10 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
     }
+  }
+
+  variantChangeAlert(){
+    console.log(this.currentVariant)
   }
 
   updateTitle(variantOb){
