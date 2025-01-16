@@ -986,7 +986,7 @@ class VariantSelects extends HTMLElement {
       </div>`;
 
       // Append the new alert to the alert container
-      newAlert.innerHTML(alertHTML)
+      newAlert.innerHTML = alertHTML
       
       notificationWrapper.appendChild(newAlert);
 
