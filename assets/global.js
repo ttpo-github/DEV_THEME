@@ -959,7 +959,32 @@ class VariantSelects extends HTMLElement {
   }
 
   variantChangeAlert(){
-    console.log(this.currentVariant)
+     let notificationWrapper = document.getElementById("variant-notification-wrapper");
+
+      notificationWrapper.append(`
+        <div class="alert">    
+          <div class="alert-container">
+            <img class="alert-image" src="//thetrailerpartsoutlet.com/cdn/shop/files/35IDTK-3_4_dbe66f58-c312-4584-a43f-07d1bde7db7e.jpg?v=1721223453"/>
+            <div class="alert-message">
+              <strong>Selected</strong>
+              <div>Option 1</div>
+              <div>Option 1</div>
+              <div>Option 1</div>
+            </div>
+            <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span> 
+          </div>
+        </div>
+      `)
+
+      function splitAtLastDash(input) {
+        const lastDashIndex = input.lastIndexOf("-");
+        if (lastDashIndex === -1) {
+            return [input]; // No dash found, return the entire string
+        }
+        const part1 = input.substring(0, lastDashIndex).trim();
+        const part2 = input.substring(lastDashIndex + 1).trim();
+        return [part1, part2];
+      }
   }
 
   updateTitle(variantOb){
