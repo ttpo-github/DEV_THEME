@@ -961,7 +961,7 @@ class VariantSelects extends HTMLElement {
   variantChangeAlert(){
      let notificationWrapper = document.getElementById("variant-notification-wrapper");
 
-      notificationWrapper.append(`
+      notificationWrapper.appendChild(`
         <div class="alert">    
           <div class="alert-container">
             <img class="alert-image" src="//thetrailerpartsoutlet.com/cdn/shop/files/35IDTK-3_4_dbe66f58-c312-4584-a43f-07d1bde7db7e.jpg?v=1721223453"/>
