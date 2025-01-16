@@ -970,6 +970,7 @@ class VariantSelects extends HTMLElement {
           <strong>Selected</strong>
           <div>Option 2</div>
           <div>Option 2</div>
+          <div>Option 2</div>
         </div>
         <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span>
       `;
