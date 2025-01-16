@@ -526,6 +526,11 @@
   .alert-image {
     width:200px;
   }
+
+  .alert-message {
+    display:flex;
+    flex-direction:row;
+  }
     
     .closebtn {
       margin-left: 15px;
@@ -566,7 +571,9 @@
 <div id="variant-notification-wrapper">
   <div class="alert">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <div class="alert-message">
     <img class="alert-image" src="//thetrailerpartsoutlet.com/cdn/shop/files/35IDTK-3_4_dbe66f58-c312-4584-a43f-07d1bde7db7e.jpg?v=1721223453"/><strong>Updated:</strong> This is a notification
+    </div>
   </div>
 </div>
   
