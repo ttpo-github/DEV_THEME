@@ -959,6 +959,7 @@ class VariantSelects extends HTMLElement {
   }
 
   variantChangeAlert(){
+    console.log(this.currentVariant)
      let notificationWrapper = document.getElementById("variant-notification-wrapper");
 
     const newAlert = document.createElement('div');
@@ -997,6 +998,8 @@ class VariantSelects extends HTMLElement {
       </div>`;
 
       // Append the new alert to the alert container
+
+      
       notificationWrapper.appendChild(newAlert);
 
      
