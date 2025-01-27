@@ -986,7 +986,7 @@ class VariantSelects extends HTMLElement {
       </ul>
           </div>
           </div>
-        <span class="closebtn" onclick="this.closest('.alert-container').style.display='none';">&times;</span>
+        <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span>
       </div>`;
 
       // Append the new alert to the alert container
