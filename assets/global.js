@@ -969,6 +969,7 @@ class VariantSelects extends HTMLElement {
      
     let alertHTML = `
       <div class="alert-container">
+      <div style="diplay:flex;">
         <img class="alert-image" src="${this.currentVariant.featured_image.src}" />
         <div class="alert-message">
           <strong>Selected</strong>`;
@@ -981,6 +982,7 @@ class VariantSelects extends HTMLElement {
     
       // Add the closing part of the alert container
       alertHTML += `
+          </div>
           </div>
         <span class="closebtn" onclick="this.closest('.alert-container').style.display='none';">&times;</span>
       </div>`;
