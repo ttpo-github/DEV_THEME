@@ -969,7 +969,7 @@ class VariantSelects extends HTMLElement {
      
     let alertHTML = `
       <div class="alert-container">
-      <div style="display:flex;">
+      <div style="display:flex; align-items:center;">
         <img class="alert-image" src="${this.currentVariant.featured_image.src}" />
         <div class="alert-message">
           <strong style="text-decoration:underline;">Selected Options</strong>
