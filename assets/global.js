@@ -973,7 +973,7 @@ class VariantSelects extends HTMLElement {
         <img class="alert-image" src="${this.currentVariant.featured_image.src}" />
         <div class="alert-message">
           <strong style="text-decoration:underline;">Selected Options</strong>
-          <ul>`
+          <ul style="padding:0 0 0 15px;">`
     
       // Loop through the options object and build the HTML for each option
       this.currentVariant.options.forEach(function(option){
