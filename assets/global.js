@@ -969,25 +969,31 @@ class VariantSelects extends HTMLElement {
      
     let alertHTML = `
       <div class="alert-container">
-      <div style="display:flex; align-items:center;">
-        <img class="alert-image" src="${this.currentVariant.featured_image.src}" />
-        <div class="alert-message">
-          <strong style="text-decoration:underline;">Selected Options</strong>
-          <ul style="padding:0 0 0 15px; margin:0px;">`
-    
-      // Loop through the options object and build the HTML for each option
-      this.currentVariant.options.forEach(function(option){
-         alertHTML += `<li>${option}</li>`;
-      }) 
-      
-    
-      // Add the closing part of the alert container
+      <div style="display:flex; align-items:center;">`;
+
+    if (this.currentVariant.featured_image?.src) {
       alertHTML += `
-      </ul>
+            <img class="alert-image" src="${this.currentVariant.featured_image.src}" />`;
+    }
+    
+    alertHTML += `
+            <div class="alert-message">
+              <strong style="text-decoration:underline;">Selected Options</strong>
+              <ul style="padding:0 0 0 15px; margin:0px;">`;
+    
+    // Loop through the options object and build the HTML for each option
+    this.currentVariant.options.forEach(function(option){
+       alertHTML += `<li>${option}</li>`;
+    });
+    
+    // Add the closing part of the alert container
+    alertHTML += `
+          </ul>
+            </div>
           </div>
-          </div>
-        <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span>
-      </div>`;
+          <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span>
+        </div>`;
+
 
       // Append the new alert to the alert container
       newAlert.innerHTML = alertHTML
