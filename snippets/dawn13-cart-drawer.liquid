@@ -557,6 +557,64 @@
               {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}. 
             {%- endif -%}
             <span> </span><a href="/cart/#tax-exempt-target" style="text-decoration:underline; font-weight:600;">Tax Exempt?</a>
+
+              <div
+                  v-if="hasItems()"
+                  data-rebuy-component="cart-subtotal"
+                  data-rebuy-component-id="cart_subtotal"
+              >
+                  <!-- Legacy Subtotal (when discount summary is disabled) -->
+                  <div v-if="!shouldShowDiscountSummary()" class="rebuy-cart__flyout-subtotal">
+                      <div class="rebuy-cart__flyout-subtotal-label">
+                          <span v-html="subtotalLabel()"></span>
+                      </div>
+                      <div class="rebuy-cart__flyout-subtotal-amount" v-html="subtotal()"></div>
+                  </div>
+              
+                  <!-- Subtotal with Discount Summary -->
+                  <div v-else class="rebuy-cart__subtotal-with-discounts">
+                      <div class="rebuy-cart__subtotal-with-discounts-row">
+                          <div class="rebuy-cart__subtotal-with-discounts-row-label">
+                              <span v-html="subtotalLabel()"></span>
+                          </div>
+                          <div class="rebuy-cart__subtotal-with-discounts-row-amount" v-html="subtotal()"></div>
+                      </div>
+              
+                      <div
+                          class="rebuy-cart__discount-summary"
+                          :class="{ 'is-expanded': isDiscountSummaryExpanded() }"
+                      >
+                          <button
+                              class="rebuy-cart__discount-summary-header"
+                              @click="toggleDiscountSummary()"
+                              :aria-expanded="isDiscountSummaryExpanded()"
+                              aria-controls="discount-summary-details"
+                          >
+                              <span v-html="getDiscountSummaryCountLabel()"></span>
+                              <span class="rebuy-cart__discount-summary-icon" aria-hidden="true">
+                                  <i class="fas fa-chevron-down"></i>
+                              </span>
+                          </button>
+              
+                          <div
+                              id="discount-summary-details"
+                              class="rebuy-cart__discount-summary-details"
+                              role="region"
+                              :aria-hidden="!isDiscountSummaryExpanded()"
+                          >
+                              <div
+                                  v-for="discount in getDiscountSummaryItems()"
+                                  class="rebuy-cart__discount-summary-item"
+                              >
+                                  <span v-html="discount.title"></span>
+                                  <span v-html="discount.amount"></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            
           </small>
         </div>
 
