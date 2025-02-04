@@ -89,9 +89,10 @@
                 {%- endif -%}
                 {%- if form.posted_successfully? -%}
                   <div class="success-message newsletter-message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</div>
-                  <p data-already-subscribed>You're already subscribed!</p>
+                  
                 {%- endif -%}
               {% endform %}
+              <p data-already-subscribed>You're already subscribed!</p>
           </div>
         {%- endcase -%}
       {%- endfor -%}
