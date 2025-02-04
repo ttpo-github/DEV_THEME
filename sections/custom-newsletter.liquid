@@ -92,7 +92,7 @@
                   
                 {%- endif -%}
               {% endform %}
-              <div data-already-subscribed hidden class="success-message newsletter-message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}You're already subscribed!</div>
+              <div data-already-subscribed style="display:none;" class="success-message newsletter-message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}You're already subscribed!</div>
           </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -113,7 +113,7 @@
     const responseDiv = document.querySelector('[data-already-subscribed]');
 
     if (result && inputVal != 0) {
-      responseDiv.hidden = false;
+      responseDiv.style.display = block;
     }
   }
 
