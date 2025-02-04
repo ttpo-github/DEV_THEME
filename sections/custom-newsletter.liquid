@@ -92,7 +92,7 @@
                   
                 {%- endif -%}
               {% endform %}
-              <p data-already-subscribed hidden="true">You're already subscribed!</p>
+              <div data-already-subscribed hidden="true" class="success-message newsletter-message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}You're already subscribed!</div>
           </div>
         {%- endcase -%}
       {%- endfor -%}
