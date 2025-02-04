@@ -89,6 +89,7 @@
                 {%- endif -%}
                 {%- if form.posted_successfully? -%}
                   <div class="success-message newsletter-message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</div>
+                  <p data-already-subscribed>You're already subscribed!</p>
                 {%- endif -%}
               {% endform %}
           </div>
@@ -97,6 +98,27 @@
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  /**
+   * Custom error message for already subscribed users
+   */
+  const catchAlreadySubscribedError = () => {
+    const LIVE_URL = window.location.href;
+
+    const inputVal = document.querySelector('[name="contact[email]"').value.length;
+    const result = LIVE_URL.includes('form_type=customer');
+    const responseDiv = document.querySelector('[data-already-subscribed]');
+
+    if (result && inputVal != 0) {
+      responseDiv.hidden = false;
+    }
+  }
+
+  catchAlreadySubscribedError();
+});
+</script>
 
 {% schema %}
 {
