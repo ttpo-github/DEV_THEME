@@ -678,18 +678,20 @@ window.addEventListener("load", function() {
 
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      
         document.addEventListener('rebuy:cart.change', (event) => { 
           console.log('rebuy:cart.change event', event.detail); 
         
           const cartDrawer = document.querySelector('cart-drawer');
-        
+
+          console.log(cartDrawer)
+          
           if (cartDrawer) {
             cartDrawer.onChange(event);
             console.log("CHANGE SUCCESS")
           }
         });
-      }
+      
     </script>
     
  <!-- theme.liquid content -->
