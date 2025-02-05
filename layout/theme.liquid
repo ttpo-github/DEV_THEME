@@ -677,10 +677,11 @@ window.addEventListener("load", function() {
 {% endcomment %}
 
 
-    
-<script>console.log('{{canonical_url}}')</script>
-    <script>console.log('{{request.path}}')</script>
-
+    <script>
+document.addEventListener('rebuy:cart.change', (event) => { 
+  console.log('rebuy:cart.change event', event.detail); 
+});
+    </script>
     
  <!-- theme.liquid content -->
   {% render 'cookies-banner' %}
