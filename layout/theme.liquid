@@ -682,7 +682,7 @@ window.addEventListener("load", function() {
         document.addEventListener('rebuy:cart.change', (event) => { 
           console.log('rebuy:cart.change event', event.detail); 
         
-          const cartDrawer = document.querySelector('cart-drawer');
+          const cartDrawer = document.getElementsByClassName('cart-drawer')[0];
 
           console.log(cartDrawer)
           
