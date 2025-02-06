@@ -31,6 +31,8 @@ class CartItems extends HTMLElement {
 
           console.log(cartDrawer)
           console.log("Changed!")
+
+      this.onChange(event)
           
           
         });
