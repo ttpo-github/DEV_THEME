@@ -678,9 +678,17 @@ window.addEventListener("load", function() {
 
 
     <script>
-      document.addEventListener('rebuy.change', function(event){
+
+      document.addEventListener('rebuy.loaded', (event) => {
+          console.log('rebuy.loaded');
+
+        document.addEventListener('rebuy.change', function(event){
           console.log('rebuy.change event', event.detail);
       });
+        
+      });
+      
+      
 
       /*
         document.addEventListener('rebuy:cart.change', (event) => { 
