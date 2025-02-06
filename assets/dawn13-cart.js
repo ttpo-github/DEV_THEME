@@ -173,7 +173,7 @@ class CartItems extends HTMLElement {
 
         //console.log(parsedState.sections[section.section])
 
-        console.log('Before sections to render - cart.js')
+        //console.log('Before sections to render - cart.js')
         
         this.getSectionsToRender().forEach((section) => {
           const elementToReplace =
