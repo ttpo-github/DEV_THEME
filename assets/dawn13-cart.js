@@ -67,7 +67,7 @@ class CartItems extends HTMLElement {
   onCartUpdate() {
     //console.log('IN THE ON CART UPDATE CALLBACK. TOP')
     if (this.tagName === 'CART-DRAWER-ITEMS') {
-      //console.log("In Cart Update")
+      console.log("In Cart Update")
       fetch(`${routes.cart_url}?section_id=dawn13-cart-drawer`)
         .then((response) => response.text())
         .then((responseText) => {
