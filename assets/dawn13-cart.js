@@ -30,6 +30,7 @@ class CartItems extends HTMLElement {
           const cartDrawer = document.getElementsByClassName('cart-drawer')[0];
 
           console.log(cartDrawer)
+          console.log("Changed!")
           
           
         });
