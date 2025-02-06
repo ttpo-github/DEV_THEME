@@ -692,7 +692,17 @@ window.addEventListener("load", function() {
             const cartDrawer = document.getElementsByClassName('cart-drawer')[0]; // Adjust selector if needed
 
             console.log(cartDrawer)
-/*
+
+            function logComponentMethods(component) {
+              const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(component))
+                .filter(name => typeof component[name] === 'function');
+            
+              console.log(methods);
+            }
+            
+            // Usage:
+            logComponentMethods(cartDrawer);
+            /*
             if (cartDrawer) {
               cartDrawer.open(); // Call the `open` method if it's defined
             }
