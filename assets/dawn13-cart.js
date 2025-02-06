@@ -31,10 +31,7 @@ class CartItems extends HTMLElement {
 
           console.log(cartDrawer)
           
-          if (cartDrawer) {
-            cartDrawer.onChange(event);
-            console.log("CHANGE SUCCESS")
-          }
+          
         });
   }
 
