@@ -682,8 +682,19 @@ window.addEventListener("load", function() {
       document.addEventListener('rebuy.loaded', (event) => {
           console.log('rebuy.loaded');
 
+          
+
+          
+
           document.addEventListener('rebuy:cart.change', function(event){
             console.log('rebuy.change event', event.detail);
+
+            const cartDrawer = document.querySelector('cart-drawer'); // Adjust selector if needed
+/*
+            if (cartDrawer) {
+              cartDrawer.open(); // Call the `open` method if it's defined
+            }
+            */
         });
         
       });
