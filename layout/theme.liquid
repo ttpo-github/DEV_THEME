@@ -689,13 +689,13 @@ window.addEventListener("load", function() {
           document.addEventListener('rebuy:cart.change', function(event){
             console.log('rebuy.change event', event.detail);
 
-            //const cartDrawer = document.querySelector('cart-items')
+            const cartItems = document.getElementsByName('cart-items')
 
             const cartDrawerItems = document.querySelector('cart-drawer-items')
 
             const dawnCartDrawer = document.querySelector('dawn13-cart-drawer')
 
-            //console.log(cartDrawer)
+            console.log(cartItems)
 
             function logComponentMethods(component) {
               const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(component))
