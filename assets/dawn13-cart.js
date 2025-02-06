@@ -23,6 +23,19 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+
+    document.addEventListener('rebuy:cart.change', (event) => { 
+          console.log('rebuy:cart.change event', event.detail); 
+        
+          const cartDrawer = document.getElementsByClassName('cart-drawer')[0];
+
+          console.log(cartDrawer)
+          
+          if (cartDrawer) {
+            cartDrawer.onChange(event);
+            console.log("CHANGE SUCCESS")
+          }
+        });
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -44,6 +57,8 @@ class CartItems extends HTMLElement {
 
   onChange(event) {
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'), event.target.dataset.quantityVariantId);
+
+    
   }
 
   onCartUpdate() {
