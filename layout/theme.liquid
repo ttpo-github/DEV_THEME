@@ -676,9 +676,13 @@ window.addEventListener("load", function() {
 </script> 
 {% endcomment %}
 
-{% comment %}
+
     <script>
-      
+      document.addEventListener('rebuy.change', function(event){
+          console.log('rebuy.change event', event.detail);
+      });
+
+      /*
         document.addEventListener('rebuy:cart.change', (event) => { 
           console.log('rebuy:cart.change event', event.detail); 
         
@@ -691,9 +695,10 @@ window.addEventListener("load", function() {
             console.log("CHANGE SUCCESS")
           }
         });
+      */
       
     </script>
-  {% endcomment %}
+
     
  <!-- theme.liquid content -->
   {% render 'cookies-banner' %}
