@@ -47,7 +47,9 @@ class CartItems extends HTMLElement {
   onChange(event) {
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'), event.target.dataset.quantityVariantId);
 
-    this.rebuyChangeEvent(event)
+    //this.rebuyChangeEvent(event)
+
+    console.log("In the onchange event")
   }
 
   rebuyChangeEvent(event) {
