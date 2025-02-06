@@ -691,6 +691,8 @@ window.addEventListener("load", function() {
 
             const cartDrawer = document.getElementsByClassName('cart-drawer')[0]; // Adjust selector if needed
 
+            const cartDrawerItems = document.querySelector('cart-drawer-items')
+
             console.log(cartDrawer)
 
             function logComponentMethods(component) {
@@ -702,6 +704,7 @@ window.addEventListener("load", function() {
             
             // Usage:
             logComponentMethods(cartDrawer);
+            logComponentMethods(cartDrawerItems)
             /*
             if (cartDrawer) {
               cartDrawer.open(); // Call the `open` method if it's defined
