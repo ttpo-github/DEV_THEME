@@ -24,18 +24,7 @@ class CartItems extends HTMLElement {
 
     this.addEventListener('change', debouncedOnChange.bind(this));
 
-    document.addEventListener('rebuy:cart.change', (event) => { 
-          console.log('rebuy:cart.change event', event.detail); 
-        
-          const cartDrawer = document.getElementsByClassName('cart-drawer')[0];
-
-          console.log(cartDrawer)
-          console.log("Changed!")
-
-      this.onChange(event)
-          
-          
-        });
+    
   }
 
   cartUpdateUnsubscriber = undefined;
