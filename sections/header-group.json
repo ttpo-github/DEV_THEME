@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -30,14 +30,14 @@
           "settings": {
             "text": "Day 9 -",
             "color_scheme": "accent-1",
-            "link": "https:\/\/thetrailerpartsoutlet.com\/collections\/brake-assemblies",
+            "link": "https://thetrailerpartsoutlet.com/collections/brake-assemblies",
             "hide-announcment-bar": false,
             "show_day": false,
             "show_hour": true,
             "show_min": true,
             "show_second": true,
             "timer-end-message": "It's the final countdown...",
-            "timer-end": "12\/23"
+            "timer-end": "12/23"
           }
         },
         "announcement_x6VVth": {
@@ -56,8 +56,7 @@
         "announcement_x6VVth"
       ],
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "header": {
       "type": "dawn13-header",
@@ -65,7 +64,7 @@
         "logo_position": "middle-left",
         "menu": "new-lending-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "reduce-logo-size",
+        "sticky_header_type": "always",
         "show_line_separator": false,
         "color_scheme": "background-1",
         "menu_color_scheme": "",
@@ -83,7 +82,7 @@
         "f0563f60-6daf-44f4-8531-48f18e755aad": {
           "type": "expert",
           "settings": {
-            "expert-image": "shopify:\/\/shop_images\/jason_500x500_bcabf219-9812-48f6-97c0-def31ad5e0fd.webp",
+            "expert-image": "shopify://shop_images/jason_500x500_bcabf219-9812-48f6-97c0-def31ad5e0fd.webp",
             "expert-heading": "Jason",
             "expert-call": "(936) 312-3337",
             "expert-mail": "jason@ttpo.co",
@@ -93,27 +92,17 @@
         "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc": {
           "type": "expert",
           "settings": {
-            "expert-image": "shopify:\/\/shop_images\/trevor.jpg",
+            "expert-image": "shopify://shop_images/trevor.jpg",
             "expert-heading": "Trevor",
             "expert-call": "(936) 349-6220",
             "expert-mail": "trevor@ttpo.co",
             "expert_addition": ""
           }
         },
-        "d90f0fcd-5131-487f-bc67-95e1db098b6d": {
-          "type": "expert",
-          "settings": {
-            "expert-image": "shopify:\/\/shop_images\/Krystal_1.png",
-            "expert-heading": "Krystal",
-            "expert-call": "(936) 218-1280",
-            "expert-mail": "Krystal@ttpo.co",
-            "expert_addition": ""
-          }
-        },
         "6ab03ef7-06a3-45e4-9e1f-65049bca7166": {
           "type": "expert",
           "settings": {
-            "expert-image": "shopify:\/\/shop_images\/Kyle_13fe604a-f1c1-456d-8dc9-e976581d10d2.jpg",
+            "expert-image": "shopify://shop_images/Kyle_13fe604a-f1c1-456d-8dc9-e976581d10d2.jpg",
             "expert-heading": "Kyle",
             "expert-call": "(936) 226-3664",
             "expert-mail": "kyle@ttpo.co",
@@ -123,7 +112,7 @@
         "expert_ieEEfR": {
           "type": "expert",
           "settings": {
-            "expert-image": "shopify:\/\/shop_images\/AB.jpg",
+            "expert-image": "shopify://shop_images/AB.jpg",
             "expert-heading": "Abraham",
             "expert-call": "936-245-8220",
             "expert-mail": "",
@@ -134,7 +123,6 @@
       "block_order": [
         "f0563f60-6daf-44f4-8531-48f18e755aad",
         "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc",
-        "d90f0fcd-5131-487f-bc67-95e1db098b6d",
         "6ab03ef7-06a3-45e4-9e1f-65049bca7166",
         "expert_ieEEfR"
       ],
