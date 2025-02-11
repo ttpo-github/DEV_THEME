@@ -180,7 +180,8 @@ cart-items {
 }
 
 .tax-note {
-  margin: 2.2rem 0 1.6rem auto;
+  /*margin: 2.2rem 0 1.6rem auto;*/
+  margin: 0px 16px;
   text-align: center;
   display: block;
 }
@@ -204,7 +205,8 @@ cart-items {
   }
 
   .tax-note {
-    margin-bottom: 2.2rem;
+    /*margin-bottom: 2.2rem;*/
+    margin: 0px 16px;
     text-align: right;
   }
 
