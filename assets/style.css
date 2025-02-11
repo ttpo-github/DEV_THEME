@@ -4511,6 +4511,7 @@ table.cart-items {
   box-shadow: none;
   font-size: 15px;
   font-family: Inter;
+  margin:0px 16px;
 }
 [data-shopify-buttoncontainer] {
   justify-content: flex-end;
