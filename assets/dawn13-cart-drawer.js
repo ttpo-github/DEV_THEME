@@ -113,7 +113,7 @@ class CartDrawer extends HTMLElement {
         
           expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
           expertImage.src = window.chosen_expert.image
-          expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
+          expertButton.innerHTML = `Click to call CHEECK CHECK ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
         }
 
     setTimeout(() => {
