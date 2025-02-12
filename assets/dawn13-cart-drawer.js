@@ -7,7 +7,7 @@ class CartDrawer extends HTMLElement {
     this.setHeaderCartIconAccessibility();
   }
 
-  /*
+  
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
     cartLink.setAttribute('role', 'button');
@@ -23,7 +23,7 @@ class CartDrawer extends HTMLElement {
       }
     });
   }
-  */
+  
 
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelectorAll('#dawn13-cart-icon-bubble');
