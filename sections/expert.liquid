@@ -146,7 +146,10 @@
   
 </script>
 
+{% comment %}
 
+                  EXPERT CODE WITH JAVASCRIPT ONLY
+                  
              window.expert_data = [
     { name: "John ", image: "https://cdn.shopify.com/s/files/1/0052/2941/2425/files/jason_500x500_bcabf219-9812-48f6-97c0-def31ad5e0fd.webp?v=1699544640", phone: "(936) 312-3337" },
     { name: "Trevor", image: "https://cdn.shopify.com/s/files/1/0052/2941/2425/files/trevor.jpg?v=1666643179", phone: "(936) 349-6220" },
@@ -174,6 +177,7 @@ if (window.chosen_expert) {
     expertImage.src = window.chosen_expert.image;
     expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`;
 }    
+{% endcomment %}
 {% schema %}
   {
     "name": "Expert",
