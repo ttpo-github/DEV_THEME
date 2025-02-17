@@ -41,7 +41,7 @@
         "text_9UHAe6": {
           "type": "text",
           "settings": {
-            "text": "{{ collection.metafields.custom.collection_page_description_header | metafield_tag }}{{ collection.metafields.custom.collection_page_description | metafield_tag }}{{ collection.metafields.custom.collection_page_description_header_2 | metafield_tag }}{{ collection.metafields.custom.collection_page_description_2 | metafield_tag }}"
+            "text": "{{ collection.metafields.custom.collection_page_description_header | metafield_tag }}{{ collection.metafields.custom.collection_page_description | metafield_tag }}{{ collection.metafields.custom.collection_page_description_header_2 | metafield_tag }}{{ collection.metafields.custom.collection_page_description_2 | metafield_tag }}<p>{{ collection.metafields.custom.collection_keyword_content_expansion_text | metafield_tag }}</p>"
           }
         }
       },
