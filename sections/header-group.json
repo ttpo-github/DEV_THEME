@@ -89,16 +89,6 @@
             "expert_addition": ""
           }
         },
-        "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc": {
-          "type": "expert",
-          "settings": {
-            "expert-image": "shopify://shop_images/trevor.jpg",
-            "expert-heading": "Trevor",
-            "expert-call": "(936) 349-6220",
-            "expert-mail": "trevor@ttpo.co",
-            "expert_addition": ""
-          }
-        },
         "6ab03ef7-06a3-45e4-9e1f-65049bca7166": {
           "type": "expert",
           "settings": {
@@ -122,7 +112,6 @@
       },
       "block_order": [
         "f0563f60-6daf-44f4-8531-48f18e755aad",
-        "36ec7c3b-4ef4-45cc-992f-4daa161ae9dc",
         "6ab03ef7-06a3-45e4-9e1f-65049bca7166",
         "expert_ieEEfR"
       ],
