@@ -99,9 +99,9 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active")
     
     $('#hubface-selection').prop('disabled', true);
-    $('#custom-spring-center').prop('disabled', true);
+    $('#custom-spring-center').prop('disabled', true).prop('required', false);
 
-    $('#custom-hubface').prop('disabled', false);
+    $('#custom-hubface').prop('disabled', false).prop('required', true);
 
     $('#disclaimer-container').css("display", "block");
     $('#custom-disclaimer').prop('required', true);
@@ -111,9 +111,9 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').addClass("custom-slide-active");
     
     $('#hubface-selection').prop('disabled', false);
-    $('#custom-spring-center').prop('disabled', false);
+    $('#custom-spring-center').prop('disabled', false).prop('required', true);
 
-    $('#custom-hubface').prop('disabled', true);
+    $('#custom-hubface').prop('disabled', true).prop('required', false);
     
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
 
@@ -128,9 +128,9 @@ $('variant-radios input[type="radio"]').change(function(){
     $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
     
     $('#hubface-selection').prop('disabled', true);
-    $('#custom-spring-center').prop('disabled', true);
+    $('#custom-spring-center').prop('disabled', true).prop('required', false);
 
-    $('#custom-hubface').prop('disabled', true);
+    $('#custom-hubface').prop('disabled', true).prop('required', false);
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
