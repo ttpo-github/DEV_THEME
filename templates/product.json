@@ -14,6 +14,7 @@
       "blocks": {
         "de33ab67-42c9-4872-810b-42453bde1c0a": {
           "type": "shopify://apps/aftership-order-tracking/blocks/edd/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
+          "disabled": true,
           "settings": {}
         },
         "shipping_info_text_c4PzTU": {
@@ -58,7 +59,7 @@
           }
         },
         "ef203090-7a02-4883-850a-501b94d93af1": {
-          "type": "shopify://apps/yanet-professional-faq-page/blocks/app-block/b70c1465-6820-4911-8d5d-2299efd66134",
+          "type": "shopify://apps/yanet-faq-page-product-faqs/blocks/app-block/b70c1465-6820-4911-8d5d-2299efd66134",
           "settings": {}
         },
         "617ae22b-7115-4c22-99a7-6674be4a3410": {
