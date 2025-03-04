@@ -48,10 +48,10 @@
         "how_did_you_find_us": "None|Email|Google|Facebook|TikTok|Bing|Referral|Youtube|NATDA Conference|FFA Conference|Returning Customer|Texas Pride"
       }
     },
-    "1741105120f89ee782": {
+    "1741105439b52659cf": {
       "type": "apps",
       "blocks": {
-        "diy_tax_exempt_checkout_app_block_rhyLj3": {
+        "diy_tax_exempt_checkout_app_block_bD4agJ": {
           "type": "shopify://apps/diy-tax-exempt-checkout/blocks/app-block/82644d0b-45f4-4a69-b630-f5ee55674d62",
           "settings": {
             "en_tx_title": "Tax Exempt Status",
@@ -81,7 +81,7 @@
         }
       },
       "block_order": [
-        "diy_tax_exempt_checkout_app_block_rhyLj3"
+        "diy_tax_exempt_checkout_app_block_bD4agJ"
       ],
       "settings": {
         "include_margins": true,
@@ -92,6 +92,6 @@
   "order": [
     "cart-items",
     "cart-footer",
-    "1741105120f89ee782"
+    "1741105439b52659cf"
   ]
 }
