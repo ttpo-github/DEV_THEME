@@ -14,7 +14,6 @@
       "blocks": {
         "de33ab67-42c9-4872-810b-42453bde1c0a": {
           "type": "shopify://apps/aftership-order-tracking/blocks/edd/3375afd5-c790-4ee3-abbc-ae4972ab72ed",
-          "disabled": true,
           "settings": {}
         },
         "shipping_info_text_c4PzTU": {
