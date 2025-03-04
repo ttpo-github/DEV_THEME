@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
@@ -5,7 +14,7 @@
       "settings": {
         "padding_top": 60,
         "padding_bottom": 40,
-        "continue_shop_link": "https:\/\/thetrailerpartsoutlet.com\/pages\/collections-list"
+        "continue_shop_link": "https://thetrailerpartsoutlet.com/pages/collections-list"
       }
     },
     "cart-footer": {
@@ -14,52 +23,21 @@
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-<\/span><\/div>"
+            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span></div>"
           }
         },
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
-        },
-        "diy_tax_exempt_checkout_app_block_QmBgbB": {
-          "type": "shopify:\/\/apps\/diy-tax-exempt-checkout\/blocks\/app-block\/82644d0b-45f4-4a69-b630-f5ee55674d62",
-          "settings": {
-            "en_tx_title": "Tax Exempt Status",
-            "en_tx_sale_tax_option_label": "My organization is not tax exempt",
-            "en_tx_exempt_option_label": "My organization is tax exempt",
-            "en_tx_make_tax_exempt_default_option": false,
-            "en_tx_email_label": "<p>Enter the email address to use for this order.<\/p>",
-            "en_tx_email_field_placeholder": "Enter email...",
-            "en_tx_email_required": "no",
-            "en_tx_certificate_label": "<p>Enter the tax-exempt certificate number.<\/p>",
-            "en_tx_certificate_number_field_placeholder": "Enter certificate num...",
-            "en_tx_optional_instructions_label": "",
-            "en_tx_show_tax_upload_form": "yes",
-            "en_tx_alert_msg_tax_validation": "Upload tax-exempt supporting documents",
-            "en_tx_show_tax_certificate_number": "yes",
-            "en_tx_alert_msg_certificate_number": "Enter your tax-exempt certificate number",
-            "en_tx_margin_top": 0,
-            "en_tx_margin_bottom": 0,
-            "en_tx_bg_color": "#ffffff",
-            "en_tx_border": 1.5,
-            "en_tx_border_radius": 3,
-            "en_tx_border_color": "#ffffff",
-            "en_tx_email_border": 1,
-            "en_tx_email_border_radius": 4,
-            "en_tx_email_border_color": "#95a7b7"
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "custom_liquid_69URTN",
         "subtotal",
-        "diy_tax_exempt_checkout_app_block_QmBgbB",
         "buttons"
       ],
       "settings": {
