@@ -30,27 +30,6 @@
           "type": "subtotal",
           "settings": {}
         },
-        "buttons": {
-          "type": "buttons",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "custom_liquid_69URTN",
-        "subtotal",
-        "buttons"
-      ],
-      "settings": {
-        "show_cart_note": true,
-        "assisted_title": "Trailer Parts Expert That Assisted You",
-        "expert_assisted_you": "None | Juan Hernandez | Trevor Jugert| Jason Gonzales | Kyle Burns | Krystal Kurtz | Callie Walther | Anna Nicholas",
-        "findur_title": "How Did You Find Us?",
-        "how_did_you_find_us": "None|Email|Google|Facebook|TikTok|Bing|Referral|Youtube|NATDA Conference|FFA Conference|Returning Customer|Texas Pride"
-      }
-    },
-    "1741105439b52659cf": {
-      "type": "apps",
-      "blocks": {
         "diy_tax_exempt_checkout_app_block_bD4agJ": {
           "type": "shopify://apps/diy-tax-exempt-checkout/blocks/app-block/82644d0b-45f4-4a69-b630-f5ee55674d62",
           "settings": {
@@ -78,20 +57,29 @@
             "en_tx_email_border_radius": 4,
             "en_tx_email_border_color": "#95a7b7"
           }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
         }
       },
       "block_order": [
-        "diy_tax_exempt_checkout_app_block_bD4agJ"
+        "custom_liquid_69URTN",
+        "subtotal",
+        "diy_tax_exempt_checkout_app_block_bD4agJ",
+        "buttons"
       ],
       "settings": {
-        "include_margins": true,
-        "css_id_selector": ""
+        "show_cart_note": true,
+        "assisted_title": "Trailer Parts Expert That Assisted You",
+        "expert_assisted_you": "None | Juan Hernandez | Trevor Jugert| Jason Gonzales | Kyle Burns | Krystal Kurtz | Callie Walther | Anna Nicholas",
+        "findur_title": "How Did You Find Us?",
+        "how_did_you_find_us": "None|Email|Google|Facebook|TikTok|Bing|Referral|Youtube|NATDA Conference|FFA Conference|Returning Customer|Texas Pride"
       }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer",
-    "1741105439b52659cf"
+    "cart-footer"
   ]
 }
