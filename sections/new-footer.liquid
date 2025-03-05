@@ -9,6 +9,7 @@
           {%- if section.settings.footer_logo_text != blank -%} <p>{{ section.settings.footer_logo_text }}</p>{%- endif -%}
           <ul>
             {% if section.settings.footer_address != blank %}<li>{% render 'footer-location-icon' %}<span>{{ section.settings.footer_address }}</span></li>{% endif %}
+            {% if section.settings.footer_address_two != blank %}<li>{% render 'footer-location-icon' %}<span>{{ section.settings.footer_address_two }}</span></li>{% endif %}
             {% if section.settings.footer_phone != blank %}<li>{% render 'footer-phone-icon' %}<a href="tel:{{section.settings.footer_phone | replace : "(", "" | replace : ")", "" | replace : " ", "" | replace : "-", "" }}">{{ section.settings.footer_phone}}</a></li>{% endif %}
             {% if section.settings.footer_mail != blank %}<li>{% render 'footer-mail-icon' %}<a href="mailto:{{section.settings.footer_mail}}">{{ section.settings.footer_mail}}</a></li>{% endif %}
           </ul>
@@ -229,6 +230,11 @@
       "type": "textarea",
       "id": "footer_address",
       "label": "Add address"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_address_two",
+      "label": "Add Second address"
     },
 	{
       "type": "text",
