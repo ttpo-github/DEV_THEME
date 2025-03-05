@@ -366,6 +366,7 @@
         </div>
         <div class="sku-peice-review-wrap">
           {%- assign current_variant = product.selected_or_first_available_variant -%}
+          <p>Test location</p>
           <div id="Sku-{{ section.id }}" class="product-sku">SKU : {{ current_variant.sku }}</div>
   
           <div class="price_review-wrap">
@@ -373,7 +374,7 @@
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
               
             </div>
-            <p>Test location</p>
+            
             {% if block.settings.show_shipping %}
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
