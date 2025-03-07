@@ -123,6 +123,9 @@ div.yotpo-label.yotpo-small-box {
 @media only screen and (max-width: 992px) {
   #price-message-mobile{
     display:inline-block;
+    font-size: 10px; 
+    margin:0 0 10px 0; 
+    line-height:1;
   }
 
   #price-message-desktop {
