@@ -367,7 +367,7 @@
         <div class="sku-peice-review-wrap">
           {%- assign current_variant = product.selected_or_first_available_variant -%}
           <div id="Sku-{{ section.id }}" class="product-sku">SKU : {{ current_variant.sku }}</div>
-          <p style="font-size: 10px; margin:0 0 10px 0; line-height:1.2">Online price only</p>
+          <p id="price-message-mobile">Online price only</p>
           <div class="price_review-wrap">
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
