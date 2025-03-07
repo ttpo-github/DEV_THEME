@@ -96,6 +96,8 @@ div.tj-modal-content {
 div.yotpo-label.yotpo-small-box {
   display:none;
 }
+
+
 /* ^^^ General Style Cusomizations ^^^ */
 
 @media only screen and (min-width: 992px) {
@@ -105,12 +107,28 @@ div.yotpo-label.yotpo-small-box {
   display:none;
 }
 
+  #price-message-mobile{
+    display:none;
+  }
+
+  #price-message-desktop {
+    display:inline-block;
+  }
+
 }
 
 
 
 /* Main Layout Breakpoint MOBILE STYLES HERE */
 @media only screen and (max-width: 992px) {
+  #price-message-mobile{
+    display:inline-block;
+  }
+
+  #price-message-desktop {
+    display:none;
+  }
+  
   .ask-a-specialist{
     font-size: 1.2rem;
   }
