@@ -1619,6 +1619,33 @@ function getLocalNoonEquivalent() {
       mydiv.remove();
     }
   },2000)
+
+  /* CUSTOM AXLE REFERENCE GUIDE SCRIPT */
+
+<script>
+    const openPopupButton = document.getElementsByClassName('axle_reference_chart');
+    const popupContainer = document.getElementById('popup-container');
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-btn');
+
+    Array.from(openPopupButton).forEach(function(el){
+      el.addEventListener('click', () => {
+        popupContainer.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+    })
+
+    closeBtn.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    overlay.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+  
+</script>
 </script>
 
 <script type="text/javascript" src="https://node1.itoris.com/dpo/storefront/include.js?shop=the-trailer-parts-outlet.myshopify.com"></script>
