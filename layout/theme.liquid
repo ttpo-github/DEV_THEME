@@ -559,11 +559,11 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    {% comment %}
+    
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'dawn13-cart-drawer' -%}
     {%- endif -%}
-    {% endcomment %}
+   
     
     {% sections 'header-group' %}
 
@@ -744,7 +744,7 @@ window.addEventListener("load", function() {
 </script> 
 {% endcomment %}
 
-
+{% comment %}
     <script>
 
       document.addEventListener('rebuy.loaded', (event) => {
@@ -803,7 +803,7 @@ window.addEventListener("load", function() {
       */
       
     </script>
-
+{% endcomment %}
     
  <!-- theme.liquid content -->
   {% render 'cookies-banner' %}
