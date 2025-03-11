@@ -53,7 +53,9 @@
               
               <div id="disclaimer-container" style="display:{% if showDisclaimer %}inline-block{% else %}none{% endif %};">
                 <input type="checkbox" name="properties[_Checked Custom Disclaimer]" form="product-form-{{ section.id }}" id="custom-disclaimer" {% if showDisclaimer %}required{% endif %}/>
-                <label for="customs-disclaimer">Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase</label>
+                <label for="customs-disclaimer">We can not process your order if your items are not within spec. Check spec here > <a href="#" class="axle_reference_chart">Custom Axle Reference Guide</a>.
+                Customs are non-refundable and modifications to order must be done within 24hrs of date of purchase
+                </label>
               </div>
         
         <div class="product-form__buttons">
