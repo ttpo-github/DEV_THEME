@@ -568,23 +568,8 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <div class="globoRecommendationsTop"></div>{{ content_for_layout }}<div class="globoRecommendationsBottom"></div>
-      
-     
 
-
-
-      
-    </main>
-
-    {% sections 'footer-group' %}
-
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
-    </ul>
-
-    <style>
+      <style>
   .axle_reference_chart{
     text-decoration: underline;
   }
@@ -646,6 +631,24 @@
     <img src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/custom_axle_min_max_reference_chart.jpg?v=1710865411" >
   </div>
 </div>
+      
+      <div class="globoRecommendationsTop"></div>{{ content_for_layout }}<div class="globoRecommendationsBottom"></div>
+      
+     
+
+
+
+      
+    </main>
+
+    {% sections 'footer-group' %}
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+    </ul>
+
+    
 
     
     <a style="display:none; padding:0;" href="tel:+8339103416" class="dynamic_phone_link" class="hidden-link custom-btn button--full-width"><span style="display:inline-block">Call for Availability:</span><span style="display:inline-block">(833) 910-3416</span></a>
