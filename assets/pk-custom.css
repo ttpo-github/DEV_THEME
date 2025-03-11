@@ -113,9 +113,10 @@ div.yotpo-label.yotpo-small-box {
 
   #price-message-desktop {
     display:inline-block;
-    font-size: 10px; 
+    font-size: 14px; 
     margin:0 0 10px 0; 
     line-height:1;
+    font-weight:normal;
   }
 
 }
