@@ -485,6 +485,37 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+
+        <p>If ordering a custom axle, please check <a href="#"  style="color:#1100d8; text-decoration-line:underline;" id="smartcart_axle_reference_chart">this guide</a> to make sure your specifications are correct.</p>
+
+        <script defer>
+          //console.log('LOADED IN')
+          const openPopupButton = document.getElementById('smartcart_axle_reference_chart');
+          const popupContainer = document.getElementById('popup-container');
+          const smartCartClose = document.getElementById("rebuy-cart-close")
+          const overlay = document.getElementById('overlay');
+          const closeBtn = document.getElementById('close-btn');
+      
+          
+            openPopupButton.addEventListener('click', () => {
+            //console.log('CLICKED!!!!!!!!')
+              popupContainer.style.display = 'block';
+              overlay.style.display = 'block';
+              
+            });
+          
+      
+          closeBtn.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+      
+          overlay.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+        </script>
+                                  
       </cart-drawer-items>
       <div class="drawer__footer">
 
