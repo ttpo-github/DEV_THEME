@@ -830,6 +830,7 @@ window.addEventListener("load", function() {
       
           Array.from(openPopupButton).forEach(function(el){
             el.addEventListener('click', () => {
+              console.log('CLICKED')
               popupContainer.style.display = 'block';
               overlay.style.display = 'block';
             });
