@@ -830,7 +830,7 @@ window.addEventListener("load", function() {
       
           Array.from(openPopupButton).forEach(function(el){
             el.addEventListener('click', () => {
-              console.log('CLICKED')
+              this.closest('dawn13-cart-drawer').close()
               popupContainer.style.display = 'block';
               overlay.style.display = 'block';
             });
