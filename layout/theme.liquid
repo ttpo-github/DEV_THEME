@@ -559,16 +559,6 @@
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
-    
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'dawn13-cart-drawer' -%}
-    {%- endif -%}
-   
-    
-    {% sections 'header-group' %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-
       <style>
   .axle_reference_chart{
     text-decoration: underline;
@@ -631,6 +621,18 @@
     <img src="https://cdn.shopify.com/s/files/1/0052/2941/2425/files/custom_axle_min_max_reference_chart.jpg?v=1710865411" >
   </div>
 </div>
+
+    
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'dawn13-cart-drawer' -%}
+    {%- endif -%}
+   
+    
+    {% sections 'header-group' %}
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+
+    
       
       <div class="globoRecommendationsTop"></div>{{ content_for_layout }}<div class="globoRecommendationsBottom"></div>
       
