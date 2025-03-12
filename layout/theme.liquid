@@ -822,7 +822,29 @@ window.addEventListener("load", function() {
       </script>
     <!-- FigPii Event tracking -->
 
-    
+    <script>
+           const openPopupButton = document.getElementsByClassName('axle_reference_chart');
+          const popupContainer = document.getElementById('popup-container');
+          const overlay = document.getElementById('overlay');
+          const closeBtn = document.getElementById('close-btn');
+      
+          Array.from(openPopupButton).forEach(function(el){
+            el.addEventListener('click', () => {
+              popupContainer.style.display = 'block';
+              overlay.style.display = 'block';
+            });
+          })
+      
+          closeBtn.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+      
+          overlay.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+        </script>
     
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"d60006c9ab9985375a3aa04e2d91eeb3"})});</script>
 
