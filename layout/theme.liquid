@@ -827,14 +827,14 @@ window.addEventListener("load", function() {
           const popupContainer = document.getElementById('popup-container');
           const overlay = document.getElementById('overlay');
           const closeBtn = document.getElementById('close-btn');
-          const cartDrawerCloseButtons = document.getElementsByClassName('dawn13-cart-drawer')
+          const cartDrawerCloseButtons = document.getElementsByClassName('drawer__close')
       
           Array.from(openPopupButton).forEach(function(el){
             el.addEventListener('click', () => {
               //this.closest('dawn13-cart-drawer').close()
 
               Array.from(cartDrawerCloseButtons).forEach(function(el){
-                console.log("CLICKED PHO")
+                //console.log("CLICKED PHO")
                 el.click()
                 
               })
