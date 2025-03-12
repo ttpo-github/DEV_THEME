@@ -823,5 +823,25 @@ window.addEventListener("load", function() {
     
     
     <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"d60006c9ab9985375a3aa04e2d91eeb3"})});</script>
+
+    <!-- REBUY REJECTION SCRIPT -->
+     <script> 
+       /* check for Rebuy quick view and if active, disable it */
+       document.addEventListener('rebuy:smartsearch.quickview.ready', (event) => {
+         console.log(event.detail.smartSearchQuickView, "Quickview is ready");
+         
+         Rebuy.SmartSearch.quickView.quickViewSettings.setting.enabled = false;
+         console.log(`Rebuy Search quick view enabled = ${Rebuy.SmartSearch.quickView.quickViewSettings.setting.enabled}`)
+      }) 
+       
+       /* check for Rebuy results page and if active, disable it */
+       document.addEventListener('rebuy:smartsearch.resultsPage.ready', (event) => {
+         console.log(event.detail.smartSearchResultsPage, "Results Page ready");
+         
+         Rebuy.SmartSearch.resultsPage.isVisible = false;
+         console.log(`Rebuy Search results page enabled = ${Rebuy.SmartSearch.resultPage.isVisible}`)
+      })
+     </script>
+    <!-- REBUY REJECTION SCRIPT -->
   </body>
 </html>
