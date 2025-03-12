@@ -496,12 +496,13 @@
           const closeBtn = document.getElementById('close-btn');
       
           
-            openPopupButton.addEventListener('click', () => {
-            //console.log('CLICKED!!!!!!!!')
-              popupContainer.style.display = 'block';
-              overlay.style.display = 'block';
-              
-            });
+             Array.from(openPopupButton).forEach(function(el){
+      el.addEventListener('click', () => {
+        popupContainer.style.display = 'block';
+        overlay.style.display = 'block';
+      });
+    })
+
           
       
           closeBtn.addEventListener('click', () => {
