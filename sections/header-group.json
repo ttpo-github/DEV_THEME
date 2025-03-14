@@ -43,10 +43,10 @@
         "announcement_x6VVth": {
           "type": "announcement",
           "settings": {
-            "text": "Need help? Click to call 📞 (936) 289-3191",
+            "text": "Order Today - Ships Tomorrow",
             "text_alignment": "center",
             "color_scheme": "accent-1",
-            "link": "tel:📞+19362893191"
+            "link": ""
           }
         }
       },
@@ -55,7 +55,6 @@
         "76b03f89-7ae9-4c1b-a5c6-5aa2ca531c03",
         "announcement_x6VVth"
       ],
-      "disabled": true,
       "settings": {}
     },
     "header": {
