@@ -116,38 +116,7 @@ class CartDrawer extends HTMLElement {
           expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
         }
 
-    /* EXPERT SECTION */
-    const openPopupButton = document.getElementsByClassName('axle_reference_chart');
-          const popupContainer = document.getElementById('popup-container');
-          const overlay = document.getElementById('overlay');
-          const closeBtn = document.getElementById('close-btn');
-          const cartDrawerCloseButtons = document.getElementsByClassName('drawer__close')
-      
-          Array.from(openPopupButton).forEach(function(el){
-            el.addEventListener('click', () => {
-              //this.closest('dawn13-cart-drawer').close()
-
-              Array.from(cartDrawerCloseButtons).forEach(function(el){
-                //console.log("CLICKED PHO")
-                el.click()
-                
-              })
-              
-              popupContainer.style.display = 'block';
-              overlay.style.display = 'block';
-            });
-          })
-      
-          closeBtn.addEventListener('click', () => {
-              popupContainer.style.display = 'none';
-              overlay.style.display = 'none';
-          });
-      
-          overlay.addEventListener('click', () => {
-              popupContainer.style.display = 'none';
-              overlay.style.display = 'none';
-          });
-    /* EXPERT SECTION */
+    
 
     setTimeout(() => {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
