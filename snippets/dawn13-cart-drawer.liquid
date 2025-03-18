@@ -494,7 +494,39 @@
       </cart-drawer-items>
       <div class="drawer__footer">
 
-        <p>If ordering a custom axle, please check <a href="#"  style="color:#1100d8; text-decoration-line:underline;" class="axle_reference_chart">this guide</a> to make sure your specifications are correct.</p>
+        <p>If ordering a custom axle, please check <a href="#"  onclick="openGuide()" style="color:#1100d8; text-decoration-line:underline;" class="axle_reference_chart">this guide</a> to make sure your specifications are correct.</p>
+        <script>
+          function openGuide(){
+          const popupContainer = document.getElementById('popup-container');
+          const overlay = document.getElementById('overlay');
+          const cartDrawerCloseButtons = document.getElementsByClassName('drawer__close')
+      
+          Array.from(openPopupButton).forEach(function(el){
+            el.addEventListener('click', () => {
+              //this.closest('dawn13-cart-drawer').close()
+
+              Array.from(cartDrawerCloseButtons).forEach(function(el){
+                //console.log("CLICKED PHO")
+                el.click()
+                
+              })
+              
+              popupContainer.style.display = 'block';
+              overlay.style.display = 'block';
+            });
+          })
+      
+          closeBtn.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+      
+          overlay.addEventListener('click', () => {
+              popupContainer.style.display = 'none';
+              overlay.style.display = 'none';
+          });
+          }
+        </script>
 
         <!-- Widget : Custom Widget Test 1 -->
                 {% comment %}<div data-rebuy-id="196223"></div>{% endcomment %}
