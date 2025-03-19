@@ -165,7 +165,7 @@
           </style>
           
           <div class="faq-custom-container">
-              {% for faq in product.metafields.custom.faq_list.value %}
+              {% for faq in product.metafields.how_to_drop_downs.value %}
                   <div class="faq-item">
                       <button class="faq-custom-question">{{ faq.titles }}</button>
                       <div class="faq-answer">{{ faq.drop_down_info}}</div>
