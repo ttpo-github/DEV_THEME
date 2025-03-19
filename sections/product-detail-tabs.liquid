@@ -136,7 +136,7 @@
                 align-items: center;
             }
             
-            .faq-answer {
+            .faq_customer_answer {
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease-in-out;
@@ -152,7 +152,7 @@
                 transition: transform 0.3s ease-in-out;
             }
             
-            .faq-item.active .faq-answer {
+            .faq-item.active .faq_customer_answer {
                 max-height: 250px;
                 padding: 15px;
             }
@@ -168,7 +168,7 @@
               {% for faq in product.metafields.how_to_drop_downs.value %}
                   <div class="faq-item">
                       <button class="faq-custom-question">{{ faq.titles }}</button>
-                      <div class="faq-answer">{{ faq.drop_down_info}}</div>
+                      <div class="faq_customer_answer">{{ faq.drop_down_info}}</div>
                   </div>
               {% endfor %}
           </div>
