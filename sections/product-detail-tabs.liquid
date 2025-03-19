@@ -104,7 +104,7 @@
       </div>{%- endif %}
   
      {% comment %} How to tabbing {% endcomment %}
-      {%- if product.metafields.custom.howto_link1  or product.metafields.how_to_drop_downs.size > 0 %}
+      {%- if product.metafields.custom.howto_link1  or product.metafields.custom.how_to_drop_downs.size > 0 %}
         <div id="howto" class="product-tabing-body">
           {{ product.metafields.custom.howto_link1 }}
 
@@ -165,7 +165,7 @@
           </style>
           
           <div class="faq-custom-container">
-              {% for faq in product.metafields.how_to_drop_downs.value %}
+              {% for faq in product.metafields.custom.how_to_drop_downs.value %}
                   <div class="faq-item">
                       <button class="faq-custom-question">{{ faq.titles }}</button>
                       <div class="faq_customer_answer">{{ faq.drop_down_info}}</div>
