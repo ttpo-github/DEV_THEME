@@ -134,15 +134,16 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                transition: background 0.3s ease-in-out;
             }
             
             .faq_customer_answer {
-                height: 0%;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-                padding: 0 15px;
+                display: none; /* Initially hidden */
+                padding: 15px;
                 font-size: 16px;
                 color: #333;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
             }
             
             .faq-custom-question::after {
@@ -153,9 +154,8 @@
             }
             
             .faq-item.active .faq_customer_answer {
-                /*max-height: 250px;*/
-                height:100%;
-                padding: 15px;
+                display: block; /* Show answer */
+                opacity: 1;
             }
             
             .faq-item.active .faq-custom-question::after {
@@ -163,34 +163,48 @@
             }
 
 
+
           </style>
           
-          <div class="faq-custom-container" {% if product.metafields.custom.how_to_drop_downs == blank %}style="display:none;"{% endif %}>
-              {% for faq in product.metafields.custom.how_to_drop_downs.value %}
+          
+
+          {% if product.metafields.custom.faq_list.value.size > 0 %}
+          <div class="faq-custom-container">
+              {% for faq in product.metafields.custom.faq_list.value %}
                   <div class="faq-item">
-                      <button class="faq-custom-question">{{ faq.titles }}</button>
-                      <div class="faq_customer_answer">{{ faq.drop_down_info}}</div>
+                      <button class="faq-custom-question">{{ faq.question }}</button>
+                      <div class="faq_customer_answer">
+                          {{ faq.answer }}  
+                      </div>
                   </div>
               {% endfor %}
           </div>
+          {% endif %}
+
 
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-                document.querySelectorAll(".faq-custom-question").forEach(button => {
-                    button.addEventListener("click", () => {
-                        const faqItem = button.parentElement;
-                        const isActive = faqItem.classList.contains("active");
-            
-                        // Close all FAQ items
-                        document.querySelectorAll(".faq-item").forEach(item => item.classList.remove("active"));
-            
-                        // Toggle the current one
-                        if (!isActive) {
-                            faqItem.classList.add("active");
-                        }
-                    });
-                });
-            });
+              document.querySelectorAll(".faq-custom-question").forEach(button => {
+                  button.addEventListener("click", () => {
+                      const faqItem = button.parentElement;
+                      const faqAnswer = faqItem.querySelector(".faq_customer_answer");
+          
+                      // Toggle FAQ visibility
+                      if (faqItem.classList.contains("active")) {
+                          faqItem.classList.remove("active");
+                      } else {
+                          // Close all other open FAQs
+                          document.querySelectorAll(".faq-item").forEach(item => {
+                              item.classList.remove("active");
+                          });
+          
+                          // Open the selected FAQ
+                          faqItem.classList.add("active");
+                      }
+                  });
+              });
+          });
+
 
           </script>
 
