@@ -129,6 +129,93 @@
         </div>
       {% endfor %}
     </div>
+
+    {% if product.metafields.custom.how_to_drop_downs.value.size > 0 %}
+    <style>
+      .faq-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.faq-question::after {
+    content: "+";
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 250px;
+    padding: 15px;
+}
+
+.faq-item.active .faq-question::after {
+    content: "−";
+}
+
+    </style>
+    <div class="faq-container">
+        {% for faq in product.metafields.custom.how_to_drop_downs.value %}
+            <div class="faq-item">
+                <button class="faq-question">{{ faq.titles}}</button>
+                <div class="faq-answer">{{ faq.drop_down_info }}</div>  
+            </div>
+        {% endfor %}
+    </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains("active");
+
+            // Close all FAQ items
+            document.querySelectorAll(".faq-item").forEach(item => item.classList.remove("active"));
+
+            // Toggle the current one
+            if (!isActive) {
+                faqItem.classList.add("active");
+            }
+        });
+    });
+});
+
+      </script>
+    {% endif %}
+
+    
   </div>
 
   
