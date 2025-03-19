@@ -104,7 +104,7 @@
       </div>{%- endif %}
   
      {% comment %} How to tabbing {% endcomment %}
-      {%- if product.metafields.custom.howto_link1 != blank or product.metafields.custom.how_to_drop_downs.size > 0 -%}
+      {%- if product.metafields.custom.howto_link1 != blank or product.metafields.custom.how_to_drop_downs != blank -%}
         <div id="howto" class="product-tabing-body">
           {{ product.metafields.custom.howto_link1 }}
 
