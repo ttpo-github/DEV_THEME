@@ -104,8 +104,9 @@
       </div>{%- endif %}
   
      {% comment %} How to tabbing {% endcomment %}
+      <div id="howto" class="product-tabing-body">{{ product.metafields.custom.howto_link1 }}</div>
       {%- if product.metafields.custom.howto_link1 %}
-        <div id="howto" class="product-tabing-body">{{ product.metafields.custom.howto_link1 }}</div>
+        
       {%- endif %}
           
       {% if product.metafields.custom.answered_questions1 %}
@@ -120,18 +121,10 @@
             </div>
           {% endif %}
         {%- endfor %}
-      </div>
-      {% endif %}
       
-      {% for tabbing in product.metafields.custom.product_tabbing.value %}
-        <div id="customtabing{{ forloop.index }}" class="product-tabing-body">
-          <div class="product__description rte quick-add-hidden">{{ tabbing.tab_body }}</div>
-        </div>
-      {% endfor %}
-    
+      {% endif %}
 
-   
-    <style>
+        <style>
       .faq-custom-container {
     max-width: 700px;
     margin: auto;
@@ -213,9 +206,20 @@
 });
 
       </script>
+    </div>
+      
+      {% for tabbing in product.metafields.custom.product_tabbing.value %}
+        <div id="customtabing{{ forloop.index }}" class="product-tabing-body">
+          <div class="product__description rte quick-add-hidden">{{ tabbing.tab_body }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+   
+  
    
 
-  </div>
+    
   </div>
 
   
