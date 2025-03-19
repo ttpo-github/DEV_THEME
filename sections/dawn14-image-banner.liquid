@@ -314,6 +314,34 @@
                   {{- block.settings.button_label_3 | escape -}}
                 </a>
               {%- endif -%}
+
+              {%- if block.settings.button_label_4 != blank -%}
+                <a
+                  {% if block.settings.button_link_4 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_4 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_4 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="background-color:#0000d8;  border-radius:4px; width:100%; font-size:2rem;"
+                >
+                  {{- block.settings.button_label_4 | escape -}}
+                </a>
+              {%- endif -%}
+
+              {%- if block.settings.button_label_5 != blank -%}
+                <a
+                  {% if block.settings.button_link_5 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_5 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_5 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="background-color:#0000d8;  border-radius:4px; width:100%; font-size:2rem;"
+                >
+                  {{- block.settings.button_label_5 | escape -}}
+                </a>
+              {%- endif -%}
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -656,37 +684,57 @@
         {
           "type": "url",
           "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+          "label": "Button 1"
         },
         {
           "type": "checkbox",
           "id": "button_style_secondary_1",
           "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+          "label": "Button Style"
         },
         {
           "type": "text",
           "id": "button_label_2",
           "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+          "label": "Button 2"
         },
         {
           "type": "url",
           "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+          "label": "Url 2"
         },
          {
           "type": "text",
           "id": "button_label_3",
           "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_3.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_3.info"
+          "label": "Button 3",
         },
         {
           "type": "url",
           "id": "button_link_3",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_3.label"
+          "label": "Url 3"
+        },
+        {
+          "type": "text",
+          "id": "button_label_4",
+          "default": "Button label",
+          "label": "Button 4"
+        },
+        {
+          "type": "url",
+          "id": "button_link_4",
+          "label": "Url 4"
+        },
+        {
+          "type": "text",
+          "id": "button_label_5",
+          "default": "Button label",
+          "label": "Button 5"
+        },
+        {
+          "type": "url",
+          "id": "button_link_5",
+          "label": "Url 5"
         },
         {
           "type": "checkbox",
