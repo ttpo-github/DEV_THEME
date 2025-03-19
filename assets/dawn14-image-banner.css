@@ -423,7 +423,6 @@
   display:flex;
   /*flex-wrap: wrap;*/
   gap: 1rem;
-    max-width: 45rem;
   flex-direction:column;
 }
 }
@@ -455,7 +454,7 @@
   display:flex;
   /*flex-wrap: wrap;*/
   gap: 1rem;
-  max-width: 45rem;
+  /*max-width: 45rem;*/
   word-break: break-word;
 }
 
