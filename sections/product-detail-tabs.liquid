@@ -104,13 +104,13 @@
       </div>{%- endif %}
   
      {% comment %} How to tabbing {% endcomment %}
-      <div id="howto" class="product-tabing-body">{{ product.metafields.custom.howto_link1 }}</div>
       {%- if product.metafields.custom.howto_link1 %}
-        
+        <div id="howto" class="product-tabing-body">{{ product.metafields.custom.howto_link1 }}</div>
       {%- endif %}
-          
+
+       <div id="faq" class="product-tabing-body">
       {% if product.metafields.custom.answered_questions1 %}
-      <div id="faq" class="product-tabing-body">
+     
         {%- for i in (1..5) %}
           {%- capture answered_questions %}answered_questions{{i}}{% endcapture %}
           {%- assign answered_questions1 = product.metafields.custom[answered_questions] | split : '[--]' -%}
