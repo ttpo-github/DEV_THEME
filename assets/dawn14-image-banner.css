@@ -417,6 +417,14 @@
   .banner--stacked .banner__box {
     width: 100%;
   }
+
+  .banner__buttons {
+  /*display: inline-flex;*/
+  display:flex;
+  /*flex-wrap: wrap;*/
+  gap: 1rem;
+  flex-direction:column;
+}
 }
 
 @media screen and (min-width: 750px) {
