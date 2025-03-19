@@ -164,7 +164,7 @@
 
           </style>
           
-          <div class="faq-custom-container">
+          <div class="faq-custom-container" {% if product.metafields.custom.how_to_drop_downs == blank %}style="display:none;"{% endif %}>
               {% for faq in product.metafields.custom.how_to_drop_downs.value %}
                   <div class="faq-item">
                       <button class="faq-custom-question">{{ faq.titles }}</button>
