@@ -166,16 +166,14 @@
 
           </style>
           
-         
+          
 
           
           <div class="faq-custom-container" {% if product.metafields.custom.how_to_drop_downs == blank %}style="display:none;"{% endif %}>
-              {% for faq in product.metafields.custom.faq_list.value %}
+              {% for faq in product.metafields.custom.how_to_drop_downs.value %}
                   <div class="faq-item">
-                      <button class="faq-custom-question">{{ faq.question }}</button>
-                      <div class="faq_customer_answer">
-                          {{ faq.answer | raw }}  <!-- Allows HTML content (images, links, etc.) -->
-                      </div>
+                      <button class="faq-custom-question">{{ faq.titles }}</button>
+                      <div class="faq_customer_answer">{{ faq.drop_down_info}}</div>
                   </div>
               {% endfor %}
           </div>
