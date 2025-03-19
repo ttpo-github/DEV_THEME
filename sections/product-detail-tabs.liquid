@@ -35,7 +35,7 @@
       <ul class="product_tabbing" id="Add_li">
         <li><span data-id="#descriptions">Product Information</span></li>
         {%- if product.metafields.custom.video_link %}<li><span data-id="#video">Videos</span></li>{%- endif %}
-        {%- if product.metafields.custom.howto_link1 != blank or product.metafields.custom.how_to_drop_downs.size > 0 -%}<li><span data-id="#howto">How To</span></li>{%- endif %}
+        {%- if product.metafields.custom.howto_link1 != blank or product.metafields.custom.how_to_drop_downs != blank -%}<li><span data-id="#howto">How To</span></li>{%- endif %}
         <li><span data-id="#reviews">Reviews</span></li>
         {%- if product.metafields.custom.answered_questions1 %}<li><span data-id="#faq">Answered Questions</span></li>{%- endif %}
         
