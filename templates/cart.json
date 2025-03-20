@@ -20,12 +20,6 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
-        "custom_liquid_69URTN": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span></div>"
-          }
-        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -33,12 +27,18 @@
         "buttons": {
           "type": "buttons",
           "settings": {}
+        },
+        "custom_liquid_69URTN": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span></div>"
+          }
         }
       },
       "block_order": [
-        "custom_liquid_69URTN",
         "subtotal",
-        "buttons"
+        "buttons",
+        "custom_liquid_69URTN"
       ],
       "settings": {
         "show_cart_note": true,
@@ -70,7 +70,7 @@
             "en_tx_alert_msg_certificate_number": "Enter your tax-exempt certificate number",
             "en_tx_margin_top": 0,
             "en_tx_margin_bottom": 0,
-            "en_tx_bg_color": "#FFFFFF",
+            "en_tx_bg_color": "#ffffff",
             "en_tx_border": 1.5,
             "en_tx_border_radius": 3,
             "en_tx_border_color": "#ffffff",
