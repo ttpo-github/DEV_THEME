@@ -329,7 +329,7 @@
       {% render 'dawn13-header-search', input_id: 'Search-In-Modal' %}
       </div>
 
-      {% comment %}
+      <!-- SEARCH FORM -->
       <search-form class="search-modal__form"><form action="/pages/search-results" method="get" role="search" class="search search-modal__form">
           <div class="field">
             <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="" placeholder="Search" autocomplete="off" maxlength="255">
@@ -346,7 +346,6 @@
               </use></svg>
             </button>
           </div></form></search-form>
-          {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
