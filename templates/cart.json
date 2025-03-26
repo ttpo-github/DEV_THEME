@@ -31,7 +31,7 @@
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span></div>"
+            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\"></div>\n</div>"
           }
         }
       },
