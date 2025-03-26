@@ -23,7 +23,7 @@
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\"></div>\n</div>"
+            "custom_liquid": "<style>\ndiv.globo-form-control[data-type=\"datetime\"]{\ndisplay:none;\n}\n</style>\n\n<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\"></div>\n</div>"
           }
         },
         "subtotal": {
