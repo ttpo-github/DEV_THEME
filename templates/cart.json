@@ -20,6 +20,12 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
+        "custom_liquid_69URTN": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\"></div>\n</div>"
+          }
+        },
         "subtotal": {
           "type": "subtotal",
           "settings": {}
@@ -27,18 +33,12 @@
         "buttons": {
           "type": "buttons",
           "settings": {}
-        },
-        "custom_liquid_69URTN": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\"></div>\n</div>"
-          }
         }
       },
       "block_order": [
+        "custom_liquid_69URTN",
         "subtotal",
-        "buttons",
-        "custom_liquid_69URTN"
+        "buttons"
       ],
       "settings": {
         "show_cart_note": true,
@@ -53,6 +53,7 @@
       "blocks": {
         "diy_tax_exempt_checkout_app_block_Jfjz7X": {
           "type": "shopify://apps/diy-tax-exempt-checkout/blocks/app-block/82644d0b-45f4-4a69-b630-f5ee55674d62",
+          "disabled": true,
           "settings": {
             "en_tx_title": "Tax Exempt Status",
             "en_tx_sale_tax_option_label": "My organization is not tax exempt",
