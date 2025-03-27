@@ -124,6 +124,26 @@
   });
 </script>
 
+<script defer>
+document.addEventListener("DOMContentLoaded", function () {
+  const emailSection = document.querySelector('[data-type="email"]');
+  const submitButton = document.querySelector('.wizard__submit');
+
+  function toggleSubmitButton() {
+    const isVisible = window.getComputedStyle(emailSection).display === "block";
+    submitButton.style.display = isVisible ? "inline-block" : "none";
+  }
+
+  // Initial check on page load
+  toggleSubmitButton();
+
+  // Observe for any future changes in the style
+  const observer = new MutationObserver(toggleSubmitButton);
+  observer.observe(emailSection, { attributes: true, attributeFilter: ['style'] });
+});
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",
