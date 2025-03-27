@@ -17,13 +17,22 @@
         "continue_shop_link": "https://thetrailerpartsoutlet.com/pages/collections-list"
       }
     },
+    "custom_liquid_nbbhpn": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\">\n</div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div id=\"tax-exempt-target\"><span style=\"visibility:hidden;\">-</span>\n<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\">\n</div>\n</div>"
+            "custom_liquid": "<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\">\n</div>"
           }
         },
         "subtotal": {
@@ -92,6 +101,7 @@
   },
   "order": [
     "cart-items",
+    "custom_liquid_nbbhpn",
     "cart-footer",
     "1742320288d6b0db85"
   ]
