@@ -31,7 +31,6 @@
       "blocks": {
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\">\n</div>"
           }
@@ -93,6 +92,7 @@
       "block_order": [
         "diy_tax_exempt_checkout_app_block_Jfjz7X"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true,
         "css_id_selector": ""
