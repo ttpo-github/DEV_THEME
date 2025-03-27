@@ -125,23 +125,33 @@
 </script>
 
 <script>
-document.addEventListener("load", function () {
-  const emailSection = document.querySelector('[data-type="email"]');
-  const submitButton = document.querySelector('.wizard__submit');
+  window.onload = function () {
+    const emailDiv = document.querySelector('.globo-form-control[data-type="email"]');
+    const submitButton = document.querySelector('button.wizard__submit');
 
-  function toggleSubmitButton() {
-    const isVisible = window.getComputedStyle(emailSection).display === "block";
-    submitButton.style.display = isVisible ? "inline-block" : "none";
-  }
+    if (!emailDiv || !submitButton) return;
 
-  // Initial check on page load
-  toggleSubmitButton();
+    function toggleButtonVisibility() {
+      if (getComputedStyle(emailDiv).display === 'block') {
+        submitButton.style.display = 'inline-block'; // or 'block' depending on your layout
+      } else {
+        submitButton.style.display = 'none';
+      }
+    }
 
-  // Observe for any future changes in the style
-  const observer = new MutationObserver(toggleSubmitButton);
-  observer.observe(emailSection, { attributes: true, attributeFilter: ['style'] });
-});
+    // Initial visibility check
+    toggleButtonVisibility();
+
+    // Watch for display changes on the email div
+    const observer = new MutationObserver(toggleButtonVisibility);
+
+    observer.observe(emailDiv, {
+      attributes: true,
+      attributeFilter: ['style']
+    });
+  };
 </script>
+
 
 
 {% schema %}
