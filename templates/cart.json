@@ -31,7 +31,6 @@
       "blocks": {
         "custom_liquid_69URTN": {
           "type": "custom_liquid",
-          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"globo-formbuilder\" data-id=\"ODI2NjY=\">\n</div>"
           }
