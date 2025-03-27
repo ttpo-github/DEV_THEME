@@ -270,6 +270,7 @@
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
+              {% if block.settings.btns_stacked %}style="display:flex; flex-direction:column;"{% endif %}
             >
 
                {% comment %}
@@ -744,6 +745,12 @@
           "type": "url",
           "id": "button_link_5",
           "label": "Url 5"
+        },
+        {
+          "type": "checkbox",
+          "id": "btns_stacked",
+          "default": false,
+          "label": "Stack Buttons?"
         },
         {
           "type": "checkbox",
