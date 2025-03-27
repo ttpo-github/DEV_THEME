@@ -124,35 +124,7 @@
   });
 </script>
 
-<script>
-  console.log("LOADING")
-  window.onload = function () {
-    console.log("LOADED")
-    const emailDiv = document.querySelector('.globo-form-control[data-type="email"]');
-    const submitButton = document.querySelector('button.wizard__submit');
 
-    if (!emailDiv || !submitButton) return;
-
-    function toggleButtonVisibility() {
-      if (getComputedStyle(emailDiv).display === 'block') {
-        submitButton.style.display = 'inline-block'; // or 'block' depending on your layout
-      } else {
-        submitButton.style.display = 'none';
-      }
-    }
-
-    // Initial visibility check
-    toggleButtonVisibility();
-
-    // Watch for display changes on the email div
-    const observer = new MutationObserver(toggleButtonVisibility);
-
-    observer.observe(emailDiv, {
-      attributes: true,
-      attributeFilter: ['style']
-    });
-  };
-</script>
 
 
 
