@@ -48,6 +48,7 @@
             "button_link_4": "shopify://collections",
             "button_label_5": "SHOP RV/CAMPING",
             "button_link_5": "shopify://collections",
+            "btns_stacked": true,
             "button_style_secondary_2": false
           }
         }
