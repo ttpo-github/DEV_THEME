@@ -539,7 +539,7 @@
         <div class="cart-additional-field">
             <label for="Cart-note">Trailer Parts Expert that assisted you</label>
             <select form="CartDrawer-Form" name="attributes[Trailer Parts Expert that assisted customer]">
-              {%- assign options = "None | Trevor Jugert | Jason Gonzales | Kyle Burns | Krystal Kurtz | Anna Nicholas | Sydney Ward | Abraham Rodriguez" | split: "|"  -%}
+              {%- assign options = "None | Trevor Jugert | Abraham Rodriguez | Jason Gonzales | Kyle Burns | Anna Nicholas | Sydney Ward" | split: "|"  -%}
               {% for option in options %}
               <option value="{{- option -}}">{{- option -}}</option>
               {% endfor %}
