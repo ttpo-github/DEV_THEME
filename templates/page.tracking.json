@@ -1,1 +1,42 @@
-{"sections":{"tracking-section":{"type":"tracking-section","settings":{"heading":"Here you can track your order. Please add your tracking number and email below.","note":"Order information may not be available for several hours after your order is processed.","image":"shopify:\/\/shop_images\/new-tracking-artboard.png"}}},"order":["tracking-section"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "tracking-section": {
+      "type": "tracking-section",
+      "disabled": true,
+      "settings": {
+        "heading": "Here you can track your order. Please add your tracking number and email below.",
+        "note": "Order information may not be available for several hours after your order is processed.",
+        "image": "shopify://shop_images/new-tracking-artboard.png"
+      }
+    },
+    "1743608755f262ffcd": {
+      "type": "apps",
+      "blocks": {
+        "parcel_panel_app_NX8b8L": {
+          "type": "shopify://apps/parcel-panel/blocks/app/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "parcel_panel_app_NX8b8L"
+      ],
+      "settings": {
+        "include_margins": true,
+        "css_id_selector": ""
+      }
+    }
+  },
+  "order": [
+    "tracking-section",
+    "1743608755f262ffcd"
+  ]
+}
