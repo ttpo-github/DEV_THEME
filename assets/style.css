@@ -2069,6 +2069,10 @@ div.pk-newletter_bg-image:before{
   .newsletter__subheading.rte {
     font-size: 15px;
   }
+
+  div#insta-feed h2{
+    font-size: 32px !important;
+  }
 }
 
 @media only screen and (max-width: 560px){
