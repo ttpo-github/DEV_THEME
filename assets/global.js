@@ -959,8 +959,9 @@ class VariantSelects extends HTMLElement {
   }
 
   variantChangeAlert(){
-    console.log(this.currentVariant)
+    //console.log(this.currentVariant)
      let notificationWrapper = document.getElementById("variant-notification-wrapper");
+    const alerts = document.querySelectorAll('.alert');
 
     const newAlert = document.createElement('div');
       newAlert.className = 'alert';
@@ -993,6 +994,12 @@ class VariantSelects extends HTMLElement {
           </div>
           <span class="closebtn" onclick="this.closest('.alert').style.display='none';">&times;</span>
         </div>`;
+
+    
+      if (alerts.length > 0) {
+        alerts[alerts.length - 1].style.display = 'none';
+      }
+
 
 
       // Append the new alert to the alert container
