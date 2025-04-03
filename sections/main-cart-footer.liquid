@@ -125,33 +125,54 @@
 </script>
 
 
-<script defer>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector('form.g-container');
+<script>
+(function () {
+  // Function to attach the submit handler
+  function attachSubmitHandler(form) {
+    if (!form || form.dataset.preventListenerAttached) return;
 
-  console.log("IN CART FOOTER")
-  console.log(form)
+    form.addEventListener("submit", function (event) {
+      // Try to find the selected radio button, accounting for third-party behavior
+      const radios = Array.from(form.querySelectorAll('input[name="radio-1"]'));
+      const selected = radios.find(radio => radio.checked || radio.classList.contains('selected'));
+      const selectedValue = selected?.value;
 
-  if (!form) return;
+      if (selectedValue === "My organization is not tax exempt") {
+        event.preventDefault();
+        alert("Submission blocked: This form is only for tax-exempt organizations.");
+      }
+    });
 
-  form.addEventListener("submit", function (event) {
-    // Get all inputs named "radio-1"
-    const radios = Array.from(document.querySelectorAll('input[name="radio-1"]'));
-    
-    // Some custom UIs use hidden inputs and set "checked" manually in JS
-    // So instead, look for the one with 'aria-checked' or a special class if necessary
-    const selected = radios.find(radio => radio.classList.contains('selected') || radio.checked);
+    // Flag to prevent double-listening
+    form.dataset.preventListenerAttached = "true";
+  }
 
-    // Fallback: just check for .checked if nothing fancy
-    const selectedValue = selected?.value;
-
-    if (selectedValue === "My organization is not tax exempt") {
-      event.preventDefault();
-      alert("Submission blocked: This form is only for tax-exempt organizations.");
+  // Use MutationObserver to wait until the form is in the DOM
+  const observer = new MutationObserver((mutations, obs) => {
+    const form = document.querySelector('form.g-container');
+    if (form) {
+      attachSubmitHandler(form);
+      obs.disconnect(); // Stop observing once found
     }
   });
-});
+
+  // Start observing the body for changes
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+
+  // Just in case the form is already there when the script runs
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector('form.g-container');
+    if (form) {
+      attachSubmitHandler(form);
+      observer.disconnect();
+    }
+  });
+})();
 </script>
+
 
 
 
