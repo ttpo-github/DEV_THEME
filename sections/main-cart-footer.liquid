@@ -125,6 +125,56 @@
 </script>
 
 
+<script>
+(function () {
+  function initSubmitToggle(form) {
+    if (!form || form.dataset.submitToggleAttached) return;
+
+    const radios = form.querySelectorAll('input[name="radio-1"]');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    if (!submitBtn) return;
+
+    // Hide the button initially
+    submitBtn.style.display = 'none';
+
+    // Watch for changes
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const selected = form.querySelector('input[name="radio-1"]:checked');
+        const isTaxExempt = selected?.value === "My organization is tax exempt";
+
+        // Toggle visibility
+        submitBtn.style.display = isTaxExempt ? '' : 'none';
+
+        console.log(`[Radio change] Selected: ${selected?.value}`);
+      });
+    });
+
+    form.dataset.submitToggleAttached = "true"; // Prevent re-binding
+  }
+
+  // Watch for the form to appear
+  const observer = new MutationObserver(() => {
+    const form = document.querySelector('form.g-container');
+    if (form) {
+      initSubmitToggle(form);
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Just in case it’s already in the DOM
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector('form.g-container');
+    if (form) {
+      initSubmitToggle(form);
+      observer.disconnect();
+    }
+  });
+})();
+</script>
 
 
 
