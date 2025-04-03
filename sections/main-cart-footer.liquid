@@ -127,16 +127,16 @@
 
 <script>
 (function () {
-  function initSubmitToggle(form) {
-    if (!form || form.dataset.submitToggleAttached) return;
+  function initFooterToggle(form) {
+    if (!form || form.dataset.footerToggleAttached) return;
 
     const radios = form.querySelectorAll('input[name="radio-1"]');
-    const submitBtn = form.querySelector('button[type="submit"]');
+    const footer = form.querySelector('.gfb__footer.wizard__footer');
 
-    if (!submitBtn || radios.length === 0) return;
+    if (!footer || radios.length === 0) return;
 
-    // Hide the button initially
-    submitBtn.style.display = 'none';
+    // Hide footer on load
+    footer.style.display = 'none';
 
     // Listen for radio changes
     radios.forEach(radio => {
@@ -144,36 +144,38 @@
         const selected = form.querySelector('input[name="radio-1"]:checked');
         const isTaxExempt = selected?.value === "My organization is tax exempt";
 
-        // Toggle button visibility
-        submitBtn.style.display = isTaxExempt ? '' : 'none';
+        // Toggle visibility of the footer
+        footer.style.display = isTaxExempt ? '' : 'none';
 
         console.log(`[Radio Change] Selected: ${selected?.value}`);
       });
     });
 
-    form.dataset.submitToggleAttached = "true";
+    form.dataset.footerToggleAttached = "true";
   }
 
-  // MutationObserver to handle dynamic forms
+  // Watch for form to appear in the DOM
   const observer = new MutationObserver(() => {
     const form = document.querySelector('form.g-container');
     if (form) {
-      initSubmitToggle(form);
+      initFooterToggle(form);
       observer.disconnect();
     }
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
 
+  // Backup if form is already there
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('form.g-container');
     if (form) {
-      initSubmitToggle(form);
+      initFooterToggle(form);
       observer.disconnect();
     }
   });
 })();
 </script>
+
 
 
 
