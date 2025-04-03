@@ -125,6 +125,31 @@
 </script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('form.g-container');
+
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    // Get all inputs named "radio-1"
+    const radios = Array.from(document.querySelectorAll('input[name="radio-1"]'));
+    
+    // Some custom UIs use hidden inputs and set "checked" manually in JS
+    // So instead, look for the one with 'aria-checked' or a special class if necessary
+    const selected = radios.find(radio => radio.classList.contains('selected') || radio.checked);
+
+    // Fallback: just check for .checked if nothing fancy
+    const selectedValue = selected?.value;
+
+    if (selectedValue === "My organization is not tax exempt") {
+      event.preventDefault();
+      alert("Submission blocked: This form is only for tax-exempt organizations.");
+    }
+  });
+});
+</script>
+
 
 
 
