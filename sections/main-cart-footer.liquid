@@ -152,6 +152,8 @@
     const form = document.querySelector('form.g-container');
     if (form) {
       attachSubmitHandler(form);
+      console.log("Cart FOOTER")
+      console.log(form)
       obs.disconnect(); // Stop observing once found
     }
   });
