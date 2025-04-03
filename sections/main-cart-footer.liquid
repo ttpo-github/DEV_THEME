@@ -133,28 +133,28 @@
     const radios = form.querySelectorAll('input[name="radio-1"]');
     const submitBtn = form.querySelector('button[type="submit"]');
 
-    if (!submitBtn) return;
+    if (!submitBtn || radios.length === 0) return;
 
     // Hide the button initially
     submitBtn.style.display = 'none';
 
-    // Watch for changes
+    // Listen for radio changes
     radios.forEach(radio => {
       radio.addEventListener('change', () => {
         const selected = form.querySelector('input[name="radio-1"]:checked');
         const isTaxExempt = selected?.value === "My organization is tax exempt";
 
-        // Toggle visibility
+        // Toggle button visibility
         submitBtn.style.display = isTaxExempt ? '' : 'none';
 
-        console.log(`[Radio change] Selected: ${selected?.value}`);
+        console.log(`[Radio Change] Selected: ${selected?.value}`);
       });
     });
 
-    form.dataset.submitToggleAttached = "true"; // Prevent re-binding
+    form.dataset.submitToggleAttached = "true";
   }
 
-  // Watch for the form to appear
+  // MutationObserver to handle dynamic forms
   const observer = new MutationObserver(() => {
     const form = document.querySelector('form.g-container');
     if (form) {
@@ -165,7 +165,6 @@
 
   observer.observe(document.body, { childList: true, subtree: true });
 
-  // Just in case it’s already in the DOM
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('form.g-container');
     if (form) {
@@ -175,6 +174,7 @@
   });
 })();
 </script>
+
 
 
 
