@@ -219,9 +219,14 @@
         "disabled": true,
         "settings": {}
       },
+      "10641372206048101839": {
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "disabled": true,
+        "settings": {}
+      },
       "9172647555721718247": {
         "type": "shopify://apps/klevu-ai-search-filter/blocks/global-configuration/3fd783f0-6a26-4856-8c5b-59083a014991",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "enable_quicksearch": true,
           "enable_catnav": false,
@@ -229,11 +234,6 @@
           "search_landing": "/search",
           "wait_for_interactive": false
         }
-      },
-      "10641372206048101839": {
-        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
-        "disabled": true,
-        "settings": {}
       }
     }
   },
