@@ -17,6 +17,15 @@
         "color_scheme": "background-1"
       }
     },
+    "custom_liquid_MtFwRp": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"margin:auto;text-align:center;\"><h2>Order Today - Ships Tomorrow</h2></div>",
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 12
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -60,6 +69,7 @@
   },
   "order": [
     "banner",
+    "custom_liquid_MtFwRp",
     "product-grid",
     "rich_text_9cMzet"
   ]
