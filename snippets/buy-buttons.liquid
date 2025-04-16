@@ -43,13 +43,15 @@
           class="product-variant-id"
         >
 
-        {% liquid
-                if product.selected_or_first_available_variant.title contains 'Custom'
-                  assign showDisclaimer = true
-                else
-                  assign showDisclaimer = false
-                endif                
-              %}
+        {% liquid 
+          assign variant_title = product.selected_or_first_available_variant.title | downcase
+        
+          if variant_title contains 'custom' or variant_title contains 'overslung'
+            assign showDisclaimer = true
+          else
+            assign showDisclaimer = false
+          endif
+         %}
               
               <div id="disclaimer-container" style="display:{% if showDisclaimer %}inline-block{% else %}none{% endif %};">
                 <input type="checkbox" name="properties[_Checked Custom Disclaimer]" form="product-form-{{ section.id }}" id="custom-disclaimer" {% if showDisclaimer %}required{% endif %}/>
