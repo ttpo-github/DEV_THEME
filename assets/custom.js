@@ -122,6 +122,10 @@ $('variant-radios input[type="radio"]').change(function(){
   }
   // If Neither option is selected
   else {
+
+    if($('variant-radios input[value="Overslung \\(+3 Day Processing\\)"]').is(":checked")){
+      $('#disclaimer-container').css("display", "block");
+    } else {
     //$('.custom_variant input').val('');
     //$('.custom_spring_center_variant input').val('');
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
@@ -134,7 +138,7 @@ $('variant-radios input[type="radio"]').change(function(){
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
-    
+    }
   }
 });
 
