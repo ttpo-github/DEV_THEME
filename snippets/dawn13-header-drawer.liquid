@@ -382,14 +382,14 @@
                         </select>
                         {% render 'icon-caret' %}
                       </div>
-                      <button class="button button--tertiary custom-header-drawer-link">{{ 'localization.update_language' | t }}</button>
+                      <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
                     {%- endform -%}
                   </noscript>
 
                   <localization-form >
                     {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
                       <div>
-                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                        <h2 class="visually-hidden custom-header-drawer-link" id="HeaderLanguageMobileLabel">
                           {{ 'localization.language_label' | t }}
                         </h2>
                         {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
