@@ -125,6 +125,15 @@ $('variant-radios input[type="radio"]').change(function(){
 
     if($('variant-radios input[value="Overslung \\(+3 Day Processing\\)"]').is(":checked")){
       $('#disclaimer-container').css("display", "block");
+      $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
+      $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
+      
+      $('#hubface-selection').prop('disabled', true);
+      $('#custom-spring-center').prop('disabled', true).prop('required', false);
+  
+      $('#custom-hubface').prop('disabled', true).prop('required', false);
+  
+      $('#disclaimer-container').css("display", "none");
     } else {
     //$('.custom_variant input').val('');
     //$('.custom_spring_center_variant input').val('');
