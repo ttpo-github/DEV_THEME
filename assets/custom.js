@@ -120,6 +120,7 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#disclaimer-container').css("display", "block");
     $('#custom-disclaimer').prop('required', true);
   }
+  /*
   // When Overslung option is selected
     else if($('variant-radios input[value="Overslung \\(+3 Day Processing\\)"]').is(":checked")){
       $('#disclaimer-container').css("display", "block");
@@ -135,6 +136,7 @@ $('variant-radios input[type="radio"]').change(function(){
       $('#disclaimer-container').css("display", "none");
       $('#custom-disclaimer').prop('required', false).prop('checked', false);
     }
+  */
   // If Neither option is selected
   else {    
     //$('.custom_variant input').val('');
