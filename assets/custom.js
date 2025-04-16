@@ -120,13 +120,24 @@ $('variant-radios input[type="radio"]').change(function(){
     $('#disclaimer-container').css("display", "block");
     $('#custom-disclaimer').prop('required', true);
   }
-  // If Neither option is selected
-  else {
-
-    if($('variant-radios input[value="Overslung \\(+3 Day Processing\\)"]').is(":checked")){
+  // When Overslung option is selected
+    else if($('variant-radios input[value="Overslung \\(+3 Day Processing\\)"]').is(":checked")){
       $('#disclaimer-container').css("display", "block");
+      //$('.custom_variant input').val('');
+      //$('.custom_spring_center_variant input').val('');
+      $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
+      $(this).siblings('.custom_spring_center_variant').removeClass("custom-slide-active");
       
-    } else {
+      $('#hubface-selection').prop('disabled', true);
+      $('#custom-spring-center').prop('disabled', true).prop('required', false);
+  
+      $('#custom-hubface').prop('disabled', true).prop('required', false);
+  
+      $('#disclaimer-container').css("display", "none");
+      $('#custom-disclaimer').prop('required', false).prop('checked', false);
+    }
+  // If Neither option is selected
+  else {    
     //$('.custom_variant input').val('');
     //$('.custom_spring_center_variant input').val('');
     $(this).siblings('.fully_custom_variant').removeClass("custom-slide-active");
@@ -139,7 +150,7 @@ $('variant-radios input[type="radio"]').change(function(){
 
     $('#disclaimer-container').css("display", "none");
     $('#custom-disclaimer').prop('required', false).prop('checked', false);
-    }
+    
   }
 });
 
