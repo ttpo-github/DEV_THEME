@@ -3374,12 +3374,13 @@ fieldset.product-form__input .form__label,
   overflow:hidden;
   transition:all .3s;
 
-  grid-column: 1 / -1;
+  
 }
 
 .custom-option-slide.custom-slide-active {
   max-height:700px;
   opacity:1;
+  grid-column: 1 / -1;
 }
 
 .custom-option-inner-container {
