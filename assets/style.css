@@ -3373,6 +3373,8 @@ fieldset.product-form__input .form__label,
   opacity:0;
   overflow:hidden;
   transition:all .3s;
+
+  grid-column: 1 / -1;
 }
 
 .custom-option-slide.custom-slide-active {
