@@ -514,6 +514,21 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+          .mw-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.mw-icon::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -12px;
+  right: -12px;
+  pointer-events: auto;
+}
 </style>
 
 <!-- Tooltip -->
