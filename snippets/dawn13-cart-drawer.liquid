@@ -146,7 +146,7 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      {% if item.product_title == 'MAGA TARIFF' %}
+                      {% if item.product.title == 'MAGA TARIFF' %}
 
                       <!-- ================================================= TARIFF LINE ITEM ================================================= -->
                         <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
