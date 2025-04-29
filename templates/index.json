@@ -48,7 +48,7 @@
             "button_link_4": "https://thetrailerpartsoutlet.com/collections/marine-trailer-lights",
             "button_label_5": "Shop RV / Camping",
             "button_link_5": "https://thetrailerpartsoutlet.com/collections/rv-axles",
-            "btns_stacked": true,
+            "btns_stacked": false,
             "button_style_secondary_2": false
           }
         }
