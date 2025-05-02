@@ -1176,7 +1176,7 @@ class VariantSelects extends HTMLElement {
     
     //document.getElementsByClassName('atc_mobile_image_container')[0].innerHTML = newMediaModal.outerHTML;
 
-    document.getElementsByClassName('atc_mobile_image_container')[0].innerHTML = `<img src="${newMediaModal.src.split('&width')[0]}" width:"75" height: "75"/>`
+    document.getElementsByClassName('atc_mobile_image_container')[0].innerHTML = `<img src="${newMediaModal.src}" width="75" height="75"/>`
 
   }
 
