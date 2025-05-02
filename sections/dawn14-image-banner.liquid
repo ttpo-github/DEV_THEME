@@ -165,17 +165,20 @@
  -->
 
     <style>
-      {
-  "type": "checkbox",
-  "id": "use_video_background",
-  "label": "Use video background",
-  "default": false
-},
-{
-  "type": "url",
-  "id": "video_url",
-  "label": "Video MP4 URL"
+     .video-background {
+  position: relative;
+  overflow: hidden;
 }
+.video-background__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 
     </style>
 
