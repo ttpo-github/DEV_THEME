@@ -152,12 +152,13 @@
 >
   {%- if section.settings.use_video_background and section.settings.video_url != blank -%}
     
-  <div class="banner__media media video-background{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <div class="video-background">
     <video autoplay muted loop playsinline class="video-background__video">
       <source src="{{ section.settings.video_url }}" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+    
 {%- elsif section.settings.image != blank -%}
   <div class="animate--ambient banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {%- liquid
