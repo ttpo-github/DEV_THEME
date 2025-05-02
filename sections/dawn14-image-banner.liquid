@@ -73,6 +73,22 @@
           gap:1rem;
         }
 
+        
+      .video-background {
+  position: relative;
+  overflow: hidden;
+}
+.video-background__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+    
         /*
         @media (prefers-reduced-motion: no-preference) {
           .animate--ambient > img,
@@ -135,22 +151,7 @@
   class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.use_video_background and section.settings.video_url != blank -%}
-    <style>
-      .video-background {
-  position: relative;
-  overflow: hidden;
-}
-.video-background__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-    </style>
+    
   <div class="banner__media media video-background{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <video autoplay muted loop playsinline class="video-background__video">
       <source src="{{ section.settings.video_url }}" type="video/mp4">
