@@ -257,6 +257,7 @@
               border: 1px solid rgba(255, 255, 255, 0.125);
                 padding:10px; font-family: Oswald;">{{ block.settings.text }}</p>
             </div>
+          </div>
           {%- when 'buttons' -%}
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -346,7 +347,7 @@
             </div>
         {%- endcase -%}
       {%- endfor -%}
-      </div>
+      
     </div>
 
     
