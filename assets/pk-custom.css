@@ -32,9 +32,11 @@ div.tj-modal-content {
 /* --- Style Overrides for the Tip Quick Widget --- */
 
 /* --- Override for Magic Zoom --- */
-#magic-zoom-plus-block{
+@media only screen and (min-width: 768px) {
+  #magic-zoom-plus-block{
   position:sticky;
   top:172px;
+}
 }
 /* ---Override for Magic Zoom --- */
 /* --- General Style Cusomizations --- */
