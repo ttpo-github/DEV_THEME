@@ -31,6 +31,12 @@ div.tj-modal-content {
 }
 /* --- Style Overrides for the Tip Quick Widget --- */
 
+/* --- Override for Magic Zoom --- */
+#magic-zoom-plus-block{
+  position:sticky;
+  top:50px;
+}
+/* ---Override for Magic Zoom --- */
 /* --- General Style Cusomizations --- */
 .cart-drawer-call-expert-phone{
   margin:auto;
