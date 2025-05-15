@@ -632,7 +632,7 @@
         <!-- Widget : Custom Widget Test 1 -->
                 {% comment %}<div data-rebuy-id="196223"></div>{% endcomment %}
               <!-- End Widget : Custom Widget Test 1 -->
-        
+        {% comment %}
         <div class="cart-additional-field">
             <label for="Cart-note">Trailer Parts Expert that assisted you</label>
             <select form="CartDrawer-Form" name="attributes[Trailer Parts Expert that assisted customer]">
@@ -642,6 +642,37 @@
               {% endfor %}
             </select>
           </div>
+        {% endcomment %}
+
+        <div class="cart-additional-field">
+  <label for="Cart-expert">Trailer Parts Expert that assisted you</label>
+  <select id="Cart-expert" form="CartDrawer-Form" name="attributes[Trailer Parts Expert that assisted customer]">
+    {%- assign options = "None | Trevor Jugert | Jason Gonzales | Abraham Rodriguez | Kyle Burns | Anna Nicholas | Sydney Ward" | split: "|" -%}
+    {% for option in options %}
+      <option value="{{ option | strip }}">{{ option | strip }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+<script>
+  // Wait for the DOM to load in case you're in a cart drawer
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        const selectedExpert = cart.attributes?.["Trailer Parts Expert that assisted customer"];
+        if (selectedExpert) {
+          const select = document.getElementById("Cart-expert");
+          const optionToSelect = Array.from(select.options).find(option => option.value.trim() === selectedExpert.trim());
+          if (optionToSelect) {
+            optionToSelect.selected = true;
+          }
+        }
+      })
+      .catch(err => console.error("Could not fetch cart:", err));
+  });
+</script>
+
         
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
