@@ -352,6 +352,11 @@
       {{ 'hero-banner.css' | asset_url | stylesheet_tag: preload:true }}
     {% endif %}
 
+    {% if template == 'index' %}
+      <link rel="preload" as="video" href="https://cdn.shopify.com/videos/c/o/v/2feea00ea0d1426986ba5e43708ecdd7.mp4" type="video/mp4">
+    {% endif %}
+
+
     {% if canonical_url contains 'products' %}
        {%- if product.selected_or_first_available_variant.featured_media != null -%}
          <link rel="preload" as="image" href="{{ product.selected_or_first_available_variant.featured_media | img_url }}">
