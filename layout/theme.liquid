@@ -467,15 +467,17 @@
     
       {% if template == 'index'  %}
         <!-- FigPii Anti-Flicker Snippet -->
+    <!--
           <style>.fp-hide{opacity:0!important;}</style>
           <script>(function(w,h,c,v,t,a,o){h.className+=" "+c;o=w[v]=w[v]||[];o.show=a=function(){h.className=h.className.replace(RegExp(" ?"+c),"")};setTimeout(function(){a();o.show=null},t)})(window,document.documentElement,"fp-hide","_fpHide",4500);</script>
+        -->
         <!-- End FigPii Anti-Flicker Snippet -->
       {% endif %}
     
 
     
     <!-- FigPii Asynchronous Tracking Code -->
-    <script>!function(){var n=document.createElement('script');n.crossOrigin='anonymous',n.async='async',n.src='https://tracking-cdn.figpii.com/9227939939023c9110d6a306383c7149.js',document.head.append(n),window._fpEvent=window._fpEvent||[]}();</script>
+    <!--<script>!function(){var n=document.createElement('script');n.crossOrigin='anonymous',n.async='async',n.src='https://tracking-cdn.figpii.com/9227939939023c9110d6a306383c7149.js',document.head.append(n),window._fpEvent=window._fpEvent||[]}();</script>-->
     <!-- End FigPii Asynchronous Tracking Code -->
 
     
@@ -826,10 +828,12 @@ window.addEventListener("load", function() {
 <script src="https://js.klevu.com/klevu-js-v1/customizations/klevu-user-customization-158223639218611681.js" async></script>
 
     <!-- FigPii Event tracking --> 
+    <!--
       <script>
         window._fpEvent=window._fpEvent||[]; // Always required.
         window._fpEvent.push(["eventConversion",{value:"add_to_cart"}]);
       </script>
+    -->
     <!-- FigPii Event tracking -->
 
     <script defer>
