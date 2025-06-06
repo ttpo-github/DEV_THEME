@@ -44,50 +44,40 @@ class CartDrawer extends HTMLElement {
     });
   }
   
-  open(triggeredBy) {
-    if (triggeredBy) this.setActiveElement(triggeredBy);
-    const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
-    if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
-    // here the animation doesn't seem to always get triggered. A timeout seem to help
-    setTimeout(() => {
-      this.classList.add('animate', 'active');
-    });
+open(triggeredBy) {
+  if (triggeredBy) this.setActiveElement(triggeredBy);
 
-    this.addEventListener(
-      'transitionend',
-      () => {
-        const containerToTrapFocusOn = this.classList.contains('is-empty')
-          ? this.querySelector('.drawer__inner-empty')
-          : document.getElementById('CartDrawer');
-        const focusElement = this.querySelector('.drawer__inner') || this.querySelector('.drawer__close');
+  const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
+  if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) {
+    this.setSummaryAccessibility(cartDrawerNote);
+  }
+
+  // Ensure animation triggers properly
+  setTimeout(() => {
+    this.classList.add('animate', 'active');
+  }, 10);
+
+  this.addEventListener(
+    'transitionend',
+    () => {
+      const containerToTrapFocusOn = this.classList.contains('is-empty')
+        ? this.querySelector('.drawer__inner-empty')
+        : document.getElementById('CartDrawer');
+
+      const focusElement =
+        this.querySelector('.drawer__inner') ||
+        this.querySelector('.drawer__close');
+
+      if (containerToTrapFocusOn && focusElement) {
         trapFocus(containerToTrapFocusOn, focusElement);
-      },
-      { once: true }
-    );
+      }
+    },
+    { once: true }
+  );
 
-    document.body.classList.add('overflow-hidden');
-  }
+  document.body.classList.add('overflow-hidden');
+}
 
-  close() {
-    this.classList.remove('active');
-    removeTrapFocus(this.activeElement);
-    document.body.classList.remove('overflow-hidden');
-  }
-
-  setSummaryAccessibility(cartDrawerNote) {
-    cartDrawerNote.setAttribute('role', 'button');
-    cartDrawerNote.setAttribute('aria-expanded', 'false');
-
-    if (cartDrawerNote.nextElementSibling.getAttribute('id')) {
-      cartDrawerNote.setAttribute('aria-controls', cartDrawerNote.nextElementSibling.id);
-    }
-
-    cartDrawerNote.addEventListener('click', (event) => {
-      event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
-    });
-
-    cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);
-  }
 
  
   
