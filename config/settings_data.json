@@ -242,7 +242,7 @@
       },
       "12622292715052272319": {
         "type": "shopify://apps/magical-product-fees/blocks/magical-mandatory-fees/8c765569-e503-4260-ade8-582a0959d5a2",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "fees_required_message": ""
         }
