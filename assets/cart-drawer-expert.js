@@ -16,6 +16,6 @@
                   img.src = random_expert.image;    
                   document.querySelector('.help-images').appendChild(img);
                   expertPhone.href = `tel:${random_expert.phone.replace(/[()\-\s]/g, '').trim()}`
-                  expertContent.innerHTML = ` TTEST Click to call ${random_expert.name} <br> ${random_expert.phone}`
+                  expertContent.innerHTML = `Click to call ${random_expert.name} <br> ${random_expert.phone}`
   
                   // EXPERT DROPDOWN
