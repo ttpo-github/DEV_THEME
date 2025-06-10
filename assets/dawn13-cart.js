@@ -195,7 +195,7 @@ class CartItems extends HTMLElement {
         
           expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
           expertImage.src = window.chosen_expert.image
-          expertButton.innerHTML = `Test Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
+          expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
         }
         
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
