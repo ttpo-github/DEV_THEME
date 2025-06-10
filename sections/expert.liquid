@@ -127,15 +127,28 @@
   //console.log(window.expert_data)
   //console.log(window.chosen_expert) 
 
-   if(window.chosen_expert != undefined){
+  if (window.chosen_expert != undefined) {
   let expertLinkContainer = document.querySelector('.cart-drawer-call-expert-phone');
   let expertImage = document.querySelector('#expert_popup img');
   let expertButton = document.querySelector('.cart-drawer-call-expert-text');
 
-  expertLinkContainer.href = `tel:${window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim()}`
-  expertImage.src = window.chosen_expert.image
-  expertButton.innerHTML = `SECTIONS Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`
-   }
+  const cleanPhone = window.chosen_expert.phone.replace(/[()\-\s]/g, '').trim();
+
+  expertLinkContainer.href = `tel:${cleanPhone}`;
+  expertImage.src = window.chosen_expert.image;
+  expertButton.innerHTML = `Click to call ${window.chosen_expert.name} <span style="white-space:nowrap;">${window.chosen_expert.phone}</span>`;
+
+  // ✅ Attach gtag event listener now that link is in place
+  expertLinkContainer.addEventListener('click', function () {
+    gtag('event', 'phone_click', {
+      phone_number: cleanPhone,
+      expert_name: window.chosen_expert.name,
+      event_category: 'engagement',
+      event_label: 'Expert Call'
+    });
+  });
+}
+
   {% comment %}
                   document.querySelector('.help-images').innerHTML = ''
                   img.src = random_expert.image;    
